@@ -1431,11 +1431,9 @@ classes:
         range: AutomatedAnnotation
   AutomatedAnnotation:
     name: AutomatedAnnotation
-    description: 'A set of fields for recording the details of the automated annotation
-      algorithm used.
-
-      (Common ''automated annotation methods'' would include PopV, Azimuth, CellTypist,
-      scArches, etc.)'
+    description: A set of fields for recording the details of the automated annotation
+      algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth,
+      CellTypist, scArches, etc.)
     from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
     slots:
     - algorithm_name

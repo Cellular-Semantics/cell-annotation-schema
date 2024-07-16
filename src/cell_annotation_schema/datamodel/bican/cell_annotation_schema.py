@@ -1,5 +1,5 @@
 # Auto generated from BICAN_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-07-16T15:53:08
+# Generation date: 2024-07-16T15:58:26
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
@@ -426,8 +426,8 @@ class BicanLabelset(Labelset):
 @dataclass
 class AutomatedAnnotation(YAMLRoot):
     """
-    A set of fields for recording the details of the automated annotation algorithm used.
-    (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)
+    A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated
+    annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)
     """
     _inherited_slots: ClassVar[List[str]] = []
 

@@ -235,11 +235,10 @@ classes:
     - annotation_method
     - automated_annotation
   AutomatedAnnotation:
-    description: 'A set of fields for recording the details of the automated annotation
+    description: "A set of fields for recording the details of the automated annotation
       algorithm used.
-
-      (Common ''automated annotation methods'' would include PopV, Azimuth, CellTypist,
-      scArches, etc.)'
+      (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist,
+      scArches, etc.)"
     slots:
     - algorithm_name
     - algorithm_version
