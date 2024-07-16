@@ -2,6 +2,9 @@
 SCHEMA_FOLDER = $(SRC)/$(SCHEMA_NAME)/schema
 BUILD_FOLDER = build
 
+DOCDIR_BICAN = $(DOCDIR)/bican
+DOCDIR_CAP = $(DOCDIR)/cap
+
 .PHONY: merged_schemas classes build
 
 merged_schemas:
@@ -16,4 +19,17 @@ classes: merged_schemas
 
 build: merged_schemas classes
 	echo "Release products generated."
+
+# mkdocs generation
+$(DOCDIR_BICAN):
+	mkdir -p $@
+
+$(DOCDIR_CAP):
+	mkdir -p $@
+
+gendoc: $(DOCDIR) $(DOCDIR_BICAN) $(DOCDIR_CAP)
+	cp -rf $(SRC)/docs/* $(DOCDIR) ; \
+	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
+	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR_BICAN) $(BUILD_FOLDER)/BICAN_schema.yaml
+	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR_CAP) $(BUILD_FOLDER)/CAP_schema.yaml
 
