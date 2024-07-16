@@ -9,13 +9,21 @@ schemauto import-json-schema src/cell_annotation_schema/legacy/general_schema.js
 
 https://github.com/INCATools/ontology-access-kit/blob/main/src/oaklib/utilities/subsets/value_set_expander.py
 
-## Merge schemas
+## Generate release artefacts
+
+This command will merge the schemas and generate the Python data model
+```
+make build
+```
+
+The merge and data model generation can be run separately:
+### Merge schemas
 
 ```
 make merged_schemas
 ```
 
-## Generate Python data model
+### Generate Python data model
 
 ```
 make classes
