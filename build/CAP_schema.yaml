@@ -1442,13 +1442,13 @@ classes:
         range: string
   Annotation:
     name: Annotation
-    description: "A collection of fields recording a cell type/class/state annotation\
-      \ on some set of cells, supporting evidence and provenance. As this is intended\
-      \ as a general schema, compulsory fields are kept to a minimum. However, tools\
-      \ using this schema are encouarged to specify a larger set of compulsory fields\
-      \ for publication. \n\nNote: This schema deliberately allows for additional\
-      \ fields in order to support ad hoc user fields, new formal schema extensions\
-      \ and project/tool specific metadata."
+    description: 'A collection of fields recording a cell type/class/state annotation
+      on some set of cells, supporting evidence and provenance. As this is intended
+      as a general schema, compulsory fields are kept to a minimum. However, tools
+      using this schema are encouarged to specify a larger set of compulsory fields
+      for publication.    Note: This schema deliberately allows for additional fields
+      in order to support ad hoc user fields, new formal schema extensions and project/tool
+      specific metadata.'
     from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
     slots:
     - labelset

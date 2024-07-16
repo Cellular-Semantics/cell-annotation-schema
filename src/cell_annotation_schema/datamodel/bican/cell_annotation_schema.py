@@ -1,5 +1,5 @@
 # Auto generated from BICAN_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-07-16T13:39:16
+# Generation date: 2024-07-16T15:53:08
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
@@ -482,10 +482,9 @@ class Annotation(YAMLRoot):
     """
     A collection of fields recording a cell type/class/state annotation on some set of cells, supporting evidence and
     provenance. As this is intended as a general schema, compulsory fields are kept to a minimum. However, tools using
-    this schema are encouarged to specify a larger set of compulsory fields for publication.
-
-    Note: This schema deliberately allows for additional fields in order to support ad hoc user fields, new formal
-    schema extensions and project/tool specific metadata.
+    this schema are encouarged to specify a larger set of compulsory fields for publication. Note: This schema
+    deliberately allows for additional fields in order to support ad hoc user fields, new formal schema extensions and
+    project/tool specific metadata.
     """
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -603,7 +602,7 @@ class BicanAnnotation(Annotation):
     labelset: str = None
     cell_label: str = None
     cell_set_accession: Optional[str] = None
-    parent_cell_set_accession: Optional[Union[dict, "BicanAnnotation"]] = None
+    parent_cell_set_accession: Optional[str] = None
     transferred_annotations: Optional[Union[Union[dict, AnnotationTransfer], List[Union[dict, AnnotationTransfer]]]] = empty_list()
     cells: Optional[Union[Union[dict, Cell], List[Union[dict, Cell]]]] = empty_list()
     negative_marker_gene_evidence: Optional[Union[str, List[str]]] = empty_list()
@@ -632,8 +631,8 @@ class BicanAnnotation(Annotation):
         if self.cell_set_accession is not None and not isinstance(self.cell_set_accession, str):
             self.cell_set_accession = str(self.cell_set_accession)
 
-        if self.parent_cell_set_accession is not None and not isinstance(self.parent_cell_set_accession, BicanAnnotation):
-            self.parent_cell_set_accession = BicanAnnotation(**as_dict(self.parent_cell_set_accession))
+        if self.parent_cell_set_accession is not None and not isinstance(self.parent_cell_set_accession, str):
+            self.parent_cell_set_accession = str(self.parent_cell_set_accession)
 
         if not isinstance(self.transferred_annotations, list):
             self.transferred_annotations = [self.transferred_annotations] if self.transferred_annotations is not None else []
@@ -648,8 +647,8 @@ class BicanAnnotation(Annotation):
         if self.cell_set_accession is not None and not isinstance(self.cell_set_accession, str):
             self.cell_set_accession = str(self.cell_set_accession)
 
-        if self.parent_cell_set_accession is not None and not isinstance(self.parent_cell_set_accession, BicanAnnotation):
-            self.parent_cell_set_accession = BicanAnnotation(**as_dict(self.parent_cell_set_accession))
+        if self.parent_cell_set_accession is not None and not isinstance(self.parent_cell_set_accession, str):
+            self.parent_cell_set_accession = str(self.parent_cell_set_accession)
 
         if not isinstance(self.transferred_annotations, list):
             self.transferred_annotations = [self.transferred_annotations] if self.transferred_annotations is not None else []
