@@ -1,6 +1,6 @@
 ![Schema Validation](https://github.com/Cellular-Semantics/cell-annotation-schema/actions/workflows/schema_validator.yaml/badge.svg?branch=main)
 
-**_DRAFT: LinkML based schema for cell annotations_**
+**_DRAFT: LinkML based [schema](https://cellular-semantics.github.io/cell-annotation-schema/) for cell annotations_**
 
 For the original/working repo visit https://github.com/cellannotation/cell-annotation-schema
 
