@@ -14,7 +14,7 @@ plugins:
       version: 10.9.0
 nav:
   # - Home: home.md
-  - Index: index.md
+  - General Schema: index.md
   - BICAN Schema: bican/index.md
   - CAP Schema: cap/index.md
 site_url: https://Cellular-Semantics.github.io/cell-annotation-schema
