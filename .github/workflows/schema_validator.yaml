@@ -36,12 +36,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          poetry install --no-dev
+          poetry install
 
       - name: Schema validation
         id: schema
         run: |
-          PYTHONPATH=./src:$PYTHONPATH python src/cell_annotation_schema/schema_validator.py
+          PYTHONPATH=./src:$PYTHONPATH poetry run python src/cell_annotation_schema/schema_validator.py
 
       - name: Prepare schema validator comment
         if: ${{ github.event_name == 'pull_request' && failure() }}
