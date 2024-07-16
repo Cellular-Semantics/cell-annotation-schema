@@ -1,4 +1,7 @@
 ![Schema Validation](https://github.com/Cellular-Semantics/cell-annotation-schema/actions/workflows/schema_validator.yaml/badge.svg?branch=main)
+
+**_DRAFT: LinkML based schema for cell annotations_**
+
 # Cell Annotation Schema
 
 A general, open-standard schema for cell annotations and related metadata.
