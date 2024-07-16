@@ -268,16 +268,29 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#generate-release-artefacts" class="md-nav__link">
+    Generate release artefacts
+  </a>
+  
+    <nav class="md-nav" aria-label="Generate release artefacts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#merge-schemas" class="md-nav__link">
     Merge schemas
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#generate-python-data-model" class="md-nav__link">
     Generate Python data model
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -309,10 +322,15 @@
 <h2 id="value-sets-expansion">Value sets expansion</h2>
 <p><code>CellTypeEnum</code> expansion</p>
 <p>https://github.com/INCATools/ontology-access-kit/blob/main/src/oaklib/utilities/subsets/value_set_expander.py</p>
-<h2 id="merge-schemas">Merge schemas</h2>
+<h2 id="generate-release-artefacts">Generate release artefacts</h2>
+<p>This command will merge the schemas and generate the Python data model</p>
+<pre><code>make build
+</code></pre>
+<p>The merge and data model generation can be run separately:</p>
+<h3 id="merge-schemas">Merge schemas</h3>
 <pre><code>make merged_schemas
 </code></pre>
-<h2 id="generate-python-data-model">Generate Python data model</h2>
+<h3 id="generate-python-data-model">Generate Python data model</h3>
 <pre><code>make classes
 </code></pre>
 
