@@ -1,0 +1,61 @@
+name: JSON schema validator
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [main]
+    paths:
+      - 'general_schema.yaml'
+      - 'BICAN_schema.yaml'
+      - 'CAP_schema.yaml'
+      - 'examples/**'
+
+permissions:
+    pull-requests: write
+    contents: read
+
+jobs:
+  json-schema-validation:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.9']
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Schema validation
+        id: schema
+        run: |
+          PYTHONPATH=./src:$PYTHONPATH python src/cas_schema/schema_validator.py
+
+      - name: Prepare schema validator comment
+        if: ${{ github.event_name == 'pull_request' && failure() }}
+        run: |
+          echo "Validation Fails. Check action report for details.  " > comment.md
+          mv comment.md .github/workflows/
+          exit 1
+
+      - name: Prepare success comment
+        if: ${{ github.event_name == 'pull_request' && success() }}
+        run: |
+          echo "Validation Passes.  " > comment.md
+          mv comment.md .github/workflows/
+
+      - name: Post validator comment
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: NejcZdovc/comment-pr@v2.0.0
+        with:
+          single_comment: false
+          file: "comment.md"

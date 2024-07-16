@@ -1,0 +1,1868 @@
+name: General_Cell_Annotation_Open_Standard
+description: General, open-standard schema for cell annotations
+title: General Cell Annotation Open Standard
+id: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+license: GNU GPL v3.0
+prefixes:
+  linkml:
+    prefix_prefix: linkml
+    prefix_reference: https://w3id.org/linkml/
+  xsd:
+    prefix_prefix: xsd
+    prefix_reference: http://www.w3.org/2001/XMLSchema#
+  shex:
+    prefix_prefix: shex
+    prefix_reference: http://www.w3.org/ns/shex#
+  schema:
+    prefix_prefix: schema
+    prefix_reference: http://schema.org/
+  cell_annotation_schema:
+    prefix_prefix: cell_annotation_schema
+    prefix_reference: https://w3id.org/Cellular-Semantics/cell-annotation-schema/
+  CAS:
+    prefix_prefix: CAS
+    prefix_reference: https://w3id.org/Cellular-Semantics/cell-annotation-schema/
+  obo:
+    prefix_prefix: obo
+    prefix_reference: http://purl.obolibrary.org/obo/
+  CL:
+    prefix_prefix: CL
+    prefix_reference: http://purl.obolibrary.org/obo/CL_
+  PCL:
+    prefix_prefix: PCL
+    prefix_reference: http://purl.obolibrary.org/obo/PCL_
+  RO:
+    prefix_prefix: RO
+    prefix_reference: http://purl.obolibrary.org/obo/RO_
+  skos:
+    prefix_prefix: skos
+    prefix_reference: http://www.w3.org/2004/02/skos/core#
+default_curi_maps:
+- semweb_context
+- obo_context
+default_prefix: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/
+default_range: string
+types:
+  string:
+    name: string
+    description: A character string
+    notes:
+    - In RDF serializations, a slot with range of string is treated as a literal or
+      type xsd:string.   If you are authoring schemas in LinkML YAML, the type is
+      referenced with the lower case "string".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    exact_mappings:
+    - schema:Text
+    base: str
+    uri: xsd:string
+  integer:
+    name: integer
+    description: An integer
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "integer".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    exact_mappings:
+    - schema:Integer
+    base: int
+    uri: xsd:integer
+  boolean:
+    name: boolean
+    description: A binary (true or false) value
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "boolean".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    exact_mappings:
+    - schema:Boolean
+    base: Bool
+    uri: xsd:boolean
+    repr: bool
+  float:
+    name: float
+    description: A real number that conforms to the xsd:float specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "float".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    exact_mappings:
+    - schema:Float
+    base: float
+    uri: xsd:float
+  double:
+    name: double
+    description: A real number that conforms to the xsd:double specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "double".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    close_mappings:
+    - schema:Float
+    base: float
+    uri: xsd:double
+  decimal:
+    name: decimal
+    description: A real number with arbitrary precision that conforms to the xsd:decimal
+      specification
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "decimal".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    broad_mappings:
+    - schema:Number
+    base: Decimal
+    uri: xsd:decimal
+  time:
+    name: time
+    description: A time object represents a (local) time of day, independent of any
+      particular day
+    notes:
+    - URI is dateTime because OWL reasoners do not work with straight date or time
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "time".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    exact_mappings:
+    - schema:Time
+    base: XSDTime
+    uri: xsd:time
+    repr: str
+  date:
+    name: date
+    description: a date (year, month and day) in an idealized calendar
+    notes:
+    - URI is dateTime because OWL reasoners don't work with straight date or time
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "date".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    exact_mappings:
+    - schema:Date
+    base: XSDDate
+    uri: xsd:date
+    repr: str
+  datetime:
+    name: datetime
+    description: The combination of a date and time
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "datetime".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    exact_mappings:
+    - schema:DateTime
+    base: XSDDateTime
+    uri: xsd:dateTime
+    repr: str
+  date_or_datetime:
+    name: date_or_datetime
+    description: Either a date or a datetime
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "date_or_datetime".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: str
+    uri: linkml:DateOrDatetime
+    repr: str
+  uriorcurie:
+    name: uriorcurie
+    description: a URI or a CURIE
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "uriorcurie".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: URIorCURIE
+    uri: xsd:anyURI
+    repr: str
+  curie:
+    name: curie
+    conforms_to: https://www.w3.org/TR/curie/
+    description: a compact URI
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "curie".
+    comments:
+    - in RDF serializations this MUST be expanded to a URI
+    - in non-RDF serializations MAY be serialized as the compact representation
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: Curie
+    uri: xsd:string
+    repr: str
+  uri:
+    name: uri
+    conforms_to: https://www.ietf.org/rfc/rfc3987.txt
+    description: a complete URI
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "uri".
+    comments:
+    - in RDF serializations a slot with range of uri is treated as a literal or type
+      xsd:anyURI unless it is an identifier or a reference to an identifier, in which
+      case it is translated directly to a node
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    close_mappings:
+    - schema:URL
+    base: URI
+    uri: xsd:anyURI
+    repr: str
+  ncname:
+    name: ncname
+    description: Prefix part of CURIE
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "ncname".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: NCName
+    uri: xsd:string
+    repr: str
+  objectidentifier:
+    name: objectidentifier
+    description: A URI or CURIE that represents an object in the model.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "objectidentifier".
+    comments:
+    - Used for inheritance and type checking
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: ElementIdentifier
+    uri: shex:iri
+    repr: str
+  nodeidentifier:
+    name: nodeidentifier
+    description: A URI, CURIE or BNODE that represents a node in a model.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "nodeidentifier".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: NodeIdentifier
+    uri: shex:nonLiteral
+    repr: str
+  jsonpointer:
+    name: jsonpointer
+    conforms_to: https://datatracker.ietf.org/doc/html/rfc6901
+    description: A string encoding a JSON Pointer. The value of the string MUST conform
+      to JSON Point syntax and SHOULD dereference to a valid object within the current
+      instance document when encoded in tree form.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "jsonpointer".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: str
+    uri: xsd:string
+    repr: str
+  jsonpath:
+    name: jsonpath
+    conforms_to: https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html
+    description: A string encoding a JSON Path. The value of the string MUST conform
+      to JSON Point syntax and SHOULD dereference to zero or more valid objects within
+      the current instance document when encoded in tree form.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "jsonpath".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: str
+    uri: xsd:string
+    repr: str
+  sparqlpath:
+    name: sparqlpath
+    conforms_to: https://www.w3.org/TR/sparql11-query/#propertypaths
+    description: A string encoding a SPARQL Property Path. The value of the string
+      MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects
+      within the current instance document when encoded as RDF.
+    notes:
+    - If you are authoring schemas in LinkML YAML, the type is referenced with the
+      lower case "sparqlpath".
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    base: str
+    uri: xsd:string
+    repr: str
+enums:
+  review_options:
+    name: review_options
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    permissible_values:
+      Agree:
+        text: Agree
+      Disagree:
+        text: Disagree
+  annotation_method_options:
+    name: annotation_method_options
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    permissible_values:
+      algorithmic:
+        text: algorithmic
+      manual:
+        text: manual
+      both:
+        text: both
+  CellTypeEnum:
+    name: CellTypeEnum
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    reachable_from:
+      source_ontology: obo:cl
+      source_nodes:
+      - CL:0000000
+      relationship_types:
+      - rdfs:subClassOf
+      include_self: true
+slots:
+  cell_set_accession:
+    name: cell_set_accession
+    description: An identifier that can be used to consistently refer to the set of
+      cells being annotated, even if the cell_label changes.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Bican_Annotation
+  parent_cell_set_accession:
+    name: parent_cell_set_accession
+    description: A list of accessions of cell sets that subsume this cell set. This
+      can be used to compose hierarchies of annotated cell sets, built from a fixed
+      set of clusters.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: RO:0015003
+    domain_of:
+    - Bican_Annotation
+    range: String
+  transferred_annotations:
+    name: transferred_annotations
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Bican_Annotation
+    range: AnnotationTransfer
+    multivalued: true
+  cells:
+    name: cells
+    description: By convention this is only used for annotation transfer labelsets.  It
+      MUST not be combined with the 'cell_ids' field.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Bican_Annotation
+    range: Cell
+    multivalued: true
+  negative_marker_gene_evidence:
+    name: negative_marker_gene_evidence
+    description: Gene names explicitly used as evidence, which MUST be in the matrix
+      of the AnnData/Seurat file
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Bican_Annotation
+    multivalued: true
+  rank:
+    name: rank
+    description: A number indicating relative granularity with 0 being the most specific.  Use
+      this where a single dataset has multiple keys that are used consistently to
+      record annotations and different levels of granularity.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Bican_Labelset
+    range: integer
+  transferred_cell_label:
+    name: transferred_cell_label
+    description: Transferred cell label
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - AnnotationTransfer
+  source_taxonomy:
+    name: source_taxonomy
+    description: PURL of source taxonomy
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - AnnotationTransfer
+    range: uriorcurie
+  source_node_accession:
+    name: source_node_accession
+    description: accession of node that label was transferred from
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - AnnotationTransfer
+  algorithm_name:
+    name: algorithm_name
+    description: Name of algorithm used to transfer annotation
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - AnnotationTransfer
+    - AutomatedAnnotation
+  comment:
+    name: comment
+    description: Free text comment on annotation transfer
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: IAO:0000115
+    domain_of:
+    - AnnotationTransfer
+  cell_id:
+    name: cell_id
+    description: Identifier for a single cell.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Cell
+    required: true
+  confidence:
+    name: confidence
+    description: Normalised confidence score
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Cell
+    range: float
+  author_categories:
+    name: author_categories
+    description: Categories of authorship for the annotation
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Cell
+    range: string
+  datestamp:
+    name: datestamp
+    description: Time and date review was last edited.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Review
+    required: true
+  reviewer:
+    name: reviewer
+    description: Review Author
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Review
+  review:
+    name: review
+    description: Reviewer's verdict on the annotation.  Must be 'Agree' or 'Disagree'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Review
+    range: review_options
+  explanation:
+    name: explanation
+    description: Free-text review of annotation. This is required if the verdict is
+      disagree and should include reasons for disagreement.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: IAO:0000115
+    domain_of:
+    - Review
+  name:
+    name: name
+    description: name of annotation key
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: rdfs:label
+    domain_of:
+    - Labelset
+    - Bican_Labelset
+    required: true
+  description:
+    name: description
+    description: The description of the dataset. e.g. 'A total of 15 retinal ganglion
+      cell clusters were identified from over 99K retinal ganglion cell nuclei in
+      the current atlas. Utilizing previous characterized markers from macaque, 5
+      clusters can be annotated.'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: IAO:0000115
+    domain_of:
+    - Labelset
+    - Taxonomy
+    - Bican_Taxonomy
+    - Bican_Labelset
+  annotation_method:
+    name: annotation_method
+    description: 'The method used for creating the cell annotations. This MUST be
+      one of the following strings: `''algorithmic''`, `''manual''`, or `''both''`'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Labelset
+    - Bican_Labelset
+    range: annotation_method_options
+  automated_annotation:
+    name: automated_annotation
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Labelset
+    - Bican_Labelset
+    range: AutomatedAnnotation
+  algorithm_version:
+    name: algorithm_version
+    description: The version of the algorithm used (if applicable). It MUST be a string
+      of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]',
+      but other versioning systems are permitted (based on the algorithm's versioning).
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - AutomatedAnnotation
+    required: true
+  algorithm_repo_url:
+    name: algorithm_repo_url
+    description: This field denotes the URL of the version control repository associated
+      with the algorithm used (if applicable). It MUST be a string of a valid URL.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - AutomatedAnnotation
+    required: true
+  reference_location:
+    name: reference_location
+    description: "This field denotes a valid URL of the annotated dataset that was\
+      \ the source of annotated reference data. \nThis MUST be a string of a valid\
+      \ URL. The concept of a 'reference' specifically refers to 'annotation transfer'\
+      \ algorithms, whereby a 'reference' dataset is used to transfer cell annotations\
+      \ to the 'query' dataset."
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - AutomatedAnnotation
+  labelset:
+    name: labelset
+    description: "The unique name of the set of cell annotations. \nEach cell within\
+      \ the AnnData/Seurat file MUST be associated with a 'cell_label' value in order\
+      \ for this to be a valid 'cellannotation_setname'."
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: CAS:has_labelset
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    range: string
+    required: true
+  cell_label:
+    name: cell_label
+    description: "This denotes any free-text term which the author uses to annotate\
+      \ cells, i.e. the preferred cell label name used by the author. Abbreviations\
+      \ are exceptable in this field; refer to 'cell_fullname' for related details.\
+      \ \nCertain key words have been reserved:\n- `'doublets'` is reserved for encoding\
+      \ cells defined as doublets based on some computational analysis\n- `'junk'`\
+      \ is reserved for encoding cells that failed sequencing for some reason, e.g.\
+      \ few genes detected, high fraction of mitochondrial reads\n- `'unknown'` is\
+      \ explicitly reserved for unknown or 'author does not know'\n- `'NA'` is incomplete,\
+      \ i.e. no cell annotation was provided"
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: rdfs:label
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    required: true
+  cell_fullname:
+    name: cell_fullname
+    description: "This MUST be the full-length name for the biological entity listed\
+      \ in `cell_label` by the author. (If the value in `cell_label` is the full-length\
+      \ term, this field will contain the same value.) \nNOTE: any reserved word used\
+      \ in the field 'cell_label' MUST match the value of this field. \n\nEXAMPLE\
+      \ 1: Given the matching terms 'LC' and 'luminal cell' used to annotate the same\
+      \ cell(s), then users could use either terms as values in the field 'cell_label'.\
+      \ However, the abbreviation 'LC' CANNOT be provided in the field 'cell_fullname'.\
+      \ \n\nEXAMPLE 2: Either the abbreviation 'AC' or the full-length term intended\
+      \ by the author 'GABAergic amacrine cell' MAY be placed in the field 'cell_label',\
+      \ but as full-length term naming this biological entity, 'GABAergic amacrine\
+      \ cell' MUST be placed in the field 'cell_fullname'."
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: skos:preflabel
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+  cell_ontology_term_id:
+    name: cell_ontology_term_id
+    description: 'This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl)
+      or from some ontology that extends it by classifying cell types under terms
+      from the Cell Ontology
+
+      e.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl)
+      or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).
+
+
+      NOTE: The closest available ontology term matching the value within the field
+      ''cell_label'' (at the time of publication) MUST be used.
+
+      For example, if the value of ''cell_label'' is ''relay interneuron'', but this
+      entity does not yet exist in the ontology, users must choose the closest available
+      term in the CL ontology. In this case, it''s the broader term ''interneuron''
+      i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: RO:0002473
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    range: CellTypeEnum
+  cell_ontology_term:
+    name: cell_ontology_term
+    description: This MUST be the human-readable name assigned to the value of 'cell_ontology_term_id'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+  cell_ids:
+    name: cell_ids
+    description: Cell barcode sequences/UUIDs used to uniquely identify the cells
+      within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs MUST
+      be included in the AnnData/Seurat matrix.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slot_uri: CAS:has_cellid
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    multivalued: true
+  rationale:
+    name: rationale
+    description: "The free-text rationale which users provide as justification/evidence\
+      \ for their cell annotations. \nResearchers are encouraged to use this field\
+      \ to cite relevant publications in-line using standard academic citations of\
+      \ the form `(Zheng et al., 2020)` This human-readable free-text MUST be encoded\
+      \ as a single string.\nAll references cited SHOULD be listed using DOIs under\
+      \ rationale_dois. There MUST be a 2000-character limit."
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+  rationale_dois:
+    name: rationale_dois
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    multivalued: true
+  marker_gene_evidence:
+    name: marker_gene_evidence
+    description: Gene names explicitly used as evidence, which MUST be in the matrix
+      of the AnnData/Seurat file
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    multivalued: true
+  synonyms:
+    name: synonyms
+    description: List of synonyms
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    multivalued: true
+  reviews:
+    name: reviews
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+    range: Review
+    multivalued: true
+  author_annotation_fields:
+    name: author_annotation_fields
+    description: A dictionary of author defined key value pairs annotating the cell
+      set. The names and aims of these fields MUST not clash with official annotation
+      fields.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Annotation
+    - Bican_Annotation
+  matrix_file_id:
+    name: matrix_file_id
+    description: A resolvable ID for a cell by gene matrix file in the form namespace:accession,
+      e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json
+      for supported namespaces.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  title:
+    name: title
+    description: The title of the dataset. This MUST be less than or equal to 200
+      characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+    required: true
+  cellannotation_schema_version:
+    name: cellannotation_schema_version
+    description: 'The schema version, the cell annotation open standard. Current version
+      MUST follow 0.1.0
+
+      This versioning MUST follow the format `''[MAJOR].[MINOR].[PATCH]''` as defined
+      by Semantic Versioning 2.0.0, https://semver.org/'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  cellannotation_timestamp:
+    name: cellannotation_timestamp
+    description: The timestamp of all cell annotations published (per dataset). This
+      MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  cellannotation_version:
+    name: cellannotation_version
+    description: The version for all cell annotations published (per dataset). This
+      MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'`
+      as defined by Semantic Versioning 2.0.0, https://semver.org/
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  cellannotation_url:
+    name: cellannotation_url
+    description: A persistent URL of all cell annotations published (per dataset).
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  author_list:
+    name: author_list
+    description: This field stores a list of users who are included in the project
+      as collaborators, regardless of their specific role. An example list; '['John
+      Smith', 'Cody Miller', 'Sarah Jones']'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  author_name:
+    name: author_name
+    description: Primary author's name. This MUST be a string in the format `[FIRST
+      NAME] [LAST NAME]`
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+    required: true
+  author_contact:
+    name: author_contact
+    description: Primary author's contact. This MUST be a valid email address of the
+      author
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  orcid:
+    name: orcid
+    description: Primary author's orcid. This MUST be a valid ORCID for the author
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Taxonomy
+    - Bican_Taxonomy
+  labelsets:
+    name: labelsets
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Bican_Taxonomy
+    - Taxonomy
+    range: Labelset
+    required: true
+    multivalued: true
+    inlined: true
+  annotations:
+    name: annotations
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    domain_of:
+    - Bican_Taxonomy
+    - Taxonomy
+    range: Annotation
+    required: true
+    multivalued: true
+    inlined: true
+  id:
+    name: id
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    identifier: true
+    range: uriorcurie
+classes:
+  Bican_Taxonomy:
+    name: Bican_Taxonomy
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    is_a: Taxonomy
+    slot_usage:
+      labelsets:
+        name: labelsets
+        domain_of:
+        - Taxonomy
+        range: Bican_Labelset
+      annotations:
+        name: annotations
+        domain_of:
+        - Taxonomy
+        range: Bican_Annotation
+    attributes:
+      matrix_file_id:
+        name: matrix_file_id
+        description: A resolvable ID for a cell by gene matrix file in the form namespace:accession,
+          e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see
+          https://github.com/cellannotation/cell-annotation-schema/registry/registry.json
+          for supported namespaces.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: matrix_file_id
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      title:
+        name: title
+        description: The title of the dataset. This MUST be less than or equal to
+          200 characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: title
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+        required: true
+      description:
+        name: description
+        description: The description of the dataset. e.g. 'A total of 15 retinal ganglion
+          cell clusters were identified from over 99K retinal ganglion cell nuclei
+          in the current atlas. Utilizing previous characterized markers from macaque,
+          5 clusters can be annotated.'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: IAO:0000115
+        alias: description
+        owner: Bican_Taxonomy
+        domain_of:
+        - Labelset
+        - Taxonomy
+        - Bican_Taxonomy
+        - Bican_Labelset
+        range: string
+      cellannotation_schema_version:
+        name: cellannotation_schema_version
+        description: 'The schema version, the cell annotation open standard. Current
+          version MUST follow 0.1.0
+
+          This versioning MUST follow the format `''[MAJOR].[MINOR].[PATCH]''` as
+          defined by Semantic Versioning 2.0.0, https://semver.org/'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_schema_version
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      cellannotation_timestamp:
+        name: cellannotation_timestamp
+        description: The timestamp of all cell annotations published (per dataset).
+          This MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_timestamp
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      cellannotation_version:
+        name: cellannotation_version
+        description: The version for all cell annotations published (per dataset).
+          This MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'`
+          as defined by Semantic Versioning 2.0.0, https://semver.org/
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_version
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      cellannotation_url:
+        name: cellannotation_url
+        description: A persistent URL of all cell annotations published (per dataset).
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_url
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      author_list:
+        name: author_list
+        description: This field stores a list of users who are included in the project
+          as collaborators, regardless of their specific role. An example list; '['John
+          Smith', 'Cody Miller', 'Sarah Jones']'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_list
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      author_name:
+        name: author_name
+        description: Primary author's name. This MUST be a string in the format `[FIRST
+          NAME] [LAST NAME]`
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_name
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+        required: true
+      author_contact:
+        name: author_contact
+        description: Primary author's contact. This MUST be a valid email address
+          of the author
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_contact
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      orcid:
+        name: orcid
+        description: Primary author's orcid. This MUST be a valid ORCID for the author
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: orcid
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      labelsets:
+        name: labelsets
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: labelsets
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        range: Bican_Labelset
+        required: true
+        multivalued: true
+        inlined: true
+      annotations:
+        name: annotations
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: annotations
+        owner: Bican_Taxonomy
+        domain_of:
+        - Taxonomy
+        range: Bican_Annotation
+        required: true
+        multivalued: true
+        inlined: true
+    tree_root: true
+  Bican_Labelset:
+    name: Bican_Labelset
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    is_a: Labelset
+    slots:
+    - rank
+    attributes:
+      rank:
+        name: rank
+        description: A number indicating relative granularity with 0 being the most
+          specific.  Use this where a single dataset has multiple keys that are used
+          consistently to record annotations and different levels of granularity.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: rank
+        owner: Bican_Labelset
+        domain_of:
+        - Bican_Labelset
+        range: integer
+      name:
+        name: name
+        description: name of annotation key
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: rdfs:label
+        alias: name
+        owner: Bican_Labelset
+        domain_of:
+        - Labelset
+        - Bican_Labelset
+        range: string
+        required: true
+      description:
+        name: description
+        description: The description of the dataset. e.g. 'A total of 15 retinal ganglion
+          cell clusters were identified from over 99K retinal ganglion cell nuclei
+          in the current atlas. Utilizing previous characterized markers from macaque,
+          5 clusters can be annotated.'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: IAO:0000115
+        alias: description
+        owner: Bican_Labelset
+        domain_of:
+        - Labelset
+        - Taxonomy
+        - Bican_Taxonomy
+        - Bican_Labelset
+        range: string
+      annotation_method:
+        name: annotation_method
+        description: 'The method used for creating the cell annotations. This MUST
+          be one of the following strings: `''algorithmic''`, `''manual''`, or `''both''`'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: annotation_method
+        owner: Bican_Labelset
+        domain_of:
+        - Labelset
+        - Bican_Labelset
+        range: annotation_method_options
+      automated_annotation:
+        name: automated_annotation
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: automated_annotation
+        owner: Bican_Labelset
+        domain_of:
+        - Labelset
+        - Bican_Labelset
+        range: AutomatedAnnotation
+  Bican_Annotation:
+    name: Bican_Annotation
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    is_a: Annotation
+    slots:
+    - cell_set_accession
+    - parent_cell_set_accession
+    - transferred_annotations
+    - cells
+    - negative_marker_gene_evidence
+    attributes:
+      cell_set_accession:
+        name: cell_set_accession
+        description: An identifier that can be used to consistently refer to the set
+          of cells being annotated, even if the cell_label changes.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cell_set_accession
+        owner: Bican_Annotation
+        domain_of:
+        - Bican_Annotation
+        range: string
+      parent_cell_set_accession:
+        name: parent_cell_set_accession
+        description: A list of accessions of cell sets that subsume this cell set.
+          This can be used to compose hierarchies of annotated cell sets, built from
+          a fixed set of clusters.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: RO:0015003
+        alias: parent_cell_set_accession
+        owner: Bican_Annotation
+        domain_of:
+        - Bican_Annotation
+        range: String
+      transferred_annotations:
+        name: transferred_annotations
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: transferred_annotations
+        owner: Bican_Annotation
+        domain_of:
+        - Bican_Annotation
+        range: AnnotationTransfer
+        multivalued: true
+      cells:
+        name: cells
+        description: By convention this is only used for annotation transfer labelsets.  It
+          MUST not be combined with the 'cell_ids' field.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cells
+        owner: Bican_Annotation
+        domain_of:
+        - Bican_Annotation
+        range: Cell
+        multivalued: true
+      negative_marker_gene_evidence:
+        name: negative_marker_gene_evidence
+        description: Gene names explicitly used as evidence, which MUST be in the
+          matrix of the AnnData/Seurat file
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: negative_marker_gene_evidence
+        owner: Bican_Annotation
+        domain_of:
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      labelset:
+        name: labelset
+        description: "The unique name of the set of cell annotations. \nEach cell\
+          \ within the AnnData/Seurat file MUST be associated with a 'cell_label'\
+          \ value in order for this to be a valid 'cellannotation_setname'."
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: CAS:has_labelset
+        alias: labelset
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        required: true
+      cell_label:
+        name: cell_label
+        description: "This denotes any free-text term which the author uses to annotate\
+          \ cells, i.e. the preferred cell label name used by the author. Abbreviations\
+          \ are exceptable in this field; refer to 'cell_fullname' for related details.\
+          \ \nCertain key words have been reserved:\n- `'doublets'` is reserved for\
+          \ encoding cells defined as doublets based on some computational analysis\n\
+          - `'junk'` is reserved for encoding cells that failed sequencing for some\
+          \ reason, e.g. few genes detected, high fraction of mitochondrial reads\n\
+          - `'unknown'` is explicitly reserved for unknown or 'author does not know'\n\
+          - `'NA'` is incomplete, i.e. no cell annotation was provided"
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: rdfs:label
+        alias: cell_label
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        required: true
+      cell_fullname:
+        name: cell_fullname
+        description: "This MUST be the full-length name for the biological entity\
+          \ listed in `cell_label` by the author. (If the value in `cell_label` is\
+          \ the full-length term, this field will contain the same value.) \nNOTE:\
+          \ any reserved word used in the field 'cell_label' MUST match the value\
+          \ of this field. \n\nEXAMPLE 1: Given the matching terms 'LC' and 'luminal\
+          \ cell' used to annotate the same cell(s), then users could use either terms\
+          \ as values in the field 'cell_label'. However, the abbreviation 'LC' CANNOT\
+          \ be provided in the field 'cell_fullname'. \n\nEXAMPLE 2: Either the abbreviation\
+          \ 'AC' or the full-length term intended by the author 'GABAergic amacrine\
+          \ cell' MAY be placed in the field 'cell_label', but as full-length term\
+          \ naming this biological entity, 'GABAergic amacrine cell' MUST be placed\
+          \ in the field 'cell_fullname'."
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: skos:preflabel
+        alias: cell_fullname
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+      cell_ontology_term_id:
+        name: cell_ontology_term_id
+        description: 'This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl)
+          or from some ontology that extends it by classifying cell types under terms
+          from the Cell Ontology
+
+          e.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl)
+          or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).
+
+
+          NOTE: The closest available ontology term matching the value within the
+          field ''cell_label'' (at the time of publication) MUST be used.
+
+          For example, if the value of ''cell_label'' is ''relay interneuron'', but
+          this entity does not yet exist in the ontology, users must choose the closest
+          available term in the CL ontology. In this case, it''s the broader term
+          ''interneuron'' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: RO:0002473
+        alias: cell_ontology_term_id
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: CellTypeEnum
+      cell_ontology_term:
+        name: cell_ontology_term
+        description: This MUST be the human-readable name assigned to the value of
+          'cell_ontology_term_id'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cell_ontology_term
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+      cell_ids:
+        name: cell_ids
+        description: Cell barcode sequences/UUIDs used to uniquely identify the cells
+          within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs
+          MUST be included in the AnnData/Seurat matrix.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: CAS:has_cellid
+        alias: cell_ids
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      rationale:
+        name: rationale
+        description: "The free-text rationale which users provide as justification/evidence\
+          \ for their cell annotations. \nResearchers are encouraged to use this field\
+          \ to cite relevant publications in-line using standard academic citations\
+          \ of the form `(Zheng et al., 2020)` This human-readable free-text MUST\
+          \ be encoded as a single string.\nAll references cited SHOULD be listed\
+          \ using DOIs under rationale_dois. There MUST be a 2000-character limit."
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: rationale
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+      rationale_dois:
+        name: rationale_dois
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: rationale_dois
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      marker_gene_evidence:
+        name: marker_gene_evidence
+        description: Gene names explicitly used as evidence, which MUST be in the
+          matrix of the AnnData/Seurat file
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: marker_gene_evidence
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      synonyms:
+        name: synonyms
+        description: List of synonyms
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: synonyms
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      reviews:
+        name: reviews
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: reviews
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: Review
+        multivalued: true
+      author_annotation_fields:
+        name: author_annotation_fields
+        description: A dictionary of author defined key value pairs annotating the
+          cell set. The names and aims of these fields MUST not clash with official
+          annotation fields.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_annotation_fields
+        owner: Bican_Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+  AnnotationTransfer:
+    name: AnnotationTransfer
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slots:
+    - transferred_cell_label
+    - source_taxonomy
+    - source_node_accession
+    - algorithm_name
+    - comment
+    attributes:
+      transferred_cell_label:
+        name: transferred_cell_label
+        description: Transferred cell label
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: transferred_cell_label
+        owner: AnnotationTransfer
+        domain_of:
+        - AnnotationTransfer
+        range: string
+      source_taxonomy:
+        name: source_taxonomy
+        description: PURL of source taxonomy
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: source_taxonomy
+        owner: AnnotationTransfer
+        domain_of:
+        - AnnotationTransfer
+        range: uriorcurie
+      source_node_accession:
+        name: source_node_accession
+        description: accession of node that label was transferred from
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: source_node_accession
+        owner: AnnotationTransfer
+        domain_of:
+        - AnnotationTransfer
+        range: string
+      algorithm_name:
+        name: algorithm_name
+        description: Name of algorithm used to transfer annotation
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: algorithm_name
+        owner: AnnotationTransfer
+        domain_of:
+        - AnnotationTransfer
+        - AutomatedAnnotation
+        range: string
+      comment:
+        name: comment
+        description: Free text comment on annotation transfer
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: IAO:0000115
+        alias: comment
+        owner: AnnotationTransfer
+        domain_of:
+        - AnnotationTransfer
+        range: string
+  Cell:
+    name: Cell
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slots:
+    - cell_id
+    - confidence
+    - author_categories
+    attributes:
+      cell_id:
+        name: cell_id
+        description: Identifier for a single cell.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cell_id
+        owner: Cell
+        domain_of:
+        - Cell
+        range: string
+        required: true
+      confidence:
+        name: confidence
+        description: Normalised confidence score
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: confidence
+        owner: Cell
+        domain_of:
+        - Cell
+        range: float
+      author_categories:
+        name: author_categories
+        description: Categories of authorship for the annotation
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_categories
+        owner: Cell
+        domain_of:
+        - Cell
+        range: string
+  Review:
+    name: Review
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slots:
+    - datestamp
+    - reviewer
+    - review
+    - explanation
+    attributes:
+      datestamp:
+        name: datestamp
+        description: Time and date review was last edited.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: datestamp
+        owner: Review
+        domain_of:
+        - Review
+        range: string
+        required: true
+      reviewer:
+        name: reviewer
+        description: Review Author
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: reviewer
+        owner: Review
+        domain_of:
+        - Review
+        range: string
+      review:
+        name: review
+        description: Reviewer's verdict on the annotation.  Must be 'Agree' or 'Disagree'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: review
+        owner: Review
+        domain_of:
+        - Review
+        range: review_options
+      explanation:
+        name: explanation
+        description: Free-text review of annotation. This is required if the verdict
+          is disagree and should include reasons for disagreement.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: IAO:0000115
+        alias: explanation
+        owner: Review
+        domain_of:
+        - Review
+        range: string
+  Labelset:
+    name: Labelset
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slots:
+    - name
+    - description
+    - annotation_method
+    - automated_annotation
+    attributes:
+      name:
+        name: name
+        description: name of annotation key
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: rdfs:label
+        alias: name
+        owner: Labelset
+        domain_of:
+        - Labelset
+        - Bican_Labelset
+        range: string
+        required: true
+      description:
+        name: description
+        description: The description of the dataset. e.g. 'A total of 15 retinal ganglion
+          cell clusters were identified from over 99K retinal ganglion cell nuclei
+          in the current atlas. Utilizing previous characterized markers from macaque,
+          5 clusters can be annotated.'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: IAO:0000115
+        alias: description
+        owner: Labelset
+        domain_of:
+        - Labelset
+        - Taxonomy
+        - Bican_Taxonomy
+        - Bican_Labelset
+        range: string
+      annotation_method:
+        name: annotation_method
+        description: 'The method used for creating the cell annotations. This MUST
+          be one of the following strings: `''algorithmic''`, `''manual''`, or `''both''`'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: annotation_method
+        owner: Labelset
+        domain_of:
+        - Labelset
+        - Bican_Labelset
+        range: annotation_method_options
+      automated_annotation:
+        name: automated_annotation
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: automated_annotation
+        owner: Labelset
+        domain_of:
+        - Labelset
+        - Bican_Labelset
+        range: AutomatedAnnotation
+  AutomatedAnnotation:
+    name: AutomatedAnnotation
+    description: 'A set of fields for recording the details of the automated annotation
+      algorithm used.
+
+      (Common ''automated annotation methods'' would include PopV, Azimuth, CellTypist,
+      scArches, etc.)'
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slots:
+    - algorithm_name
+    - algorithm_version
+    - algorithm_repo_url
+    - reference_location
+    attributes:
+      algorithm_name:
+        name: algorithm_name
+        description: Name of algorithm used to transfer annotation
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: algorithm_name
+        owner: AutomatedAnnotation
+        domain_of:
+        - AnnotationTransfer
+        - AutomatedAnnotation
+        range: string
+      algorithm_version:
+        name: algorithm_version
+        description: The version of the algorithm used (if applicable). It MUST be
+          a string of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]',
+          but other versioning systems are permitted (based on the algorithm's versioning).
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: algorithm_version
+        owner: AutomatedAnnotation
+        domain_of:
+        - AutomatedAnnotation
+        range: string
+        required: true
+      algorithm_repo_url:
+        name: algorithm_repo_url
+        description: This field denotes the URL of the version control repository
+          associated with the algorithm used (if applicable). It MUST be a string
+          of a valid URL.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: algorithm_repo_url
+        owner: AutomatedAnnotation
+        domain_of:
+        - AutomatedAnnotation
+        range: string
+        required: true
+      reference_location:
+        name: reference_location
+        description: "This field denotes a valid URL of the annotated dataset that\
+          \ was the source of annotated reference data. \nThis MUST be a string of\
+          \ a valid URL. The concept of a 'reference' specifically refers to 'annotation\
+          \ transfer' algorithms, whereby a 'reference' dataset is used to transfer\
+          \ cell annotations to the 'query' dataset."
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: reference_location
+        owner: AutomatedAnnotation
+        domain_of:
+        - AutomatedAnnotation
+        range: string
+  Annotation:
+    name: Annotation
+    description: "A collection of fields recording a cell type/class/state annotation\
+      \ on some set of cells, supporting evidence and provenance. As this is intended\
+      \ as a general schema, compulsory fields are kept to a minimum. However, tools\
+      \ using this schema are encouarged to specify a larger set of compulsory fields\
+      \ for publication. \n\nNote: This schema deliberately allows for additional\
+      \ fields in order to support ad hoc user fields, new formal schema extensions\
+      \ and project/tool specific metadata."
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slots:
+    - labelset
+    - cell_label
+    - cell_fullname
+    - cell_ontology_term_id
+    - cell_ontology_term
+    - cell_ids
+    - rationale
+    - rationale_dois
+    - marker_gene_evidence
+    - synonyms
+    - reviews
+    - author_annotation_fields
+    attributes:
+      labelset:
+        name: labelset
+        description: "The unique name of the set of cell annotations. \nEach cell\
+          \ within the AnnData/Seurat file MUST be associated with a 'cell_label'\
+          \ value in order for this to be a valid 'cellannotation_setname'."
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: CAS:has_labelset
+        alias: labelset
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        required: true
+      cell_label:
+        name: cell_label
+        description: "This denotes any free-text term which the author uses to annotate\
+          \ cells, i.e. the preferred cell label name used by the author. Abbreviations\
+          \ are exceptable in this field; refer to 'cell_fullname' for related details.\
+          \ \nCertain key words have been reserved:\n- `'doublets'` is reserved for\
+          \ encoding cells defined as doublets based on some computational analysis\n\
+          - `'junk'` is reserved for encoding cells that failed sequencing for some\
+          \ reason, e.g. few genes detected, high fraction of mitochondrial reads\n\
+          - `'unknown'` is explicitly reserved for unknown or 'author does not know'\n\
+          - `'NA'` is incomplete, i.e. no cell annotation was provided"
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: rdfs:label
+        alias: cell_label
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        required: true
+      cell_fullname:
+        name: cell_fullname
+        description: "This MUST be the full-length name for the biological entity\
+          \ listed in `cell_label` by the author. (If the value in `cell_label` is\
+          \ the full-length term, this field will contain the same value.) \nNOTE:\
+          \ any reserved word used in the field 'cell_label' MUST match the value\
+          \ of this field. \n\nEXAMPLE 1: Given the matching terms 'LC' and 'luminal\
+          \ cell' used to annotate the same cell(s), then users could use either terms\
+          \ as values in the field 'cell_label'. However, the abbreviation 'LC' CANNOT\
+          \ be provided in the field 'cell_fullname'. \n\nEXAMPLE 2: Either the abbreviation\
+          \ 'AC' or the full-length term intended by the author 'GABAergic amacrine\
+          \ cell' MAY be placed in the field 'cell_label', but as full-length term\
+          \ naming this biological entity, 'GABAergic amacrine cell' MUST be placed\
+          \ in the field 'cell_fullname'."
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: skos:preflabel
+        alias: cell_fullname
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+      cell_ontology_term_id:
+        name: cell_ontology_term_id
+        description: 'This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl)
+          or from some ontology that extends it by classifying cell types under terms
+          from the Cell Ontology
+
+          e.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl)
+          or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).
+
+
+          NOTE: The closest available ontology term matching the value within the
+          field ''cell_label'' (at the time of publication) MUST be used.
+
+          For example, if the value of ''cell_label'' is ''relay interneuron'', but
+          this entity does not yet exist in the ontology, users must choose the closest
+          available term in the CL ontology. In this case, it''s the broader term
+          ''interneuron'' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: RO:0002473
+        alias: cell_ontology_term_id
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: CellTypeEnum
+      cell_ontology_term:
+        name: cell_ontology_term
+        description: This MUST be the human-readable name assigned to the value of
+          'cell_ontology_term_id'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cell_ontology_term
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+      cell_ids:
+        name: cell_ids
+        description: Cell barcode sequences/UUIDs used to uniquely identify the cells
+          within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs
+          MUST be included in the AnnData/Seurat matrix.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: CAS:has_cellid
+        alias: cell_ids
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      rationale:
+        name: rationale
+        description: "The free-text rationale which users provide as justification/evidence\
+          \ for their cell annotations. \nResearchers are encouraged to use this field\
+          \ to cite relevant publications in-line using standard academic citations\
+          \ of the form `(Zheng et al., 2020)` This human-readable free-text MUST\
+          \ be encoded as a single string.\nAll references cited SHOULD be listed\
+          \ using DOIs under rationale_dois. There MUST be a 2000-character limit."
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: rationale
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+      rationale_dois:
+        name: rationale_dois
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: rationale_dois
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      marker_gene_evidence:
+        name: marker_gene_evidence
+        description: Gene names explicitly used as evidence, which MUST be in the
+          matrix of the AnnData/Seurat file
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: marker_gene_evidence
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      synonyms:
+        name: synonyms
+        description: List of synonyms
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: synonyms
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+        multivalued: true
+      reviews:
+        name: reviews
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: reviews
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: Review
+        multivalued: true
+      author_annotation_fields:
+        name: author_annotation_fields
+        description: A dictionary of author defined key value pairs annotating the
+          cell set. The names and aims of these fields MUST not clash with official
+          annotation fields.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_annotation_fields
+        owner: Annotation
+        domain_of:
+        - Annotation
+        - Bican_Annotation
+        range: string
+  Taxonomy:
+    name: Taxonomy
+    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    slots:
+    - matrix_file_id
+    - title
+    - description
+    - cellannotation_schema_version
+    - cellannotation_timestamp
+    - cellannotation_version
+    - cellannotation_url
+    - author_list
+    - author_name
+    - author_contact
+    - orcid
+    - labelsets
+    - annotations
+    attributes:
+      matrix_file_id:
+        name: matrix_file_id
+        description: A resolvable ID for a cell by gene matrix file in the form namespace:accession,
+          e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see
+          https://github.com/cellannotation/cell-annotation-schema/registry/registry.json
+          for supported namespaces.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: matrix_file_id
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      title:
+        name: title
+        description: The title of the dataset. This MUST be less than or equal to
+          200 characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: title
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+        required: true
+      description:
+        name: description
+        description: The description of the dataset. e.g. 'A total of 15 retinal ganglion
+          cell clusters were identified from over 99K retinal ganglion cell nuclei
+          in the current atlas. Utilizing previous characterized markers from macaque,
+          5 clusters can be annotated.'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        slot_uri: IAO:0000115
+        alias: description
+        owner: Taxonomy
+        domain_of:
+        - Labelset
+        - Taxonomy
+        - Bican_Taxonomy
+        - Bican_Labelset
+        range: string
+      cellannotation_schema_version:
+        name: cellannotation_schema_version
+        description: 'The schema version, the cell annotation open standard. Current
+          version MUST follow 0.1.0
+
+          This versioning MUST follow the format `''[MAJOR].[MINOR].[PATCH]''` as
+          defined by Semantic Versioning 2.0.0, https://semver.org/'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_schema_version
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      cellannotation_timestamp:
+        name: cellannotation_timestamp
+        description: The timestamp of all cell annotations published (per dataset).
+          This MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_timestamp
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      cellannotation_version:
+        name: cellannotation_version
+        description: The version for all cell annotations published (per dataset).
+          This MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'`
+          as defined by Semantic Versioning 2.0.0, https://semver.org/
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_version
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      cellannotation_url:
+        name: cellannotation_url
+        description: A persistent URL of all cell annotations published (per dataset).
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: cellannotation_url
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      author_list:
+        name: author_list
+        description: This field stores a list of users who are included in the project
+          as collaborators, regardless of their specific role. An example list; '['John
+          Smith', 'Cody Miller', 'Sarah Jones']'
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_list
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      author_name:
+        name: author_name
+        description: Primary author's name. This MUST be a string in the format `[FIRST
+          NAME] [LAST NAME]`
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_name
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+        required: true
+      author_contact:
+        name: author_contact
+        description: Primary author's contact. This MUST be a valid email address
+          of the author
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: author_contact
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      orcid:
+        name: orcid
+        description: Primary author's orcid. This MUST be a valid ORCID for the author
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: orcid
+        owner: Taxonomy
+        domain_of:
+        - Taxonomy
+        - Bican_Taxonomy
+        range: string
+      labelsets:
+        name: labelsets
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: labelsets
+        owner: Taxonomy
+        domain_of:
+        - Bican_Taxonomy
+        - Taxonomy
+        range: Labelset
+        required: true
+        multivalued: true
+        inlined: true
+      annotations:
+        name: annotations
+        from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+        alias: annotations
+        owner: Taxonomy
+        domain_of:
+        - Bican_Taxonomy
+        - Taxonomy
+        range: Annotation
+        required: true
+        multivalued: true
+        inlined: true
+source_file: src/cell_annotation_schema/schema/BICAN/BICAN_schema.yaml

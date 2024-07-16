@@ -1,0 +1,27 @@
+{
+  "template": "https://github.com/linkml/linkml-project-cookiecutter",
+  "commit": "b2da87eb7835bfec748a76823d098cac85e8363a",
+  "checkout": null,
+  "context": {
+    "cookiecutter": {
+      "project_name": "cell-annotation-schema",
+      "__project_slug": "cell_annotation_schema",
+      "github_org": "Cellular-Semantics",
+      "__source_path": "src/cell_annotation_schema/schema/cell_annotation_schema.yaml",
+      "project_description": "General, open-standard schema for cell annotations",
+      "full_name": "Huseyin Kir",
+      "email": "huseyin_kir@yahoo.com",
+      "__author": "Huseyin Kir <huseyin_kir@yahoo.com>",
+      "license": "GNU GPL v3.0",
+      "main_schema_class": "Taxonomy",
+      "create_python_classes": "Yes",
+      "use_schemasheets": "Yes",
+      "google_sheet_id": "1wVoaiFg47aT9YWNeRfTZ8tYHN8s8PAuDx5i2HUcDpvQ",
+      "google_sheet_tabs": "personinfo enums",
+      "__google_sheet_module": "personinfo_enums",
+      "github_token_for_pypi_deployment": "PYPI_PASSWORD",
+      "_template": "https://github.com/linkml/linkml-project-cookiecutter"
+    }
+  },
+  "directory": null
+}
