@@ -1,8 +1,8 @@
 # Auto generated from general_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-07-16T15:58:25
+# Generation date: 2024-07-23T16:17:25
 # Schema: General_Cell_Annotation_Open_Standard
 #
-# id: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+# id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 # description: General, open-standard schema for cell annotations
 # license: GNU GPL v3.0
 
@@ -32,12 +32,12 @@ version = None
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-CAS = CurieNamespace('CAS', 'https://w3id.org/Cellular-Semantics/cell-annotation-schema/')
+CAS = CurieNamespace('CAS', 'https://cellular-semantics.sanger.ac.uk/ontology/CAS/')
 CL = CurieNamespace('CL', 'http://purl.obolibrary.org/obo/CL_')
 IAO = CurieNamespace('IAO', 'http://purl.obolibrary.org/obo/IAO_')
 PCL = CurieNamespace('PCL', 'http://purl.obolibrary.org/obo/PCL_')
 RO = CurieNamespace('RO', 'http://purl.obolibrary.org/obo/RO_')
-CELL_ANNOTATION_SCHEMA = CurieNamespace('cell_annotation_schema', 'https://w3id.org/Cellular-Semantics/cell-annotation-schema/')
+CELL_ANNOTATION_SCHEMA = CurieNamespace('cell_annotation_schema', 'https://cellular-semantics.sanger.ac.uk/ontology/CAS/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 OBO = CurieNamespace('obo', 'http://purl.obolibrary.org/obo/')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')
@@ -166,8 +166,8 @@ class Annotation(YAMLRoot):
     """
     _inherited_slots: ClassVar[List[str]] = []
 
-    class_class_uri: ClassVar[URIRef] = CELL_ANNOTATION_SCHEMA["Annotation"]
-    class_class_curie: ClassVar[str] = "cell_annotation_schema:Annotation"
+    class_class_uri: ClassVar[URIRef] = PCL["0010001"]
+    class_class_curie: ClassVar[str] = "PCL:0010001"
     class_name: ClassVar[str] = "Annotation"
     class_model_uri: ClassVar[URIRef] = CELL_ANNOTATION_SCHEMA.Annotation
 

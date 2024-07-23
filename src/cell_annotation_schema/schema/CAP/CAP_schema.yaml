@@ -1,5 +1,5 @@
 ---
-id: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 name: General_Cell_Annotation_Open_Standard
 title: General Cell Annotation Open Standard
 description: |-
@@ -10,6 +10,10 @@ imports:
 - linkml:types
 - ../cell_annotation_schema
 
+prefixes:
+  cell_annotation_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS/
+  CAS: https://cellular-semantics.sanger.ac.uk/ontology/CAS/
+default_prefix: cell_annotation_schema
 default_range: string
 default_curi_maps:
   - semweb_context
@@ -62,6 +66,7 @@ slots:
 classes:
   Cap_Taxonomy:
     is_a: Taxonomy
+    class_uri: CAS:Taxonomy
     tree_root: true
     slots:
       - cap_publication_title
@@ -83,6 +88,7 @@ classes:
         required: true
   Cap_Annotation:
     is_a: Annotation
+    class_uri: PCL:0010001
     slots:
     - canonical_marker_genes
     - cell_ontology_exists

@@ -9,8 +9,8 @@ DOCDIR_CAP = $(DOCDIR)/cap
 
 merged_schemas:
 	cp $(SCHEMA_FOLDER)/cell_annotation_schema.yaml $(BUILD_FOLDER)/general_schema.yaml
-	gen-linkml $(SCHEMA_FOLDER)/BICAN/BICAN_schema.yaml --output $(BUILD_FOLDER)/BICAN_schema.yaml --mergeimports --format yaml
-	gen-linkml $(SCHEMA_FOLDER)/CAP/CAP_schema.yaml --output $(BUILD_FOLDER)/CAP_schema.yaml --mergeimports --format yaml
+	gen-linkml $(SCHEMA_FOLDER)/BICAN/BICAN_schema.yaml --output $(BUILD_FOLDER)/BICAN_schema.yaml --mergeimports --format yaml --no-materialize-attributes
+	gen-linkml $(SCHEMA_FOLDER)/CAP/CAP_schema.yaml --output $(BUILD_FOLDER)/CAP_schema.yaml --mergeimports --format yaml --no-materialize-attributes
 
 classes: merged_schemas
 	gen-python $(BUILD_FOLDER)/general_schema.yaml --no-slots > $(PYMODEL)/cell_annotation_schema.py
