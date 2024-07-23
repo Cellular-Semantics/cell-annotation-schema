@@ -206,7 +206,7 @@
 </a>
 <h1 id="class-automatedannotation">Class: AutomatedAnnotation</h1>
 <p><em>A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)</em></p>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AutomatedAnnotation">https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AutomatedAnnotation</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/AutomatedAnnotation">cell_annotation_schema:AutomatedAnnotation</a></p>
 <div class="mermaid"> classDiagram
     class AutomatedAnnotation
     click AutomatedAnnotation href "../AutomatedAnnotation"
@@ -232,30 +232,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../algorithm_name/">algorithm_name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Name of algorithm used to transfer annotation</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../algorithm_version/">algorithm_version</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>The version of the algorithm used (if applicable)</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../algorithm_repo_url/">algorithm_repo_url</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>This field denotes the URL of the version control repository associated with ...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../reference_location/">reference_location</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>This field denotes a valid URL of the annotated dataset that was the source o...</td>
-<td>direct</td>
-</tr>
 <tr>
 <td><a href="../algorithm_name/">algorithm_name</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
@@ -310,7 +286,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -323,11 +299,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AutomatedAnnotation</td>
+<td>cell_annotation_schema:AutomatedAnnotation</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AutomatedAnnotation</td>
+<td>cell_annotation_schema:AutomatedAnnotation</td>
 </tr>
 </tbody>
 </table>
@@ -339,59 +315,12 @@
 description: A set of fields for recording the details of the automated annotation
   algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth,
   CellTypist, scArches, etc.)
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 slots:
 - algorithm_name
 - algorithm_version
 - algorithm_repo_url
 - reference_location
-attributes:
-  algorithm_name:
-    name: algorithm_name
-    description: Name of algorithm used to transfer annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: algorithm_name
-    owner: AutomatedAnnotation
-    domain_of:
-    - AnnotationTransfer
-    - AutomatedAnnotation
-    range: string
-  algorithm_version:
-    name: algorithm_version
-    description: The version of the algorithm used (if applicable). It MUST be a string
-      of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]',
-      but other versioning systems are permitted (based on the algorithm's versioning).
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: algorithm_version
-    owner: AutomatedAnnotation
-    domain_of:
-    - AutomatedAnnotation
-    range: string
-    required: true
-  algorithm_repo_url:
-    name: algorithm_repo_url
-    description: This field denotes the URL of the version control repository associated
-      with the algorithm used (if applicable). It MUST be a string of a valid URL.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: algorithm_repo_url
-    owner: AutomatedAnnotation
-    domain_of:
-    - AutomatedAnnotation
-    range: string
-    required: true
-  reference_location:
-    name: reference_location
-    description: "This field denotes a valid URL of the annotated dataset that was\
-      \ the source of annotated reference data. \nThis MUST be a string of a valid\
-      \ URL. The concept of a 'reference' specifically refers to 'annotation transfer'\
-      \ algorithms, whereby a 'reference' dataset is used to transfer cell annotations\
-      \ to the 'query' dataset."
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: reference_location
-    owner: AutomatedAnnotation
-    domain_of:
-    - AutomatedAnnotation
-    range: string
 
 </code></pre>
 </details>
@@ -401,12 +330,13 @@ attributes:
 description: A set of fields for recording the details of the automated annotation
   algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth,
   CellTypist, scArches, etc.)
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 attributes:
   algorithm_name:
     name: algorithm_name
     description: Name of algorithm used to transfer annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: algorithm_name
     owner: AutomatedAnnotation
     domain_of:
@@ -418,7 +348,8 @@ attributes:
     description: The version of the algorithm used (if applicable). It MUST be a string
       of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]',
       but other versioning systems are permitted (based on the algorithm's versioning).
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: algorithm_version
     owner: AutomatedAnnotation
     domain_of:
@@ -429,7 +360,8 @@ attributes:
     name: algorithm_repo_url
     description: This field denotes the URL of the version control repository associated
       with the algorithm used (if applicable). It MUST be a string of a valid URL.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: algorithm_repo_url
     owner: AutomatedAnnotation
     domain_of:
@@ -443,7 +375,8 @@ attributes:
       \ URL. The concept of a 'reference' specifically refers to 'annotation transfer'\
       \ algorithms, whereby a 'reference' dataset is used to transfer cell annotations\
       \ to the 'query' dataset."
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: reference_location
     owner: AutomatedAnnotation
     domain_of:

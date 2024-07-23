@@ -341,7 +341,7 @@
 <h1 id="slot-labelset">Slot: labelset</h1>
 <p>_The unique name of the set of cell annotations. _</p>
 <p><em>Each cell within the AnnData/Seurat file MUST be associated with a 'cell_label' value in order for this to be a valid 'cellannotation_setname'.</em></p>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/cell-annotation-schema/has_labelset">CAS:has_labelset</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_labelset">CAS:has_labelset</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -378,7 +378,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -395,7 +395,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:labelset</td>
+<td>cell_annotation_schema:labelset</td>
 </tr>
 </tbody>
 </table>
@@ -406,13 +406,12 @@
 description: &quot;The unique name of the set of cell annotations. \nEach cell within the\
   \ AnnData/Seurat file MUST be associated with a 'cell_label' value in order for\
   \ this to be a valid 'cellannotation_setname'.&quot;
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 rank: 1000
 slot_uri: CAS:has_labelset
 alias: labelset
 domain_of:
 - Annotation
-- Bican_Annotation
 range: string
 required: true
 

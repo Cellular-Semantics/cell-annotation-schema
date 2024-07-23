@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-cell">Class: Cell</h1>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Cell">https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Cell</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Cell">cell_annotation_schema:Cell</a></p>
 <div class="mermaid"> classDiagram
     class Cell
     click Cell href "../Cell"
@@ -229,24 +229,6 @@
 </tr>
 </thead>
 <tbody>
-<tr>
-<td><a href="../cell_id/">cell_id</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>Identifier for a single cell</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../confidence/">confidence</a></td>
-<td>0..1 <br/> <a href="../Float/">Float</a></td>
-<td>Normalised confidence score</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../author_categories/">author_categories</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Categories of authorship for the annotation</td>
-<td>direct</td>
-</tr>
 <tr>
 <td><a href="../cell_id/">cell_id</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
@@ -289,7 +271,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -302,11 +284,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Cell</td>
+<td>cell_annotation_schema:Cell</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Cell</td>
+<td>cell_annotation_schema:Cell</td>
 </tr>
 </tbody>
 </table>
@@ -315,52 +297,24 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Cell
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 slots:
 - cell_id
 - confidence
 - author_categories
-attributes:
-  cell_id:
-    name: cell_id
-    description: Identifier for a single cell.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: cell_id
-    owner: Cell
-    domain_of:
-    - Cell
-    range: string
-    required: true
-  confidence:
-    name: confidence
-    description: Normalised confidence score
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: confidence
-    owner: Cell
-    domain_of:
-    - Cell
-    range: float
-  author_categories:
-    name: author_categories
-    description: Categories of authorship for the annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: author_categories
-    owner: Cell
-    domain_of:
-    - Cell
-    range: string
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Cell
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 attributes:
   cell_id:
     name: cell_id
     description: Identifier for a single cell.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: cell_id
     owner: Cell
     domain_of:
@@ -370,7 +324,8 @@ attributes:
   confidence:
     name: confidence
     description: Normalised confidence score
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: confidence
     owner: Cell
     domain_of:
@@ -379,7 +334,8 @@ attributes:
   author_categories:
     name: author_categories
     description: Categories of authorship for the annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: author_categories
     owner: Cell
     domain_of:

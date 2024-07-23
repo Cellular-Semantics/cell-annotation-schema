@@ -377,7 +377,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -394,7 +394,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:cell_fullname</td>
+<td>cell_annotation_schema:cell_fullname</td>
 </tr>
 </tbody>
 </table>
@@ -413,13 +413,12 @@ description: &quot;This MUST be the full-length name for the biological entity l
   \ 'GABAergic amacrine cell' MAY be placed in the field 'cell_label', but as full-length\
   \ term naming this biological entity, 'GABAergic amacrine cell' MUST be placed in\
   \ the field 'cell_fullname'.&quot;
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 rank: 1000
 slot_uri: skos:preflabel
 alias: cell_fullname
 domain_of:
 - Annotation
-- Bican_Annotation
 range: string
 
 </code></pre>

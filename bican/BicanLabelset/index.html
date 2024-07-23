@@ -210,7 +210,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-bicanlabelset">Class: BicanLabelset</h1>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:BicanLabelset">https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:BicanLabelset</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset">CAS:Labelset</a></p>
 <div class="mermaid"> classDiagram
     class BicanLabelset
     click BicanLabelset href "../BicanLabelset"
@@ -268,34 +268,28 @@
 <td>direct</td>
 </tr>
 <tr>
-<td><a href="../rank/">rank</a></td>
-<td>0..1 <br/> <a href="../Integer/">Integer</a></td>
-<td>A number indicating relative granularity with 0 being the most specific</td>
-<td>direct</td>
-</tr>
-<tr>
 <td><a href="../name/">name</a></td>
 <td>1 <br/> <a href="../String/">String</a></td>
 <td>name of annotation key</td>
-<td>direct</td>
+<td><a href="../Labelset/">Labelset</a></td>
 </tr>
 <tr>
 <td><a href="../description/">description</a></td>
 <td>0..1 <br/> <a href="../String/">String</a></td>
 <td>The description of the dataset</td>
-<td>direct</td>
+<td><a href="../Labelset/">Labelset</a></td>
 </tr>
 <tr>
 <td><a href="../annotation_method/">annotation_method</a></td>
 <td>0..1 <br/> <a href="../AnnotationMethodOptions/">AnnotationMethodOptions</a></td>
 <td>The method used for creating the cell annotations</td>
-<td>direct</td>
+<td><a href="../Labelset/">Labelset</a></td>
 </tr>
 <tr>
 <td><a href="../automated_annotation/">automated_annotation</a></td>
 <td>0..1 <br/> <a href="../AutomatedAnnotation/">AutomatedAnnotation</a></td>
 <td></td>
-<td>direct</td>
+<td><a href="../Labelset/">Labelset</a></td>
 </tr>
 </tbody>
 </table>
@@ -321,7 +315,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -334,11 +328,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:BicanLabelset</td>
+<td>CAS:Labelset</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:BicanLabelset</td>
+<td>cell_annotation_schema:BicanLabelset</td>
 </tr>
 </tbody>
 </table>
@@ -347,77 +341,18 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Bican_Labelset
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 is_a: Labelset
 slots:
 - rank
-attributes:
-  rank:
-    name: rank
-    description: A number indicating relative granularity with 0 being the most specific.  Use
-      this where a single dataset has multiple keys that are used consistently to
-      record annotations and different levels of granularity.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: rank
-    owner: Bican_Labelset
-    domain_of:
-    - Bican_Labelset
-    range: integer
-  name:
-    name: name
-    description: name of annotation key
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    slot_uri: rdfs:label
-    alias: name
-    owner: Bican_Labelset
-    domain_of:
-    - Labelset
-    - Bican_Labelset
-    range: string
-    required: true
-  description:
-    name: description
-    description: The description of the dataset. e.g. 'A total of 15 retinal ganglion
-      cell clusters were identified from over 99K retinal ganglion cell nuclei in
-      the current atlas. Utilizing previous characterized markers from macaque, 5
-      clusters can be annotated.'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    slot_uri: IAO:0000115
-    alias: description
-    owner: Bican_Labelset
-    domain_of:
-    - Labelset
-    - Taxonomy
-    - Bican_Taxonomy
-    - Bican_Labelset
-    range: string
-  annotation_method:
-    name: annotation_method
-    description: 'The method used for creating the cell annotations. This MUST be
-      one of the following strings: `''algorithmic''`, `''manual''`, or `''both''`'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: annotation_method
-    owner: Bican_Labelset
-    domain_of:
-    - Labelset
-    - Bican_Labelset
-    range: annotation_method_options
-  automated_annotation:
-    name: automated_annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: automated_annotation
-    owner: Bican_Labelset
-    domain_of:
-    - Labelset
-    - Bican_Labelset
-    range: AutomatedAnnotation
+class_uri: CAS:Labelset
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Bican_Labelset
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 is_a: Labelset
 attributes:
   rank:
@@ -425,7 +360,8 @@ attributes:
     description: A number indicating relative granularity with 0 being the most specific.  Use
       this where a single dataset has multiple keys that are used consistently to
       record annotations and different levels of granularity.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: rank
     owner: Bican_Labelset
     domain_of:
@@ -434,13 +370,13 @@ attributes:
   name:
     name: name
     description: name of annotation key
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     slot_uri: rdfs:label
     alias: name
     owner: Bican_Labelset
     domain_of:
     - Labelset
-    - Bican_Labelset
     range: string
     required: true
   description:
@@ -449,36 +385,36 @@ attributes:
       cell clusters were identified from over 99K retinal ganglion cell nuclei in
       the current atlas. Utilizing previous characterized markers from macaque, 5
       clusters can be annotated.'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     slot_uri: IAO:0000115
     alias: description
     owner: Bican_Labelset
     domain_of:
     - Labelset
     - Taxonomy
-    - Bican_Taxonomy
-    - Bican_Labelset
     range: string
   annotation_method:
     name: annotation_method
     description: 'The method used for creating the cell annotations. This MUST be
       one of the following strings: `''algorithmic''`, `''manual''`, or `''both''`'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: annotation_method
     owner: Bican_Labelset
     domain_of:
     - Labelset
-    - Bican_Labelset
     range: annotation_method_options
   automated_annotation:
     name: automated_annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: automated_annotation
     owner: Bican_Labelset
     domain_of:
     - Labelset
-    - Bican_Labelset
     range: AutomatedAnnotation
+class_uri: CAS:Labelset
 
 </code></pre>
 </details>

@@ -206,7 +206,7 @@
 </a>
 <h1 id="class-annotation">Class: Annotation</h1>
 <p><em>A collection of fields recording a cell type/class/state annotation on some set of cells, supporting evidence and provenance. As this is intended as a general schema, compulsory fields are kept to a minimum. However, tools using this schema are encouarged to specify a larger set of compulsory fields for publication.    Note: This schema deliberately allows for additional fields in order to support ad hoc user fields, new formal schema extensions and project/tool specific metadata.</em></p>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/cell-annotation-schema/Annotation">cell_annotation_schema:Annotation</a></p>
+<p>URI: <a href="http://purl.obolibrary.org/obo/PCL_0010001">PCL:0010001</a></p>
 <div class="mermaid"> classDiagram
     class Annotation
     click Annotation href "../Annotation"
@@ -358,7 +358,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -371,7 +371,7 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>cell_annotation_schema:Annotation</td>
+<td>PCL:0010001</td>
 </tr>
 <tr>
 <td>native</td>
@@ -390,7 +390,7 @@ description: 'A collection of fields recording a cell type/class/state annotatio
   this schema are encouarged to specify a larger set of compulsory fields for publication.    Note:
   This schema deliberately allows for additional fields in order to support ad hoc
   user fields, new formal schema extensions and project/tool specific metadata.'
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 slots:
 - labelset
 - cell_label
@@ -404,6 +404,7 @@ slots:
 - synonyms
 - reviews
 - author_annotation_fields
+class_uri: PCL:0010001
 
 </code></pre>
 </details>
@@ -416,14 +417,14 @@ description: 'A collection of fields recording a cell type/class/state annotatio
   this schema are encouarged to specify a larger set of compulsory fields for publication.    Note:
   This schema deliberately allows for additional fields in order to support ad hoc
   user fields, new formal schema extensions and project/tool specific metadata.'
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 attributes:
   labelset:
     name: labelset
     description: "The unique name of the set of cell annotations. \nEach cell within\
       \ the AnnData/Seurat file MUST be associated with a 'cell_label' value in order\
       \ for this to be a valid 'cellannotation_setname'."
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     slot_uri: CAS:has_labelset
     alias: labelset
@@ -443,7 +444,7 @@ attributes:
       \ few genes detected, high fraction of mitochondrial reads\n- `'unknown'` is\
       \ explicitly reserved for unknown or 'author does not know'\n- `'NA'` is incomplete,\
       \ i.e. no cell annotation was provided"
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     slot_uri: rdfs:label
     alias: cell_label
@@ -465,7 +466,7 @@ attributes:
       \ by the author 'GABAergic amacrine cell' MAY be placed in the field 'cell_label',\
       \ but as full-length term naming this biological entity, 'GABAergic amacrine\
       \ cell' MUST be placed in the field 'cell_fullname'."
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     slot_uri: skos:preflabel
     alias: cell_fullname
@@ -490,7 +491,7 @@ attributes:
       entity does not yet exist in the ontology, users must choose the closest available
       term in the CL ontology. In this case, it''s the broader term ''interneuron''
       i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     slot_uri: RO:0002473
     alias: cell_ontology_term_id
@@ -501,7 +502,7 @@ attributes:
   cell_ontology_term:
     name: cell_ontology_term
     description: This MUST be the human-readable name assigned to the value of 'cell_ontology_term_id'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: cell_ontology_term
     owner: Annotation
@@ -513,7 +514,7 @@ attributes:
     description: Cell barcode sequences/UUIDs used to uniquely identify the cells
       within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs MUST
       be included in the AnnData/Seurat matrix.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     slot_uri: CAS:has_cellid
     alias: cell_ids
@@ -530,7 +531,7 @@ attributes:
       \ the form `(Zheng et al., 2020)` This human-readable free-text MUST be encoded\
       \ as a single string.\nAll references cited SHOULD be listed using DOIs under\
       \ rationale_dois. There MUST be a 2000-character limit."
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: rationale
     owner: Annotation
@@ -539,7 +540,7 @@ attributes:
     range: string
   rationale_dois:
     name: rationale_dois
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: rationale_dois
     owner: Annotation
@@ -551,7 +552,7 @@ attributes:
     name: marker_gene_evidence
     description: Gene names explicitly used as evidence, which MUST be in the matrix
       of the AnnData/Seurat file
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: marker_gene_evidence
     owner: Annotation
@@ -562,7 +563,7 @@ attributes:
   synonyms:
     name: synonyms
     description: List of synonyms
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: synonyms
     owner: Annotation
@@ -572,7 +573,7 @@ attributes:
     multivalued: true
   reviews:
     name: reviews
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: reviews
     owner: Annotation
@@ -585,13 +586,14 @@ attributes:
     description: A dictionary of author defined key value pairs annotating the cell
       set. The names and aims of these fields MUST not clash with official annotation
       fields.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: author_annotation_fields
     owner: Annotation
     domain_of:
     - Annotation
     range: string
+class_uri: PCL:0010001
 
 </code></pre>
 </details>

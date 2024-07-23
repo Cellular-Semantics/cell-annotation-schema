@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-annotationtransfer">Class: AnnotationTransfer</h1>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AnnotationTransfer">https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AnnotationTransfer</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationTransfer">cell_annotation_schema:AnnotationTransfer</a></p>
 <div class="mermaid"> classDiagram
     class AnnotationTransfer
     click AnnotationTransfer href "../AnnotationTransfer"
@@ -263,36 +263,6 @@
 <td>Free text comment on annotation transfer</td>
 <td>direct</td>
 </tr>
-<tr>
-<td><a href="../transferred_cell_label/">transferred_cell_label</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Transferred cell label</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../source_taxonomy/">source_taxonomy</a></td>
-<td>0..1 <br/> <a href="../Uriorcurie/">Uriorcurie</a></td>
-<td>PURL of source taxonomy</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../source_node_accession/">source_node_accession</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>accession of node that label was transferred from</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../algorithm_name/">algorithm_name</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Name of algorithm used to transfer annotation</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../comment/">comment</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Free text comment on annotation transfer</td>
-<td>direct</td>
-</tr>
 </tbody>
 </table>
 <h2 id="usages">Usages</h2>
@@ -317,7 +287,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -330,11 +300,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AnnotationTransfer</td>
+<td>cell_annotation_schema:AnnotationTransfer</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:AnnotationTransfer</td>
+<td>cell_annotation_schema:AnnotationTransfer</td>
 </tr>
 </tbody>
 </table>
@@ -343,73 +313,26 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: AnnotationTransfer
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 slots:
 - transferred_cell_label
 - source_taxonomy
 - source_node_accession
 - algorithm_name
 - comment
-attributes:
-  transferred_cell_label:
-    name: transferred_cell_label
-    description: Transferred cell label
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: transferred_cell_label
-    owner: AnnotationTransfer
-    domain_of:
-    - AnnotationTransfer
-    range: string
-  source_taxonomy:
-    name: source_taxonomy
-    description: PURL of source taxonomy
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: source_taxonomy
-    owner: AnnotationTransfer
-    domain_of:
-    - AnnotationTransfer
-    range: uriorcurie
-  source_node_accession:
-    name: source_node_accession
-    description: accession of node that label was transferred from
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: source_node_accession
-    owner: AnnotationTransfer
-    domain_of:
-    - AnnotationTransfer
-    range: string
-  algorithm_name:
-    name: algorithm_name
-    description: Name of algorithm used to transfer annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: algorithm_name
-    owner: AnnotationTransfer
-    domain_of:
-    - AnnotationTransfer
-    - AutomatedAnnotation
-    range: string
-  comment:
-    name: comment
-    description: Free text comment on annotation transfer
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    slot_uri: IAO:0000115
-    alias: comment
-    owner: AnnotationTransfer
-    domain_of:
-    - AnnotationTransfer
-    range: string
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: AnnotationTransfer
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 attributes:
   transferred_cell_label:
     name: transferred_cell_label
     description: Transferred cell label
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: transferred_cell_label
     owner: AnnotationTransfer
     domain_of:
@@ -418,7 +341,8 @@ attributes:
   source_taxonomy:
     name: source_taxonomy
     description: PURL of source taxonomy
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: source_taxonomy
     owner: AnnotationTransfer
     domain_of:
@@ -427,7 +351,8 @@ attributes:
   source_node_accession:
     name: source_node_accession
     description: accession of node that label was transferred from
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: source_node_accession
     owner: AnnotationTransfer
     domain_of:
@@ -436,7 +361,8 @@ attributes:
   algorithm_name:
     name: algorithm_name
     description: Name of algorithm used to transfer annotation
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: algorithm_name
     owner: AnnotationTransfer
     domain_of:
@@ -446,7 +372,8 @@ attributes:
   comment:
     name: comment
     description: Free text comment on annotation transfer
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     slot_uri: IAO:0000115
     alias: comment
     owner: AnnotationTransfer

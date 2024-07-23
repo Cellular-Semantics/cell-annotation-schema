@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-review">Class: Review</h1>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/cell-annotation-schema/Review">cell_annotation_schema:Review</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Review">cell_annotation_schema:Review</a></p>
 <div class="mermaid"> classDiagram
     class Review
     click Review href "../Review"
@@ -286,7 +286,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -312,7 +312,7 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Review
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 slots:
 - datestamp
 - reviewer
@@ -324,12 +324,12 @@ slots:
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Review
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 attributes:
   datestamp:
     name: datestamp
     description: Time and date review was last edited.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: datestamp
     owner: Review
@@ -340,7 +340,7 @@ attributes:
   reviewer:
     name: reviewer
     description: Review Author
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: reviewer
     owner: Review
@@ -350,7 +350,7 @@ attributes:
   review:
     name: review
     description: Reviewer's verdict on the annotation.  Must be 'Agree' or 'Disagree'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: review
     owner: Review
@@ -361,7 +361,7 @@ attributes:
     name: explanation
     description: Free-text review of annotation. This is required if the verdict is
       disagree and should include reasons for disagreement.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     slot_uri: IAO:0000115
     alias: explanation

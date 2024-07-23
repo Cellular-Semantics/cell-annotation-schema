@@ -205,7 +205,7 @@
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
 <h1 id="class-taxonomy">Class: Taxonomy</h1>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Taxonomy">https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Taxonomy</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Taxonomy">cell_annotation_schema:Taxonomy</a></p>
 <div class="mermaid"> classDiagram
     class Taxonomy
     click Taxonomy href "../Taxonomy"
@@ -350,90 +350,12 @@
 <td></td>
 <td>direct</td>
 </tr>
-<tr>
-<td><a href="../matrix_file_id/">matrix_file_id</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A resolvable ID for a cell by gene matrix file in the form namespace:accessio...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../title/">title</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>The title of the dataset</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../description/">description</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The description of the dataset</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../cellannotation_schema_version/">cellannotation_schema_version</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The schema version, the cell annotation open standard</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../cellannotation_timestamp/">cellannotation_timestamp</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The timestamp of all cell annotations published (per dataset)</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../cellannotation_version/">cellannotation_version</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>The version for all cell annotations published (per dataset)</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../cellannotation_url/">cellannotation_url</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>A persistent URL of all cell annotations published (per dataset)</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../author_list/">author_list</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>This field stores a list of users who are included in the project as collabor...</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../author_name/">author_name</a></td>
-<td>1 <br/> <a href="../String/">String</a></td>
-<td>Primary author's name</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../author_contact/">author_contact</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Primary author's contact</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../orcid/">orcid</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
-<td>Primary author's orcid</td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../labelsets/">labelsets</a></td>
-<td>1..* <br/> <a href="../Labelset/">Labelset</a></td>
-<td></td>
-<td>direct</td>
-</tr>
-<tr>
-<td><a href="../annotations/">annotations</a></td>
-<td>1..* <br/> <a href="../Annotation/">Annotation</a></td>
-<td></td>
-<td>direct</td>
-</tr>
 </tbody>
 </table>
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -446,11 +368,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Taxonomy</td>
+<td>cell_annotation_schema:Taxonomy</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:Taxonomy</td>
+<td>cell_annotation_schema:Taxonomy</td>
 </tr>
 </tbody>
 </table>
@@ -459,7 +381,7 @@
 <h3 id="direct">Direct</h3>
 <details>
 <pre><code class="language-yaml">name: Taxonomy
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 slots:
 - matrix_file_id
 - title
@@ -474,192 +396,36 @@ slots:
 - orcid
 - labelsets
 - annotations
-attributes:
-  matrix_file_id:
-    name: matrix_file_id
-    description: A resolvable ID for a cell by gene matrix file in the form namespace:accession,
-      e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json
-      for supported namespaces.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: matrix_file_id
-    owner: Taxonomy
-    domain_of:
-    - Taxonomy
-    - Cap_Taxonomy
-    range: string
-  title:
-    name: title
-    description: The title of the dataset. This MUST be less than or equal to 200
-      characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: title
-    owner: Taxonomy
-    domain_of:
-    - Taxonomy
-    - Cap_Taxonomy
-    range: string
-    required: true
-  description:
-    name: description
-    description: The description of the dataset. e.g. 'A total of 15 retinal ganglion
-      cell clusters were identified from over 99K retinal ganglion cell nuclei in
-      the current atlas. Utilizing previous characterized markers from macaque, 5
-      clusters can be annotated.'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    slot_uri: IAO:0000115
-    alias: description
-    owner: Taxonomy
-    domain_of:
-    - Labelset
-    - Taxonomy
-    - Cap_Taxonomy
-    range: string
-  cellannotation_schema_version:
-    name: cellannotation_schema_version
-    description: 'The schema version, the cell annotation open standard. Current version
-      MUST follow 0.1.0
-
-      This versioning MUST follow the format `''[MAJOR].[MINOR].[PATCH]''` as defined
-      by Semantic Versioning 2.0.0, https://semver.org/'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: cellannotation_schema_version
-    owner: Taxonomy
-    domain_of:
-    - Cap_Taxonomy
-    - Taxonomy
-    range: string
-  cellannotation_timestamp:
-    name: cellannotation_timestamp
-    description: The timestamp of all cell annotations published (per dataset). This
-      MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: cellannotation_timestamp
-    owner: Taxonomy
-    domain_of:
-    - Cap_Taxonomy
-    - Taxonomy
-    range: string
-  cellannotation_version:
-    name: cellannotation_version
-    description: The version for all cell annotations published (per dataset). This
-      MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'`
-      as defined by Semantic Versioning 2.0.0, https://semver.org/
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: cellannotation_version
-    owner: Taxonomy
-    domain_of:
-    - Cap_Taxonomy
-    - Taxonomy
-    range: string
-  cellannotation_url:
-    name: cellannotation_url
-    description: A persistent URL of all cell annotations published (per dataset).
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: cellannotation_url
-    owner: Taxonomy
-    domain_of:
-    - Cap_Taxonomy
-    - Taxonomy
-    range: string
-  author_list:
-    name: author_list
-    description: This field stores a list of users who are included in the project
-      as collaborators, regardless of their specific role. An example list; '['John
-      Smith', 'Cody Miller', 'Sarah Jones']'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: author_list
-    owner: Taxonomy
-    domain_of:
-    - Taxonomy
-    - Cap_Taxonomy
-    range: string
-  author_name:
-    name: author_name
-    description: Primary author's name. This MUST be a string in the format `[FIRST
-      NAME] [LAST NAME]`
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: author_name
-    owner: Taxonomy
-    domain_of:
-    - Taxonomy
-    - Cap_Taxonomy
-    range: string
-    required: true
-  author_contact:
-    name: author_contact
-    description: Primary author's contact. This MUST be a valid email address of the
-      author
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: author_contact
-    owner: Taxonomy
-    domain_of:
-    - Taxonomy
-    - Cap_Taxonomy
-    range: string
-  orcid:
-    name: orcid
-    description: Primary author's orcid. This MUST be a valid ORCID for the author
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: orcid
-    owner: Taxonomy
-    domain_of:
-    - Taxonomy
-    - Cap_Taxonomy
-    range: string
-  labelsets:
-    name: labelsets
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: labelsets
-    owner: Taxonomy
-    domain_of:
-    - Taxonomy
-    - Cap_Taxonomy
-    range: Labelset
-    required: true
-    multivalued: true
-    inlined: true
-  annotations:
-    name: annotations
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
-    alias: annotations
-    owner: Taxonomy
-    domain_of:
-    - Cap_Taxonomy
-    - Taxonomy
-    range: Annotation
-    required: true
-    multivalued: true
-    inlined: true
 
 </code></pre>
 </details>
 <h3 id="induced">Induced</h3>
 <details>
 <pre><code class="language-yaml">name: Taxonomy
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 attributes:
   matrix_file_id:
     name: matrix_file_id
     description: A resolvable ID for a cell by gene matrix file in the form namespace:accession,
       e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json
       for supported namespaces.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: matrix_file_id
     owner: Taxonomy
     domain_of:
     - Taxonomy
-    - Cap_Taxonomy
     range: string
   title:
     name: title
     description: The title of the dataset. This MUST be less than or equal to 200
       characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: title
     owner: Taxonomy
     domain_of:
     - Taxonomy
-    - Cap_Taxonomy
     range: string
     required: true
   description:
@@ -668,14 +434,14 @@ attributes:
       cell clusters were identified from over 99K retinal ganglion cell nuclei in
       the current atlas. Utilizing previous characterized markers from macaque, 5
       clusters can be annotated.'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     slot_uri: IAO:0000115
     alias: description
     owner: Taxonomy
     domain_of:
     - Labelset
     - Taxonomy
-    - Cap_Taxonomy
     range: string
   cellannotation_schema_version:
     name: cellannotation_schema_version
@@ -684,22 +450,22 @@ attributes:
 
       This versioning MUST follow the format `''[MAJOR].[MINOR].[PATCH]''` as defined
       by Semantic Versioning 2.0.0, https://semver.org/'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: cellannotation_schema_version
     owner: Taxonomy
     domain_of:
-    - Cap_Taxonomy
     - Taxonomy
     range: string
   cellannotation_timestamp:
     name: cellannotation_timestamp
     description: The timestamp of all cell annotations published (per dataset). This
       MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: cellannotation_timestamp
     owner: Taxonomy
     domain_of:
-    - Cap_Taxonomy
     - Taxonomy
     range: string
   cellannotation_version:
@@ -707,21 +473,21 @@ attributes:
     description: The version for all cell annotations published (per dataset). This
       MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'`
       as defined by Semantic Versioning 2.0.0, https://semver.org/
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: cellannotation_version
     owner: Taxonomy
     domain_of:
-    - Cap_Taxonomy
     - Taxonomy
     range: string
   cellannotation_url:
     name: cellannotation_url
     description: A persistent URL of all cell annotations published (per dataset).
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: cellannotation_url
     owner: Taxonomy
     domain_of:
-    - Cap_Taxonomy
     - Taxonomy
     range: string
   author_list:
@@ -729,65 +495,65 @@ attributes:
     description: This field stores a list of users who are included in the project
       as collaborators, regardless of their specific role. An example list; '['John
       Smith', 'Cody Miller', 'Sarah Jones']'
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: author_list
     owner: Taxonomy
     domain_of:
     - Taxonomy
-    - Cap_Taxonomy
     range: string
   author_name:
     name: author_name
     description: Primary author's name. This MUST be a string in the format `[FIRST
       NAME] [LAST NAME]`
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: author_name
     owner: Taxonomy
     domain_of:
     - Taxonomy
-    - Cap_Taxonomy
     range: string
     required: true
   author_contact:
     name: author_contact
     description: Primary author's contact. This MUST be a valid email address of the
       author
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: author_contact
     owner: Taxonomy
     domain_of:
     - Taxonomy
-    - Cap_Taxonomy
     range: string
   orcid:
     name: orcid
     description: Primary author's orcid. This MUST be a valid ORCID for the author
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: orcid
     owner: Taxonomy
     domain_of:
     - Taxonomy
-    - Cap_Taxonomy
     range: string
   labelsets:
     name: labelsets
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: labelsets
     owner: Taxonomy
     domain_of:
     - Taxonomy
-    - Cap_Taxonomy
     range: Labelset
     required: true
     multivalued: true
     inlined: true
   annotations:
     name: annotations
-    from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
     alias: annotations
     owner: Taxonomy
     domain_of:
-    - Cap_Taxonomy
     - Taxonomy
     range: Annotation
     required: true

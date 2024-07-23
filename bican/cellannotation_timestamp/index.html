@@ -340,7 +340,7 @@
 
 <h1 id="slot-cellannotation_timestamp">Slot: cellannotation_timestamp</h1>
 <p><em>The timestamp of all cell annotations published (per dataset). This MUST be a string in the format <code>'%yyyy-%mm-%dd %hh:%mm:%ss'</code></em></p>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:cellannotation_timestamp">https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:cellannotation_timestamp</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_timestamp">cell_annotation_schema:cellannotation_timestamp</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -354,12 +354,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../BicanTaxonomy/">BicanTaxonomy</a></td>
+<td><a href="../Taxonomy/">Taxonomy</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Taxonomy/">Taxonomy</a></td>
+<td><a href="../BicanTaxonomy/">BicanTaxonomy</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -372,7 +372,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -385,11 +385,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:cellannotation_timestamp</td>
+<td>cell_annotation_schema:cellannotation_timestamp</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:cellannotation_timestamp</td>
+<td>cell_annotation_schema:cellannotation_timestamp</td>
 </tr>
 </tbody>
 </table>
@@ -399,12 +399,11 @@
 <pre><code class="language-yaml">name: cellannotation_timestamp
 description: The timestamp of all cell annotations published (per dataset). This MUST
   be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 rank: 1000
 alias: cellannotation_timestamp
 domain_of:
 - Taxonomy
-- Bican_Taxonomy
 range: string
 
 </code></pre>

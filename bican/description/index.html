@@ -354,12 +354,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../BicanLabelset/">BicanLabelset</a></td>
+<td><a href="../Labelset/">Labelset</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../BicanTaxonomy/">BicanTaxonomy</a></td>
+<td><a href="../BicanLabelset/">BicanLabelset</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -369,7 +369,7 @@
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Labelset/">Labelset</a></td>
+<td><a href="../BicanTaxonomy/">BicanTaxonomy</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -382,7 +382,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -399,7 +399,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:description</td>
+<td>cell_annotation_schema:description</td>
 </tr>
 </tbody>
 </table>
@@ -411,15 +411,13 @@ description: The description of the dataset. e.g. 'A total of 15 retinal ganglio
   cell clusters were identified from over 99K retinal ganglion cell nuclei in the
   current atlas. Utilizing previous characterized markers from macaque, 5 clusters
   can be annotated.'
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 rank: 1000
 slot_uri: IAO:0000115
 alias: description
 domain_of:
 - Labelset
 - Taxonomy
-- Bican_Taxonomy
-- Bican_Labelset
 range: string
 
 </code></pre>

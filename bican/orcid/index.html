@@ -340,7 +340,7 @@
 
 <h1 id="slot-orcid">Slot: orcid</h1>
 <p><em>Primary author's orcid. This MUST be a valid ORCID for the author</em></p>
-<p>URI: <a href="https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:orcid">https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:orcid</a></p>
+<p>URI: <a href="https://cellular-semantics.sanger.ac.uk/ontology/CAS/orcid">cell_annotation_schema:orcid</a></p>
 <!-- no inheritance hierarchy -->
 
 <h2 id="applicable-classes">Applicable Classes</h2>
@@ -354,12 +354,12 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../BicanTaxonomy/">BicanTaxonomy</a></td>
+<td><a href="../Taxonomy/">Taxonomy</a></td>
 <td></td>
 <td>no</td>
 </tr>
 <tr>
-<td><a href="../Taxonomy/">Taxonomy</a></td>
+<td><a href="../BicanTaxonomy/">BicanTaxonomy</a></td>
 <td></td>
 <td>no</td>
 </tr>
@@ -372,7 +372,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -385,11 +385,11 @@
 <tbody>
 <tr>
 <td>self</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:orcid</td>
+<td>cell_annotation_schema:orcid</td>
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:orcid</td>
+<td>cell_annotation_schema:orcid</td>
 </tr>
 </tbody>
 </table>
@@ -398,12 +398,11 @@
 
 <pre><code class="language-yaml">name: orcid
 description: Primary author's orcid. This MUST be a valid ORCID for the author
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 rank: 1000
 alias: orcid
 domain_of:
 - Taxonomy
-- Bican_Taxonomy
 range: string
 
 </code></pre>

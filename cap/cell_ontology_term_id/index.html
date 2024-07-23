@@ -376,7 +376,7 @@
 <h2 id="identifier-and-mapping-information">Identifier and Mapping Information</h2>
 <h3 id="schema-source">Schema Source</h3>
 <ul>
-<li>from schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard</li>
+<li>from schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS</li>
 </ul>
 <h2 id="mappings">Mappings</h2>
 <table>
@@ -393,7 +393,7 @@
 </tr>
 <tr>
 <td>native</td>
-<td>https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard/:cell_ontology_term_id</td>
+<td>cell_annotation_schema:cell_ontology_term_id</td>
 </tr>
 </tbody>
 </table>
@@ -415,13 +415,12 @@ description: 'This MUST be a term from either the Cell Ontology (https://www.ebi
   For example, if the value of ''cell_label'' is ''relay interneuron'', but this entity
   does not yet exist in the ontology, users must choose the closest available term
   in the CL ontology. In this case, it''s the broader term ''interneuron'' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.'
-from_schema: https://w3id.org/Cellular-Semantics/General-Cell-Annotation-Open-Standard
+from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
 rank: 1000
 slot_uri: RO:0002473
 alias: cell_ontology_term_id
 domain_of:
 - Annotation
-- Cap_Annotation
 range: CellTypeEnum
 
 </code></pre>
