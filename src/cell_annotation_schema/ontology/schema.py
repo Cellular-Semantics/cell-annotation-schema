@@ -34,8 +34,8 @@ DEFAULT_PREFIXES = {
 
 def decorate_linkml_schema(
     schema_obj: Union[dict, SchemaDefinition],
-    ontology_namespace: str,
-    ontology_iri: str,
+    ontology_namespace: Optional[str] = None,
+    ontology_iri: Optional[str] = None,
     labelsets: Optional[List[str]] = None,
     output_path: Optional[str] = None,
 ) -> dict:
@@ -57,63 +57,46 @@ def decorate_linkml_schema(
 
     # schema_obj["id"] = CAS_NAMESPACE
 
-    ontology_namespace = ontology_namespace.upper()
-    # prefixes = DEFAULT_PREFIXES.copy()
-    # prefixes["linkml"] = "https://w3id.org/linkml/"
-    prefixes = schema_obj["prefixes"]
-    prefixes["_base"] = ontology_iri
-    prefixes[ontology_namespace] = ontology_iri
-    labelsets = labelsets or []
-    for labelset in labelsets:
-        prefixes[labelset] = ontology_iri + f"{labelset}#"
+    if ontology_namespace and ontology_iri:
+        # these only required for ontology conversion
+        ontology_namespace = ontology_namespace.upper()
+        # prefixes = DEFAULT_PREFIXES.copy()
+        # prefixes["linkml"] = "https://w3id.org/linkml/"
+        prefixes = schema_obj["prefixes"]
+        prefixes["_base"] = ontology_iri
+        prefixes[ontology_namespace] = ontology_iri
+        labelsets = labelsets or []
+        for labelset in labelsets:
+            prefixes[labelset] = ontology_iri + f"{labelset}#"
+        schema_obj["prefixes"] = prefixes
+        schema_obj["slots"]["id"] = {"identifier": True, "range": "uriorcurie"}
+        schema_obj["classes"]["Labelset"]["slots"] = list(schema_obj["classes"]["Labelset"]["slots"]) + ["id"]
+        schema_obj["classes"]["Taxonomy"]["slots"] = list(schema_obj["classes"]["Taxonomy"]["slots"]) + ["id"]
+        # schema_obj["slots"]["cell_id"]["identifier"] = True   # TODO
+        is_bican = "Bican_Taxonomy" in schema_obj["classes"]
+        is_cap = "Cap_Taxonomy" in schema_obj["classes"]
+        if "cell_set_accession" in schema_obj["slots"]:
+            schema_obj["slots"]["cell_set_accession"]["identifier"] = True
+        if "parent_cell_set_accession" in schema_obj["slots"]:
+            schema_obj["slots"]["parent_cell_set_accession"]["range"] = "Bican_Annotation"
+        if is_bican and "labelset" in schema_obj["slots"]:
+            schema_obj["slots"]["labelset"]["range"] = "Bican_Labelset"
 
-    schema_obj["prefixes"] = prefixes
-    # schema_obj["default_range"] = "string"
-    # schema_obj["default_curi_maps"] = ["semweb_context", "obo_context"]
-    # schema_obj["enums"]["CellTypeEnum"] = {
-    #     "reachable_from": {
-    #         "source_ontology": "obo:cl",
-    #         "source_nodes": ["CL:0000000"],
-    #         "include_self": True,
-    #         "relationship_types": ["rdfs:subClassOf"],
-    #     }
-    # }
-    schema_obj["slots"]["id"] = {"identifier": True, "range": "uriorcurie"}
-    # schema_obj["slots"]["name"]["slot_uri"] = "rdfs:label"
-    # schema_obj["slots"]["description"]["slot_uri"] = "IAO:0000115"
-    # schema_obj["slots"]["cell_label"]["slot_uri"] = "rdfs:label"
-    # schema_obj["slots"]["cell_fullname"]["slot_uri"] = "skos:preflabel"
-    # schema_obj["slots"]["cell_ontology_term_id"]["slot_uri"] = "RO:0002473"
-    # schema_obj["slots"]["cell_ontology_term_id"]["range"] = "CellTypeEnum"
-    # schema_obj["slots"]["cell_ids"]["slot_uri"] = "CAS:has_cellid"
-    if "cell_set_accession" in schema_obj["slots"]:
-        schema_obj["slots"]["cell_set_accession"]["identifier"] = True
-        # if "Bican_Annotation" in schema_obj["classes"] and \
-        #         "attributes" in schema_obj["classes"]["Bican_Annotation"] and \
-        #         "cell_set_accession" in schema_obj["classes"]["Bican_Annotation"]["attributes"]:
-        #     schema_obj["classes"]["Bican_Annotation"]["attributes"]["cell_set_accession"]["identifier"] = True
-    if "parent_cell_set_accession" in schema_obj["slots"]:
-        # schema_obj["slots"]["parent_cell_set_accession"]["slot_uri"] = "RO:0015003"
-        schema_obj["slots"]["parent_cell_set_accession"]["range"] = "Bican_Annotation"  # TODO
-    # schema_obj["slots"]["source_taxonomy"]["range"] = "uriorcurie"
-    # schema_obj["slots"]["comment"]["slot_uri"] = "IAO:0000115"
-    # schema_obj["slots"]["labelset"]["slot_uri"] = "CAS:has_labelset"
-    if "labelset" in schema_obj["slots"]:
-        schema_obj["slots"]["labelset"]["range"] = "Bican_Labelset"   # TODO
-    # schema_obj["slots"]["labelsets"]["inlined"] = True
-    # schema_obj["slots"]["annotations"]["inlined"] = True
-    # schema_obj["slots"]["cell_id"]["identifier"] = True   # TODO
-    schema_obj["classes"]["Labelset"]["slots"] = list(schema_obj["classes"]["Labelset"]["slots"]) + ["id"]
-    schema_obj["classes"]["Taxonomy"]["slots"] = list(schema_obj["classes"]["Taxonomy"]["slots"]) + ["id"]
     # this is a workaround for lack of annotation ids in the base schema
-    taxonomy_slots = list(schema_obj["classes"]["Taxonomy"]["slots"])
-    taxonomy_slots.remove("annotations")
-    schema_obj["classes"]["Taxonomy"]["slots"] = taxonomy_slots
-    bican_annotation_slots = schema_obj["classes"]["Bican_Taxonomy"].get("slots", list())
-    bican_annotation_slots.append("annotations")
-    schema_obj["classes"]["Bican_Taxonomy"]["slots"] = bican_annotation_slots
-
-    # schema_obj["classes"]["Annotation"]["class_uri"] = "PCL:0010001"
+    if "Bican_Taxonomy" in schema_obj["classes"]:
+        taxonomy_slots = list(schema_obj["classes"]["Taxonomy"]["slots"])
+        taxonomy_slots.remove("annotations")
+        schema_obj["classes"]["Taxonomy"]["slots"] = taxonomy_slots
+        bican_annotation_slots = schema_obj["classes"]["Bican_Taxonomy"].get("slots", list())
+        bican_annotation_slots.append("annotations")
+        schema_obj["classes"]["Bican_Taxonomy"]["slots"] = bican_annotation_slots
+    if "Cap_Taxonomy" in schema_obj["classes"]:
+        taxonomy_slots = list(schema_obj["classes"]["Taxonomy"]["slots"])
+        taxonomy_slots.remove("annotations")
+        schema_obj["classes"]["Taxonomy"]["slots"] = taxonomy_slots
+        cap_annotation_slots = schema_obj["classes"]["Cap_Taxonomy"].get("slots", list())
+        cap_annotation_slots.append("annotations")
+        schema_obj["classes"]["Cap_Taxonomy"]["slots"] = cap_annotation_slots
 
     for class_name in schema_obj["classes"]:
         if "attributes" in schema_obj["classes"][class_name]:

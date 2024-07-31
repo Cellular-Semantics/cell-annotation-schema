@@ -21,9 +21,8 @@ class LinkMLDataTestCase(unittest.TestCase):
 
     @classmethod
     def tearDownClass(cls):
-        # if os.path.isfile(TEST_OUTPUT):
-        #     os.remove(TEST_OUTPUT)
-        pass
+        if os.path.isfile(TEST_OUTPUT):
+            os.remove(TEST_OUTPUT)
 
     def test_instantiate_class(self):
         json_data = get_json_from_file(os.path.join(TESTDATA, "AIT_MTG_data_short_no_id.json"))
@@ -32,15 +31,8 @@ class LinkMLDataTestCase(unittest.TestCase):
         self.assertIsNotNone(obj)
         self.assertEqual(obj.title, "MTG")
         self.assertEqual(1, len(obj.annotations))
-
-    def test_instantiate_class_delete_me(self):
-        json_data = get_json_from_file(os.path.join(TESTDATA, "AIT_MTG_data_short.json"))
-        bican_linkml_schema = read_schema("bican")
-        import tests.test_data.rdf.decorated_schema as ds
-        obj = ds.BicanTaxonomy(**json_data)
-        self.assertIsNotNone(obj)
-        self.assertEqual(obj.title, "MTG")
-        self.assertEqual(1, len(obj.annotations))
+        annotation_0 = next(iter(obj.annotations.values()))
+        self.assertEqual("VLMC_1", annotation_0.cell_fullname)
 
     def test_rdf_dump(self):
         data = populate_ids(os.path.join(TESTDATA, "AIT_MTG_data_short.json"), ontology_namespace="MTG",
@@ -75,7 +67,7 @@ class LinkMLDataTestCase(unittest.TestCase):
 
         )
         self.assertIsNotNone(rdf_graph)
-        rdf_graph.serialize(destination="rdf_graph.rdf", format="xml")  # TODO:for debugging
+        # rdf_graph.serialize(destination="rdf_graph.rdf", format="xml")  # TODO:for debugging
         # expected graph (excluding existential restrictions)
         expected_graph = Graph()
         expected_graph.parse(
@@ -84,7 +76,6 @@ class LinkMLDataTestCase(unittest.TestCase):
 
         self.assertTrue(len(rdf_graph) > len(expected_graph))
         for stmt in expected_graph:
-            print(stmt)
             self.assertTrue(stmt in rdf_graph)
 
     # def test_validate(self):

@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import List
 from ruamel.yaml import YAML
 
-from cell_annotation_schema.json_utils import get_json_from_file
+from cell_annotation_schema.file_utils import get_json_from_file
 
 from linkml.validator import validate
 

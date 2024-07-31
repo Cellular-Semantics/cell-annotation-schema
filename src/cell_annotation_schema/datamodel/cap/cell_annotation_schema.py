@@ -1,5 +1,5 @@
-# Auto generated from CAP_schema.yaml by pythongen.py version: 0.0.1
-# Generation date: 2024-07-23T16:17:26
+# Auto generated from None by pythongen.py version: 0.0.1
+# Generation date: 2024-07-31T16:21:54
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -438,7 +438,6 @@ class Taxonomy(YAMLRoot):
     title: str = None
     author_name: str = None
     labelsets: Union[Union[dict, Labelset], List[Union[dict, Labelset]]] = None
-    annotations: Union[Union[dict, Annotation], List[Union[dict, Annotation]]] = None
     matrix_file_id: Optional[str] = None
     description: Optional[str] = None
     cellannotation_schema_version: Optional[str] = None
@@ -463,10 +462,6 @@ class Taxonomy(YAMLRoot):
         if self._is_empty(self.labelsets):
             self.MissingRequiredField("labelsets")
         self._normalize_inlined_as_dict(slot_name="labelsets", slot_type=Labelset, key_name="name", keyed=False)
-
-        if self._is_empty(self.annotations):
-            self.MissingRequiredField("annotations")
-        self._normalize_inlined_as_dict(slot_name="annotations", slot_type=Annotation, key_name="labelset", keyed=False)
 
         if self.matrix_file_id is not None and not isinstance(self.matrix_file_id, str):
             self.matrix_file_id = str(self.matrix_file_id)
@@ -595,4 +590,170 @@ class CellTypeEnum(EnumDefinitionImpl):
     )
 
 # Slots
+class slots:
+    pass
 
+slots.canonical_marker_genes = Slot(uri=CELL_ANNOTATION_SCHEMA.canonical_marker_genes, name="canonical_marker_genes", curie=CELL_ANNOTATION_SCHEMA.curie('canonical_marker_genes'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.canonical_marker_genes, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.cell_ontology_exists = Slot(uri=CELL_ANNOTATION_SCHEMA.cell_ontology_exists, name="cell_ontology_exists", curie=CELL_ANNOTATION_SCHEMA.curie('cell_ontology_exists'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_ontology_exists, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.category_fullname = Slot(uri=CELL_ANNOTATION_SCHEMA.category_fullname, name="category_fullname", curie=CELL_ANNOTATION_SCHEMA.curie('category_fullname'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.category_fullname, domain=None, range=Optional[str])
+
+slots.category_cell_ontology_exists = Slot(uri=CELL_ANNOTATION_SCHEMA.category_cell_ontology_exists, name="category_cell_ontology_exists", curie=CELL_ANNOTATION_SCHEMA.curie('category_cell_ontology_exists'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.category_cell_ontology_exists, domain=None, range=Optional[Union[bool, Bool]])
+
+slots.category_cell_ontology_term_id = Slot(uri=CELL_ANNOTATION_SCHEMA.category_cell_ontology_term_id, name="category_cell_ontology_term_id", curie=CELL_ANNOTATION_SCHEMA.curie('category_cell_ontology_term_id'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.category_cell_ontology_term_id, domain=None, range=Optional[str])
+
+slots.category_cell_ontology_term = Slot(uri=CELL_ANNOTATION_SCHEMA.category_cell_ontology_term, name="category_cell_ontology_term", curie=CELL_ANNOTATION_SCHEMA.curie('category_cell_ontology_term'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.category_cell_ontology_term, domain=None, range=Optional[str])
+
+slots.cell_ontology_assessment = Slot(uri=CELL_ANNOTATION_SCHEMA.cell_ontology_assessment, name="cell_ontology_assessment", curie=CELL_ANNOTATION_SCHEMA.curie('cell_ontology_assessment'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_ontology_assessment, domain=None, range=Optional[str])
+
+slots.cap_publication_title = Slot(uri=CELL_ANNOTATION_SCHEMA.cap_publication_title, name="cap_publication_title", curie=CELL_ANNOTATION_SCHEMA.curie('cap_publication_title'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cap_publication_title, domain=None, range=Optional[str])
+
+slots.cap_publication_description = Slot(uri=CELL_ANNOTATION_SCHEMA.cap_publication_description, name="cap_publication_description", curie=CELL_ANNOTATION_SCHEMA.curie('cap_publication_description'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cap_publication_description, domain=None, range=Optional[str])
+
+slots.cap_publication_url = Slot(uri=CELL_ANNOTATION_SCHEMA.cap_publication_url, name="cap_publication_url", curie=CELL_ANNOTATION_SCHEMA.curie('cap_publication_url'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cap_publication_url, domain=None, range=Optional[str])
+
+slots.cap_dataset_url = Slot(uri=CELL_ANNOTATION_SCHEMA.cap_dataset_url, name="cap_dataset_url", curie=CELL_ANNOTATION_SCHEMA.curie('cap_dataset_url'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cap_dataset_url, domain=None, range=Optional[str])
+
+slots.publication_timestamp = Slot(uri=CELL_ANNOTATION_SCHEMA.publication_timestamp, name="publication_timestamp", curie=CELL_ANNOTATION_SCHEMA.curie('publication_timestamp'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.publication_timestamp, domain=None, range=Optional[str])
+
+slots.publication_version = Slot(uri=CELL_ANNOTATION_SCHEMA.publication_version, name="publication_version", curie=CELL_ANNOTATION_SCHEMA.curie('publication_version'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.publication_version, domain=None, range=Optional[str])
+
+slots.datestamp = Slot(uri=CELL_ANNOTATION_SCHEMA.datestamp, name="datestamp", curie=CELL_ANNOTATION_SCHEMA.curie('datestamp'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.datestamp, domain=None, range=str)
+
+slots.reviewer = Slot(uri=CELL_ANNOTATION_SCHEMA.reviewer, name="reviewer", curie=CELL_ANNOTATION_SCHEMA.curie('reviewer'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.reviewer, domain=None, range=Optional[str])
+
+slots.review = Slot(uri=CELL_ANNOTATION_SCHEMA.review, name="review", curie=CELL_ANNOTATION_SCHEMA.curie('review'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.review, domain=None, range=Optional[Union[str, "ReviewOptions"]])
+
+slots.explanation = Slot(uri=IAO['0000115'], name="explanation", curie=IAO.curie('0000115'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.explanation, domain=None, range=Optional[str])
+
+slots.name = Slot(uri=RDFS.label, name="name", curie=RDFS.curie('label'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.name, domain=None, range=str)
+
+slots.description = Slot(uri=IAO['0000115'], name="description", curie=IAO.curie('0000115'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.description, domain=None, range=Optional[str])
+
+slots.annotation_method = Slot(uri=CELL_ANNOTATION_SCHEMA.annotation_method, name="annotation_method", curie=CELL_ANNOTATION_SCHEMA.curie('annotation_method'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.annotation_method, domain=None, range=Optional[Union[str, "AnnotationMethodOptions"]])
+
+slots.automated_annotation = Slot(uri=CELL_ANNOTATION_SCHEMA.automated_annotation, name="automated_annotation", curie=CELL_ANNOTATION_SCHEMA.curie('automated_annotation'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.automated_annotation, domain=None, range=Optional[Union[dict, AutomatedAnnotation]])
+
+slots.algorithm_name = Slot(uri=CELL_ANNOTATION_SCHEMA.algorithm_name, name="algorithm_name", curie=CELL_ANNOTATION_SCHEMA.curie('algorithm_name'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.algorithm_name, domain=None, range=str)
+
+slots.algorithm_version = Slot(uri=CELL_ANNOTATION_SCHEMA.algorithm_version, name="algorithm_version", curie=CELL_ANNOTATION_SCHEMA.curie('algorithm_version'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.algorithm_version, domain=None, range=str)
+
+slots.algorithm_repo_url = Slot(uri=CELL_ANNOTATION_SCHEMA.algorithm_repo_url, name="algorithm_repo_url", curie=CELL_ANNOTATION_SCHEMA.curie('algorithm_repo_url'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.algorithm_repo_url, domain=None, range=str)
+
+slots.reference_location = Slot(uri=CELL_ANNOTATION_SCHEMA.reference_location, name="reference_location", curie=CELL_ANNOTATION_SCHEMA.curie('reference_location'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.reference_location, domain=None, range=Optional[str])
+
+slots.labelset = Slot(uri=CAS.has_labelset, name="labelset", curie=CAS.curie('has_labelset'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.labelset, domain=None, range=str)
+
+slots.cell_label = Slot(uri=RDFS.label, name="cell_label", curie=RDFS.curie('label'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_label, domain=None, range=str)
+
+slots.cell_fullname = Slot(uri=SKOS.preflabel, name="cell_fullname", curie=SKOS.curie('preflabel'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_fullname, domain=None, range=Optional[str])
+
+slots.cell_ontology_term_id = Slot(uri=RO['0002473'], name="cell_ontology_term_id", curie=RO.curie('0002473'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_ontology_term_id, domain=None, range=Optional[Union[str, "CellTypeEnum"]])
+
+slots.cell_ontology_term = Slot(uri=CELL_ANNOTATION_SCHEMA.cell_ontology_term, name="cell_ontology_term", curie=CELL_ANNOTATION_SCHEMA.curie('cell_ontology_term'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_ontology_term, domain=None, range=Optional[str])
+
+slots.cell_ids = Slot(uri=CAS.has_cellid, name="cell_ids", curie=CAS.curie('has_cellid'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_ids, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.rationale = Slot(uri=CELL_ANNOTATION_SCHEMA.rationale, name="rationale", curie=CELL_ANNOTATION_SCHEMA.curie('rationale'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.rationale, domain=None, range=Optional[str])
+
+slots.rationale_dois = Slot(uri=CELL_ANNOTATION_SCHEMA.rationale_dois, name="rationale_dois", curie=CELL_ANNOTATION_SCHEMA.curie('rationale_dois'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.rationale_dois, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.marker_gene_evidence = Slot(uri=CELL_ANNOTATION_SCHEMA.marker_gene_evidence, name="marker_gene_evidence", curie=CELL_ANNOTATION_SCHEMA.curie('marker_gene_evidence'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.marker_gene_evidence, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.synonyms = Slot(uri=CELL_ANNOTATION_SCHEMA.synonyms, name="synonyms", curie=CELL_ANNOTATION_SCHEMA.curie('synonyms'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.synonyms, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.reviews = Slot(uri=CELL_ANNOTATION_SCHEMA.reviews, name="reviews", curie=CELL_ANNOTATION_SCHEMA.curie('reviews'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.reviews, domain=None, range=Optional[Union[Union[dict, Review], List[Union[dict, Review]]]])
+
+slots.author_annotation_fields = Slot(uri=CELL_ANNOTATION_SCHEMA.author_annotation_fields, name="author_annotation_fields", curie=CELL_ANNOTATION_SCHEMA.curie('author_annotation_fields'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.author_annotation_fields, domain=None, range=Optional[str])
+
+slots.matrix_file_id = Slot(uri=CELL_ANNOTATION_SCHEMA.matrix_file_id, name="matrix_file_id", curie=CELL_ANNOTATION_SCHEMA.curie('matrix_file_id'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.matrix_file_id, domain=None, range=Optional[str])
+
+slots.title = Slot(uri=CELL_ANNOTATION_SCHEMA.title, name="title", curie=CELL_ANNOTATION_SCHEMA.curie('title'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.title, domain=None, range=str)
+
+slots.cellannotation_schema_version = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_schema_version, name="cellannotation_schema_version", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_schema_version'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cellannotation_schema_version, domain=None, range=Optional[str])
+
+slots.cellannotation_timestamp = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_timestamp, name="cellannotation_timestamp", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_timestamp'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cellannotation_timestamp, domain=None, range=Optional[str])
+
+slots.cellannotation_version = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_version, name="cellannotation_version", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_version'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cellannotation_version, domain=None, range=Optional[str])
+
+slots.cellannotation_url = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_url, name="cellannotation_url", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_url'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.cellannotation_url, domain=None, range=Optional[str])
+
+slots.author_list = Slot(uri=CELL_ANNOTATION_SCHEMA.author_list, name="author_list", curie=CELL_ANNOTATION_SCHEMA.curie('author_list'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.author_list, domain=None, range=Optional[str])
+
+slots.author_name = Slot(uri=CELL_ANNOTATION_SCHEMA.author_name, name="author_name", curie=CELL_ANNOTATION_SCHEMA.curie('author_name'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.author_name, domain=None, range=str)
+
+slots.author_contact = Slot(uri=CELL_ANNOTATION_SCHEMA.author_contact, name="author_contact", curie=CELL_ANNOTATION_SCHEMA.curie('author_contact'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.author_contact, domain=None, range=Optional[str])
+
+slots.orcid = Slot(uri=CELL_ANNOTATION_SCHEMA.orcid, name="orcid", curie=CELL_ANNOTATION_SCHEMA.curie('orcid'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.orcid, domain=None, range=Optional[str])
+
+slots.labelsets = Slot(uri=CELL_ANNOTATION_SCHEMA.labelsets, name="labelsets", curie=CELL_ANNOTATION_SCHEMA.curie('labelsets'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.labelsets, domain=None, range=Union[Union[dict, Labelset], List[Union[dict, Labelset]]])
+
+slots.annotations = Slot(uri=CELL_ANNOTATION_SCHEMA.annotations, name="annotations", curie=CELL_ANNOTATION_SCHEMA.curie('annotations'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.annotations, domain=None, range=Union[Union[dict, Annotation], List[Union[dict, Annotation]]])
+
+slots.id = Slot(uri=CELL_ANNOTATION_SCHEMA.id, name="id", curie=CELL_ANNOTATION_SCHEMA.curie('id'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.id, domain=None, range=URIRef)
+
+slots.Cap_Taxonomy_annotations = Slot(uri=CELL_ANNOTATION_SCHEMA.annotations, name="Cap_Taxonomy_annotations", curie=CELL_ANNOTATION_SCHEMA.curie('annotations'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.Cap_Taxonomy_annotations, domain=CapTaxonomy, range=Union[Union[dict, CapAnnotation], List[Union[dict, CapAnnotation]]])
+
+slots.Cap_Taxonomy_cellannotation_schema_version = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_schema_version, name="Cap_Taxonomy_cellannotation_schema_version", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_schema_version'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.Cap_Taxonomy_cellannotation_schema_version, domain=CapTaxonomy, range=str)
+
+slots.Cap_Taxonomy_cellannotation_timestamp = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_timestamp, name="Cap_Taxonomy_cellannotation_timestamp", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_timestamp'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.Cap_Taxonomy_cellannotation_timestamp, domain=CapTaxonomy, range=str)
+
+slots.Cap_Taxonomy_cellannotation_version = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_version, name="Cap_Taxonomy_cellannotation_version", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_version'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.Cap_Taxonomy_cellannotation_version, domain=CapTaxonomy, range=str)
+
+slots.Cap_Taxonomy_cellannotation_url = Slot(uri=CELL_ANNOTATION_SCHEMA.cellannotation_url, name="Cap_Taxonomy_cellannotation_url", curie=CELL_ANNOTATION_SCHEMA.curie('cellannotation_url'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.Cap_Taxonomy_cellannotation_url, domain=CapTaxonomy, range=str)

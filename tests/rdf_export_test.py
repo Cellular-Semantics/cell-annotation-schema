@@ -7,7 +7,7 @@ from cell_annotation_schema.ontology.export import export_to_rdf
 
 
 CAS_NS = "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
-dataset_type = URIRef(CAS_NS + "GeneralCellAnnotationOpenStandard")
+dataset_type = URIRef(CAS_NS + "Taxonomy")
 annotation_type = URIRef("http://purl.obolibrary.org/obo/PCL_0010001")
 labelset_type = URIRef(CAS_NS + "Labelset")
 rdftype = URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type")
@@ -77,7 +77,7 @@ class ExportToRDFTestCase(unittest.TestCase):
 
         rdf_graph = export_to_rdf(
             # cas_schema="bican",
-            cas_schema="https://raw.githubusercontent.com/cellannotation/cell-annotation-schema/main/build/BICAN_schema.json",
+            cas_schema="https://raw.githubusercontent.com/Cellular-Semantics/cell-annotation-schema/main/build/BICAN_schema.yaml",
             # data=os.path.join(TESTDATA, "CS202210140.json"),
             data=os.path.join(TESTDATA, "Siletti_all_non_neuronal_cells.json"),
             ontology_namespace=ontology_namespace,

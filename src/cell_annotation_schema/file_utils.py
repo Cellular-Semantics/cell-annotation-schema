@@ -2,6 +2,7 @@ import os
 import json
 import warnings
 
+from typing import Union
 from urllib.request import urlopen
 from pathlib import Path
 from linkml_runtime.linkml_model import SchemaDefinition
@@ -36,7 +37,7 @@ def get_json_from_file(filename):
         warnings.warn("Failed to parse JSON in " + filename + ": " + str(exc))
 
 
-def read_schema(schema) -> SchemaDefinition:
+def read_schema(schema: Union[str, dict]) -> SchemaDefinition:
     """
     Reads the given LinkML schema.
     Parameters:
