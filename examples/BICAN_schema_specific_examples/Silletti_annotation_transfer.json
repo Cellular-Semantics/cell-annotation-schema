@@ -10,6 +10,7 @@
     {
       "labelset": "Subtype",
       "cell_label": "INT-VIP",
+      "cell_set_accession": "CCN20230822_1",
       "transferred_annotations": [
         {
           "transferred_cell_label": "Vip",

@@ -1,5 +1,5 @@
 # Auto generated from None by pythongen.py version: 0.0.1
-# Generation date: 2024-07-31T16:21:54
+# Generation date: 2024-08-01T16:37:23
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -201,8 +201,7 @@ class Sparqlpath(str):
 
 
 # Class references
-class BicanAnnotationCellSetAccession(extended_str):
-    pass
+
 
 
 @dataclass
@@ -470,9 +469,9 @@ class BicanAnnotation(Annotation):
     class_name: ClassVar[str] = "Bican_Annotation"
     class_model_uri: ClassVar[URIRef] = CELL_ANNOTATION_SCHEMA.BicanAnnotation
 
-    cell_set_accession: Union[str, BicanAnnotationCellSetAccession] = None
     labelset: str = None
     cell_label: str = None
+    cell_set_accession: str = None
     parent_cell_set_accession: Optional[str] = None
     transferred_annotations: Optional[Union[Union[dict, AnnotationTransfer], List[Union[dict, AnnotationTransfer]]]] = empty_list()
     cells: Optional[Union[Union[dict, Cell], List[Union[dict, Cell]]]] = empty_list()
@@ -481,8 +480,8 @@ class BicanAnnotation(Annotation):
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.cell_set_accession):
             self.MissingRequiredField("cell_set_accession")
-        if not isinstance(self.cell_set_accession, BicanAnnotationCellSetAccession):
-            self.cell_set_accession = BicanAnnotationCellSetAccession(self.cell_set_accession)
+        if not isinstance(self.cell_set_accession, str):
+            self.cell_set_accession = str(self.cell_set_accession)
 
         if self.parent_cell_set_accession is not None and not isinstance(self.parent_cell_set_accession, str):
             self.parent_cell_set_accession = str(self.parent_cell_set_accession)
@@ -578,13 +577,13 @@ class BicanTaxonomy(Taxonomy):
 
     title: str = None
     author_name: str = None
-    annotations: Union[Dict[Union[str, BicanAnnotationCellSetAccession], Union[dict, BicanAnnotation]], List[Union[dict, BicanAnnotation]]] = empty_dict()
+    annotations: Union[Union[dict, BicanAnnotation], List[Union[dict, BicanAnnotation]]] = None
     labelsets: Union[Union[dict, BicanLabelset], List[Union[dict, BicanLabelset]]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.annotations):
             self.MissingRequiredField("annotations")
-        self._normalize_inlined_as_dict(slot_name="annotations", slot_type=BicanAnnotation, key_name="cell_set_accession", keyed=True)
+        self._normalize_inlined_as_dict(slot_name="annotations", slot_type=BicanAnnotation, key_name="labelset", keyed=False)
 
         if self._is_empty(self.labelsets):
             self.MissingRequiredField("labelsets")
@@ -624,7 +623,7 @@ class slots:
     pass
 
 slots.cell_set_accession = Slot(uri=CELL_ANNOTATION_SCHEMA.cell_set_accession, name="cell_set_accession", curie=CELL_ANNOTATION_SCHEMA.curie('cell_set_accession'),
-                   model_uri=CELL_ANNOTATION_SCHEMA.cell_set_accession, domain=None, range=URIRef)
+                   model_uri=CELL_ANNOTATION_SCHEMA.cell_set_accession, domain=None, range=str)
 
 slots.parent_cell_set_accession = Slot(uri=RO['0015003'], name="parent_cell_set_accession", curie=RO.curie('0015003'),
                    model_uri=CELL_ANNOTATION_SCHEMA.parent_cell_set_accession, domain=None, range=Optional[str])
@@ -777,4 +776,4 @@ slots.Bican_Taxonomy_labelsets = Slot(uri=CELL_ANNOTATION_SCHEMA.labelsets, name
                    model_uri=CELL_ANNOTATION_SCHEMA.Bican_Taxonomy_labelsets, domain=BicanTaxonomy, range=Union[Union[dict, BicanLabelset], List[Union[dict, BicanLabelset]]])
 
 slots.Bican_Taxonomy_annotations = Slot(uri=CELL_ANNOTATION_SCHEMA.annotations, name="Bican_Taxonomy_annotations", curie=CELL_ANNOTATION_SCHEMA.curie('annotations'),
-                   model_uri=CELL_ANNOTATION_SCHEMA.Bican_Taxonomy_annotations, domain=BicanTaxonomy, range=Union[Dict[Union[str, BicanAnnotationCellSetAccession], Union[dict, BicanAnnotation]], List[Union[dict, BicanAnnotation]]])
+                   model_uri=CELL_ANNOTATION_SCHEMA.Bican_Taxonomy_annotations, domain=BicanTaxonomy, range=Union[Union[dict, BicanAnnotation], List[Union[dict, BicanAnnotation]]])

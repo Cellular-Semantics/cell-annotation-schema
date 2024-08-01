@@ -4,22 +4,15 @@ import json
 from pathlib import Path
 from typing import Union, Optional, List
 
-from dacite import from_dict
+from cell_annotation_schema.ontology.schema import DEFAULT_PREFIXES, CAS_NAMESPACE
+from cell_annotation_schema.file_utils import get_json_from_file
+from cell_annotation_schema.generator.dataclassgen import get_py_instance, get_root_class
 
-from cell_annotation_schema.datamodel.cell_annotation_schema import Taxonomy
-from cell_annotation_schema.datamodel.bican.cell_annotation_schema import BicanTaxonomy
-from cell_annotation_schema.datamodel.cap.cell_annotation_schema import CapTaxonomy
-
-from cell_annotation_schema.ontology.schema import CAS_ROOT_CLASS, DEFAULT_PREFIXES, CAS_NAMESPACE
-from cell_annotation_schema.file_utils import get_json_from_file, get_cas_schema_names
-
-from linkml_runtime.utils.compile_python import compile_python
 from linkml_runtime.linkml_model import SchemaDefinition
 from linkml_runtime import SchemaView
 from linkml_runtime.loaders import yaml_loader
 from linkml_runtime.dumpers import rdflib_dumper
 from linkml.validator import Validator
-from linkml import generators
 
 CELL_RELATION = "has_cellid"
 
@@ -84,52 +77,6 @@ def dump_to_rdf(
     if output_path:
         g.serialize(format="xml", destination=output_path)
     return g
-
-
-def get_py_instance(instance_dict, schema_name, schema_def, root_class=None):
-    """
-    Returns a Python instance of the schema class from the given data instance.
-    Args:
-        instance_dict: The data instance dictionary.
-        schema_name: The name of the schema to be used for RDF generation.
-        schema_def: The schema definition object.
-        root_class: The root class of the schema if this is not a core (base,cap or bican) schema.
-    Returns:
-        The Python instance of the schema class.
-    """
-    if isinstance(schema_name, str):
-        if schema_name.lower() == "base":
-            return Taxonomy(**instance_dict)
-        elif schema_name.lower() == "bican":
-            return BicanTaxonomy(**instance_dict)
-        elif schema_name.lower() == "cap":
-            return CapTaxonomy(**instance_dict)
-
-    # unknown schema, dynamically generate the python module and instantiate
-    gen = generators.PythonGenerator(schema_def)
-    output = gen.serialize()
-    python_module = compile_python(output)
-    py_target_class = getattr(python_module, root_class)
-    py_inst = py_target_class(**instance_dict)
-
-    return py_inst
-
-
-def get_root_class(schema_name):
-    """
-    Returns the root class of the schema based on the schema name.
-    Args:
-        schema_name: The name of the schema.
-    Returns: The root class of the schema.
-    """
-    root_class = None
-    if schema_name.lower() == "base":
-        root_class = CAS_ROOT_CLASS
-    elif schema_name.lower() == "bican":
-        root_class = "BicanTaxonomy"
-    elif schema_name.lower() == "cap":
-        root_class = "CapTaxonomy"
-    return root_class
 
 
 def add_cl_existential_restrictions(g: rdflib.Graph):

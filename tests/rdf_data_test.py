@@ -2,9 +2,8 @@ import os
 import unittest
 
 from cell_annotation_schema.ontology.export import dump_to_rdf, populate_ids
-from cell_annotation_schema.file_utils import read_schema, get_json_from_file
-from cell_annotation_schema.ontology.schema import decorate_linkml_schema, expand_schema
-from cell_annotation_schema.ontology.data import get_py_instance
+from cell_annotation_schema.file_utils import read_schema
+from cell_annotation_schema.ontology.schema import decorate_linkml_ontology_schema, expand_schema
 
 from rdflib import Graph
 
@@ -24,22 +23,12 @@ class LinkMLDataTestCase(unittest.TestCase):
         if os.path.isfile(TEST_OUTPUT):
             os.remove(TEST_OUTPUT)
 
-    def test_instantiate_class(self):
-        json_data = get_json_from_file(os.path.join(TESTDATA, "AIT_MTG_data_short_no_id.json"))
-        bican_linkml_schema = read_schema("bican")
-        obj = get_py_instance(json_data, "bican", bican_linkml_schema)
-        self.assertIsNotNone(obj)
-        self.assertEqual(obj.title, "MTG")
-        self.assertEqual(1, len(obj.annotations))
-        annotation_0 = next(iter(obj.annotations.values()))
-        self.assertEqual("VLMC_1", annotation_0.cell_fullname)
-
     def test_rdf_dump(self):
         data = populate_ids(os.path.join(TESTDATA, "AIT_MTG_data_short.json"), ontology_namespace="MTG",
                             ontology_id="AIT_MTG")
 
         bican_linkml_schema = read_schema("bican")
-        decorated_schema = decorate_linkml_schema(
+        decorated_schema = decorate_linkml_ontology_schema(
             bican_linkml_schema,
             ontology_namespace="MTG",
             ontology_iri="https://purl.brain-bican.org/ontology/AIT_MTG/",
@@ -49,10 +38,10 @@ class LinkMLDataTestCase(unittest.TestCase):
             config=None, yaml_obj=decorated_schema, value_set_names=["CellTypeEnum"]
         )
 
-        from ruamel.yaml import YAML
-        yaml = YAML()
-        with open('./test_data/rdf/decorated_schema.yaml', 'wb') as f:
-            yaml.dump(decorated_schema, f)
+        # from ruamel.yaml import YAML
+        # yaml = YAML()
+        # with open('./test_data/rdf/decorated_schema.yaml', 'wb') as f:
+        #     yaml.dump(decorated_schema, f)
         # cli: gen-python decorated_schema.yaml > decorated_schema.py
 
         rdf_graph = dump_to_rdf(
@@ -77,10 +66,6 @@ class LinkMLDataTestCase(unittest.TestCase):
         self.assertTrue(len(rdf_graph) > len(expected_graph))
         for stmt in expected_graph:
             self.assertTrue(stmt in rdf_graph)
-
-    # def test_validate(self):
-    #     # TODO: Implement test
-    #     pass
 
 
 if __name__ == "__main__":

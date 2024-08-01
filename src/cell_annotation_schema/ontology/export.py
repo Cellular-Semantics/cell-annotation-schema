@@ -4,7 +4,7 @@ from typing import Union, Optional, List
 
 from cell_annotation_schema.file_utils import read_schema
 from cell_annotation_schema.ontology.schema import (
-    decorate_linkml_schema,
+    decorate_linkml_ontology_schema,
     expand_schema,
 )
 from cell_annotation_schema.ontology.data import dump_to_rdf, populate_ids
@@ -47,7 +47,7 @@ def export_to_rdf(
         cas_schema = "base"
     base_linkml_schema = read_schema(cas_schema)
     #  TODO get labelsets from the data
-    decorated_schema = decorate_linkml_schema(
+    decorated_schema = decorate_linkml_ontology_schema(
         base_linkml_schema,
         ontology_namespace=ontology_namespace,
         ontology_iri=ontology_iri,

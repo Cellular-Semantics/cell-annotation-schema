@@ -24,7 +24,7 @@ slots:
     description: An identifier that can be used to consistently refer to the set of
       cells being annotated, even if the cell_label changes.
     required: true
-    identifier: true
+#    identifier: true
   parent_cell_set_accession:
     description: A list of accessions of cell sets that subsume this cell set. This
       can be used to compose hierarchies of annotated cell sets, built from a fixed

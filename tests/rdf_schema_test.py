@@ -3,7 +3,7 @@ import unittest
 
 from cell_annotation_schema.file_utils import read_schema
 from cell_annotation_schema.ontology.schema import (
-    decorate_linkml_schema,
+    decorate_linkml_ontology_schema,
     expand_schema,
 )
 
@@ -24,7 +24,7 @@ class LinkMLSchemaCase(unittest.TestCase):
 
     def test_decorate_linkml_schema(self):
         bican_linkml_schema = read_schema("bican")
-        decorated_schema = decorate_linkml_schema(
+        decorated_schema = decorate_linkml_ontology_schema(
             bican_linkml_schema,
             ontology_namespace="MTG",
             ontology_iri="https://purl.brain-bican.org/ontology/AIT_MTG/",
@@ -41,7 +41,7 @@ class LinkMLSchemaCase(unittest.TestCase):
 
     def test_expand_schema(self):
         bican_linkml_schema = read_schema("bican")
-        decorated_schema = decorate_linkml_schema(
+        decorated_schema = decorate_linkml_ontology_schema(
             bican_linkml_schema,
             ontology_namespace="MTG",
             ontology_iri="https://purl.brain-bican.org/ontology/AIT_MTG/",

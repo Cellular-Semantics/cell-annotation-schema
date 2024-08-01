@@ -34,53 +34,20 @@ DEFAULT_PREFIXES = {
 
 def decorate_linkml_schema(
     schema_obj: Union[dict, SchemaDefinition],
-    ontology_namespace: Optional[str] = None,
-    ontology_iri: Optional[str] = None,
-    labelsets: Optional[List[str]] = None,
     output_path: Optional[str] = None,
 ) -> dict:
     """
-    Adds additional properties to the LinkML schema necessary for OWL conversion.
+    Adds additional properties to the LinkML schema necessary for Python conversion.
     Args:
         schema_obj (Union[dict, SchemaDefinition]): The LinkML schema object, either as a dictionary or a
         SchemaDefinition.
-        ontology_namespace (str): The namespace of the ontology (e.g., 'MTG').
-        ontology_iri (str): The ontology IRI (e.g., 'https://purl.brain-bican.org/ontology/AIT_MTG/').
-        labelsets (Optional[List[str]]): Labelsets used in the taxonomy, such as ['Cluster', 'Subclass', 'Class'].
         output_path (Optional[str]): Path to the output schema file, if specified.
     Returns:
-        dict: The schema decorated with additional properties for OWL conversion.
+        dict: The schema decorated with additional properties for Python conversion.
     """
-
     if isinstance(schema_obj, SchemaDefinition):
         schema_obj = schema_as_dict(schema_obj)
-
     # schema_obj["id"] = CAS_NAMESPACE
-
-    if ontology_namespace and ontology_iri:
-        # these only required for ontology conversion
-        ontology_namespace = ontology_namespace.upper()
-        # prefixes = DEFAULT_PREFIXES.copy()
-        # prefixes["linkml"] = "https://w3id.org/linkml/"
-        prefixes = schema_obj["prefixes"]
-        prefixes["_base"] = ontology_iri
-        prefixes[ontology_namespace] = ontology_iri
-        labelsets = labelsets or []
-        for labelset in labelsets:
-            prefixes[labelset] = ontology_iri + f"{labelset}#"
-        schema_obj["prefixes"] = prefixes
-        schema_obj["slots"]["id"] = {"identifier": True, "range": "uriorcurie"}
-        schema_obj["classes"]["Labelset"]["slots"] = list(schema_obj["classes"]["Labelset"]["slots"]) + ["id"]
-        schema_obj["classes"]["Taxonomy"]["slots"] = list(schema_obj["classes"]["Taxonomy"]["slots"]) + ["id"]
-        # schema_obj["slots"]["cell_id"]["identifier"] = True   # TODO
-        is_bican = "Bican_Taxonomy" in schema_obj["classes"]
-        is_cap = "Cap_Taxonomy" in schema_obj["classes"]
-        if "cell_set_accession" in schema_obj["slots"]:
-            schema_obj["slots"]["cell_set_accession"]["identifier"] = True
-        if "parent_cell_set_accession" in schema_obj["slots"]:
-            schema_obj["slots"]["parent_cell_set_accession"]["range"] = "Bican_Annotation"
-        if is_bican and "labelset" in schema_obj["slots"]:
-            schema_obj["slots"]["labelset"]["range"] = "Bican_Labelset"
 
     # this is a workaround for lack of annotation ids in the base schema
     if "Bican_Taxonomy" in schema_obj["classes"]:
@@ -106,6 +73,49 @@ def decorate_linkml_schema(
     if output_path:
         write_schema(schema_obj, output_path)
 
+    return schema_obj
+
+
+def decorate_linkml_ontology_schema(schema_obj: Union[dict, SchemaDefinition], ontology_iri: str, ontology_namespace: str, labelsets: Optional[List[str]] = None):
+    """
+    Decorates the LinkML schema with additional properties for OWL conversion.
+    Args:
+        schema_obj (Union[dict, SchemaDefinition]): The LinkML schema object, either as a dictionary or a
+        SchemaDefinition.
+        ontology_namespace (str): The namespace of the ontology (e.g., 'MTG').
+        ontology_iri (str): The ontology IRI (e.g., 'https://purl.brain-bican.org/ontology/AIT_MTG/').
+        labelsets (Optional[List[str]]): Labelsets used in the taxonomy, such as ['Cluster', 'Subclass', 'Class'].
+    Returns:
+        dict: The schema decorated with additional properties for OWL conversion.
+    """
+    if isinstance(schema_obj, SchemaDefinition):
+        schema_obj = schema_as_dict(schema_obj)
+
+    # these only required for ontology conversion
+    ontology_namespace = ontology_namespace.upper()
+    # prefixes = DEFAULT_PREFIXES.copy()
+    # prefixes["linkml"] = "https://w3id.org/linkml/"
+    prefixes = schema_obj["prefixes"]
+    prefixes["_base"] = ontology_iri
+    prefixes[ontology_namespace] = ontology_iri
+    labelsets = labelsets or []
+    for labelset in labelsets:
+        prefixes[labelset] = ontology_iri + f"{labelset}#"
+    schema_obj["prefixes"] = prefixes
+    schema_obj["slots"]["id"] = {"identifier": True, "range": "uriorcurie"}
+    schema_obj["classes"]["Labelset"]["slots"] = list(schema_obj["classes"]["Labelset"]["slots"]) + ["id"]
+    schema_obj["classes"]["Taxonomy"]["slots"] = list(schema_obj["classes"]["Taxonomy"]["slots"]) + ["id"]
+    # schema_obj["slots"]["cell_id"]["identifier"] = True   # TODO
+    is_bican = "Bican_Taxonomy" in schema_obj["classes"]
+    is_cap = "Cap_Taxonomy" in schema_obj["classes"]
+    if "cell_set_accession" in schema_obj["slots"]:
+        schema_obj["slots"]["cell_set_accession"]["identifier"] = True
+    if "parent_cell_set_accession" in schema_obj["slots"]:
+        schema_obj["slots"]["parent_cell_set_accession"]["range"] = "Bican_Annotation"
+    if is_bican and "labelset" in schema_obj["slots"]:
+        schema_obj["slots"]["labelset"]["range"] = "Bican_Labelset"
+
+    schema_obj = decorate_linkml_schema(schema_obj)
     return schema_obj
 
 

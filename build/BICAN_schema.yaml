@@ -308,7 +308,6 @@ slots:
     description: An identifier that can be used to consistently refer to the set of
       cells being annotated, even if the cell_label changes.
     from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
-    identifier: true
     required: true
   parent_cell_set_accession:
     name: parent_cell_set_accession

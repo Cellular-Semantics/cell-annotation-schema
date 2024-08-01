@@ -8,6 +8,7 @@ from typing import List
 from ruamel.yaml import YAML
 
 from cell_annotation_schema.file_utils import get_json_from_file
+from cell_annotation_schema.ontology.schema import decorate_linkml_schema
 
 from linkml.validator import validate
 
@@ -15,12 +16,11 @@ from linkml.validator import validate
 warnings.filterwarnings("always")
 
 
-def validate_data(schema, schema_name, test_path):
+def validate_data(schema, test_path):
     """
     Validates all json files located in the test path with the given schema.
     Parameters:
         schema: json schema object
-        schema_name: name (or path) of the schema. Used for reporting purposes only.
         test_path: path to the data files. If path is a folder, validates all json files inside. If path is a json file,
         validates it.
     Returns:
@@ -42,7 +42,7 @@ def validate_data(schema, schema_name, test_path):
         report = validate(i, schema)
         if report.results:
             for result in report.results:
-                print(result.message)
+                print("Validation ERROR: " + result.message)
         validation_status.append(False if report.results else True)
     return False not in validation_status
 
@@ -78,8 +78,9 @@ def run_validator(path_to_schema_dir, schema_file, path_to_test_dir):
     else:
         schema_file_path = os.path.join(script_folder, schema_dir, schema_file)
         schema = get_schema(schema_file_path)
+        schema = decorate_linkml_schema(schema)
 
-        result = validate_data(schema, schema_file_path, test_path)
+        result = validate_data(schema, test_path)
         if not result:
             raise Exception("Validation Failed")
 
