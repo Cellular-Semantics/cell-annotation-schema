@@ -1,0 +1,56 @@
+name: Nightly Snapshot
+
+on:
+  schedule:
+  - cron: "59 23 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    name: Make snapshot release
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ '3.9' ]
+    steps:
+      - name: Get current date
+        id: date
+        run: echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+
+      - name: Install dependencies
+        run: |
+          poetry install
+
+      - name: Generate merged schemas
+        run: |
+          cp src/cell_annotation_schema/schema/cell_annotation_schema.yaml build/general_schema.yaml
+          gen-linkml src/cell_annotation_schema/schema/BICAN/BICAN_schema.yaml --output build/BICAN_schema.yaml --mergeimports --format yaml --no-materialize-attributes
+          gen-linkml src/cell_annotation_schema/schema/CAP/CAP_schema.yaml --output build/CAP_schema.yaml --mergeimports --format yaml --no-materialize-attributes
+
+      - name: Make Snapshot
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "build/general_schema.yaml,
+          build/BICAN_schema.yaml,build/CAP_schema.yaml"
+          body: "Nightly snapshot release. Draft only, please use a stable release instead."
+          allowUpdates: true
+          draft: true
+          makeLatest: false
+          name: "${{ steps.date.outputs.date }} SNAPSHOT"
+          removeArtifacts: true
+          tag: "snapshot"

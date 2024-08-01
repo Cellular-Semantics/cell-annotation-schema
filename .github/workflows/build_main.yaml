@@ -1,0 +1,54 @@
+name: Build schemas
+
+# when main changed rebuild the products (schemas and documentations) and updates the build folder
+on:
+  push:
+    branches: [ main ]
+
+permissions: write-all
+
+jobs:
+  build-and-publish:
+    name: Build main branch
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [ '3.9' ]
+    steps:
+
+      - uses: actions/checkout@v3
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install Poetry
+        run: |
+          curl -sSL https://install.python-poetry.org | python3 -
+
+      - name: Install dependencies
+        run: |
+          poetry install
+
+      - name: Generate merged schemas
+        run: |
+          cp src/cell_annotation_schema/schema/cell_annotation_schema.yaml build/general_schema.yaml
+          gen-linkml src/cell_annotation_schema/schema/BICAN/BICAN_schema.yaml --output build/BICAN_schema.yaml --mergeimports --format yaml --no-materialize-attributes
+          gen-linkml src/cell_annotation_schema/schema/CAP/CAP_schema.yaml --output build/CAP_schema.yaml --mergeimports --format yaml --no-materialize-attributes
+
+
+      - name: Commit files
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git diff --quiet && git diff --staged --quiet || git commit -a -m "Main branch build"
+
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.P_TOKEN }}
+          branch: ${{ github.head_ref }}
