@@ -40,15 +40,17 @@ jobs:
           cp build/BICAN_schema.yaml src/cell_annotation_schema/schemas
           cp build/CAP_schema.yaml src/cell_annotation_schema/schemas
 
-      - name: Update package version
+#      - name: Build source and wheel archives
+#        run: poetry build
+#
+#      - name: Publish Package
+#        uses: pypa/gh-action-pypi-publish@release/v1
+#        with:
+#          repository-url: https://test.pypi.org/legacy/
+#          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
+
+      - name: Publish distribution to PyPI
         run: |
-          sed -i 's/__version__/${{  github.ref_name }}/g' pyproject.toml
+          poetry config repositories.testpypi https://test.pypi.org/legacy/
+          poetry publish --build -r testpypi -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
 
-      - name: Build source and wheel archives
-        run: poetry build
-
-      - name: Publish Package
-        uses: pypa/gh-action-pypi-publish@release/v1
-        with:
-          repository-url: https://test.pypi.org/legacy/
-          password: ${{ secrets.TEST_PYPI_API_TOKEN }}
