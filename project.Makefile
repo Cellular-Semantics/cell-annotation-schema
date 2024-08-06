@@ -1,4 +1,9 @@
 ## Add your own custom Makefile targets here
+#
+# make build : generates dataclasses and merged schemas
+# make gendoc : generates documentation
+# make gen-project : generates project folder contents
+
 SCHEMA_FOLDER = $(SRC)/$(SCHEMA_NAME)/schema
 BUILD_FOLDER = build
 
@@ -33,4 +38,12 @@ gendoc: $(DOCDIR) $(DOCDIR_BICAN) $(DOCDIR_CAP)
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR) $(SOURCE_SCHEMA_PATH)
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR_BICAN) $(BUILD_FOLDER)/BICAN_schema.yaml
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR_CAP) $(BUILD_FOLDER)/CAP_schema.yaml
+
+gen-project: build
+	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(BUILD_FOLDER)/general_schema.yaml --exclude python
+	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(BUILD_FOLDER)/BICAN_schema.yaml --exclude python
+	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(BUILD_FOLDER)/CAP_schema.yaml --exclude python
+
+compile-sheets:
+	echo "Skipped compiling sheets."
 

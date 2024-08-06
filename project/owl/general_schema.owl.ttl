@@ -1,0 +1,641 @@
+@prefix CAS: <https://cellular-semantics.sanger.ac.uk/ontology/CAS/> .
+@prefix PCL: <http://purl.obolibrary.org/obo/PCL_> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix linkml: <https://w3id.org/linkml/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+CAS:Taxonomy a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Taxonomy" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:author_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cellannotation_schema_version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cellannotation_version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:orcid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cellannotation_timestamp ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cellannotation_version ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cellannotation_timestamp ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:author_list ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:matrix_file_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cellannotation_version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:author_list ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:labelsets ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:author_contact ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:orcid ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:title ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:orcid ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:title ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:annotations ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cellannotation_timestamp ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cellannotation_url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:author_contact ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:author_contact ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:author_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:author_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cellannotation_url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:title ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:Annotation ;
+            owl:onProperty CAS:annotations ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cellannotation_schema_version ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:Labelset ;
+            owl:onProperty CAS:labelsets ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:author_list ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cellannotation_url ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cellannotation_schema_version ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:matrix_file_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:matrix_file_id ] ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "id" ;
+    rdfs:range linkml:Uriorcurie ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:Annotation a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Annotation" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:synonyms ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cell_ids ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:CellTypeEnum ;
+            owl:onProperty CAS:cell_ontology_term_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_label ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:reviews ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cell_ontology_term ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_ontology_term_id ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_ontology_term_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_fullname ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:rationale_dois ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cell_label ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_ids ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:rationale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:marker_gene_evidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:author_annotation_fields ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_ontology_term ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:rationale_dois ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:author_annotation_fields ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:labelset ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:labelset ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:author_annotation_fields ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:synonyms ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:Review ;
+            owl:onProperty CAS:reviews ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:rationale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:cell_fullname ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:cell_label ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:labelset ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:marker_gene_evidence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_fullname ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:rationale ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_ontology_term ] ;
+    skos:definition "A collection of fields recording a cell type/class/state annotation on some set of cells, supporting evidence and provenance. As this is intended as a general schema, compulsory fields are kept to a minimum. However, tools using this schema are encouarged to specify a larger set of compulsory fields for publication.    Note: This schema deliberately allows for additional fields in order to support ad hoc user fields, new formal schema extensions and project/tool specific metadata." ;
+    skos:exactMatch PCL:0010001 ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+<https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic> a owl:Class,
+        CAS:AnnotationMethodOptions ;
+    rdfs:label "algorithmic" ;
+    rdfs:subClassOf CAS:AnnotationMethodOptions .
+
+<https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both> a owl:Class,
+        CAS:AnnotationMethodOptions ;
+    rdfs:label "both" ;
+    rdfs:subClassOf CAS:AnnotationMethodOptions .
+
+<https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual> a owl:Class,
+        CAS:AnnotationMethodOptions ;
+    rdfs:label "manual" ;
+    rdfs:subClassOf CAS:AnnotationMethodOptions .
+
+CAS:AutomatedAnnotation a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "AutomatedAnnotation" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:reference_location ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:algorithm_version ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:algorithm_repo_url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:algorithm_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:algorithm_name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:algorithm_repo_url ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:algorithm_repo_url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:algorithm_version ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:algorithm_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:algorithm_version ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:reference_location ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:reference_location ] ;
+    skos:definition "A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:CellTypeEnum a owl:Class,
+        linkml:EnumDefinition .
+
+CAS:Labelset a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Labelset" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:name ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:AutomatedAnnotation ;
+            owl:onProperty CAS:automated_annotation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:automated_annotation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:automated_annotation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:annotation_method ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:annotation_method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:AnnotationMethodOptions ;
+            owl:onProperty CAS:annotation_method ] ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:Review a owl:Class,
+        linkml:ClassDefinition ;
+    rdfs:label "Review" ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:review ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:explanation ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:datestamp ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:datestamp ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:reviewer ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:datestamp ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:review ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:ReviewOptions ;
+            owl:onProperty CAS:review ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom linkml:String ;
+            owl:onProperty CAS:reviewer ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:reviewer ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:explanation ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:explanation ] ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+<https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree> a owl:Class,
+        CAS:ReviewOptions ;
+    rdfs:label "Agree" ;
+    rdfs:subClassOf CAS:ReviewOptions .
+
+<https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> a owl:Class,
+        CAS:ReviewOptions ;
+    rdfs:label "Disagree" ;
+    rdfs:subClassOf CAS:ReviewOptions .
+
+CAS:annotations a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "annotations" ;
+    rdfs:range CAS:Annotation ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cell_ids a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cell_ids" ;
+    skos:definition "Cell barcode sequences/UUIDs used to uniquely identify the cells within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs MUST be included in the AnnData/Seurat matrix." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:labelsets a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "labelsets" ;
+    rdfs:range CAS:Labelset ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:marker_gene_evidence a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "marker_gene_evidence" ;
+    skos:definition "Gene names explicitly used as evidence, which MUST be in the matrix of the AnnData/Seurat file" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:rationale_dois a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "rationale_dois" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:reviews a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "reviews" ;
+    rdfs:range CAS:Review ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:synonyms a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "synonyms" ;
+    skos:definition "List of synonyms" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:algorithm_name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "algorithm_name" ;
+    skos:definition "The name of the algorithm used. It MUST be a string of the algorithm's name." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:algorithm_repo_url a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "algorithm_repo_url" ;
+    skos:definition "This field denotes the URL of the version control repository associated with the algorithm used (if applicable). It MUST be a string of a valid URL." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:algorithm_version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "algorithm_version" ;
+    skos:definition "The version of the algorithm used (if applicable). It MUST be a string of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]', but other versioning systems are permitted (based on the algorithm's versioning)." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:annotation_method a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "annotation_method" ;
+    rdfs:range CAS:AnnotationMethodOptions ;
+    skos:definition "The method used for creating the cell annotations. This MUST be one of the following strings: `'algorithmic'`, `'manual'`, or `'both'`" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:author_annotation_fields a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "author_annotation_fields" ;
+    skos:definition "A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:author_contact a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "author_contact" ;
+    skos:definition "Primary author's contact. This MUST be a valid email address of the author" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:author_list a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "author_list" ;
+    skos:definition "This field stores a list of users who are included in the project as collaborators, regardless of their specific role. An example list; '['John Smith', 'Cody Miller', 'Sarah Jones']'" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:author_name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "author_name" ;
+    skos:definition "Primary author's name. This MUST be a string in the format `[FIRST NAME] [LAST NAME]`" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:automated_annotation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "automated_annotation" ;
+    rdfs:range CAS:AutomatedAnnotation ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cell_fullname a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cell_fullname" ;
+    skos:definition """This MUST be the full-length name for the biological entity listed in `cell_label` by the author. (If the value in `cell_label` is the full-length term, this field will contain the same value.) 
+NOTE: any reserved word used in the field 'cell_label' MUST match the value of this field. 
+
+EXAMPLE 1: Given the matching terms 'LC' and 'luminal cell' used to annotate the same cell(s), then users could use either terms as values in the field 'cell_label'. However, the abbreviation 'LC' CANNOT be provided in the field 'cell_fullname'. 
+
+EXAMPLE 2: Either the abbreviation 'AC' or the full-length term intended by the author 'GABAergic amacrine cell' MAY be placed in the field 'cell_label', but as full-length term naming this biological entity, 'GABAergic amacrine cell' MUST be placed in the field 'cell_fullname'.""" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cell_label a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cell_label" ;
+    skos:definition """This denotes any free-text term which the author uses to annotate cells, i.e. the preferred cell label name used by the author. Abbreviations are exceptable in this field; refer to 'cell_fullname' for related details. 
+Certain key words have been reserved:
+- `'doublets'` is reserved for encoding cells defined as doublets based on some computational analysis
+- `'junk'` is reserved for encoding cells that failed sequencing for some reason, e.g. few genes detected, high fraction of mitochondrial reads
+- `'unknown'` is explicitly reserved for unknown or 'author does not know'
+- `'NA'` is incomplete, i.e. no cell annotation was provided""" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cell_ontology_term a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cell_ontology_term" ;
+    skos:definition "This MUST be the human-readable name assigned to the value of 'cell_ontology_term_id'" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cell_ontology_term_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cell_ontology_term_id" ;
+    rdfs:range CAS:CellTypeEnum ;
+    skos:definition """This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl) or from some ontology that extends it by classifying cell types under terms from the Cell Ontology
+e.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl) or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).
+
+NOTE: The closest available ontology term matching the value within the field 'cell_label' (at the time of publication) MUST be used.
+For example, if the value of 'cell_label' is 'relay interneuron', but this entity does not yet exist in the ontology, users must choose the closest available term in the CL ontology. In this case, it's the broader term 'interneuron' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.""" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cellannotation_schema_version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cellannotation_schema_version" ;
+    skos:definition """The schema version, the cell annotation open standard. Current version MUST follow 0.1.0
+This versioning MUST follow the format `'[MAJOR].[MINOR].[PATCH]'` as defined by Semantic Versioning 2.0.0, https://semver.org/""" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cellannotation_timestamp a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cellannotation_timestamp" ;
+    skos:definition "The timestamp of all cell annotations published (per dataset). This MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cellannotation_url a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cellannotation_url" ;
+    skos:definition "A persistent URL of all cell annotations published (per dataset)." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:cellannotation_version a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "cellannotation_version" ;
+    skos:definition "The version for all cell annotations published (per dataset). This MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'` as defined by Semantic Versioning 2.0.0, https://semver.org/" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:datestamp a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "datestamp" ;
+    skos:definition "Time and date review was last edited." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:explanation a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "explanation" ;
+    skos:definition "Free-text review of annotation. This is required if the verdict is disagree and should include reasons for disagreement." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:labelset a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "labelset" ;
+    rdfs:range linkml:String ;
+    skos:definition """The unique name of the set of cell annotations. 
+Each cell within the AnnData/Seurat file MUST be associated with a 'cell_label' value in order for this to be a valid 'cellannotation_setname'.""" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:matrix_file_id a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "matrix_file_id" ;
+    skos:definition "A resolvable ID for a cell by gene matrix file in the form namespace:accession, e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json for supported namespaces." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:name a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "name" ;
+    skos:definition "name of annotation key" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:orcid a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "orcid" ;
+    skos:definition "Primary author's orcid. This MUST be a valid ORCID for the author" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:rationale a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "rationale" ;
+    skos:definition """The free-text rationale which users provide as justification/evidence for their cell annotations. 
+Researchers are encouraged to use this field to cite relevant publications in-line using standard academic citations of the form `(Zheng et al., 2020)` This human-readable free-text MUST be encoded as a single string.
+All references cited SHOULD be listed using DOIs under rationale_dois. There MUST be a 2000-character limit.""" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:reference_location a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "reference_location" ;
+    skos:definition """This field denotes a valid URL of the annotated dataset that was the source of annotated reference data. 
+This MUST be a string of a valid URL. The concept of a 'reference' specifically refers to 'annotation transfer' algorithms, whereby a 'reference' dataset is used to transfer cell annotations to the 'query' dataset.""" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:review a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "review" ;
+    rdfs:range CAS:ReviewOptions ;
+    skos:definition "Reviewer's verdict on the annotation.  Must be 'Agree' or 'Disagree'" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:reviewer a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "reviewer" ;
+    skos:definition "Review Author" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:title a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "title" ;
+    skos:definition "The title of the dataset. This MUST be less than or equal to 200 characters. e.g. 'Human retina cell atlas - retinal ganglion cells'." ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:ReviewOptions a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree> <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> ) ;
+    linkml:permissible_values <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree>,
+        <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> .
+
+CAS:description a owl:ObjectProperty,
+        linkml:SlotDefinition ;
+    rdfs:label "description" ;
+    skos:definition "The description of the dataset. e.g. 'A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.'" ;
+    skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
+
+CAS:AnnotationMethodOptions a owl:Class,
+        linkml:EnumDefinition ;
+    owl:unionOf ( <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic> <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual> <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both> ) ;
+    linkml:permissible_values <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic>,
+        <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both>,
+        <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual> .
+
+<https://cellular-semantics.sanger.ac.uk/ontology/CAS> a owl:Ontology ;
+    rdfs:label "General_Cell_Annotation_Open_Standard" ;
+    dcterms:license "GNU GPL v3.0" ;
+    dcterms:title "General Cell Annotation Open Standard" ;
+    skos:definition "General, open-standard schema for cell annotations" .
+

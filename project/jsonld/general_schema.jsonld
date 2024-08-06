@@ -1,0 +1,1035 @@
+{
+  "name": "General_Cell_Annotation_Open_Standard",
+  "description": "General, open-standard schema for cell annotations",
+  "title": "General Cell Annotation Open Standard",
+  "id": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+  "imports": [
+    "linkml:types"
+  ],
+  "license": "GNU GPL v3.0",
+  "prefixes": [
+    {
+      "prefix_prefix": "cell_annotation_schema",
+      "prefix_reference": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+    },
+    {
+      "prefix_prefix": "CAS",
+      "prefix_reference": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+    },
+    {
+      "prefix_prefix": "linkml",
+      "prefix_reference": "https://w3id.org/linkml/"
+    },
+    {
+      "prefix_prefix": "obo",
+      "prefix_reference": "http://purl.obolibrary.org/obo/"
+    },
+    {
+      "prefix_prefix": "CL",
+      "prefix_reference": "http://purl.obolibrary.org/obo/CL_"
+    },
+    {
+      "prefix_prefix": "PCL",
+      "prefix_reference": "http://purl.obolibrary.org/obo/PCL_"
+    },
+    {
+      "prefix_prefix": "RO",
+      "prefix_reference": "http://purl.obolibrary.org/obo/RO_"
+    },
+    {
+      "prefix_prefix": "skos",
+      "prefix_reference": "http://www.w3.org/2004/02/skos/core#"
+    }
+  ],
+  "default_curi_maps": [
+    "semweb_context",
+    "obo_context"
+  ],
+  "default_prefix": "cell_annotation_schema",
+  "default_range": "string",
+  "types": [
+    {
+      "name": "string",
+      "definition_uri": "https://w3id.org/linkml/String",
+      "description": "A character string",
+      "notes": [
+        "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Text"
+      ],
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "integer",
+      "definition_uri": "https://w3id.org/linkml/Integer",
+      "description": "An integer",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Integer"
+      ],
+      "base": "int",
+      "uri": "http://www.w3.org/2001/XMLSchema#integer",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "boolean",
+      "definition_uri": "https://w3id.org/linkml/Boolean",
+      "description": "A binary (true or false) value",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Boolean"
+      ],
+      "base": "Bool",
+      "uri": "http://www.w3.org/2001/XMLSchema#boolean",
+      "repr": "bool",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "float",
+      "definition_uri": "https://w3id.org/linkml/Float",
+      "description": "A real number that conforms to the xsd:float specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#float",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "double",
+      "definition_uri": "https://w3id.org/linkml/Double",
+      "description": "A real number that conforms to the xsd:double specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:Float"
+      ],
+      "base": "float",
+      "uri": "http://www.w3.org/2001/XMLSchema#double",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "decimal",
+      "definition_uri": "https://w3id.org/linkml/Decimal",
+      "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "broad_mappings": [
+        "schema:Number"
+      ],
+      "base": "Decimal",
+      "uri": "http://www.w3.org/2001/XMLSchema#decimal",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "time",
+      "definition_uri": "https://w3id.org/linkml/Time",
+      "description": "A time object represents a (local) time of day, independent of any particular day",
+      "notes": [
+        "URI is dateTime because OWL reasoners do not work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"time\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Time"
+      ],
+      "base": "XSDTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#time",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date",
+      "definition_uri": "https://w3id.org/linkml/Date",
+      "description": "a date (year, month and day) in an idealized calendar",
+      "notes": [
+        "URI is dateTime because OWL reasoners don't work with straight date or time",
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:Date"
+      ],
+      "base": "XSDDate",
+      "uri": "http://www.w3.org/2001/XMLSchema#date",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "datetime",
+      "definition_uri": "https://w3id.org/linkml/Datetime",
+      "description": "The combination of a date and time",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "exact_mappings": [
+        "schema:DateTime"
+      ],
+      "base": "XSDDateTime",
+      "uri": "http://www.w3.org/2001/XMLSchema#dateTime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "date_or_datetime",
+      "definition_uri": "https://w3id.org/linkml/DateOrDatetime",
+      "description": "Either a date or a datetime",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "https://w3id.org/linkml/DateOrDatetime",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uriorcurie",
+      "definition_uri": "https://w3id.org/linkml/Uriorcurie",
+      "description": "a URI or a CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "URIorCURIE",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "curie",
+      "definition_uri": "https://w3id.org/linkml/Curie",
+      "conforms_to": "https://www.w3.org/TR/curie/",
+      "description": "a compact URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"curie\"."
+      ],
+      "comments": [
+        "in RDF serializations this MUST be expanded to a URI",
+        "in non-RDF serializations MAY be serialized as the compact representation"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "Curie",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "uri",
+      "definition_uri": "https://w3id.org/linkml/Uri",
+      "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
+      "description": "a complete URI",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uri\"."
+      ],
+      "comments": [
+        "in RDF serializations a slot with range of uri is treated as a literal or type xsd:anyURI unless it is an identifier or a reference to an identifier, in which case it is translated directly to a node"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "close_mappings": [
+        "schema:URL"
+      ],
+      "base": "URI",
+      "uri": "http://www.w3.org/2001/XMLSchema#anyURI",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "ncname",
+      "definition_uri": "https://w3id.org/linkml/Ncname",
+      "description": "Prefix part of CURIE",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NCName",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "objectidentifier",
+      "definition_uri": "https://w3id.org/linkml/Objectidentifier",
+      "description": "A URI or CURIE that represents an object in the model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
+      ],
+      "comments": [
+        "Used for inheritance and type checking"
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "ElementIdentifier",
+      "uri": "http://www.w3.org/ns/shex#iri",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "nodeidentifier",
+      "definition_uri": "https://w3id.org/linkml/Nodeidentifier",
+      "description": "A URI, CURIE or BNODE that represents a node in a model.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "NodeIdentifier",
+      "uri": "http://www.w3.org/ns/shex#nonLiteral",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpointer",
+      "definition_uri": "https://w3id.org/linkml/Jsonpointer",
+      "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
+      "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpointer\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "jsonpath",
+      "definition_uri": "https://w3id.org/linkml/Jsonpath",
+      "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
+      "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"jsonpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    },
+    {
+      "name": "sparqlpath",
+      "definition_uri": "https://w3id.org/linkml/Sparqlpath",
+      "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
+      "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
+      "notes": [
+        "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"sparqlpath\"."
+      ],
+      "from_schema": "https://w3id.org/linkml/types",
+      "imported_from": "linkml:types",
+      "base": "str",
+      "uri": "http://www.w3.org/2001/XMLSchema#string",
+      "repr": "str",
+      "@type": "TypeDefinition"
+    }
+  ],
+  "enums": [
+    {
+      "name": "review_options",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "permissible_values": [
+        {
+          "text": "Agree"
+        },
+        {
+          "text": "Disagree"
+        }
+      ]
+    },
+    {
+      "name": "annotation_method_options",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "permissible_values": [
+        {
+          "text": "algorithmic"
+        },
+        {
+          "text": "manual"
+        },
+        {
+          "text": "both"
+        }
+      ]
+    },
+    {
+      "name": "CellTypeEnum",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/CellTypeEnum",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "reachable_from": {
+        "source_ontology": "obo:cl",
+        "source_nodes": [
+          "CL:0000000"
+        ],
+        "relationship_types": [
+          "rdfs:subClassOf"
+        ],
+        "include_self": true
+      }
+    }
+  ],
+  "slots": [
+    {
+      "name": "datestamp",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/datestamp",
+      "description": "Time and date review was last edited.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/datestamp",
+      "owner": "Review",
+      "domain_of": [
+        "Review"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "reviewer",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviewer",
+      "description": "Review Author",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviewer",
+      "owner": "Review",
+      "domain_of": [
+        "Review"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "review",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/review",
+      "description": "Reviewer's verdict on the annotation.  Must be 'Agree' or 'Disagree'",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/review",
+      "owner": "Review",
+      "domain_of": [
+        "Review"
+      ],
+      "range": "review_options",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "explanation",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/explanation",
+      "description": "Free-text review of annotation. This is required if the verdict is disagree and should include reasons for disagreement.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/IAO_0000115"
+      ],
+      "slot_uri": "http://purl.obolibrary.org/obo/IAO_0000115",
+      "owner": "Review",
+      "domain_of": [
+        "Review"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "name",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/name",
+      "description": "name of annotation key",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "owner": "Labelset",
+      "domain_of": [
+        "Labelset"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "description",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/description",
+      "description": "The description of the dataset. e.g. 'A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.'",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/IAO_0000115"
+      ],
+      "slot_uri": "http://purl.obolibrary.org/obo/IAO_0000115",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Labelset",
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "annotation_method",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotation_method",
+      "description": "The method used for creating the cell annotations. This MUST be one of the following strings: `'algorithmic'`, `'manual'`, or `'both'`",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotation_method",
+      "owner": "Labelset",
+      "domain_of": [
+        "Labelset"
+      ],
+      "range": "annotation_method_options",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "automated_annotation",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/automated_annotation",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/automated_annotation",
+      "owner": "Labelset",
+      "domain_of": [
+        "Labelset"
+      ],
+      "range": "AutomatedAnnotation",
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "algorithm_name",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_name",
+      "description": "The name of the algorithm used. It MUST be a string of the algorithm's name.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_name",
+      "owner": "AutomatedAnnotation",
+      "domain_of": [
+        "AutomatedAnnotation"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "algorithm_version",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_version",
+      "description": "The version of the algorithm used (if applicable). It MUST be a string of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]', but other versioning systems are permitted (based on the algorithm's versioning).",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_version",
+      "owner": "AutomatedAnnotation",
+      "domain_of": [
+        "AutomatedAnnotation"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "algorithm_repo_url",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_repo_url",
+      "description": "This field denotes the URL of the version control repository associated with the algorithm used (if applicable). It MUST be a string of a valid URL.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_repo_url",
+      "owner": "AutomatedAnnotation",
+      "domain_of": [
+        "AutomatedAnnotation"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "reference_location",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reference_location",
+      "description": "This field denotes a valid URL of the annotated dataset that was the source of annotated reference data. \nThis MUST be a string of a valid URL. The concept of a 'reference' specifically refers to 'annotation transfer' algorithms, whereby a 'reference' dataset is used to transfer cell annotations to the 'query' dataset.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reference_location",
+      "owner": "AutomatedAnnotation",
+      "domain_of": [
+        "AutomatedAnnotation"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "labelset",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelset",
+      "description": "The unique name of the set of cell annotations. \nEach cell within the AnnData/Seurat file MUST be associated with a 'cell_label' value in order for this to be a valid 'cellannotation_setname'.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_labelset"
+      ],
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_labelset",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cell_label",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_label",
+      "description": "This denotes any free-text term which the author uses to annotate cells, i.e. the preferred cell label name used by the author. Abbreviations are exceptable in this field; refer to 'cell_fullname' for related details. \nCertain key words have been reserved:\n- `'doublets'` is reserved for encoding cells defined as doublets based on some computational analysis\n- `'junk'` is reserved for encoding cells that failed sequencing for some reason, e.g. few genes detected, high fraction of mitochondrial reads\n- `'unknown'` is explicitly reserved for unknown or 'author does not know'\n- `'NA'` is incomplete, i.e. no cell annotation was provided",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "http://www.w3.org/2000/01/rdf-schema#label"
+      ],
+      "slot_uri": "http://www.w3.org/2000/01/rdf-schema#label",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cell_fullname",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_fullname",
+      "description": "This MUST be the full-length name for the biological entity listed in `cell_label` by the author. (If the value in `cell_label` is the full-length term, this field will contain the same value.) \nNOTE: any reserved word used in the field 'cell_label' MUST match the value of this field. \n\nEXAMPLE 1: Given the matching terms 'LC' and 'luminal cell' used to annotate the same cell(s), then users could use either terms as values in the field 'cell_label'. However, the abbreviation 'LC' CANNOT be provided in the field 'cell_fullname'. \n\nEXAMPLE 2: Either the abbreviation 'AC' or the full-length term intended by the author 'GABAergic amacrine cell' MAY be placed in the field 'cell_label', but as full-length term naming this biological entity, 'GABAergic amacrine cell' MUST be placed in the field 'cell_fullname'.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "http://www.w3.org/2004/02/skos/core#preflabel"
+      ],
+      "slot_uri": "http://www.w3.org/2004/02/skos/core#preflabel",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cell_ontology_term_id",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ontology_term_id",
+      "description": "This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl) or from some ontology that extends it by classifying cell types under terms from the Cell Ontology\ne.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl) or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).\n\nNOTE: The closest available ontology term matching the value within the field 'cell_label' (at the time of publication) MUST be used.\nFor example, if the value of 'cell_label' is 'relay interneuron', but this entity does not yet exist in the ontology, users must choose the closest available term in the CL ontology. In this case, it's the broader term 'interneuron' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "http://purl.obolibrary.org/obo/RO_0002473"
+      ],
+      "slot_uri": "http://purl.obolibrary.org/obo/RO_0002473",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "CellTypeEnum",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cell_ontology_term",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ontology_term",
+      "description": "This MUST be the human-readable name assigned to the value of 'cell_ontology_term_id'",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ontology_term",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cell_ids",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ids",
+      "description": "Cell barcode sequences/UUIDs used to uniquely identify the cells within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs MUST be included in the AnnData/Seurat matrix.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_cellid"
+      ],
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_cellid",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rationale",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale",
+      "description": "The free-text rationale which users provide as justification/evidence for their cell annotations. \nResearchers are encouraged to use this field to cite relevant publications in-line using standard academic citations of the form `(Zheng et al., 2020)` This human-readable free-text MUST be encoded as a single string.\nAll references cited SHOULD be listed using DOIs under rationale_dois. There MUST be a 2000-character limit.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "rationale_dois",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale_dois",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale_dois",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "marker_gene_evidence",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/marker_gene_evidence",
+      "description": "Gene names explicitly used as evidence, which MUST be in the matrix of the AnnData/Seurat file",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/marker_gene_evidence",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "synonyms",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/synonyms",
+      "description": "List of synonyms",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/synonyms",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "multivalued": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "reviews",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviews",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviews",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "Review",
+      "multivalued": true,
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "author_annotation_fields",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_annotation_fields",
+      "description": "A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_annotation_fields",
+      "owner": "Annotation",
+      "domain_of": [
+        "Annotation"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "matrix_file_id",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/matrix_file_id",
+      "description": "A resolvable ID for a cell by gene matrix file in the form namespace:accession, e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json for supported namespaces.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/matrix_file_id",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "title",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/title",
+      "description": "The title of the dataset. This MUST be less than or equal to 200 characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/title",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cellannotation_schema_version",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_schema_version",
+      "description": "The schema version, the cell annotation open standard. Current version MUST follow 0.1.0\nThis versioning MUST follow the format `'[MAJOR].[MINOR].[PATCH]'` as defined by Semantic Versioning 2.0.0, https://semver.org/",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_schema_version",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cellannotation_timestamp",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_timestamp",
+      "description": "The timestamp of all cell annotations published (per dataset). This MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_timestamp",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cellannotation_version",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_version",
+      "description": "The version for all cell annotations published (per dataset). This MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'` as defined by Semantic Versioning 2.0.0, https://semver.org/",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_version",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "cellannotation_url",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_url",
+      "description": "A persistent URL of all cell annotations published (per dataset).",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_url",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "author_list",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_list",
+      "description": "This field stores a list of users who are included in the project as collaborators, regardless of their specific role. An example list; '['John Smith', 'Cody Miller', 'Sarah Jones']'",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_list",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "author_name",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_name",
+      "description": "Primary author's name. This MUST be a string in the format `[FIRST NAME] [LAST NAME]`",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_name",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "required": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "author_contact",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_contact",
+      "description": "Primary author's contact. This MUST be a valid email address of the author",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_contact",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "orcid",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/orcid",
+      "description": "Primary author's orcid. This MUST be a valid ORCID for the author",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/orcid",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "string",
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "labelsets",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelsets",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelsets",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "Labelset",
+      "required": true,
+      "multivalued": true,
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "annotations",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotations",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotations",
+      "owner": "Taxonomy",
+      "domain_of": [
+        "Taxonomy"
+      ],
+      "range": "Annotation",
+      "required": true,
+      "multivalued": true,
+      "inlined": true,
+      "@type": "SlotDefinition"
+    },
+    {
+      "name": "id",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/id",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/id",
+      "identifier": true,
+      "range": "uriorcurie",
+      "required": true,
+      "@type": "SlotDefinition"
+    }
+  ],
+  "classes": [
+    {
+      "name": "Review",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Review",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slots": [
+        "datestamp",
+        "reviewer",
+        "review",
+        "explanation"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Review",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Labelset",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slots": [
+        "name",
+        "description",
+        "annotation_method",
+        "automated_annotation"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "AutomatedAnnotation",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AutomatedAnnotation",
+      "description": "A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slots": [
+        "algorithm_name",
+        "algorithm_version",
+        "algorithm_repo_url",
+        "reference_location"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AutomatedAnnotation",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Annotation",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Annotation",
+      "description": "A collection of fields recording a cell type/class/state annotation on some set of cells, supporting evidence and provenance. As this is intended as a general schema, compulsory fields are kept to a minimum. However, tools using this schema are encouarged to specify a larger set of compulsory fields for publication.    Note: This schema deliberately allows for additional fields in order to support ad hoc user fields, new formal schema extensions and project/tool specific metadata.",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "PCL:0010001"
+      ],
+      "slots": [
+        "labelset",
+        "cell_label",
+        "cell_fullname",
+        "cell_ontology_term_id",
+        "cell_ontology_term",
+        "cell_ids",
+        "rationale",
+        "rationale_dois",
+        "marker_gene_evidence",
+        "synonyms",
+        "reviews",
+        "author_annotation_fields"
+      ],
+      "slot_usage": {},
+      "class_uri": "http://purl.obolibrary.org/obo/PCL_0010001",
+      "@type": "ClassDefinition"
+    },
+    {
+      "name": "Taxonomy",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Taxonomy",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "slots": [
+        "matrix_file_id",
+        "title",
+        "description",
+        "cellannotation_schema_version",
+        "cellannotation_timestamp",
+        "cellannotation_version",
+        "cellannotation_url",
+        "author_list",
+        "author_name",
+        "author_contact",
+        "orcid",
+        "labelsets",
+        "annotations"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Taxonomy",
+      "@type": "ClassDefinition"
+    }
+  ],
+  "metamodel_version": "1.7.0",
+  "source_file": "general_schema.yaml",
+  "source_file_date": "2024-08-06T17:24:28",
+  "source_file_size": 11708,
+  "generation_date": "2024-08-06T17:24:34",
+  "@type": "SchemaDefinition",
+  "@context": [
+    "project/jsonld/general_schema.context.jsonld",
+    "https://w3id.org/linkml/types.context.jsonld",
+    {
+      "@base": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+    }
+  ]
+}

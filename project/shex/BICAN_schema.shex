@@ -1,0 +1,178 @@
+# metamodel_version: 1.7.0
+BASE <https://cellular-semantics.sanger.ac.uk/ontology/CAS/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX PCL: <http://purl.obolibrary.org/obo/PCL_>
+PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+
+
+<String> xsd:string
+
+<Integer> xsd:integer
+
+<Boolean> xsd:boolean
+
+<Float> xsd:float
+
+<Double> xsd:double
+
+<Decimal> xsd:decimal
+
+<Time> xsd:time
+
+<Date> xsd:date
+
+<Datetime> xsd:dateTime
+
+<DateOrDatetime> linkml:DateOrDatetime
+
+<Uriorcurie> IRI
+
+<Curie> xsd:string
+
+<Uri> IRI
+
+<Ncname> xsd:string
+
+<Objectidentifier> IRI
+
+<Nodeidentifier> NONLITERAL
+
+<Jsonpointer> xsd:string
+
+<Jsonpath> xsd:string
+
+<Sparqlpath> xsd:string
+
+<Annotation>  (
+    CLOSED {
+       (  $<Annotation_tes> (  <has_labelset> @<String> ;
+             rdfs:label @<String> ;
+             skos:preflabel @<String> ? ;
+             RO:0002473 . ? ;
+             <cell_ontology_term> @<String> ? ;
+             <has_cellid> @<String> * ;
+             <rationale> @<String> ? ;
+             <rationale_dois> @<String> * ;
+             <marker_gene_evidence> @<String> * ;
+             <synonyms> @<String> * ;
+             <reviews> @<Review> * ;
+             <author_annotation_fields> @<String> ?
+          ) ;
+          rdf:type [ PCL:0010001 ] ?
+       )
+    } OR @<BicanAnnotation>
+)
+
+<AnnotationTransfer> CLOSED {
+    (  $<AnnotationTransfer_tes> (  <transferred_cell_label> @<String> ? ;
+          <source_taxonomy> @<Uriorcurie> ? ;
+          <source_node_accession> @<String> ? ;
+          <algorithm_name> @<String> ? ;
+          IAO:0000115 @<String> ?
+       ) ;
+       rdf:type [ <AnnotationTransfer> ] ?
+    )
+}
+
+<AutomatedAnnotation> CLOSED {
+    (  $<AutomatedAnnotation_tes> (  <algorithm_name> @<String> ? ;
+          <algorithm_version> @<String> ;
+          <algorithm_repo_url> @<String> ;
+          <reference_location> @<String> ?
+       ) ;
+       rdf:type [ <AutomatedAnnotation> ] ?
+    )
+}
+
+<BicanAnnotation> CLOSED {
+    (  $<BicanAnnotation_tes> (  &<Annotation_tes> ;
+          rdf:type [ PCL:0010001 ] ? ;
+          <cell_set_accession> @<String> ;
+          RO:0015003 @<String> ? ;
+          <transferred_annotations> @<AnnotationTransfer> * ;
+          <cells> @<Cell> * ;
+          <negative_marker_gene_evidence> @<String> *
+       ) ;
+       rdf:type [ PCL:0010001 ] ?
+    )
+}
+
+<BicanLabelset> CLOSED {
+    (  $<BicanLabelset_tes> (  &<Labelset_tes> ;
+          rdf:type [ <Labelset> ] ? ;
+          <rank> @<Integer> ?
+       ) ;
+       rdf:type [ <Labelset> ] ?
+    )
+}
+
+<BicanTaxonomy> CLOSED {
+    (  $<BicanTaxonomy_tes> (  &<Taxonomy_tes> ;
+          rdf:type [ <Taxonomy> ] ? ;
+          <labelsets> @<BicanLabelset> + ;
+          <annotations> @<BicanAnnotation> +
+       ) ;
+       rdf:type [ <Taxonomy> ] ?
+    )
+}
+
+<Cell> CLOSED {
+    (  $<Cell_tes> (  <cell_id> @<String> ;
+          <confidence> @<Float> ? ;
+          <author_categories> @<String> ?
+       ) ;
+       rdf:type [ <Cell> ] ?
+    )
+}
+
+<Labelset>  (
+    CLOSED {
+       (  $<Labelset_tes> (  rdfs:label @<String> ;
+             IAO:0000115 @<String> ? ;
+             <annotation_method> [ <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic>
+                <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual>
+                <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both> ] ? ;
+             <automated_annotation> @<AutomatedAnnotation> ?
+          ) ;
+          rdf:type [ <Labelset> ] ?
+       )
+    } OR @<BicanLabelset>
+)
+
+<Review> CLOSED {
+    (  $<Review_tes> (  <datestamp> @<String> ;
+          <reviewer> @<String> ? ;
+          <review> [ <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree>
+             <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> ] ? ;
+          IAO:0000115 @<String> ?
+       ) ;
+       rdf:type [ <Review> ] ?
+    )
+}
+
+<Taxonomy>  (
+    CLOSED {
+       (  $<Taxonomy_tes> (  <matrix_file_id> @<String> ? ;
+             <title> @<String> ;
+             IAO:0000115 @<String> ? ;
+             <cellannotation_schema_version> @<String> ? ;
+             <cellannotation_timestamp> @<String> ? ;
+             <cellannotation_version> @<String> ? ;
+             <cellannotation_url> @<String> ? ;
+             <author_list> @<String> ? ;
+             <author_name> @<String> ;
+             <author_contact> @<String> ? ;
+             <orcid> @<String> ? ;
+             <labelsets> @<Labelset> + ;
+             <annotations> @<Annotation> +
+          ) ;
+          rdf:type [ <Taxonomy> ] ?
+       )
+    } OR @<BicanTaxonomy>
+)
+

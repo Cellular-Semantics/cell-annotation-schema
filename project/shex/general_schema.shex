@@ -1,0 +1,120 @@
+# metamodel_version: 1.7.0
+BASE <https://cellular-semantics.sanger.ac.uk/ontology/CAS/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX linkml: <https://w3id.org/linkml/>
+PREFIX PCL: <http://purl.obolibrary.org/obo/PCL_>
+PREFIX RO: <http://purl.obolibrary.org/obo/RO_>
+PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
+
+
+linkml:String xsd:string
+
+linkml:Integer xsd:integer
+
+linkml:Boolean xsd:boolean
+
+linkml:Float xsd:float
+
+linkml:Double xsd:double
+
+linkml:Decimal xsd:decimal
+
+linkml:Time xsd:time
+
+linkml:Date xsd:date
+
+linkml:Datetime xsd:dateTime
+
+linkml:DateOrDatetime linkml:DateOrDatetime
+
+linkml:Uriorcurie IRI
+
+linkml:Curie xsd:string
+
+linkml:Uri IRI
+
+linkml:Ncname xsd:string
+
+linkml:Objectidentifier IRI
+
+linkml:Nodeidentifier NONLITERAL
+
+linkml:Jsonpointer xsd:string
+
+linkml:Jsonpath xsd:string
+
+linkml:Sparqlpath xsd:string
+
+<Annotation> CLOSED {
+    (  $<Annotation_tes> (  <has_labelset> @linkml:String ;
+          rdfs:label @linkml:String ;
+          skos:preflabel @linkml:String ? ;
+          RO:0002473 . ? ;
+          <cell_ontology_term> @linkml:String ? ;
+          <has_cellid> @linkml:String * ;
+          <rationale> @linkml:String ? ;
+          <rationale_dois> @linkml:String * ;
+          <marker_gene_evidence> @linkml:String * ;
+          <synonyms> @linkml:String * ;
+          <reviews> @<Review> * ;
+          <author_annotation_fields> @linkml:String ?
+       ) ;
+       rdf:type [ PCL:0010001 ] ?
+    )
+}
+
+<AutomatedAnnotation> CLOSED {
+    (  $<AutomatedAnnotation_tes> (  <algorithm_name> @linkml:String ;
+          <algorithm_version> @linkml:String ;
+          <algorithm_repo_url> @linkml:String ;
+          <reference_location> @linkml:String ?
+       ) ;
+       rdf:type [ <AutomatedAnnotation> ] ?
+    )
+}
+
+<Labelset> CLOSED {
+    (  $<Labelset_tes> (  rdfs:label @linkml:String ;
+          IAO:0000115 @linkml:String ? ;
+          <annotation_method> [ <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic>
+             <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual>
+             <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both> ] ? ;
+          <automated_annotation> @<AutomatedAnnotation> ?
+       ) ;
+       rdf:type [ <Labelset> ] ?
+    )
+}
+
+<Review> CLOSED {
+    (  $<Review_tes> (  <datestamp> @linkml:String ;
+          <reviewer> @linkml:String ? ;
+          <review> [ <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree>
+             <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> ] ? ;
+          IAO:0000115 @linkml:String ?
+       ) ;
+       rdf:type [ <Review> ] ?
+    )
+}
+
+<Taxonomy> CLOSED {
+    (  $<Taxonomy_tes> (  <matrix_file_id> @linkml:String ? ;
+          <title> @linkml:String ;
+          IAO:0000115 @linkml:String ? ;
+          <cellannotation_schema_version> @linkml:String ? ;
+          <cellannotation_timestamp> @linkml:String ? ;
+          <cellannotation_version> @linkml:String ? ;
+          <cellannotation_url> @linkml:String ? ;
+          <author_list> @linkml:String ? ;
+          <author_name> @linkml:String ;
+          <author_contact> @linkml:String ? ;
+          <orcid> @linkml:String ? ;
+          <labelsets> @<Labelset> + ;
+          <annotations> @<Annotation> +
+       ) ;
+       rdf:type [ <Taxonomy> ] ?
+    )
+}
+
