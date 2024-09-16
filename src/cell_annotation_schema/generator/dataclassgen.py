@@ -72,6 +72,12 @@ def get_py_instance(instance_dict, schema_name, schema_def, root_class=None):
     Returns:
         The Python instance of the schema class.
     """
+    for annotation in instance_dict.get("annotations", []):
+        # remove empty cell_ontology_term_id to prevent enum value failure
+        if annotation.get("cell_ontology_term_id", None) == "":
+            annotation.pop("cell_ontology_term_id", None)
+            annotation.pop("cell_ontology_term", None)
+
     if isinstance(schema_name, str):
         if schema_name.lower() == "base":
             return Taxonomy(**instance_dict)

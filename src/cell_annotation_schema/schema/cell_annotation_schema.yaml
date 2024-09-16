@@ -212,12 +212,12 @@ slots:
     range: Labelset
     required: true
     multivalued: true
-    inlined: true
+    inlined_as_list: true
   annotations:
     range: Annotation
     required: true
     multivalued: true
-    inlined: true
+    inlined_as_list: true
   id:
     identifier: true
     range: uriorcurie
