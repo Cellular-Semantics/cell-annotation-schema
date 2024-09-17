@@ -37,7 +37,7 @@ jobs:
       - name: Package release assets
         run: |
           mkdir -p src/cell_annotation_schema/schemas
-          touch src/cas_schema/schemas/__init__.py
+          touch src/cell_annotation_schema/schemas/__init__.py
           cp build/general_schema.yaml src/cell_annotation_schema/schemas
           cp build/BICAN_schema.yaml src/cell_annotation_schema/schemas
           cp build/CAP_schema.yaml src/cell_annotation_schema/schemas
