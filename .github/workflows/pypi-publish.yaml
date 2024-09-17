@@ -26,15 +26,13 @@ jobs:
       - name: Install dependencies
         run: poetry install --no-interaction
 
-      - name: Generate merged schemas
+      - name: Set PYTHONPATH
         run: |
-          make merged_schemas
+          echo "PYTHONPATH=$PYTHONPATH:$(pwd)/src" >> $GITHUB_ENV
 
-      - name: Run schema_expander.py
+      - name: Generate merged and expanded schemas
         run: |
-          poetry run python src/cell_annotation_schema/schema_expander.py expand -i build/general_schema.yaml -o build/general_schema.yaml
-          poetry run python src/cell_annotation_schema/schema_expander.py expand -i build/BICAN_schema.yaml -o build/BICAN_schema.yaml
-          poetry run python src/cell_annotation_schema/schema_expander.py expand -i build/CAP_schema.yaml -o build/CAP_schema.yaml
+          make expanded_schemas
 
       - name: Package release assets
         run: |
