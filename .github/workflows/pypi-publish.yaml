@@ -52,6 +52,6 @@ jobs:
 
       - name: Publish distribution to PyPI
         run: |
-          poetry config repositories.pypi https://pypi.org/
+          poetry config repositories.pypi https://pypi.org/legacy/
           poetry version ${{ github.ref_name }}
           poetry publish --build -r pypi -u __token__ -p ${{ secrets.PYPI_API_TOKEN }}
