@@ -36,9 +36,9 @@ jobs:
         run: |
           poetry install
 
-      - name: Generate merged schemas
+      - name: Generate merged and expanded schemas
         run: |
-          make merged_schemas
+          make expanded_schemas
 
       - name: Make Snapshot
         uses: ncipollo/release-action@v1

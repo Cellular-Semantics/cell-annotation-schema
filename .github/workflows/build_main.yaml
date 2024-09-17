@@ -34,9 +34,9 @@ jobs:
         run: |
           poetry install --no-interaction
 
-      - name: Generate merged schemas
+      - name: Generate merged and expanded schemas
         run: |
-          make merged_schemas
+          make expanded_schemas
 
       - name: Commit files
         run: |

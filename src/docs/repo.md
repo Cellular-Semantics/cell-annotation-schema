@@ -16,11 +16,11 @@ This command will merge the schemas and generate the Python data model
 make build
 ```
 
-The merge and data model generation can be run separately:
+The merge (expand) and data model generation can be run separately:
 ### Merge schemas
 
 ```
-make merged_schemas
+make expanded_schemas
 ```
 
 ### Generate Python data model
