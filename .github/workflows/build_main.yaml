@@ -34,9 +34,15 @@ jobs:
         run: |
           poetry install --no-interaction
 
-      - name: Generate merged and expanded schemas
+      - name: Generate merged schemas
         run: |
-          make expanded_schemas
+          make merged_schemas
+
+      - name: Run schema_expander.py
+        run: |
+          poetry run python src/cell_annotation_schema/schema_expander.py expand -i build/general_schema.yaml -o build/general_schema.yaml
+          poetry run python src/cell_annotation_schema/schema_expander.py expand -i build/BICAN_schema.yaml -o build/BICAN_schema.yaml
+          poetry run python src/cell_annotation_schema/schema_expander.py expand -i build/CAP_schema.yaml -o build/CAP_schema.yaml
 
       - name: Commit files
         run: |

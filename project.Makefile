@@ -10,7 +10,7 @@ BUILD_FOLDER = build
 DOCDIR_BICAN = $(DOCDIR)/bican
 DOCDIR_CAP = $(DOCDIR)/cap
 
-SCHEMA_EXPANDER := $(SRC)/$(SCHEMA_NAME)/schema_expander.py
+SCHEMA_EXPANDER := $(SRC)/cell_annotation_schema/schema_expander.py
 
 .PHONY: expanded_schemas merged_schemas classes build
 
