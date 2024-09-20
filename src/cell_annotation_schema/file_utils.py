@@ -1,12 +1,16 @@
 import os
 import json
+import yaml
 import warnings
 
 from typing import Union
 from urllib.request import urlopen
 from pathlib import Path
+from importlib import resources
 from linkml_runtime.linkml_model import SchemaDefinition
 from linkml_runtime.loaders import yaml_loader
+
+from cell_annotation_schema import schemas
 
 
 def is_web_url(path):
@@ -49,8 +53,15 @@ def read_schema(schema: Union[str, dict]) -> SchemaDefinition:
     """
     try:
         if isinstance(schema, str) and str(schema).lower() in get_cas_schema_names().keys():
-            schema_dir = os.path.join(os.path.dirname(__file__), "../../build")
-            schema = os.path.join(schema_dir, get_cas_schema_names()[str(schema).lower()])
+            schema_name = get_cas_schema_names()[str(schema).lower()]
+            schema_file = resources.files(schemas) / schema_name
+            if os.path.exists(schema_file):
+                # read from resources (schemas) package
+                schema = yaml.safe_load(Path(schema_file).read_text())
+            else:
+                # read from build folder
+                schema_dir = os.path.join(os.path.dirname(__file__), "../../build")
+                schema = os.path.join(schema_dir, schema_name)
         if isinstance(schema, Path):
             schema = str(schema)
         if isinstance(schema, dict):
