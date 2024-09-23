@@ -1,5 +1,5 @@
 # Auto generated from None by pythongen.py version: 0.0.1
-# Generation date: 2024-09-16T15:21:05
+# Generation date: 2024-09-23T12:23:42
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -11,7 +11,7 @@ import re
 from jsonasobj2 import JsonObj, as_dict
 from typing import Optional, List, Union, Dict, ClassVar, Any
 from dataclasses import dataclass
-from datetime import date, datetime
+from datetime import date, datetime, time
 from linkml_runtime.linkml_model.meta import EnumDefinition, PermissibleValue, PvFormulaOptions
 
 from linkml_runtime.utils.slot import Slot
@@ -204,7 +204,7 @@ class Sparqlpath(str):
 
 
 
-@dataclass
+@dataclass(repr=False)
 class AnnotationTransfer(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -238,7 +238,7 @@ class AnnotationTransfer(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class Cell(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -266,7 +266,7 @@ class Cell(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class Review(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -298,7 +298,7 @@ class Review(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class Labelset(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -330,7 +330,7 @@ class Labelset(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class BicanLabelset(Labelset):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -349,7 +349,7 @@ class BicanLabelset(Labelset):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class AutomatedAnnotation(YAMLRoot):
     """
     A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated
@@ -387,7 +387,7 @@ class AutomatedAnnotation(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class Annotation(YAMLRoot):
     """
     A collection of fields recording a cell type/class/state annotation on some set of cells, supporting evidence and
@@ -463,7 +463,7 @@ class Annotation(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class BicanAnnotation(Annotation):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -502,7 +502,7 @@ class BicanAnnotation(Annotation):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class Taxonomy(YAMLRoot):
     _inherited_slots: ClassVar[List[str]] = []
 
@@ -571,7 +571,7 @@ class Taxonomy(YAMLRoot):
         super().__post_init__(**kwargs)
 
 
-@dataclass
+@dataclass(repr=False)
 class BicanTaxonomy(Taxonomy):
     _inherited_slots: ClassVar[List[str]] = []
 

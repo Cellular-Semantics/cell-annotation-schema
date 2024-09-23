@@ -24,10 +24,12 @@ We read schema into memory and remove `annotations` slot from the Taxonomy class
 (as if it is not inherited but its own slot) so that the problematic normalisation code is not generated.
 """
 import os
+import json
 
 from pathlib import Path
 from typing import Union
 from linkml import generators
+from dacite import from_dict
 
 from linkml_runtime.linkml_model import SchemaDefinition
 from linkml_runtime.loaders import yaml_loader
@@ -72,28 +74,46 @@ def get_py_instance(instance_dict, schema_name, schema_def, root_class=None):
     Returns:
         The Python instance of the schema class.
     """
+    fix_author_annotation_fields(instance_dict)
     for annotation in instance_dict.get("annotations", []):
         # remove empty cell_ontology_term_id to prevent enum value failure
         if annotation.get("cell_ontology_term_id", None) == "":
             annotation.pop("cell_ontology_term_id", None)
             annotation.pop("cell_ontology_term", None)
 
+    py_inst = None
     if isinstance(schema_name, str):
         if schema_name.lower() == "base":
-            return Taxonomy(**instance_dict)
+            py_inst = from_dict(data_class=Taxonomy, data=instance_dict)
         elif schema_name.lower() == "bican":
-            return BicanTaxonomy(**instance_dict)
+            py_inst = from_dict(data_class=BicanTaxonomy, data=instance_dict)
         elif schema_name.lower() == "cap":
-            return CapTaxonomy(**instance_dict)
+            py_inst = from_dict(data_class=CapTaxonomy, data=instance_dict)
 
-    # unknown schema, dynamically generate the python module and instantiate
-    gen = generators.PythonGenerator(schema_def)
-    output = gen.serialize()
-    python_module = compile_python(output)
-    py_target_class = getattr(python_module, root_class)
-    py_inst = py_target_class(**instance_dict)
+    if not py_inst:
+        # unknown schema, dynamically generate the python module and instantiate the class
+        gen = generators.PythonGenerator(schema_def)
+        output = gen.serialize()
+        python_module = compile_python(output)
+        py_target_class = getattr(python_module, root_class)
+        py_inst = py_target_class(**instance_dict)
 
+    for annotation in py_inst.annotations:
+        # fix the author_annotation_fields in the json representation to be a string
+        if annotation.author_annotation_fields:
+            annotation.author_annotation_fields = json.loads(annotation.author_annotation_fields)
     return py_inst
+
+
+def fix_author_annotation_fields(json_obj):
+    """
+    Fix the author_annotation_fields in the json representation to be a string.
+    Args:
+        py_inst: The Python instance of the schema class.
+    """
+    for annotation in json_obj["annotations"]:
+        if annotation.get("author_annotation_fields", None):
+            annotation["author_annotation_fields"] = json.dumps(annotation["author_annotation_fields"])
 
 
 def get_root_class(schema_name):

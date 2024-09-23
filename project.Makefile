@@ -46,10 +46,13 @@ gendoc: $(DOCDIR) $(DOCDIR_BICAN) $(DOCDIR_CAP)
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR_BICAN) $(BUILD_FOLDER)/BICAN_schema.yaml
 	$(RUN) gen-doc ${GEN_DOC_ARGS} -d $(DOCDIR_CAP) $(BUILD_FOLDER)/CAP_schema.yaml
 
+# also copy and rename json schema files: build/.schema.json > build/.json
 gen-project: build
 	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(BUILD_FOLDER)/general_schema.yaml --exclude python
 	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(BUILD_FOLDER)/BICAN_schema.yaml --exclude python
 	$(RUN) gen-project ${CONFIG_YAML} -d $(DEST) $(BUILD_FOLDER)/CAP_schema.yaml --exclude python
+	cp -a $(DEST)/jsonschema/. $(BUILD_FOLDER)/
+	find $(BUILD_FOLDER)/ -name '*.schema.json' -exec sh -c 'mv "$$0" "$${0%.schema.json}.json"' {} \;
 
 compile-sheets:
 	echo "Skipped compiling sheets."

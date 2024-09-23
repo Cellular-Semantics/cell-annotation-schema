@@ -42,6 +42,7 @@ class DataClassGeneratorTestCase(unittest.TestCase):
         json_data = get_json_from_file(os.path.join(TESTDATA, "Siletti_all_non_neuronal_cells.json"))
         print(len(json_data["annotations"]))
         bican_linkml_schema = read_schema("bican")
+
         obj = get_py_instance(json_data, "bican", bican_linkml_schema)
         self.assertIsNotNone(obj)
         self.assertEqual(BicanTaxonomy, type(obj))
@@ -52,3 +53,14 @@ class DataClassGeneratorTestCase(unittest.TestCase):
         annotation_0 = obj.annotations[0]
         self.assertEqual("Microglia", annotation_0.cell_label)
         self.assertEqual("supercluster_term", annotation_0.labelset)
+
+        import json
+
+        index = 0
+        for annotation in obj.annotations:
+            if annotation.author_annotation_fields:
+                print(annotation.author_annotation_fields)
+                self.assertTrue(dict, type(annotation.author_annotation_fields))
+                self.assertEqual("4", annotation.author_annotation_fields["Cluster ID"])
+                break
+            index += 1

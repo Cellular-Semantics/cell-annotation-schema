@@ -17383,9 +17383,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "general_schema.yaml",
-  "source_file_date": "2024-09-16T15:20:52",
+  "source_file_date": "2024-09-23T12:23:30",
   "source_file_size": 764582,
-  "generation_date": "2024-09-16T15:21:08",
+  "generation_date": "2024-09-23T12:23:45",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/general_schema.context.jsonld",
