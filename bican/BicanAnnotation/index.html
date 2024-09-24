@@ -219,6 +219,13 @@
 
       BicanAnnotation : author_annotation_fields
 
+
+
+
+    BicanAnnotation --&gt; "0..1" Any : author_annotation_fields
+    click Any href "../Any"
+
+
       BicanAnnotation : cell_fullname
 
       BicanAnnotation : cell_ids
@@ -397,7 +404,7 @@
 </tr>
 <tr>
 <td><a href="../author_annotation_fields/">author_annotation_fields</a></td>
-<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>0..1 <br/> <a href="../Any/">Any</a></td>
 <td>A dictionary of author defined key value pairs annotating the cell set</td>
 <td><a href="../Annotation/">Annotation</a></td>
 </tr>
@@ -701,7 +708,7 @@ attributes:
     owner: Bican_Annotation
     domain_of:
     - Annotation
-    range: string
+    range: Any
 class_uri: PCL:0010001
 
 </code></pre>
