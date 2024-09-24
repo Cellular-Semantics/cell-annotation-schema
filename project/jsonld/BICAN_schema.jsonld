@@ -17280,7 +17280,8 @@
       "domain_of": [
         "Annotation"
       ],
-      "range": "string",
+      "range": "Any",
+      "inlined": true,
       "@type": "SlotDefinition"
     },
     {
@@ -17608,6 +17609,17 @@
       "@type": "ClassDefinition"
     },
     {
+      "name": "Any",
+      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Any",
+      "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
+      "mappings": [
+        "linkml:Any"
+      ],
+      "slot_usage": {},
+      "class_uri": "https://w3id.org/linkml/Any",
+      "@type": "ClassDefinition"
+    },
+    {
       "name": "Review",
       "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Review",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
@@ -17702,9 +17714,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "BICAN_schema.yaml",
-  "source_file_date": "2024-09-23T12:23:33",
-  "source_file_size": 778991,
-  "generation_date": "2024-09-23T12:23:51",
+  "source_file_date": "2024-09-23T16:32:39",
+  "source_file_size": 779109,
+  "generation_date": "2024-09-23T16:32:56",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/BICAN_schema.context.jsonld",

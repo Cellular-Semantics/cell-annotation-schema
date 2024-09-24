@@ -12,7 +12,7 @@ type Annotation
     markerGeneEvidence: [String]
     synonyms: [String]
     reviews: [Review]
-    authorAnnotationFields: String
+    authorAnnotationFields: Any
   }
 
 type AnnotationTransfer
@@ -22,6 +22,10 @@ type AnnotationTransfer
     sourceNodeAccession: String
     algorithmName: String
     comment: String
+  }
+
+type Any
+  {
   }
 
 type AutomatedAnnotation
@@ -45,7 +49,7 @@ type BicanAnnotation
     markerGeneEvidence: [String]
     synonyms: [String]
     reviews: [Review]
-    authorAnnotationFields: String
+    authorAnnotationFields: Any
     cellSetAccession: String!
     parentCellSetAccession: String
     transferredAnnotations: [AnnotationTransfer]

@@ -12,7 +12,11 @@ type Annotation
     markerGeneEvidence: [String]
     synonyms: [String]
     reviews: [Review]
-    authorAnnotationFields: String
+    authorAnnotationFields: Any
+  }
+
+type Any
+  {
   }
 
 type AutomatedAnnotation

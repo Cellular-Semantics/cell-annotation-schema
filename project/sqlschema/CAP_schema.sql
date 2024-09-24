@@ -31,8 +31,10 @@
 --     * Slot: cell_ontology_term_id Description: This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl) or from some ontology that extends it by classifying cell types under terms from the Cell Ontologye.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl) or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).NOTE: The closest available ontology term matching the value within the field 'cell_label' (at the time of publication) MUST be used.For example, if the value of 'cell_label' is 'relay interneuron', but this entity does not yet exist in the ontology, users must choose the closest available term in the CL ontology. In this case, it's the broader term 'interneuron' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.
 --     * Slot: cell_ontology_term Description: This MUST be the human-readable name assigned to the value of 'cell_ontology_term_id'
 --     * Slot: rationale Description: The free-text rationale which users provide as justification/evidence for their cell annotations. Researchers are encouraged to use this field to cite relevant publications in-line using standard academic citations of the form `(Zheng et al., 2020)` This human-readable free-text MUST be encoded as a single string.All references cited SHOULD be listed using DOIs under rationale_dois. There MUST be a 2000-character limit.
---     * Slot: author_annotation_fields Description: A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields.
 --     * Slot: Cap_Taxonomy_id Description: Autocreated FK slot
+--     * Slot: author_annotation_fields_id Description: A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields.
+-- # Class: "Any" Description: ""
+--     * Slot: id Description: 
 -- # Class: "Review" Description: ""
 --     * Slot: id Description: 
 --     * Slot: datestamp Description: Time and date review was last edited.
@@ -61,8 +63,8 @@
 --     * Slot: cell_ontology_term_id Description: This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl) or from some ontology that extends it by classifying cell types under terms from the Cell Ontologye.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl) or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).NOTE: The closest available ontology term matching the value within the field 'cell_label' (at the time of publication) MUST be used.For example, if the value of 'cell_label' is 'relay interneuron', but this entity does not yet exist in the ontology, users must choose the closest available term in the CL ontology. In this case, it's the broader term 'interneuron' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.
 --     * Slot: cell_ontology_term Description: This MUST be the human-readable name assigned to the value of 'cell_ontology_term_id'
 --     * Slot: rationale Description: The free-text rationale which users provide as justification/evidence for their cell annotations. Researchers are encouraged to use this field to cite relevant publications in-line using standard academic citations of the form `(Zheng et al., 2020)` This human-readable free-text MUST be encoded as a single string.All references cited SHOULD be listed using DOIs under rationale_dois. There MUST be a 2000-character limit.
---     * Slot: author_annotation_fields Description: A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields.
 --     * Slot: Taxonomy_id Description: Autocreated FK slot
+--     * Slot: author_annotation_fields_id Description: A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields.
 -- # Class: "Taxonomy" Description: ""
 --     * Slot: id Description: 
 --     * Slot: matrix_file_id Description: A resolvable ID for a cell by gene matrix file in the form namespace:accession, e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json for supported namespaces.
@@ -131,6 +133,10 @@ CREATE TABLE "Cap_Taxonomy" (
 	orcid TEXT, 
 	PRIMARY KEY (id)
 );
+CREATE TABLE "Any" (
+	id INTEGER NOT NULL, 
+	PRIMARY KEY (id)
+);
 CREATE TABLE "Review" (
 	id INTEGER NOT NULL, 
 	datestamp TEXT NOT NULL, 
@@ -176,10 +182,11 @@ CREATE TABLE "Cap_Annotation" (
 	cell_ontology_term_id VARCHAR(10), 
 	cell_ontology_term TEXT, 
 	rationale TEXT, 
-	author_annotation_fields TEXT, 
 	"Cap_Taxonomy_id" INTEGER, 
+	author_annotation_fields_id INTEGER, 
 	PRIMARY KEY (id), 
-	FOREIGN KEY("Cap_Taxonomy_id") REFERENCES "Cap_Taxonomy" (id)
+	FOREIGN KEY("Cap_Taxonomy_id") REFERENCES "Cap_Taxonomy" (id), 
+	FOREIGN KEY(author_annotation_fields_id) REFERENCES "Any" (id)
 );
 CREATE TABLE "Labelset" (
 	id INTEGER NOT NULL, 
@@ -202,10 +209,11 @@ CREATE TABLE "Annotation" (
 	cell_ontology_term_id VARCHAR(10), 
 	cell_ontology_term TEXT, 
 	rationale TEXT, 
-	author_annotation_fields TEXT, 
 	"Taxonomy_id" INTEGER, 
+	author_annotation_fields_id INTEGER, 
 	PRIMARY KEY (id), 
-	FOREIGN KEY("Taxonomy_id") REFERENCES "Taxonomy" (id)
+	FOREIGN KEY("Taxonomy_id") REFERENCES "Taxonomy" (id), 
+	FOREIGN KEY(author_annotation_fields_id) REFERENCES "Any" (id)
 );
 CREATE TABLE "Cap_Annotation_canonical_marker_genes" (
 	"Cap_Annotation_id" INTEGER, 

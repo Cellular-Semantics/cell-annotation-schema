@@ -336,12 +336,18 @@ PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
              <marker_gene_evidence> @<String> * ;
              <synonyms> @<String> * ;
              <reviews> @<Review> * ;
-             <author_annotation_fields> @<String> ?
+             <author_annotation_fields> @<Any> ?
           ) ;
           rdf:type [ PCL:0010001 ] ?
        )
     } OR @<CapAnnotation>
 )
+
+<Any> CLOSED {
+    (  $<Any_tes> rdf:type . * ;
+       rdf:type [ linkml:Any ] ?
+    )
+}
 
 <AutomatedAnnotation> CLOSED {
     (  $<AutomatedAnnotation_tes> (  <algorithm_name> @<String> ;

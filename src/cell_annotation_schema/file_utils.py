@@ -13,6 +13,33 @@ from linkml_runtime.loaders import yaml_loader
 from cell_annotation_schema import schemas
 
 
+def get_cas_object(cas_json: Union[dict, str], schema_name: str):
+    """
+    Returns a CAS python object from the given JSON path or dictionary. Path can be a local file path or a
+    web URL.
+    :param cas_json: path/url to the JSON file or a dictionary
+    :param schema_name: name of the schema to use. Should be one of the predefined schema names:
+    `base`, `cap`, `bican`.
+    :return: CAS python object
+    """
+    from cell_annotation_schema.generator.dataclassgen import get_py_instance
+
+    if isinstance(cas_json, str):
+        if is_web_url(cas_json):
+            json_obj = get_json_from_url(cas_json)
+        else:
+            json_obj = get_json_from_file(cas_json)
+    elif isinstance(cas_json, dict):
+        json_obj = cas_json
+    else:
+        raise ValueError("Invalid input for cas_json (should be a dictionary or a path/url to a "
+                         "JSON file).")
+
+    taxonomy = get_py_instance(json_obj, schema_name, read_schema(schema_name))
+
+    return taxonomy
+
+
 def is_web_url(path):
     """
     Checks if the given path is a web URL.
@@ -24,6 +51,9 @@ def is_web_url(path):
 
 def get_json_from_url(url):
     """Loads JSOn from web URL."""
+    import ssl
+    ssl._create_default_https_context = ssl._create_unverified_context
+
     return json.loads(urlopen(url).read())
 
 

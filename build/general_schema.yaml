@@ -17136,6 +17136,7 @@ slots:
     description: A dictionary of author defined key value pairs annotating the cell
       set. The names and aims of these fields MUST not clash with official annotation
       fields.
+    range: Any
   matrix_file_id:
     description: A resolvable ID for a cell by gene matrix file in the form namespace:accession,
       e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json
@@ -17186,6 +17187,8 @@ slots:
     identifier: true
     range: uriorcurie
 classes:
+  Any:
+    class_uri: linkml:Any
   Review:
     slots:
     - datestamp

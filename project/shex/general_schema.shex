@@ -335,9 +335,15 @@ linkml:Sparqlpath xsd:string
           <marker_gene_evidence> @linkml:String * ;
           <synonyms> @linkml:String * ;
           <reviews> @<Review> * ;
-          <author_annotation_fields> @linkml:String ?
+          <author_annotation_fields> @<Any> ?
        ) ;
        rdf:type [ PCL:0010001 ] ?
+    )
+}
+
+<Any> CLOSED {
+    (  $<Any_tes> rdf:type . * ;
+       rdf:type [ linkml:Any ] ?
     )
 }
 

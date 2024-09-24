@@ -15,7 +15,7 @@ message Annotation
  repeated  string markerGeneEvidence = 0
  repeated  string synonyms = 0
  repeated  review reviews = 0
-  string authorAnnotationFields = 0
+  any authorAnnotationFields = 0
  }
 // A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)
 message AutomatedAnnotation
@@ -38,7 +38,7 @@ message CapAnnotation
  repeated  string markerGeneEvidence = 0
  repeated  string synonyms = 0
  repeated  review reviews = 0
-  string authorAnnotationFields = 0
+  any authorAnnotationFields = 0
  repeated  string canonicalMarkerGenes = 0
   boolean cellOntologyExists = 0
   string categoryFullname = 0

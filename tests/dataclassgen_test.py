@@ -54,13 +54,33 @@ class DataClassGeneratorTestCase(unittest.TestCase):
         self.assertEqual("Microglia", annotation_0.cell_label)
         self.assertEqual("supercluster_term", annotation_0.labelset)
 
-        import json
+        from jsonasobj2 import JsonObj
 
         index = 0
         for annotation in obj.annotations:
             if annotation.author_annotation_fields:
                 print(annotation.author_annotation_fields)
-                self.assertTrue(dict, type(annotation.author_annotation_fields))
+                # self.assertEqual(dict, type(annotation.author_annotation_fields))
+                # self.assertNotEqual(JsonObj, type(annotation.author_annotation_fields))
                 self.assertEqual("4", annotation.author_annotation_fields["Cluster ID"])
+                annotation.author_annotation_fields = {"Cluster ID": "4"}
+                print(annotation.author_annotation_fields)
+                print(type(annotation.author_annotation_fields))
                 break
             index += 1
+
+    def test_json_obj(self):
+        from cell_annotation_schema.datamodel.bican.cell_annotation_schema import Labelset
+        taxonomy = BicanTaxonomy("title", "author", annotations=[BicanAnnotation(labelset="labelset",
+                                                                                 cell_label="label",
+                                                                                 cell_set_accession="accession",
+                                                                                 parent_cell_set_accession="parent_cell_set_accession")], labelsets=[Labelset("labelset", "labelset_description")])
+        annotation = taxonomy.annotations[0]
+        print(annotation.author_annotation_fields)
+        annotation.author_annotation_fields = {"Cluster ID": "4"}
+        from jsonasobj2 import JsonObj
+        self.assertTrue(isinstance(annotation.author_annotation_fields, JsonObj))
+        print(annotation.author_annotation_fields._as_dict)
+        print(type(annotation.author_annotation_fields))
+
+

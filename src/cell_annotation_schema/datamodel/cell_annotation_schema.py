@@ -1,5 +1,5 @@
 # Auto generated from None by pythongen.py version: 0.0.1
-# Generation date: 2024-09-23T12:23:41
+# Generation date: 2024-09-23T16:32:46
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -50,6 +50,8 @@ DEFAULT_ = CELL_ANNOTATION_SCHEMA
 # Class references
 
 
+
+Any = Any
 
 @dataclass(repr=False)
 class Review(YAMLRoot):
@@ -182,7 +184,7 @@ class Annotation(YAMLRoot):
     marker_gene_evidence: Optional[Union[str, List[str]]] = empty_list()
     synonyms: Optional[Union[str, List[str]]] = empty_list()
     reviews: Optional[Union[Union[dict, Review], List[Union[dict, Review]]]] = empty_list()
-    author_annotation_fields: Optional[str] = None
+    author_annotation_fields: Optional[Union[dict, Any]] = None
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.labelset):
@@ -224,9 +226,6 @@ class Annotation(YAMLRoot):
         self.synonyms = [v if isinstance(v, str) else str(v) for v in self.synonyms]
 
         self._normalize_inlined_as_dict(slot_name="reviews", slot_type=Review, key_name="datestamp", keyed=False)
-
-        if self.author_annotation_fields is not None and not isinstance(self.author_annotation_fields, str):
-            self.author_annotation_fields = str(self.author_annotation_fields)
 
         super().__post_init__(**kwargs)
 
@@ -14021,7 +14020,7 @@ slots.reviews = Slot(uri=CELL_ANNOTATION_SCHEMA.reviews, name="reviews", curie=C
                    model_uri=CELL_ANNOTATION_SCHEMA.reviews, domain=None, range=Optional[Union[Union[dict, Review], List[Union[dict, Review]]]])
 
 slots.author_annotation_fields = Slot(uri=CELL_ANNOTATION_SCHEMA.author_annotation_fields, name="author_annotation_fields", curie=CELL_ANNOTATION_SCHEMA.curie('author_annotation_fields'),
-                   model_uri=CELL_ANNOTATION_SCHEMA.author_annotation_fields, domain=None, range=Optional[str])
+                   model_uri=CELL_ANNOTATION_SCHEMA.author_annotation_fields, domain=None, range=Optional[Union[dict, Any]])
 
 slots.matrix_file_id = Slot(uri=CELL_ANNOTATION_SCHEMA.matrix_file_id, name="matrix_file_id", curie=CELL_ANNOTATION_SCHEMA.curie('matrix_file_id'),
                    model_uri=CELL_ANNOTATION_SCHEMA.matrix_file_id, domain=None, range=Optional[str])

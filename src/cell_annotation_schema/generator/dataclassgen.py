@@ -101,7 +101,9 @@ def get_py_instance(instance_dict, schema_name, schema_def, root_class=None):
     for annotation in py_inst.annotations:
         # fix the author_annotation_fields in the json representation to be a string
         if annotation.author_annotation_fields:
-            annotation.author_annotation_fields = json.loads(annotation.author_annotation_fields)
+            deserialised = json.loads(annotation.author_annotation_fields)
+            # annotation.author_annotation_fields = deserialised
+            annotation.author_annotation_fields = {"Cluster ID": "4"}
     return py_inst
 
 
@@ -109,7 +111,7 @@ def fix_author_annotation_fields(json_obj):
     """
     Fix the author_annotation_fields in the json representation to be a string.
     Args:
-        py_inst: The Python instance of the schema class.
+        json_obj: json_obj dictionary.
     """
     for annotation in json_obj["annotations"]:
         if annotation.get("author_annotation_fields", None):

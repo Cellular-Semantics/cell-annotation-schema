@@ -15,6 +15,9 @@
    "Annotation": {
       "@id": "PCL:0010001"
    },
+   "Any": {
+      "@id": "linkml:Any"
+   },
    "BicanAnnotation": {
       "@id": "PCL:0010001"
    },

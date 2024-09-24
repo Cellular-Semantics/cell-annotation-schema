@@ -15,7 +15,7 @@ message Annotation
  repeated  string markerGeneEvidence = 0
  repeated  string synonyms = 0
  repeated  review reviews = 0
-  string authorAnnotationFields = 0
+  any authorAnnotationFields = 0
  }
 message AnnotationTransfer
  {
@@ -46,7 +46,7 @@ message BicanAnnotation
  repeated  string markerGeneEvidence = 0
  repeated  string synonyms = 0
  repeated  review reviews = 0
-  string authorAnnotationFields = 0
+  any authorAnnotationFields = 0
   string cellSetAccession = 0
   string parentCellSetAccession = 0
  repeated  annotationTransfer transferredAnnotations = 0
