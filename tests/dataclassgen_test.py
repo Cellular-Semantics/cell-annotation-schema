@@ -54,8 +54,6 @@ class DataClassGeneratorTestCase(unittest.TestCase):
         self.assertEqual("Microglia", annotation_0.cell_label)
         self.assertEqual("supercluster_term", annotation_0.labelset)
 
-        from jsonasobj2 import JsonObj
-
         index = 0
         for annotation in obj.annotations:
             if annotation.author_annotation_fields:
