@@ -18,6 +18,7 @@ prefixes:
   PCL: http://purl.obolibrary.org/obo/PCL_
   RO: http://purl.obolibrary.org/obo/RO_
   skos: http://www.w3.org/2004/02/skos/core#
+  CellXGene_dataset: https://cellxgene.cziscience.com/datasets/
 default_prefix: cell_annotation_schema
 default_range: string
 default_curi_maps:
@@ -177,6 +178,7 @@ slots:
     description: A resolvable ID for a cell by gene matrix file in the form namespace:accession,
       e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json
       for supported namespaces.
+    range: uriorcurie
   title:
     description: The title of the dataset. This MUST be less than or equal to 200
       characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.

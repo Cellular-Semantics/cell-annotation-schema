@@ -1,5 +1,5 @@
 # Auto generated from None by pythongen.py version: 0.0.1
-# Generation date: 2024-09-23T16:32:46
+# Generation date: 2024-10-03T17:13:02
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -34,6 +34,7 @@ dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 # Namespaces
 CAS = CurieNamespace('CAS', 'https://cellular-semantics.sanger.ac.uk/ontology/CAS/')
 CL = CurieNamespace('CL', 'http://purl.obolibrary.org/obo/CL_')
+CELLXGENE_DATASET = CurieNamespace('CellXGene_dataset', 'https://cellxgene.cziscience.com/datasets/')
 IAO = CurieNamespace('IAO', 'http://purl.obolibrary.org/obo/IAO_')
 PCL = CurieNamespace('PCL', 'http://purl.obolibrary.org/obo/PCL_')
 RO = CurieNamespace('RO', 'http://purl.obolibrary.org/obo/RO_')
@@ -243,7 +244,7 @@ class Taxonomy(YAMLRoot):
     author_name: str = None
     labelsets: Union[Union[dict, Labelset], List[Union[dict, Labelset]]] = None
     annotations: Union[Union[dict, Annotation], List[Union[dict, Annotation]]] = None
-    matrix_file_id: Optional[str] = None
+    matrix_file_id: Optional[Union[str, URIorCURIE]] = None
     description: Optional[str] = None
     cellannotation_schema_version: Optional[str] = None
     cellannotation_timestamp: Optional[str] = None
@@ -276,8 +277,8 @@ class Taxonomy(YAMLRoot):
             self.annotations = [self.annotations] if self.annotations is not None else []
         self.annotations = [v if isinstance(v, Annotation) else Annotation(**as_dict(v)) for v in self.annotations]
 
-        if self.matrix_file_id is not None and not isinstance(self.matrix_file_id, str):
-            self.matrix_file_id = str(self.matrix_file_id)
+        if self.matrix_file_id is not None and not isinstance(self.matrix_file_id, URIorCURIE):
+            self.matrix_file_id = URIorCURIE(self.matrix_file_id)
 
         if self.description is not None and not isinstance(self.description, str):
             self.description = str(self.description)
@@ -14023,7 +14024,7 @@ slots.author_annotation_fields = Slot(uri=CELL_ANNOTATION_SCHEMA.author_annotati
                    model_uri=CELL_ANNOTATION_SCHEMA.author_annotation_fields, domain=None, range=Optional[Union[dict, Any]])
 
 slots.matrix_file_id = Slot(uri=CELL_ANNOTATION_SCHEMA.matrix_file_id, name="matrix_file_id", curie=CELL_ANNOTATION_SCHEMA.curie('matrix_file_id'),
-                   model_uri=CELL_ANNOTATION_SCHEMA.matrix_file_id, domain=None, range=Optional[str])
+                   model_uri=CELL_ANNOTATION_SCHEMA.matrix_file_id, domain=None, range=Optional[Union[str, URIorCURIE]])
 
 slots.title = Slot(uri=CELL_ANNOTATION_SCHEMA.title, name="title", curie=CELL_ANNOTATION_SCHEMA.curie('title'),
                    model_uri=CELL_ANNOTATION_SCHEMA.title, domain=None, range=str)

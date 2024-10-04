@@ -100,10 +100,9 @@ def get_py_instance(instance_dict, schema_name, schema_def, root_class=None):
 
     for annotation in py_inst.annotations:
         # fix the author_annotation_fields in the json representation to be a string
-        if annotation.author_annotation_fields:
+        if annotation.author_annotation_fields and isinstance(annotation.author_annotation_fields, str):
             deserialised = json.loads(annotation.author_annotation_fields)
-            # annotation.author_annotation_fields = deserialised
-            annotation.author_annotation_fields = {"Cluster ID": "4"}
+            annotation.author_annotation_fields = deserialised
     return py_inst
 
 

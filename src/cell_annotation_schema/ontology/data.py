@@ -7,11 +7,13 @@ from typing import Union, Optional, List
 from cell_annotation_schema.ontology.schema import DEFAULT_PREFIXES, CAS_NAMESPACE
 from cell_annotation_schema.file_utils import get_json_from_file
 from cell_annotation_schema.generator.dataclassgen import get_py_instance, get_root_class
+from cell_annotation_schema.ontology.dumpers import rdflib_dumper
+from cell_annotation_schema.curie_utils import CurieToIriConverter
 
 from linkml_runtime.linkml_model import SchemaDefinition
 from linkml_runtime import SchemaView
 from linkml_runtime.loaders import yaml_loader
-from linkml_runtime.dumpers import rdflib_dumper
+# from linkml_runtime.dumpers import rdflib_dumper
 from linkml.validator import Validator
 
 CELL_RELATION = "has_cellid"
@@ -54,6 +56,7 @@ def dump_to_rdf(
     if validate:
         validate_data(schema_def, instance)
     instance = serialise_author_annotation(instance)
+    instance = resolve_matrix_file(instance)
 
     root_class = get_root_class(schema_name)
     py_inst = get_py_instance(instance, None, schema_def, root_class)
@@ -208,4 +211,18 @@ def serialise_author_annotation(instance: dict) -> dict:
     for annotation in instance.get("annotations", []):
         if "author_annotation_fields" in annotation and annotation["author_annotation_fields"]:
             annotation["author_annotation_fields"] = json.dumps(annotation["author_annotation_fields"])
+    return instance
+
+
+def resolve_matrix_file(instance: dict) -> dict:
+    """
+    Resolves the matrix file curie to iri in the instance.
+    Args:
+        instance: The instance to be updated.
+    Returns:
+        The updated instance.
+    """
+    if "matrix_file_id" in instance and instance["matrix_file_id"]:
+        converter = CurieToIriConverter()
+        instance["matrix_file_id"] = converter.curie_to_iri(str(instance["matrix_file_id"])) + ".cxg/"
     return instance
