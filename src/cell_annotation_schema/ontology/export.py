@@ -48,13 +48,12 @@ def export_to_rdf(
     base_linkml_schema = read_schema(cas_schema)
 
     data = get_instance_data(data)
-    labelsets = [labelset['name'] for labelset in sorted(data["labelsets"], key=lambda x: x['rank'])]
 
     decorated_schema = decorate_linkml_ontology_schema(
         base_linkml_schema,
         ontology_namespace=ontology_namespace,
         ontology_iri=ontology_iri,
-        labelsets=labelsets,
+        labelsets=[labelset['name'] for labelset in data["labelsets"]],
     )
     expanded_schema = expand_schema(
         config=None, yaml_obj=decorated_schema, value_set_names=["CellTypeEnum"]

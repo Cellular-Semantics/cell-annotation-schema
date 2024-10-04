@@ -64,8 +64,7 @@ def dump_to_rdf(
     prefixes["_base"] = ontology_iri
     prefixes[ontology_namespace] = ontology_iri
 
-    labelsets = [labelset['name'] for labelset in sorted(instance["labelsets"], key=lambda x: x['rank'])]
-    for labelset in labelsets:
+    for labelset in [labelset['name'] for labelset in instance["labelsets"]]:
         prefixes[labelset] = ontology_iri + f"{labelset}#"
 
     g = rdflib_dumper.as_rdf_graph(
