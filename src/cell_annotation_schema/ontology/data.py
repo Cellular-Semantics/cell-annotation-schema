@@ -25,7 +25,6 @@ def dump_to_rdf(
         ontology_namespace: str,
         ontology_iri: str,
         schema_name: str = None,
-        labelsets: Optional[List[str]] = None,
         output_path: str = None,
         validate: bool = True,
         include_cells: bool = True,
@@ -64,6 +63,8 @@ def dump_to_rdf(
     prefixes = DEFAULT_PREFIXES.copy()
     prefixes["_base"] = ontology_iri
     prefixes[ontology_namespace] = ontology_iri
+
+    labelsets = [labelset['name'] for labelset in sorted(instance["labelsets"], key=lambda x: x['rank'])]
     for labelset in labelsets:
         prefixes[labelset] = ontology_iri + f"{labelset}#"
 
@@ -153,7 +154,6 @@ def populate_ids(
     Returns:
         dict: A JSON object with populated ID properties.
     """
-
     if isinstance(instance, Path):
         instance = str(instance)
     if isinstance(instance, str):

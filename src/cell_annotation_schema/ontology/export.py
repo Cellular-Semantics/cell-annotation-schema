@@ -1,8 +1,9 @@
 import rdflib
 
+from pathlib import Path
 from typing import Union, Optional, List
 
-from cell_annotation_schema.file_utils import read_schema
+from cell_annotation_schema.file_utils import read_schema, get_json_from_file
 from cell_annotation_schema.ontology.schema import (
     decorate_linkml_ontology_schema,
     expand_schema,
@@ -15,7 +16,6 @@ def export_to_rdf(
     data: Union[str, dict],
     ontology_namespace: str,
     ontology_iri: str,
-    labelsets: Optional[List[str]] = None,
     output_path: str = None,
     validate: bool = True,
     include_cells: bool = True,
@@ -46,7 +46,10 @@ def export_to_rdf(
     if not cas_schema:
         cas_schema = "base"
     base_linkml_schema = read_schema(cas_schema)
-    #  TODO get labelsets from the data
+
+    data = get_instance_data(data)
+    labelsets = [labelset['name'] for labelset in sorted(data["labelsets"], key=lambda x: x['rank'])]
+
     decorated_schema = decorate_linkml_ontology_schema(
         base_linkml_schema,
         ontology_namespace=ontology_namespace,
@@ -69,13 +72,28 @@ def export_to_rdf(
         ontology_namespace=ontology_namespace,
         ontology_iri=ontology_iri,
         schema_name=get_schema_name(cas_schema),
-        labelsets=labelsets,
         validate=validate,
         include_cells=include_cells,
         output_path=output_path,
     )
 
     return rdf_graph
+
+
+def get_instance_data(data: Union[str, dict]):
+    """
+    Reads the data from the file or returns the data as is.
+    Args:
+        data: The data JSON file path or JSON object dictionary.
+    Returns: The data as a dictionary.
+    """
+    if isinstance(data, Path):
+        data = str(data)
+    if isinstance(data, str):
+        data = get_json_from_file(data)
+        if data is None:
+            raise ValueError("No such file: " + str(data))
+    return data
 
 
 def get_schema_name(cas_schema: str) -> str:

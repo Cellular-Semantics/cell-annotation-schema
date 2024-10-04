@@ -50,7 +50,6 @@ class LinkMLDataTestCase(unittest.TestCase):
             ontology_namespace="MTG",
             ontology_iri="https://purl.brain-bican.org/ontology/AIT_MTG/",
             schema_name="bican",
-            labelsets=["CrossArea_cluster", "CrossArea_subclass", "Class"],
             output_path=TEST_OUTPUT,
             validate=False,
 

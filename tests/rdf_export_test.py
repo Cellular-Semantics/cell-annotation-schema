@@ -37,14 +37,12 @@ class ExportToRDFTestCase(unittest.TestCase):
     def test_export_to_rdf(self):
         ontology_namespace = "MTG"
         ontology_iri = "https://purl.brain-bican.org/ontology/AIT_MTG/"
-        labelsets = ["CrossArea_cluster", "CrossArea_subclass", "Class"]
 
         rdf_graph = export_to_rdf(
             cas_schema="bican",
             data=os.path.join(TESTDATA, "AIT_MTG.json"),
             ontology_namespace=ontology_namespace,
             ontology_iri=ontology_iri,
-            labelsets=labelsets,
             output_path=TEST_OUTPUT,
             validate=True,
             include_cells=False,
@@ -83,7 +81,6 @@ class ExportToRDFTestCase(unittest.TestCase):
     def test_export_to_rdf_siletti(self):
         ontology_namespace = "CS202210140"
         ontology_iri = "https://purl.brain-bican.org/ontology/CS202210140/"
-        labelsets = ["Cluster", "supercluster_term"]
 
         rdf_graph = export_to_rdf(
             cas_schema="bican",
@@ -92,7 +89,6 @@ class ExportToRDFTestCase(unittest.TestCase):
             data=os.path.join(TESTDATA, "Siletti_all_non_neuronal_cells.json"),
             ontology_namespace=ontology_namespace,
             ontology_iri=ontology_iri,
-            labelsets=labelsets,
             output_path=TEST_OUTPUT2,
             validate=True,
             include_cells=False,
@@ -129,7 +125,6 @@ class ExportToRDFTestCase(unittest.TestCase):
     def test_export_to_rdf_siletti_v2(self):
         ontology_namespace = "CS202210140"
         ontology_iri = "https://purl.brain-bican.org/ontology/CS202210140/"
-        labelsets = ["Cluster", "supercluster_term"]
 
         rdf_graph = export_to_rdf(
             cas_schema="bican",
@@ -138,7 +133,6 @@ class ExportToRDFTestCase(unittest.TestCase):
             ),  # with annotation transfer
             ontology_namespace=ontology_namespace,
             ontology_iri=ontology_iri,
-            labelsets=labelsets,
             output_path=TEST_OUTPUT2,
             validate=True,
             include_cells=False,
