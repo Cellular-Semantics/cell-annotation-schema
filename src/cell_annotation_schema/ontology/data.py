@@ -64,7 +64,7 @@ def dump_to_rdf(
     prefixes["_base"] = ontology_iri
     prefixes[ontology_namespace] = ontology_iri
 
-    for labelset in [labelset['name'] for labelset in instance["labelsets"]]:
+    for labelset in get_labelsets(instance):
         prefixes[labelset] = ontology_iri + f"{labelset}#"
 
     g = rdflib_dumper.as_rdf_graph(
@@ -225,3 +225,18 @@ def resolve_matrix_file(instance: dict) -> dict:
         converter = CurieToIriConverter()
         instance["matrix_file_id"] = converter.curie_to_iri(str(instance["matrix_file_id"])) + ".cxg/"
     return instance
+
+
+def get_labelsets(instance):
+    """
+    Gets the labelsets from the instance data.
+    Args:
+        instance: The instance data.
+    Returns: The labelsets to be used.
+    """
+    ranked_lblsets = (ls for ls in instance["labelsets"] if "rank" in ls)
+    if ranked_lblsets:
+        labelset_objects = sorted(ranked_lblsets, key=lambda x: x["rank"])
+    else:
+        labelset_objects = instance["labelsets"]
+    return [ls["name"] for ls in labelset_objects]

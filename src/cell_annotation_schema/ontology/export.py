@@ -53,7 +53,7 @@ def export_to_rdf(
         base_linkml_schema,
         ontology_namespace=ontology_namespace,
         ontology_iri=ontology_iri,
-        labelsets=[labelset['name'] for labelset in data["labelsets"]],
+        labelsets=get_labelsets(data),
     )
     expanded_schema = expand_schema(
         config=None, yaml_obj=decorated_schema, value_set_names=["CellTypeEnum"]
@@ -111,3 +111,18 @@ def get_schema_name(cas_schema: str) -> str:
         elif cas_schema.lower() == "cap" or cas_schema.endswith("CAP_schema.yaml"):
             return "cap"
     return ""
+
+
+def get_labelsets(instance):
+    """
+    Gets the labelsets from the instance data.
+    Args:
+        instance: The instance data.
+    Returns: The labelsets to be used.
+    """
+    ranked_lblsets = (ls for ls in instance["labelsets"] if "rank" in ls)
+    if ranked_lblsets:
+        labelset_objects = sorted(ranked_lblsets, key=lambda x: x["rank"])
+    else:
+        labelset_objects = instance["labelsets"]
+    return [ls["name"] for ls in labelset_objects]
