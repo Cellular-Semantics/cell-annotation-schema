@@ -19,11 +19,11 @@ from oaklib.utilities.subsets.value_set_expander import (
 
 CAS_ROOT_CLASS = "Taxonomy"
 
-CAS_NAMESPACE = "https://cellular-semantics.sanger.ac.uk/ontology/CAS"
+# CAS_NAMESPACE = "https://cellular-semantics.sanger.ac.uk/ontology/CAS"
 CAS_ROOT_NS = "cell_annotation_schema"
 DEFAULT_PREFIXES = {
-    CAS_ROOT_NS: CAS_NAMESPACE + "/",
-    "CAS": CAS_NAMESPACE + "/",
+    # CAS_ROOT_NS: CAS_NAMESPACE + "/",
+    # "CAS": CAS_NAMESPACE + "/",
     "obo": "http://purl.obolibrary.org/obo/",
     "CL": "http://purl.obolibrary.org/obo/CL_",
     "PCL": "http://purl.obolibrary.org/obo/PCL_",

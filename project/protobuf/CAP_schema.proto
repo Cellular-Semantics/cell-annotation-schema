@@ -49,7 +49,7 @@ message CapAnnotation
  }
 message CapTaxonomy
  {
-  string matrixFileId = 0
+  uriorcurie matrixFileId = 0
   string title = 0
   string description = 0
   string authorList = 0
@@ -85,7 +85,7 @@ message Review
  }
 message Taxonomy
  {
-  string matrixFileId = 0
+  uriorcurie matrixFileId = 0
   string title = 0
   string description = 0
   string cellannotationSchemaVersion = 0

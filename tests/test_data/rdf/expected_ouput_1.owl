@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
    xml:base="https://purl.brain-bican.org/ontology/AIT_MTG/"
-   xmlns:CAS="https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+   xmlns:CAS="https://purl.brain-bican.org/taxonomy/"
    xmlns:obo="http://purl.obolibrary.org/obo/"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
 >
-  <rdf:Description rdf:about="https://cellular-semantics.sanger.ac.uk/ontology/CAS/AIT_MTG">
+  <rdf:Description rdf:about="https://purl.brain-bican.org/taxonomy/AIT_MTG">
     <CAS:author_name>Trygve E Bakken</CAS:author_name>
     <CAS:labelsets rdf:resource="CrossArea_cluster"/>
     <CAS:labelsets rdf:resource="CrossArea_subclass"/>
@@ -16,7 +16,7 @@
     <CAS:annotations rdf:resource="CrossArea_cluster#1b1d42bb38"/>
     <CAS:matrix_file_id rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://cellxgene.cziscience.com/e/8e10f1c4-8e98-41e5-b65f-8cd89a887122.cxg/</CAS:matrix_file_id>
     <CAS:cellannotation_schema_version>4.0.0</CAS:cellannotation_schema_version>
-    <rdf:type rdf:resource="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Taxonomy"/>
+    <rdf:type rdf:resource="https://purl.brain-bican.org/taxonomy/Taxonomy"/>
   </rdf:Description>
   <rdf:Description rdf:about="CrossArea_cluster#1b1d42bb38">
     <CAS:has_labelset rdf:resource="CrossArea_cluster"/>
@@ -46,16 +46,16 @@
   <rdf:Description rdf:about="CrossArea_subclass">
     <rdfs:label>CrossArea_subclass</rdfs:label>
     <CAS:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</CAS:rank>
-    <rdf:type rdf:resource="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset"/>
+    <rdf:type rdf:resource="https://purl.brain-bican.org/taxonomy/Labelset"/>
   </rdf:Description>
   <rdf:Description rdf:about="CrossArea_cluster">
     <rdfs:label>CrossArea_cluster</rdfs:label>
     <CAS:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</CAS:rank>
-    <rdf:type rdf:resource="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset"/>
+    <rdf:type rdf:resource="https://purl.brain-bican.org/taxonomy/Labelset"/>
   </rdf:Description>
   <rdf:Description rdf:about="Class">
     <rdfs:label>Class</rdfs:label>
     <CAS:rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</CAS:rank>
-    <rdf:type rdf:resource="https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset"/>
+    <rdf:type rdf:resource="https://purl.brain-bican.org/taxonomy/Labelset"/>
   </rdf:Description>
 </rdf:RDF>

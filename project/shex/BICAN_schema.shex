@@ -1,5 +1,5 @@
 # metamodel_version: 1.7.0
-BASE <https://cellular-semantics.sanger.ac.uk/ontology/CAS/>
+BASE <https://purl.brain-bican.org/taxonomy/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
@@ -415,9 +415,9 @@ PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
     CLOSED {
        (  $<Labelset_tes> (  rdfs:label @<String> ;
              IAO:0000115 @<String> ? ;
-             <annotation_method> [ <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic>
-                <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual>
-                <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both> ] ? ;
+             <annotation_method> [ <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#algorithmic>
+                <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#manual>
+                <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#both> ] ? ;
              <automated_annotation> @<AutomatedAnnotation> ?
           ) ;
           rdf:type [ <Labelset> ] ?
@@ -428,8 +428,8 @@ PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
 <Review> CLOSED {
     (  $<Review_tes> (  <datestamp> @<String> ;
           <reviewer> @<String> ? ;
-          <review> [ <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree>
-             <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> ] ? ;
+          <review> [ <https://purl.brain-bican.org/taxonomy/ReviewOptions#Agree>
+             <https://purl.brain-bican.org/taxonomy/ReviewOptions#Disagree> ] ? ;
           IAO:0000115 @<String> ?
        ) ;
        rdf:type [ <Review> ] ?
@@ -438,7 +438,7 @@ PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
 
 <Taxonomy>  (
     CLOSED {
-       (  $<Taxonomy_tes> (  <matrix_file_id> @<String> ? ;
+       (  $<Taxonomy_tes> (  <matrix_file_id> @<Uriorcurie> ? ;
              <title> @<String> ;
              IAO:0000115 @<String> ? ;
              <cellannotation_schema_version> @<String> ? ;

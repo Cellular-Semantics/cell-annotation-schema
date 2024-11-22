@@ -1,6 +1,7 @@
 {
    "CAS": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/",
    "CL": "http://purl.obolibrary.org/obo/CL_",
+   "CellXGene_dataset": "https://cellxgene.cziscience.com/datasets/",
    "IAO": "http://purl.obolibrary.org/obo/IAO_",
    "PCL": "http://purl.obolibrary.org/obo/PCL_",
    "RO": "http://purl.obolibrary.org/obo/RO_",

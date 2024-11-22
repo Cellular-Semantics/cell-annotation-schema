@@ -6,7 +6,7 @@ from rdflib import URIRef, Graph
 from cell_annotation_schema.ontology.export import export_to_rdf
 
 
-CAS_NS = "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+CAS_NS = "https://purl.brain-bican.org/taxonomy/"
 OBO_NS = "http://purl.obolibrary.org/obo/"
 
 # ontology resources
@@ -189,7 +189,7 @@ class ExportToRDFTestCase(unittest.TestCase):
                 at_triples = list(rdf_graph.triples((at_blanknode, None, None)))
                 self.assertEqual(5, len(at_triples))
                 self.assertEqual(
-                    "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationTransfer",
+                    "https://purl.brain-bican.org/taxonomy/AnnotationTransfer",
                     str(list(rdf_graph.triples((at_blanknode, rdftype, None)))[0][2]),
                 )
                 self.assertEqual(
@@ -230,6 +230,28 @@ class ExportToRDFTestCase(unittest.TestCase):
                 )
         self.assertTrue(has_annotation_transfer)
 
+    def test_export_to_wmb(self):
+        ontology_namespace = "CCN20230722"
+        ontology_iri = "https://purl.brain-bican.org/taxonomy/CCN20230722/"
+        # out_file = os.path.join(TESTDATA, "CCN20230722.rdf")
+        out_file = TEST_OUTPUT
+
+        rdf_graph = export_to_rdf(
+            cas_schema="bican",
+            data=os.path.join(
+                TESTDATA, "CCN20230722.json"
+            ),  # with annotation transfer
+            ontology_namespace=ontology_namespace,
+            ontology_iri=ontology_iri,
+            output_path=out_file,
+            validate=True,
+            include_cells=False,
+        )
+        self.assertTrue(os.path.isfile(out_file))
+        self.assertEqual(1, len(list(rdf_graph.triples((None, rdftype, dataset_type)))))
+        self.assertEqual(
+            5, len(list(rdf_graph.triples((None, rdftype, labelset_type))))
+        )
 
 if __name__ == "__main__":
     unittest.main()

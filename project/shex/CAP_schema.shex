@@ -418,7 +418,7 @@ PREFIX IAO: <http://purl.obolibrary.org/obo/IAO_>
 
 <Taxonomy>  (
     CLOSED {
-       (  $<Taxonomy_tes> (  <matrix_file_id> @<String> ? ;
+       (  $<Taxonomy_tes> (  <matrix_file_id> @<Uriorcurie> ? ;
              <title> @<String> ;
              IAO:0000115 @<String> ? ;
              <cellannotation_schema_version> @<String> ? ;

@@ -14,6 +14,10 @@
       "prefix_reference": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
     },
     {
+      "prefix_prefix": "CellXGene_dataset",
+      "prefix_reference": "https://cellxgene.cziscience.com/datasets/"
+    },
+    {
       "prefix_prefix": "linkml",
       "prefix_reference": "https://w3id.org/linkml/"
     },
@@ -17283,7 +17287,7 @@
       "domain_of": [
         "Taxonomy"
       ],
-      "range": "string",
+      "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
     {
@@ -17719,9 +17723,9 @@
   ],
   "metamodel_version": "1.7.0",
   "source_file": "CAP_schema.yaml",
-  "source_file_date": "2024-09-23T16:32:42",
-  "source_file_size": 780217,
-  "generation_date": "2024-09-23T16:33:03",
+  "source_file_date": "2024-11-22T11:09:46",
+  "source_file_size": 780303,
+  "generation_date": "2024-11-22T11:10:07",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/CAP_schema.context.jsonld",

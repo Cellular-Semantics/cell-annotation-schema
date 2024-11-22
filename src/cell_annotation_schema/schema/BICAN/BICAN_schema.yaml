@@ -11,8 +11,8 @@ imports:
 - ../cell_annotation_schema
 
 prefixes:
-  cell_annotation_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS/
-  CAS: https://cellular-semantics.sanger.ac.uk/ontology/CAS/
+  cell_annotation_schema: https://purl.brain-bican.org/taxonomy/
+  CAS: https://purl.brain-bican.org/taxonomy/
   CellXGene_dataset: https://cellxgene.cziscience.com/datasets/
 default_prefix: cell_annotation_schema
 default_range: string

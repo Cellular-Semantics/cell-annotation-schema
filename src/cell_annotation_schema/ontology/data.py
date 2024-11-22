@@ -4,7 +4,7 @@ import json
 from pathlib import Path
 from typing import Union, Optional, List
 
-from cell_annotation_schema.ontology.schema import DEFAULT_PREFIXES, CAS_NAMESPACE
+from cell_annotation_schema.ontology.schema import DEFAULT_PREFIXES
 from cell_annotation_schema.file_utils import get_json_from_file
 from cell_annotation_schema.generator.dataclassgen import get_py_instance, get_root_class
 from cell_annotation_schema.ontology.dumpers import rdflib_dumper
@@ -75,11 +75,18 @@ def dump_to_rdf(
 
     add_cl_existential_restrictions(g)
     if not include_cells:
-        g.remove((None, rdflib.URIRef(CAS_NAMESPACE + "/" + CELL_RELATION), None))
+        g.remove((None, rdflib.URIRef(get_cell_relation_iri(g)), None))
 
     if output_path:
         g.serialize(format="xml", destination=output_path)
     return g
+
+
+def get_cell_relation_iri(g):
+    for s, p, o in g:
+        if isinstance(p, rdflib.URIRef) and p.endswith(CELL_RELATION):
+            return p
+    return ""
 
 
 def add_cl_existential_restrictions(g: rdflib.Graph):

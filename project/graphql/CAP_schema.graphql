@@ -52,7 +52,7 @@ type CapAnnotation
 
 type CapTaxonomy
   {
-    matrixFileId: String
+    matrixFileId: Uriorcurie
     title: String!
     description: String
     authorList: String
@@ -91,7 +91,7 @@ type Review
 
 type Taxonomy
   {
-    matrixFileId: String
+    matrixFileId: Uriorcurie
     title: String!
     description: String
     cellannotationSchemaVersion: String

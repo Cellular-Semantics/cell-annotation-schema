@@ -7,11 +7,15 @@
   "prefixes": [
     {
       "prefix_prefix": "cell_annotation_schema",
-      "prefix_reference": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+      "prefix_reference": "https://purl.brain-bican.org/taxonomy/"
     },
     {
       "prefix_prefix": "CAS",
-      "prefix_reference": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+      "prefix_reference": "https://purl.brain-bican.org/taxonomy/"
+    },
+    {
+      "prefix_prefix": "CellXGene_dataset",
+      "prefix_reference": "https://cellxgene.cziscience.com/datasets/"
     },
     {
       "prefix_prefix": "linkml",
@@ -59,7 +63,7 @@
   "types": [
     {
       "name": "string",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/String",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/String",
       "description": "A character string",
       "notes": [
         "In RDF serializations, a slot with range of string is treated as a literal or type xsd:string.   If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"string\"."
@@ -74,7 +78,7 @@
     },
     {
       "name": "integer",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Integer",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Integer",
       "description": "An integer",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"integer\"."
@@ -89,7 +93,7 @@
     },
     {
       "name": "boolean",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Boolean",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Boolean",
       "description": "A binary (true or false) value",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"boolean\"."
@@ -105,7 +109,7 @@
     },
     {
       "name": "float",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Float",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Float",
       "description": "A real number that conforms to the xsd:float specification",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"float\"."
@@ -120,7 +124,7 @@
     },
     {
       "name": "double",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Double",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Double",
       "description": "A real number that conforms to the xsd:double specification",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"double\"."
@@ -135,7 +139,7 @@
     },
     {
       "name": "decimal",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Decimal",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Decimal",
       "description": "A real number with arbitrary precision that conforms to the xsd:decimal specification",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"decimal\"."
@@ -150,7 +154,7 @@
     },
     {
       "name": "time",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Time",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Time",
       "description": "A time object represents a (local) time of day, independent of any particular day",
       "notes": [
         "URI is dateTime because OWL reasoners do not work with straight date or time",
@@ -167,7 +171,7 @@
     },
     {
       "name": "date",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Date",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Date",
       "description": "a date (year, month and day) in an idealized calendar",
       "notes": [
         "URI is dateTime because OWL reasoners don't work with straight date or time",
@@ -184,7 +188,7 @@
     },
     {
       "name": "datetime",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Datetime",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Datetime",
       "description": "The combination of a date and time",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"datetime\"."
@@ -200,7 +204,7 @@
     },
     {
       "name": "date_or_datetime",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/DateOrDatetime",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/DateOrDatetime",
       "description": "Either a date or a datetime",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"date_or_datetime\"."
@@ -213,7 +217,7 @@
     },
     {
       "name": "uriorcurie",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Uriorcurie",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Uriorcurie",
       "description": "a URI or a CURIE",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"uriorcurie\"."
@@ -226,7 +230,7 @@
     },
     {
       "name": "curie",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Curie",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Curie",
       "conforms_to": "https://www.w3.org/TR/curie/",
       "description": "a compact URI",
       "notes": [
@@ -244,7 +248,7 @@
     },
     {
       "name": "uri",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Uri",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Uri",
       "conforms_to": "https://www.ietf.org/rfc/rfc3987.txt",
       "description": "a complete URI",
       "notes": [
@@ -264,7 +268,7 @@
     },
     {
       "name": "ncname",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Ncname",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Ncname",
       "description": "Prefix part of CURIE",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"ncname\"."
@@ -277,7 +281,7 @@
     },
     {
       "name": "objectidentifier",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Objectidentifier",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Objectidentifier",
       "description": "A URI or CURIE that represents an object in the model.",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"objectidentifier\"."
@@ -293,7 +297,7 @@
     },
     {
       "name": "nodeidentifier",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Nodeidentifier",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Nodeidentifier",
       "description": "A URI, CURIE or BNODE that represents a node in a model.",
       "notes": [
         "If you are authoring schemas in LinkML YAML, the type is referenced with the lower case \"nodeidentifier\"."
@@ -306,7 +310,7 @@
     },
     {
       "name": "jsonpointer",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Jsonpointer",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Jsonpointer",
       "conforms_to": "https://datatracker.ietf.org/doc/html/rfc6901",
       "description": "A string encoding a JSON Pointer. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to a valid object within the current instance document when encoded in tree form.",
       "notes": [
@@ -320,7 +324,7 @@
     },
     {
       "name": "jsonpath",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Jsonpath",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Jsonpath",
       "conforms_to": "https://www.ietf.org/archive/id/draft-goessner-dispatch-jsonpath-00.html",
       "description": "A string encoding a JSON Path. The value of the string MUST conform to JSON Point syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded in tree form.",
       "notes": [
@@ -334,7 +338,7 @@
     },
     {
       "name": "sparqlpath",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Sparqlpath",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Sparqlpath",
       "conforms_to": "https://www.w3.org/TR/sparql11-query/#propertypaths",
       "description": "A string encoding a SPARQL Property Path. The value of the string MUST conform to SPARQL syntax and SHOULD dereference to zero or more valid objects within the current instance document when encoded as RDF.",
       "notes": [
@@ -350,7 +354,7 @@
   "enums": [
     {
       "name": "review_options",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/ReviewOptions",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "permissible_values": [
         {
@@ -363,7 +367,7 @@
     },
     {
       "name": "annotation_method_options",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "permissible_values": [
         {
@@ -379,7 +383,7 @@
     },
     {
       "name": "CellTypeEnum",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/CellTypeEnum",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/CellTypeEnum",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "permissible_values": [
         {
@@ -16756,10 +16760,10 @@
   "slots": [
     {
       "name": "cell_set_accession",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_set_accession",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cell_set_accession",
       "description": "An identifier that can be used to consistently refer to the set of cells being annotated, even if the cell_label changes.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_set_accession",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cell_set_accession",
       "owner": "BicanAnnotation",
       "domain_of": [
         "BicanAnnotation"
@@ -16770,7 +16774,7 @@
     },
     {
       "name": "parent_cell_set_accession",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/parent_cell_set_accession",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/parent_cell_set_accession",
       "description": "A list of accessions of cell sets that subsume this cell set. This can be used to compose hierarchies of annotated cell sets, built from a fixed set of clusters.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -16786,9 +16790,9 @@
     },
     {
       "name": "transferred_annotations",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/transferred_annotations",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/transferred_annotations",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/transferred_annotations",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/transferred_annotations",
       "owner": "BicanAnnotation",
       "domain_of": [
         "BicanAnnotation"
@@ -16800,10 +16804,10 @@
     },
     {
       "name": "cells",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cells",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cells",
       "description": "By convention this is only used for annotation transfer labelsets.  It MUST not be combined with the 'cell_ids' field.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cells",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cells",
       "owner": "BicanAnnotation",
       "domain_of": [
         "BicanAnnotation"
@@ -16815,10 +16819,10 @@
     },
     {
       "name": "negative_marker_gene_evidence",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/negative_marker_gene_evidence",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/negative_marker_gene_evidence",
       "description": "Gene names explicitly used as evidence, which MUST be in the matrix of the AnnData/Seurat file",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/negative_marker_gene_evidence",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/negative_marker_gene_evidence",
       "owner": "BicanAnnotation",
       "domain_of": [
         "BicanAnnotation"
@@ -16829,10 +16833,10 @@
     },
     {
       "name": "rank",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rank",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/rank",
       "description": "A number indicating relative granularity with 0 being the most specific.  Use this where a single dataset has multiple keys that are used consistently to record annotations and different levels of granularity.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rank",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/rank",
       "owner": "BicanLabelset",
       "domain_of": [
         "BicanLabelset"
@@ -16842,10 +16846,10 @@
     },
     {
       "name": "transferred_cell_label",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/transferred_cell_label",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/transferred_cell_label",
       "description": "Transferred cell label",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/transferred_cell_label",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/transferred_cell_label",
       "owner": "AnnotationTransfer",
       "domain_of": [
         "AnnotationTransfer"
@@ -16855,10 +16859,10 @@
     },
     {
       "name": "source_taxonomy",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/source_taxonomy",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/source_taxonomy",
       "description": "PURL of source taxonomy",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/source_taxonomy",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/source_taxonomy",
       "owner": "AnnotationTransfer",
       "domain_of": [
         "AnnotationTransfer"
@@ -16868,10 +16872,10 @@
     },
     {
       "name": "source_node_accession",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/source_node_accession",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/source_node_accession",
       "description": "accession of node that label was transferred from",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/source_node_accession",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/source_node_accession",
       "owner": "AnnotationTransfer",
       "domain_of": [
         "AnnotationTransfer"
@@ -16881,10 +16885,10 @@
     },
     {
       "name": "algorithm_name",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_name",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/algorithm_name",
       "description": "Name of algorithm used to transfer annotation",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_name",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/algorithm_name",
       "owner": "AutomatedAnnotation",
       "domain_of": [
         "AnnotationTransfer",
@@ -16895,7 +16899,7 @@
     },
     {
       "name": "comment",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/comment",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/comment",
       "description": "Free text comment on annotation transfer",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -16911,10 +16915,10 @@
     },
     {
       "name": "cell_id",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_id",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cell_id",
       "description": "Identifier for a single cell.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_id",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cell_id",
       "owner": "Cell",
       "domain_of": [
         "Cell"
@@ -16925,10 +16929,10 @@
     },
     {
       "name": "confidence",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/confidence",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/confidence",
       "description": "Normalised confidence score",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/confidence",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/confidence",
       "owner": "Cell",
       "domain_of": [
         "Cell"
@@ -16938,10 +16942,10 @@
     },
     {
       "name": "author_categories",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_categories",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/author_categories",
       "description": "Categories of authorship for the annotation",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_categories",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/author_categories",
       "owner": "Cell",
       "domain_of": [
         "Cell"
@@ -16951,10 +16955,10 @@
     },
     {
       "name": "datestamp",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/datestamp",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/datestamp",
       "description": "Time and date review was last edited.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/datestamp",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/datestamp",
       "owner": "Review",
       "domain_of": [
         "Review"
@@ -16965,10 +16969,10 @@
     },
     {
       "name": "reviewer",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviewer",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/reviewer",
       "description": "Review Author",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviewer",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/reviewer",
       "owner": "Review",
       "domain_of": [
         "Review"
@@ -16978,10 +16982,10 @@
     },
     {
       "name": "review",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/review",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/review",
       "description": "Reviewer's verdict on the annotation.  Must be 'Agree' or 'Disagree'",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/review",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/review",
       "owner": "Review",
       "domain_of": [
         "Review"
@@ -16991,7 +16995,7 @@
     },
     {
       "name": "explanation",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/explanation",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/explanation",
       "description": "Free-text review of annotation. This is required if the verdict is disagree and should include reasons for disagreement.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -17007,7 +17011,7 @@
     },
     {
       "name": "name",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/name",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/name",
       "description": "name of annotation key",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -17024,7 +17028,7 @@
     },
     {
       "name": "description",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/description",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/description",
       "description": "The description of the dataset. e.g. 'A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.'",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -17041,10 +17045,10 @@
     },
     {
       "name": "annotation_method",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotation_method",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/annotation_method",
       "description": "The method used for creating the cell annotations. This MUST be one of the following strings: `'algorithmic'`, `'manual'`, or `'both'`",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotation_method",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/annotation_method",
       "owner": "Labelset",
       "domain_of": [
         "Labelset"
@@ -17054,9 +17058,9 @@
     },
     {
       "name": "automated_annotation",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/automated_annotation",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/automated_annotation",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/automated_annotation",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/automated_annotation",
       "owner": "Labelset",
       "domain_of": [
         "Labelset"
@@ -17067,10 +17071,10 @@
     },
     {
       "name": "algorithm_version",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_version",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/algorithm_version",
       "description": "The version of the algorithm used (if applicable). It MUST be a string of the algorithm's version, which is typically in the format '[MAJOR].[MINOR]', but other versioning systems are permitted (based on the algorithm's versioning).",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_version",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/algorithm_version",
       "owner": "AutomatedAnnotation",
       "domain_of": [
         "AutomatedAnnotation"
@@ -17081,10 +17085,10 @@
     },
     {
       "name": "algorithm_repo_url",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_repo_url",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/algorithm_repo_url",
       "description": "This field denotes the URL of the version control repository associated with the algorithm used (if applicable). It MUST be a string of a valid URL.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/algorithm_repo_url",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/algorithm_repo_url",
       "owner": "AutomatedAnnotation",
       "domain_of": [
         "AutomatedAnnotation"
@@ -17095,10 +17099,10 @@
     },
     {
       "name": "reference_location",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reference_location",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/reference_location",
       "description": "This field denotes a valid URL of the annotated dataset that was the source of annotated reference data. \nThis MUST be a string of a valid URL. The concept of a 'reference' specifically refers to 'annotation transfer' algorithms, whereby a 'reference' dataset is used to transfer cell annotations to the 'query' dataset.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reference_location",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/reference_location",
       "owner": "AutomatedAnnotation",
       "domain_of": [
         "AutomatedAnnotation"
@@ -17108,13 +17112,13 @@
     },
     {
       "name": "labelset",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelset",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/labelset",
       "description": "The unique name of the set of cell annotations. \nEach cell within the AnnData/Seurat file MUST be associated with a 'cell_label' value in order for this to be a valid 'cellannotation_setname'.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
-        "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_labelset"
+        "https://purl.brain-bican.org/taxonomy/has_labelset"
       ],
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_labelset",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/has_labelset",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17125,7 +17129,7 @@
     },
     {
       "name": "cell_label",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_label",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cell_label",
       "description": "This denotes any free-text term which the author uses to annotate cells, i.e. the preferred cell label name used by the author. Abbreviations are exceptable in this field; refer to 'cell_fullname' for related details. \nCertain key words have been reserved:\n- `'doublets'` is reserved for encoding cells defined as doublets based on some computational analysis\n- `'junk'` is reserved for encoding cells that failed sequencing for some reason, e.g. few genes detected, high fraction of mitochondrial reads\n- `'unknown'` is explicitly reserved for unknown or 'author does not know'\n- `'NA'` is incomplete, i.e. no cell annotation was provided",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -17142,7 +17146,7 @@
     },
     {
       "name": "cell_fullname",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_fullname",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cell_fullname",
       "description": "This MUST be the full-length name for the biological entity listed in `cell_label` by the author. (If the value in `cell_label` is the full-length term, this field will contain the same value.) \nNOTE: any reserved word used in the field 'cell_label' MUST match the value of this field. \n\nEXAMPLE 1: Given the matching terms 'LC' and 'luminal cell' used to annotate the same cell(s), then users could use either terms as values in the field 'cell_label'. However, the abbreviation 'LC' CANNOT be provided in the field 'cell_fullname'. \n\nEXAMPLE 2: Either the abbreviation 'AC' or the full-length term intended by the author 'GABAergic amacrine cell' MAY be placed in the field 'cell_label', but as full-length term naming this biological entity, 'GABAergic amacrine cell' MUST be placed in the field 'cell_fullname'.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -17158,7 +17162,7 @@
     },
     {
       "name": "cell_ontology_term_id",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ontology_term_id",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cell_ontology_term_id",
       "description": "This MUST be a term from either the Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/cl) or from some ontology that extends it by classifying cell types under terms from the Cell Ontology\ne.g. the Provisional Cell Ontology (https://www.ebi.ac.uk/ols/ontologies/pcl) or the Drosophila Anatomy Ontology (DAO) (https://www.ebi.ac.uk/ols4/ontologies/fbbt).\n\nNOTE: The closest available ontology term matching the value within the field 'cell_label' (at the time of publication) MUST be used.\nFor example, if the value of 'cell_label' is 'relay interneuron', but this entity does not yet exist in the ontology, users must choose the closest available term in the CL ontology. In this case, it's the broader term 'interneuron' i.e.  https://www.ebi.ac.uk/ols/ontologies/cl/terms?obo_id=CL:0000099.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -17174,10 +17178,10 @@
     },
     {
       "name": "cell_ontology_term",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ontology_term",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cell_ontology_term",
       "description": "This MUST be the human-readable name assigned to the value of 'cell_ontology_term_id'",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ontology_term",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cell_ontology_term",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17187,13 +17191,13 @@
     },
     {
       "name": "cell_ids",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cell_ids",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cell_ids",
       "description": "Cell barcode sequences/UUIDs used to uniquely identify the cells within the AnnData/Seurat matrix. Any and all cell barcode sequences/UUIDs MUST be included in the AnnData/Seurat matrix.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
-        "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_cellid"
+        "https://purl.brain-bican.org/taxonomy/has_cellid"
       ],
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/has_cellid",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/has_cellid",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17204,10 +17208,10 @@
     },
     {
       "name": "rationale",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/rationale",
       "description": "The free-text rationale which users provide as justification/evidence for their cell annotations. \nResearchers are encouraged to use this field to cite relevant publications in-line using standard academic citations of the form `(Zheng et al., 2020)` This human-readable free-text MUST be encoded as a single string.\nAll references cited SHOULD be listed using DOIs under rationale_dois. There MUST be a 2000-character limit.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/rationale",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17217,9 +17221,9 @@
     },
     {
       "name": "rationale_dois",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale_dois",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/rationale_dois",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/rationale_dois",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/rationale_dois",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17230,10 +17234,10 @@
     },
     {
       "name": "marker_gene_evidence",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/marker_gene_evidence",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/marker_gene_evidence",
       "description": "Gene names explicitly used as evidence, which MUST be in the matrix of the AnnData/Seurat file",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/marker_gene_evidence",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/marker_gene_evidence",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17244,10 +17248,10 @@
     },
     {
       "name": "synonyms",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/synonyms",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/synonyms",
       "description": "List of synonyms",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/synonyms",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/synonyms",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17258,9 +17262,9 @@
     },
     {
       "name": "reviews",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviews",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/reviews",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/reviews",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/reviews",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17272,10 +17276,10 @@
     },
     {
       "name": "author_annotation_fields",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_annotation_fields",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/author_annotation_fields",
       "description": "A dictionary of author defined key value pairs annotating the cell set. The names and aims of these fields MUST not clash with official annotation fields.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_annotation_fields",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/author_annotation_fields",
       "owner": "Annotation",
       "domain_of": [
         "Annotation"
@@ -17286,23 +17290,23 @@
     },
     {
       "name": "matrix_file_id",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/matrix_file_id",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/matrix_file_id",
       "description": "A resolvable ID for a cell by gene matrix file in the form namespace:accession, e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json for supported namespaces.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/matrix_file_id",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/matrix_file_id",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
       ],
-      "range": "string",
+      "range": "uriorcurie",
       "@type": "SlotDefinition"
     },
     {
       "name": "title",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/title",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/title",
       "description": "The title of the dataset. This MUST be less than or equal to 200 characters. e.g. 'Human retina cell atlas - retinal ganglion cells'.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/title",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/title",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17313,10 +17317,10 @@
     },
     {
       "name": "cellannotation_schema_version",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_schema_version",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_schema_version",
       "description": "The schema version, the cell annotation open standard. Current version MUST follow 0.1.0\nThis versioning MUST follow the format `'[MAJOR].[MINOR].[PATCH]'` as defined by Semantic Versioning 2.0.0, https://semver.org/",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_schema_version",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_schema_version",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17326,10 +17330,10 @@
     },
     {
       "name": "cellannotation_timestamp",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_timestamp",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_timestamp",
       "description": "The timestamp of all cell annotations published (per dataset). This MUST be a string in the format `'%yyyy-%mm-%dd %hh:%mm:%ss'`",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_timestamp",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_timestamp",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17339,10 +17343,10 @@
     },
     {
       "name": "cellannotation_version",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_version",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_version",
       "description": "The version for all cell annotations published (per dataset). This MUST be a string. The recommended versioning format is `'[MAJOR].[MINOR].[PATCH]'` as defined by Semantic Versioning 2.0.0, https://semver.org/",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_version",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_version",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17352,10 +17356,10 @@
     },
     {
       "name": "cellannotation_url",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_url",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_url",
       "description": "A persistent URL of all cell annotations published (per dataset).",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/cellannotation_url",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/cellannotation_url",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17365,10 +17369,10 @@
     },
     {
       "name": "author_list",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_list",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/author_list",
       "description": "This field stores a list of users who are included in the project as collaborators, regardless of their specific role. An example list; '['John Smith', 'Cody Miller', 'Sarah Jones']'",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_list",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/author_list",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17378,10 +17382,10 @@
     },
     {
       "name": "author_name",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_name",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/author_name",
       "description": "Primary author's name. This MUST be a string in the format `[FIRST NAME] [LAST NAME]`",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_name",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/author_name",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17392,10 +17396,10 @@
     },
     {
       "name": "author_contact",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_contact",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/author_contact",
       "description": "Primary author's contact. This MUST be a valid email address of the author",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/author_contact",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/author_contact",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17405,10 +17409,10 @@
     },
     {
       "name": "orcid",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/orcid",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/orcid",
       "description": "Primary author's orcid. This MUST be a valid ORCID for the author",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/orcid",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/orcid",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17418,9 +17422,9 @@
     },
     {
       "name": "labelsets",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelsets",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/labelsets",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelsets",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/labelsets",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17434,9 +17438,9 @@
     },
     {
       "name": "annotations",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotations",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/annotations",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotations",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/annotations",
       "owner": "Taxonomy",
       "domain_of": [
         "Taxonomy"
@@ -17450,9 +17454,9 @@
     },
     {
       "name": "id",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/id",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/id",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/id",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/id",
       "identifier": true,
       "range": "uriorcurie",
       "required": true,
@@ -17460,11 +17464,11 @@
     },
     {
       "name": "Bican_Taxonomy_labelsets",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelsets",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/labelsets",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "is_a": "labelsets",
       "domain": "BicanTaxonomy",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/labelsets",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/labelsets",
       "alias": "labelsets",
       "owner": "BicanTaxonomy",
       "domain_of": [
@@ -17481,11 +17485,11 @@
     },
     {
       "name": "Bican_Taxonomy_annotations",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotations",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/annotations",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "is_a": "annotations",
       "domain": "BicanTaxonomy",
-      "slot_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/annotations",
+      "slot_uri": "https://purl.brain-bican.org/taxonomy/annotations",
       "alias": "annotations",
       "owner": "BicanTaxonomy",
       "domain_of": [
@@ -17504,7 +17508,7 @@
   "classes": [
     {
       "name": "BicanTaxonomy",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/BicanTaxonomy",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/BicanTaxonomy",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
         "CAS:Taxonomy"
@@ -17526,13 +17530,13 @@
         "Bican_Taxonomy_annotations"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Taxonomy",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/Taxonomy",
       "tree_root": true,
       "@type": "ClassDefinition"
     },
     {
       "name": "BicanLabelset",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/BicanLabelset",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/BicanLabelset",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
         "CAS:Labelset"
@@ -17546,12 +17550,12 @@
         "rank"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/Labelset",
       "@type": "ClassDefinition"
     },
     {
       "name": "BicanAnnotation",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/BicanAnnotation",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/BicanAnnotation",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
         "PCL:0010001"
@@ -17582,7 +17586,7 @@
     },
     {
       "name": "AnnotationTransfer",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationTransfer",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/AnnotationTransfer",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "slots": [
         "transferred_cell_label",
@@ -17592,12 +17596,12 @@
         "comment"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationTransfer",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/AnnotationTransfer",
       "@type": "ClassDefinition"
     },
     {
       "name": "Cell",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Cell",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Cell",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "slots": [
         "cell_id",
@@ -17605,12 +17609,12 @@
         "author_categories"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Cell",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/Cell",
       "@type": "ClassDefinition"
     },
     {
       "name": "Any",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Any",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Any",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
         "linkml:Any"
@@ -17621,7 +17625,7 @@
     },
     {
       "name": "Review",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Review",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Review",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "slots": [
         "datestamp",
@@ -17630,12 +17634,12 @@
         "explanation"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Review",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/Review",
       "@type": "ClassDefinition"
     },
     {
       "name": "Labelset",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Labelset",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "slots": [
         "name",
@@ -17644,12 +17648,12 @@
         "automated_annotation"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Labelset",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/Labelset",
       "@type": "ClassDefinition"
     },
     {
       "name": "AutomatedAnnotation",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AutomatedAnnotation",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/AutomatedAnnotation",
       "description": "A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "slots": [
@@ -17659,12 +17663,12 @@
         "reference_location"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/AutomatedAnnotation",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/AutomatedAnnotation",
       "@type": "ClassDefinition"
     },
     {
       "name": "Annotation",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Annotation",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Annotation",
       "description": "A collection of fields recording a cell type/class/state annotation on some set of cells, supporting evidence and provenance. As this is intended as a general schema, compulsory fields are kept to a minimum. However, tools using this schema are encouarged to specify a larger set of compulsory fields for publication.    Note: This schema deliberately allows for additional fields in order to support ad hoc user fields, new formal schema extensions and project/tool specific metadata.",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "mappings": [
@@ -17690,7 +17694,7 @@
     },
     {
       "name": "Taxonomy",
-      "definition_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Taxonomy",
+      "definition_uri": "https://purl.brain-bican.org/taxonomy/Taxonomy",
       "from_schema": "https://cellular-semantics.sanger.ac.uk/ontology/CAS",
       "slots": [
         "matrix_file_id",
@@ -17708,20 +17712,20 @@
         "annotations"
       ],
       "slot_usage": {},
-      "class_uri": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/Taxonomy",
+      "class_uri": "https://purl.brain-bican.org/taxonomy/Taxonomy",
       "@type": "ClassDefinition"
     }
   ],
   "metamodel_version": "1.7.0",
   "source_file": "BICAN_schema.yaml",
-  "source_file_date": "2024-09-23T16:32:39",
-  "source_file_size": 779109,
-  "generation_date": "2024-09-23T16:32:56",
+  "source_file_date": "2024-11-22T11:09:42",
+  "source_file_size": 779165,
+  "generation_date": "2024-11-22T11:09:59",
   "@type": "SchemaDefinition",
   "@context": [
     "project/jsonld/BICAN_schema.context.jsonld",
     {
-      "@base": "https://cellular-semantics.sanger.ac.uk/ontology/CAS/"
+      "@base": "https://purl.brain-bican.org/taxonomy/"
     }
   ]
 }

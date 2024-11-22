@@ -1,5 +1,5 @@
 # Auto generated from None by pythongen.py version: 0.0.1
-# Generation date: 2024-10-03T17:13:03
+# Generation date: 2024-11-22T11:09:50
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -31,13 +31,13 @@ version = None
 dataclasses._init_fn = dataclasses_init_fn_with_kwargs
 
 # Namespaces
-CAS = CurieNamespace('CAS', 'https://cellular-semantics.sanger.ac.uk/ontology/CAS/')
+CAS = CurieNamespace('CAS', 'https://purl.brain-bican.org/taxonomy/')
 CL = CurieNamespace('CL', 'http://purl.obolibrary.org/obo/CL_')
 CELLXGENE_DATASET = CurieNamespace('CellXGene_dataset', 'https://cellxgene.cziscience.com/datasets/')
 IAO = CurieNamespace('IAO', 'http://purl.obolibrary.org/obo/IAO_')
 PCL = CurieNamespace('PCL', 'http://purl.obolibrary.org/obo/PCL_')
 RO = CurieNamespace('RO', 'http://purl.obolibrary.org/obo/RO_')
-CELL_ANNOTATION_SCHEMA = CurieNamespace('cell_annotation_schema', 'https://cellular-semantics.sanger.ac.uk/ontology/CAS/')
+CELL_ANNOTATION_SCHEMA = CurieNamespace('cell_annotation_schema', 'https://purl.brain-bican.org/taxonomy/')
 LINKML = CurieNamespace('linkml', 'https://w3id.org/linkml/')
 OBO = CurieNamespace('obo', 'http://purl.obolibrary.org/obo/')
 RDFS = CurieNamespace('rdfs', 'http://www.w3.org/2000/01/rdf-schema#')

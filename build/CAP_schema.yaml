@@ -381,10 +381,7 @@ enums:
         title: ameloblast
       CL:0000160:
         text: CL:0000160
-        description: A specialized, columnar, mucus secreting epithelial cell shaped
-          like a flask or goblet. A narrow basal end contains the nucleus while the
-          apical end is swollen by the accumulation of mucus laden secretory granules.  Short
-          microvilli project from the apical plasma membrane.
+        description: A cell of the epithelial lining that produce and secrete mucins.
         meaning: CL:0000160
         title: goblet cell
       CL:0002680:
@@ -763,8 +760,8 @@ enums:
         title: strial basal cell
       CL:1001124:
         text: CL:1001124
-        description: An endothelial cell that is part of the peritubular capillary
-          of the renal cortex.
+        description: Any peritubular capillary endothelial cell that is part of some
+          renal cortex peritubular capillary.
         meaning: CL:1001124
         title: kidney cortex peritubular capillary cell
       CL:0000112:
@@ -969,11 +966,6 @@ enums:
           phenotype CD38-negative and IgG-negative.
         meaning: CL:0002118
         title: CD38-negative IgG-negative class switched memory B cell
-      CL:4033075:
-        text: CL:4033075
-        description: A(n) CD4-positive, alpha-beta T cell that is cycling.
-        meaning: CL:4033075
-        title: cycling CD4-positive, alpha-beta T cell
       CL:4023064:
         text: CL:4023064
         description: An interneuron that is derived from the caudal ganglionic eminence.
@@ -1503,8 +1495,8 @@ enums:
         title: type I cell of adrenal medulla
       CL:1001123:
         text: CL:1001123
-        description: An endothelial cell that is part of the peritubular capillary
-          of the outer renal medulla.
+        description: Any peritubular capillary endothelial cell that is part of some
+          outer renal medulla peritubular capillary.
         meaning: CL:1001123
         title: kidney outer medulla peritubular capillary cell
       CL:0009095:
@@ -1593,17 +1585,17 @@ enums:
         title: CD4-negative, CD8-negative type I NK T cell secreting interferon-gamma
       CL:4023007:
         text: CL:4023007
-        description: A VIP GABAergic cortical interneuron with bipolar morphology,
-          with a soma found in L2/3. L2/3 bipolar VIP cells have extending axons across
+        description: A vip GABAergic cortical interneuron with bipolar morphology,
+          with a soma found in L2/3. L2/3 bipolar vip cells have extending axons across
           all layers (with preferences for layers II/III and Va) and a dendritic tree
-          that is vertically more restricted than deeper layer VIP cells and extend
+          that is vertically more restricted than deeper layer vip cells and extend
           fewer dendrites into the layers outside their home layer (location of soma).
-          L2/3 bipolar VIP cells have great variability in firing patterns, though
-          most are continuous adapting. L2/3 bipolar VIP cells are more depolarized
+          L2/3 bipolar vip cells have great variability in firing patterns, though
+          most are continuous adapting. L2/3 bipolar vip cells are more depolarized
           in their resting state, had less fast rectification, and had smaller after
-          hyperpolarization than deeper VIP cells.
+          hyperpolarization than deeper vip cells.
         meaning: CL:4023007
-        title: L2/3 bipolar VIP GABAergic interneuron (Mmus)
+        title: L2/3 bipolar vip GABAergic interneuron (Mmus)
       CL:0009049:
         text: CL:0009049
         description: A layer of smooth muscle cells that forms the outer layer of
@@ -1922,6 +1914,11 @@ enums:
           hundreds of pyramidal cells in a clustered manner.
         meaning: CL:4023036
         title: chandelier pvalb GABAergic cortical interneuron
+      CL:4023110:
+        text: CL:4023110
+        description: A pyramidal neuron with soma located in the amygdala.
+        meaning: CL:4023110
+        title: amygdala pyramidal neuron
       CL:2000048:
         text: CL:2000048
         description: A lower motor neuron whose soma is located in the anterior horn.
@@ -1981,16 +1978,6 @@ enums:
           endothelium.
         meaning: CL:2000008
         title: microvascular endothelial cell
-      CL:4047005:
-        text: CL:4047005
-        description: A(n) neuroblast (sensu Vertebrata) that is cycling.
-        meaning: CL:4047005
-        title: cycling neuroblast (sensu Vertebrata)
-      CL:4023110:
-        text: CL:4023110
-        description: A pyramidal neuron with soma located in the amygdala.
-        meaning: CL:4023110
-        title: amygdala pyramidal neuron
       CL:0002210:
         text: CL:0002210
         description: A slow muscle cell that contains high levels of myoglobin and
@@ -2291,9 +2278,8 @@ enums:
         title: cell in vitro
       CL:1001006:
         text: CL:1001006
-        description: An endothelial cell which is part of the afferent arteriole in
-          the kidney. This cell is  responsible for maintaining renal blood flow and
-          glomerular filtration rate.
+        description: Any kidney arterial blood vessel cell that is part of some renal
+          afferent arteriole.
         meaning: CL:1001006
         title: kidney afferent arteriole cell
       CL:2000037:
@@ -2483,11 +2469,6 @@ enums:
           egg cell.
         meaning: CL:0000365
         title: animal zygote
-      CL:4033070:
-        text: CL:4033070
-        description: A(n) dendritic cell that is cycling.
-        meaning: CL:4033070
-        title: cycling dendritic cell
       CL:0000555:
         text: CL:0000555
         meaning: CL:0000555
@@ -2989,11 +2970,6 @@ enums:
           CD45RA-positive.
         meaning: CL:0001050
         title: effector CD8-positive, alpha-beta T cell
-      CL:4033068:
-        text: CL:4033068
-        description: A(n) B cell that is cycling.
-        meaning: CL:4033068
-        title: cycling B cell
       CL:0002528:
         text: CL:0002528
         description: A mature CD14-positive dermal dendritic cell is CD80-high, CD86-high,
@@ -3522,11 +3498,6 @@ enums:
           secretes secretin and serotonin.
         meaning: CL:0002281
         title: type S enteroendocrine cell
-      CL:4033073:
-        text: CL:4033073
-        description: A(n) monocyte that is cycling.
-        meaning: CL:4033073
-        title: cycling monocyte
       CL:0009115:
         text: CL:0009115
         description: An endothelial cell located in a lymph node lymphatic vessel.
@@ -3584,11 +3555,6 @@ enums:
           expresses a glial glutumate transporter, GLAST.
         meaning: CL:0002289
         title: type I taste bud cell
-      CL:4033079:
-        text: CL:4033079
-        description: A(n) endothelial cell of lymphatic vessel that is cycling.
-        meaning: CL:4033079
-        title: cycling endothelial cell of lymphatic vessel
       CL:0009058:
         text: CL:0009058
         description: An enterocyte that is located in the anorectum.
@@ -3864,7 +3830,7 @@ enums:
         text: CL:0002659
         description: A glandular epithelial cell that is part of the stomach.
         meaning: CL:0002659
-        title: glandular epithelial cell of stomach
+        title: glandular cell of stomach
       CL:0000982:
         text: CL:0000982
         description: A plasmablast that secretes IgG.
@@ -4294,6 +4260,11 @@ enums:
           lin-negative, AA4-positive, Kit-positive, IL7Ra-positive and CD45R-positive.
         meaning: CL:0002045
         title: fraction A pre-pro B cell
+      CL:2000000:
+        text: CL:2000000
+        description: Any melanocyte that is part of a epidermis.
+        meaning: CL:2000000
+        title: epidermal melanocyte
       CL:0000313:
         text: CL:0000313
         description: Columnar glandular cell with irregular nucleus, copious granular
@@ -4440,16 +4411,6 @@ enums:
         description: Neuron that secretes histamine.
         meaning: CL:0011110
         title: histaminergic neuron
-      CL:4033081:
-        text: CL:4033081
-        description: A(n) myeloid cell that is cycling.
-        meaning: CL:4033081
-        title: cycling myeloid cell
-      CL:2000000:
-        text: CL:2000000
-        description: Any melanocyte that is part of a epidermis.
-        meaning: CL:2000000
-        title: epidermal melanocyte
       CL:0011030:
         text: CL:0011030
         description: Any microvascular endothelial cell that is part of the dermis.
@@ -4722,8 +4683,7 @@ enums:
         title: CD22-positive, CD38-low small pre-B cell
       CL:4030041:
         text: CL:4030041
-        description: A ciliated cell of the endometrial luminal epithelium. This cell
-          is characterized by the presence of motile cilia on its apical surface.
+        description: A ciliated cell of the endometrial luminal epithelium.
         meaning: CL:4030041
         title: luminal endometrial ciliated epithelial cell
       CL:0000911:
@@ -5524,7 +5484,7 @@ enums:
         title: interlobulary vein endothelial cell
       CL:0002152:
         text: CL:0002152
-        description: A simple columnar epithelial cell located in the endocervix.
+        description: A columnar cell of the cervix uteri.
         meaning: CL:0002152
         title: columnar cell of endocervix
       CL:0000234:
@@ -5690,8 +5650,7 @@ enums:
         title: lens fiber cell
       CL:0002149:
         text: CL:0002149
-        description: An epithelial cell of the uterus. This cell has a mesodermal
-          origin.
+        description: An epithelial cell of the uterus.
         meaning: CL:0002149
         title: epithelial cell of uterus
       CL:0000582:
@@ -5822,6 +5781,14 @@ enums:
           but have differential projections to the thalamus or anterior cingulate.
         meaning: CL:4023038
         title: L6b glutamatergic cortical neuron
+      CL:0000900:
+        text: CL:0000900
+        description: A CD8-positive, alpha-beta T cell that has not experienced activation
+          via antigen contact and has the phenotype CD45RA-positive, CCR7-positive
+          and CD127-positive. This cell type is also described as being CD25-negative,
+          CD62L-high and CD44-low.
+        meaning: CL:0000900
+        title: naive thymus-derived CD8-positive, alpha-beta T cell
       CL:1001009:
         text: CL:1001009
         description: Any kidney arterial blood vessel cell that is part of some renal
@@ -6027,11 +5994,6 @@ enums:
           CD44-positive and kit-positive.
         meaning: CL:0002425
         title: early T lineage precursor
-      CL:4033080:
-        text: CL:4033080
-        description: A(n) pulmonary alveolar type 2 cell that is cycling.
-        meaning: CL:4033080
-        title: cycling pulmonary alveolar type 2 cell
       CL:0002577:
         text: CL:0002577
         description: An epithelial cell of the placenta.
@@ -6200,10 +6162,7 @@ enums:
         title: parietal cell
       CL:1001033:
         text: CL:1001033
-        description: An endothelial cell that is part of the peritubular capillary
-          of the kidney. This cell is highly fenestrated and plays a vital role in
-          the kidney's filtration process, enabling the exchange of materials between
-          the blood and the renal tubules.
+        description: An endothelial cell that is part of some peritubular capillary.
         meaning: CL:1001033
         title: peritubular capillary endothelial cell
       CL:0000992:
@@ -6218,19 +6177,6 @@ enums:
           tissue.
         meaning: CL:2000072
         title: adipose microvascular endothelial cell
-      CL:4033072:
-        text: CL:4033072
-        description: A(n) gamma-delta T cell that is cycling.
-        meaning: CL:4033072
-        title: cycling gamma-delta T cell
-      CL:0000900:
-        text: CL:0000900
-        description: A CD8-positive, alpha-beta T cell that has not experienced activation
-          via antigen contact and has the phenotype CD45RA-positive, CCR7-positive
-          and CD127-positive. This cell type is also described as being CD25-negative,
-          CD62L-high and CD44-low.
-        meaning: CL:0000900
-        title: naive thymus-derived CD8-positive, alpha-beta T cell
       CL:0002305:
         text: CL:0002305
         description: An epithelial cell of the distal convoluted tubule of the kidney
@@ -6570,11 +6516,6 @@ enums:
           \ by the transformation of endometrial stromal cells during decidualization."
         meaning: CL:2000002
         title: decidual cell
-      CL:4033082:
-        text: CL:4033082
-        description: A(n) basal cell that is cycling.
-        meaning: CL:4033082
-        title: cycling basal cell
       CL:2000007:
         text: CL:2000007
         description: Chondrocyte forming the hyaline cartilage found in the knee joint.
@@ -6607,7 +6548,7 @@ enums:
         title: nucleate cell
       CL:0002180:
         text: CL:0002180
-        description: An epithelial cell of the stomach. This cell produces mucous.
+        description: A mucous cell in the epithelium of the stomach.
         meaning: CL:0002180
         title: mucous cell of stomach
       CL:2000020:
@@ -7095,16 +7036,7 @@ enums:
         title: intestinal tuft cell
       CL:0000121:
         text: CL:0000121
-        description: An inhibitory neuron and the sole output neuron of the cerebellar
-          cortex, the Purkinje cell's soma is located between the granular and molecular
-          layers of the cerebellum. It is one of the largest neural cells in the mammalian
-          brain, ranging from 50 to 80 micrometres in diameter. Purkinje cells have
-          planar, fan-shaped dendrites that branch extensively with little overlap.
-          This cell type receives synaptic input from parallel fibres, which modulate
-          high-frequency spike activity known as "simple spikes," and climbing fibres,
-          which modulate infrequent calcium spike activity known as "complex spikes".
-          Purkinje cells are involved in motor coordination, particularly in correcting
-          movements in progress.
+        description: The output neuron of the cerebellar cortex.
         meaning: CL:0000121
         title: Purkinje cell
       CL:0000587:
@@ -7732,10 +7664,7 @@ enums:
         title: single fate stem cell
       CL:1001097:
         text: CL:1001097
-        description: A smooth muscle cell found in the wall of the afferent arteriole.
-          This cell contracts and relaxes in response to changes in blood pressure,
-          a process known as a myogenic response, to alter artery diameter and regulate
-          blood flow into the glomeruli.
+        description: Any smooth muscle cell that is part of some renal afferent arteriole.
         meaning: CL:1001097
         title: kidney afferent arteriole smooth muscle cell
       CL:1000838:
@@ -9391,6 +9320,11 @@ enums:
         text: CL:0000256
         meaning: CL:0000256
         title: uric acid accumulating cell
+      CL:0010004:
+        text: CL:0010004
+        description: A mononuclear cell that is part_of a bone marrow.
+        meaning: CL:0010004
+        title: mononuclear cell of bone marrow
       CL:0003031:
         text: CL:0003031
         description: A monostratified retinal ganglion cell that has post synaptic
@@ -9407,16 +9341,6 @@ enums:
         text: CL:0000428
         meaning: CL:0000428
         title: yolk cell
-      CL:0010004:
-        text: CL:0010004
-        description: A mononuclear cell that is part_of a bone marrow.
-        meaning: CL:0010004
-        title: mononuclear cell of bone marrow
-      CL:4047004:
-        text: CL:4047004
-        description: A(n) type EC enteroendocrine cell that is cycling.
-        meaning: CL:4047004
-        title: cycling type EC enteroendocrine cell
       CL:0005000:
         text: CL:0005000
         description: A CNS interneuron located in the spinal cord.
@@ -9490,6 +9414,13 @@ enums:
           gland.
         meaning: CL:4033003
         title: myoepithelial cell of bronchus submucosal gland
+      CL:0000512:
+        text: CL:0000512
+        description: A paracrine cell is a secretory cell that secretes an agonist
+          into intercellular spaces in which it diffuses to a target cell other than
+          that which produced it.
+        meaning: CL:0000512
+        title: paracrine cell
       CL:0009029:
         text: CL:0009029
         description: A mesothelial cell that is located in a vermiform appendix.
@@ -9563,11 +9494,6 @@ enums:
           of the islets of Langerhans.
         meaning: CL:0000169
         title: type B pancreatic cell
-      CL:4047003:
-        text: CL:4047003
-        description: A(n) plasma cell that is cycling.
-        meaning: CL:4047003
-        title: cycling plasma cell
       CL:4023063:
         text: CL:4023063
         description: An interneuron that is derived from the medial ganglionic eminence.
@@ -9654,7 +9580,7 @@ enums:
         description: A GABAergic neuron located in the cerebral cortex that expresses
           vasoactive intestinal polypeptide
         meaning: CL:4023016
-        title: VIP GABAergic cortical interneuron
+        title: vip GABAergic cortical interneuron
       CL:0009073:
         text: CL:0009073
         description: A thymic medullary epithelial cell considered to be a post-AIRE
@@ -10308,12 +10234,6 @@ enums:
         description: An epithelial cell of the esophagus.
         meaning: CL:0002252
         title: epithelial cell of esophagus
-      CL:4042016:
-        text: CL:4042016
-        description: A serous secreting cell that is part of a submucosal gland in
-          the nasal cavity respiratory epithelium.
-        meaning: CL:4042016
-        title: nasal serous secreting cell
       CL:0009003:
         text: CL:0009003
         description: Any cell in the midgut (middle subdivision of a digestive tract)
@@ -10460,10 +10380,10 @@ enums:
         title: retinoblast
       CL:4023019:
         text: CL:4023019
-        description: A VIP GABAergic cortical interneuron that expresses cck. L5/6
+        description: A vip GABAergic cortical interneuron that expresses cck. L5/6
           cck cells have soma found mainly in L5 and L6 and have large axonal arborization.
         meaning: CL:4023019
-        title: L5/6 cck, VIP GABAergic interneuron (Mmus)
+        title: L5/6 cck, vip GABAergic interneuron (Mmus)
       CL:0000404:
         text: CL:0000404
         description: A cell that initiates an electrical signal and passes that signal
@@ -11782,11 +11702,7 @@ enums:
         title: lung parenchyma resident eosinophil
       CL:1001096:
         text: CL:1001096
-        description: An endothelial cell that lines the interior surface of the afferent
-          arteriole and maintains vascular tone. This cell responds to changing ion
-          concentrations and blood pressure by releasing vasoactive substances, in
-          order to regulate blood flow into the glomeruli, which is essential for
-          glomerular filtration.
+        description: Any endothelial cell that is part of some renal afferent arteriole.
         meaning: CL:1001096
         title: kidney afferent arteriole endothelial cell
       CL:0000192:
@@ -12609,11 +12525,6 @@ enums:
           of the tympanic membrane. This cell-type lacks a nucleus.
         meaning: CL:0002161
         title: superficial external epithelial cell of tympanic membrane
-      CL:4033069:
-        text: CL:4033069
-        description: A(n) T cell that is cycling.
-        meaning: CL:4033069
-        title: cycling T cell
       CL:0002231:
         text: CL:0002231
         description: An epithelial cell of the prostate.
@@ -12903,11 +12814,6 @@ enums:
           pulp.
         meaning: CL:0000345
         title: dental papilla cell
-      CL:4033077:
-        text: CL:4033077
-        description: A(n) alveolar macrophage that is cycling.
-        meaning: CL:4033077
-        title: cycling alveolar macrophage
       CL:0000322:
         text: CL:0000322
         description: An epithelial cell that lines the peripheral gas exchange region
@@ -13052,11 +12958,6 @@ enums:
         description: A cell that contains more than two haploid sets of chromosomes.
         meaning: CL:0000412
         title: polyploid cell
-      CL:4047002:
-        text: CL:4047002
-        description: A(n) glial cell that is cycling.
-        meaning: CL:4047002
-        title: cycling glial cell
       CL:1000412:
         text: CL:1000412
         description: An endothelial cell that is part of the arteriole.
@@ -13256,8 +13157,7 @@ enums:
         title: premigratory neural crest cell
       CL:4030042:
         text: CL:4030042
-        description: A ciliated cell of the endometrial glandular epithelium. This
-          cell is characterized by the presence of motile cilia on its apical surface.
+        description: A ciliated cell of the endometrial glandular epithelium.
         meaning: CL:4030042
         title: glandular endometrial ciliated epithelial cell
       CL:0000354:
@@ -13411,7 +13311,7 @@ enums:
         title: subcutaneous adipocyte
       CL:0002244:
         text: CL:0002244
-        description: A stratified squamous epithelial cell located in the ectocervix.
+        description: A nonstratified squamous cell located in the ectocervix.
         meaning: CL:0002244
         title: squamous cell of ectocervix
       CL:0000498:
@@ -13653,10 +13553,11 @@ enums:
         title: L4 sst Martinotti interneuron (Mmus)
       CL:0002145:
         text: CL:0002145
-        description: A multi-ciliated epithelial cell located in the trachea and bronchi,
-          characterized by a columnar shape and motile cilia on its apical surface.
-          These cilia facilitate mucociliary clearance by moving mucus and trapped
-          particles toward the pharynx.
+        description: A ciliated columnar cell found in the trachea and bronchus. Vary
+          from low to tall columnar; possesses up to 300 cilia at its surface, interspersed
+          with long irregular microvilli with the cilia varying in length from about
+          6um in the trachea to about 4um in the terminal bronchioles; driving force
+          of the ciliary current in the bronchial tree.
         meaning: CL:0002145
         title: ciliated columnar cell of tracheobronchial tree
       CL:0000965:
@@ -13899,14 +13800,6 @@ enums:
           intestine.
         meaning: CL:1000339
         title: enterocyte of epithelium proper of small intestine
-      CL:4042014:
-        text: CL:4042014
-        description: A VIP GABAergic cortical interneuron with a soma located in L1-3
-          of some neocortex in Mmus. This neuron has a multipolar morphology with
-          spiny dendrites concentrating on L1 of the cortex, and has a burst firing
-          electrophysiological signature with highly dynamic dendritic spines.
-        meaning: CL:4042014
-        title: spiny VIP neuron
       CL:0000959:
         text: CL:0000959
         description: A transitional stage B cell that has the phenotype surface IgM-positive,
@@ -13987,11 +13880,6 @@ enums:
           bitufted neurons have branching that occur close to the soma.
         meaning: CL:4023077
         title: bitufted neuron
-      CL:4033074:
-        text: CL:4033074
-        description: A(n) CD8-positive, alpha-beta T cell that is cycling.
-        meaning: CL:4033074
-        title: cycling CD8-positive, alpha-beta T cell
       CL:0002316:
         text: CL:0002316
         description: A supporting cell of the vestibular epithelium.
@@ -14345,11 +14233,6 @@ enums:
           fibers and synapses of the auditory inner hair cells.
         meaning: CL:0005015
         title: inner phalangeal cell
-      CL:4033071:
-        text: CL:4033071
-        description: A(n) natural killer cell that is cycling.
-        meaning: CL:4033071
-        title: cycling natural killer cell
       CL:0000954:
         text: CL:0000954
         description: A small pre-B-II cell is a pre-B-II cell that is Rag1-positive,
@@ -15401,8 +15284,8 @@ enums:
         title: spinal accessory motor neuron
       CL:1001005:
         text: CL:1001005
-        description: An endothelial cell that is part of the glomerular capillary
-          of the kidney.
+        description: Any kidney capillary endothelial cell that is part of some glomerular
+          capillary endothelium.
         meaning: CL:1001005
         title: glomerular capillary endothelial cell
       CL:0001023:
@@ -15522,11 +15405,6 @@ enums:
           short microvilli.
         meaning: CL:0002063
         title: pulmonary alveolar type 2 cell
-      CL:4033076:
-        text: CL:4033076
-        description: A(n) macrophage that is cycling.
-        meaning: CL:4033076
-        title: cycling macrophage
       CL:4023097:
         text: CL:4023097
         description: A mesothelial fibroblast of the arachnoid barrier layer. Arachnoid
@@ -15696,7 +15574,7 @@ enums:
         title: Purkinje myocyte of atrioventricular bundle
       CL:1000892:
         text: CL:1000892
-        description: An endothelial cell that is part of the capillary of the kidney.
+        description: Any kidney blood vessel cell that is part of some kidney capillary.
         meaning: CL:1000892
         title: kidney capillary endothelial cell
       CL:0002172:
@@ -16389,11 +16267,6 @@ enums:
         description: A steroid hormone secreting cell that secretes androgen.
         meaning: CL:0000593
         title: androgen secreting cell
-      CL:4047001:
-        text: CL:4047001
-        description: A(n) stromal cell that is cycling.
-        meaning: CL:4047001
-        title: cycling stromal cell
       CL:0002447:
         text: CL:0002447
         description: A NK1.1-positive T cell that is CD94-negative.
@@ -16453,13 +16326,11 @@ enums:
         title: regular interventricular cardiac myocyte
       CL:0000351:
         text: CL:0000351
-        description: An extraembryonic cell that develops from a trophectodermal cell.
-          This cell is found in the outer layer of the blastocyst and can invade other
-          structures in the uterus once the blastocyst implants into the uterine wall.
-          A trophoblast cell is involved in the implantation of the embryo into the
-          uterine wall, placental formation, remodelling of maternal vasculature in
-          the uterus, nutrient and gas exchange, hormone production, and immune modulation
-          to support fetal development.
+        description: A cell lining the outside of the blastocyst. After binding to
+          the endometrium, trophoblast cells develop into two distinct layers, an
+          inner layer of mononuclear cytotrophoblast cells and an outer layer of continuous
+          multinuclear cytoplasm, the syncytiotrophoblast cells, which form the early
+          fetal-maternal interface.
         meaning: CL:0000351
         title: trophoblast cell
       CL:0002271:
@@ -16522,13 +16393,13 @@ enums:
         title: mature dermal dendritic cell
       CL:4023014:
         text: CL:4023014
-        description: A VIP GABAergic cortical interneuron with a soma found in L5.
-          L5 VIP cells have mostly local morphology with some deep-projecting axons.
+        description: A vip GABAergic cortical interneuron with a soma found in L5.
+          L5 vip cells have mostly local morphology with some deep-projecting axons.
           They show only moderate resistance, comparable to that of sst subclass and
-          unlike typical VIP subclass cells that tend to show high input resistance.
-          L5 VIP cells show particularly low resting membrane potential.
+          unlike typical Vip subclass cells that tend to show high input resistance.
+          L5 vip cells show particularly low resting membrane potential.
         meaning: CL:4023014
-        title: L5 VIP GABAergic interneuron (Mmus)
+        title: L5 vip GABAergic interneuron (Mmus)
       CL:0002214:
         text: CL:0002214
         description: A type II muscle cell that contains large amounts of myoglobin,
@@ -16678,9 +16549,9 @@ enums:
         title: lymphocyte of B lineage, CD19-positive
       CL:0002188:
         text: CL:0002188
-        description: An endothelial cell that is part of the glomerulus of the kidney.
-          This cell is flattened, highly fenestrated, and plays a vital role in the
-          formation of glomerular ultrafiltrate.
+        description: An endothelial cell found in the glomerulus of the kidney. This
+          cell is flattened, highly fenestrated, and plays a vital role in the formation
+          of glomerular ultrafiltrate.
         meaning: CL:0002188
         title: glomerular endothelial cell
       CL:0003026:
@@ -16861,11 +16732,6 @@ enums:
         description: A muscle cell that is part of some visceral muscle.
         meaning: CL:0008007
         title: visceral muscle cell
-      CL:4033078:
-        text: CL:4033078
-        description: A(n) mononuclear phagocyte that is cycling.
-        meaning: CL:4033078
-        title: cycling mononuclear phagocyte
       CL:0002432:
         text: CL:0002432
         description: A CD4-positive, CD8-negative thymocyte that is CD24-positive
@@ -17067,13 +16933,6 @@ enums:
         description: A CD24-low, CD44-positive, DX5-low, NK1.1-negative NK T cell.
         meaning: CL:0002041
         title: immature NK T cell stage III
-      CL:4042015:
-        text: CL:4042015
-        description: "A VIP GABAergic cortical interneuron expressing vasoactive intestinal\
-          \ polypeptide and choline acetyltransferase in the Mmus neocortex. This\
-          \ interneuron releases both \u03B3-aminobutyric acid and acetylcholine."
-        meaning: CL:4042015
-        title: VIP-ChAT interneuron
       CL:0000661:
         text: CL:0000661
         meaning: CL:0000661
@@ -17145,9 +17004,8 @@ enums:
         title: nasal mucosa goblet cell
       CL:4030040:
         text: CL:4030040
-        description: A multi-ciliated cell of the endometrial epithelium. This cell
-          is characterized by the presence of 9+2 motile cilia on its apical surface,
-          which facilitates the movement of mucus across the endometrial surface.
+        description: A ciliated cell of the endometrial epithelium. The cilia of this
+          cell type help move mucus from glandular tissue of the endometrium.
         meaning: CL:4030040
         title: endometrial ciliated epithelial cell
       CL:4023023:

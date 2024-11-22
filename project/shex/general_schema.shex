@@ -381,7 +381,7 @@ linkml:Sparqlpath xsd:string
 }
 
 <Taxonomy> CLOSED {
-    (  $<Taxonomy_tes> (  <matrix_file_id> @linkml:String ? ;
+    (  $<Taxonomy_tes> (  <matrix_file_id> @linkml:Uriorcurie ? ;
           <title> @linkml:String ;
           IAO:0000115 @linkml:String ? ;
           <cellannotation_schema_version> @linkml:String ? ;

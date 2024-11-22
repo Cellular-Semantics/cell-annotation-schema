@@ -45,7 +45,7 @@ type Review
 
 type Taxonomy
   {
-    matrixFileId: String
+    matrixFileId: Uriorcurie
     title: String!
     description: String
     cellannotationSchemaVersion: String

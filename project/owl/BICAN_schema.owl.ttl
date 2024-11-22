@@ -1,4 +1,4 @@
-@prefix CAS: <https://cellular-semantics.sanger.ac.uk/ontology/CAS/> .
+@prefix CAS: <https://purl.brain-bican.org/taxonomy/> .
 @prefix CL: <http://purl.obolibrary.org/obo/CL_> .
 @prefix PCL: <http://purl.obolibrary.org/obo/PCL_> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -38,41 +38,41 @@ CAS:BicanAnnotation a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Bican_Annotation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty CAS:cell_set_accession ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:parent_cell_set_accession ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:AnnotationTransfer ;
-            owl:onProperty CAS:transferred_annotations ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:cell_set_accession ],
-        [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:negative_marker_gene_evidence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:parent_cell_set_accession ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cell_set_accession ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:parent_cell_set_accession ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:Cell ;
             owl:onProperty CAS:cells ],
         [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:parent_cell_set_accession ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:cell_set_accession ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:parent_cell_set_accession ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:parent_cell_set_accession ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:negative_marker_gene_evidence ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:cells ],
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_set_accession ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:transferred_annotations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:cell_set_accession ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:AnnotationTransfer ;
+            owl:onProperty CAS:transferred_annotations ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cells ],
         CAS:Annotation ;
     skos:exactMatch PCL:0010001 ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
@@ -81,10 +81,10 @@ CAS:BicanLabelset a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Bican_Labelset" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom CAS:integer ;
             owl:onProperty CAS:rank ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:integer ;
+            owl:maxCardinality 1 ;
             owl:onProperty CAS:rank ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
@@ -13933,17 +13933,17 @@ CL:4042013 a owl:Class,
     rdfs:label "CL:4042013" ;
     rdfs:subClassOf CAS:CellTypeEnum .
 
-<https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic> a owl:Class,
+<https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#algorithmic> a owl:Class,
         CAS:AnnotationMethodOptions ;
     rdfs:label "algorithmic" ;
     rdfs:subClassOf CAS:AnnotationMethodOptions .
 
-<https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both> a owl:Class,
+<https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#both> a owl:Class,
         CAS:AnnotationMethodOptions ;
     rdfs:label "both" ;
     rdfs:subClassOf CAS:AnnotationMethodOptions .
 
-<https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual> a owl:Class,
+<https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#manual> a owl:Class,
         CAS:AnnotationMethodOptions ;
     rdfs:label "manual" ;
     rdfs:subClassOf CAS:AnnotationMethodOptions .
@@ -13952,50 +13952,50 @@ CAS:AnnotationTransfer a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "AnnotationTransfer" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:algorithm_name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:source_node_accession ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:comment ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:algorithm_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:transferred_cell_label ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:source_node_accession ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:algorithm_name ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:comment ],
-        [ a owl:Restriction ;
             owl:allValuesFrom CAS:uriorcurie ;
             owl:onProperty CAS:source_taxonomy ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:source_node_accession ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:source_node_accession ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:comment ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:algorithm_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:algorithm_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:source_taxonomy ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:transferred_cell_label ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:comment ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:algorithm_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty CAS:transferred_cell_label ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty CAS:comment ],
         [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:transferred_cell_label ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:source_node_accession ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:source_taxonomy ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty CAS:source_taxonomy ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:transferred_cell_label ] ;
+            owl:onProperty CAS:source_taxonomy ] ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
 CAS:Any a owl:Class,
@@ -14008,29 +14008,8 @@ CAS:AutomatedAnnotation a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "AutomatedAnnotation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:algorithm_repo_url ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:reference_location ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty CAS:reference_location ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:algorithm_version ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:algorithm_version ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty CAS:algorithm_repo_url ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty CAS:algorithm_version ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:algorithm_repo_url ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:algorithm_name ],
@@ -14038,11 +14017,32 @@ CAS:AutomatedAnnotation a owl:Class,
             owl:maxCardinality 1 ;
             owl:onProperty CAS:algorithm_name ],
         [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:algorithm_repo_url ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:reference_location ],
+        [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:algorithm_name ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:reference_location ] ;
+            owl:onProperty CAS:algorithm_repo_url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:reference_location ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:algorithm_version ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:algorithm_version ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:algorithm_version ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:algorithm_repo_url ] ;
     skos:definition "A set of fields for recording the details of the automated annotation algorithm used. (Common 'automated annotation methods' would include PopV, Azimuth, CellTypist, scArches, etc.)" ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
@@ -14051,30 +14051,30 @@ CAS:Cell a owl:Class,
     rdfs:label "Cell" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cell_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:author_categories ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty CAS:author_categories ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:float ;
+            owl:minCardinality 0 ;
             owl:onProperty CAS:confidence ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_id ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty CAS:cell_id ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:author_categories ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:confidence ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:cell_id ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty CAS:confidence ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:author_categories ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:float ;
             owl:onProperty CAS:confidence ] ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
@@ -14082,49 +14082,49 @@ CAS:Review a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Review" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
+            owl:maxCardinality 1 ;
             owl:onProperty CAS:reviewer ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:explanation ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:explanation ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:review ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:minCardinality 0 ;
             owl:onProperty CAS:explanation ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:reviewer ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty CAS:review ],
+            owl:onProperty CAS:explanation ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
+            owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:datestamp ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:explanation ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty CAS:datestamp ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:reviewer ],
+            owl:allValuesFrom CAS:ReviewOptions ;
+            owl:onProperty CAS:review ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:review ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
             owl:onProperty CAS:datestamp ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:ReviewOptions ;
-            owl:onProperty CAS:review ] ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:reviewer ] ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
-<https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree> a owl:Class,
+<https://purl.brain-bican.org/taxonomy/ReviewOptions#Agree> a owl:Class,
         CAS:ReviewOptions ;
     rdfs:label "Agree" ;
     rdfs:subClassOf CAS:ReviewOptions .
 
-<https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> a owl:Class,
+<https://purl.brain-bican.org/taxonomy/ReviewOptions#Disagree> a owl:Class,
         CAS:ReviewOptions ;
     rdfs:label "Disagree" ;
     rdfs:subClassOf CAS:ReviewOptions .
@@ -14133,116 +14133,116 @@ CAS:Taxonomy a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Taxonomy" ;
     rdfs:subClassOf [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cellannotation_schema_version ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:cellannotation_schema_version ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:cellannotation_timestamp ],
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:description ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:cellannotation_schema_version ],
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:orcid ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty CAS:annotations ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:title ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:matrix_file_id ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:author_contact ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cellannotation_schema_version ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
+            owl:allValuesFrom CAS:Labelset ;
             owl:onProperty CAS:labelsets ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:author_list ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
+            owl:minCardinality 0 ;
             owl:onProperty CAS:cellannotation_version ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:author_contact ],
-        [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty CAS:matrix_file_id ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:orcid ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
             owl:onProperty CAS:cellannotation_timestamp ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:author_list ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:author_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:Annotation ;
             owl:onProperty CAS:annotations ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty CAS:cellannotation_version ],
+            owl:onProperty CAS:author_contact ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty CAS:cellannotation_url ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:uriorcurie ;
+            owl:onProperty CAS:matrix_file_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:title ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:orcid ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:author_contact ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:author_name ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:matrix_file_id ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:Labelset ;
-            owl:onProperty CAS:labelsets ],
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:author_list ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cellannotation_url ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
             owl:onProperty CAS:title ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty CAS:cellannotation_version ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:cellannotation_url ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty CAS:author_name ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty CAS:title ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:cellannotation_timestamp ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cellannotation_url ],
+            owl:onProperty CAS:cellannotation_version ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty CAS:cellannotation_url ],
+            owl:onProperty CAS:orcid ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:author_list ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:orcid ],
+            owl:onProperty CAS:cellannotation_url ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:orcid ],
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:description ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:author_name ] ;
+            owl:onProperty CAS:cellannotation_schema_version ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:author_list ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cellannotation_version ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:title ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:author_name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:matrix_file_id ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:cellannotation_timestamp ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:labelsets ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:author_name ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:author_contact ] ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
 CAS:cell_ids a owl:ObjectProperty,
@@ -14297,98 +14297,98 @@ CAS:Annotation a owl:Class,
         linkml:ClassDefinition ;
     rdfs:label "Annotation" ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:cell_ids ],
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:cell_label ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty CAS:labelset ],
+            owl:onProperty CAS:cell_label ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty CAS:rationale ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:cell_fullname ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cell_fullname ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:synonyms ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:rationale_dois ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
-            owl:onProperty CAS:cell_ontology_term_id ],
+            owl:onProperty CAS:author_annotation_fields ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:labelset ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:rationale ],
+            owl:onProperty CAS:cell_fullname ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:marker_gene_evidence ],
         [ a owl:Restriction ;
             owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_ontology_term ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:Any ;
             owl:onProperty CAS:author_annotation_fields ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:rationale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:cell_ontology_term ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_ids ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:author_annotation_fields ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:labelset ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_ontology_term_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_ontology_term_id ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:cell_fullname ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:rationale ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_ontology_term ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:Review ;
+            owl:onProperty CAS:reviews ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:cell_label ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:rationale_dois ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:synonyms ],
+        [ a owl:Restriction ;
+            owl:minCardinality 1 ;
+            owl:onProperty CAS:labelset ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:synonyms ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:rationale ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:cell_ids ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:cell_fullname ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:CellTypeEnum ;
             owl:onProperty CAS:cell_ontology_term_id ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:rationale ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:rationale_dois ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
             owl:onProperty CAS:labelset ],
         [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cell_ids ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:cell_label ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:cell_ontology_term ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:marker_gene_evidence ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:Any ;
-            owl:onProperty CAS:author_annotation_fields ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cell_label ],
-        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:reviews ],
         [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:author_annotation_fields ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:cell_fullname ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:synonyms ],
-        [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:cell_ontology_term ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:cell_ontology_term_id ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:Review ;
-            owl:onProperty CAS:reviews ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:cell_ontology_term ],
-        [ a owl:Restriction ;
-            owl:minCardinality 1 ;
-            owl:onProperty CAS:cell_label ] ;
+            owl:onProperty CAS:marker_gene_evidence ] ;
     skos:definition "A collection of fields recording a cell type/class/state annotation on some set of cells, supporting evidence and provenance. As this is intended as a general schema, compulsory fields are kept to a minimum. However, tools using this schema are encouarged to specify a larger set of compulsory fields for publication.    Note: This schema deliberately allows for additional fields in order to support ad hoc user fields, new formal schema extensions and project/tool specific metadata." ;
     skos:exactMatch PCL:0010001 ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
@@ -14576,6 +14576,7 @@ Each cell within the AnnData/Seurat file MUST be associated with a 'cell_label' 
 CAS:matrix_file_id a owl:ObjectProperty,
         linkml:SlotDefinition ;
     rdfs:label "matrix_file_id" ;
+    rdfs:range CAS:uriorcurie ;
     skos:definition "A resolvable ID for a cell by gene matrix file in the form namespace:accession, e.g. CellXGene_dataset:8e10f1c4-8e98-41e5-b65f-8cd89a887122.  Please see https://github.com/cellannotation/cell-annotation-schema/registry/registry.json for supported namespaces." ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
@@ -14663,37 +14664,37 @@ CAS:Labelset a owl:Class,
     rdfs:label "Labelset" ;
     rdfs:subClassOf [ a owl:Restriction ;
             owl:maxCardinality 1 ;
-            owl:onProperty CAS:description ],
+            owl:onProperty CAS:name ],
         [ a owl:Restriction ;
             owl:allValuesFrom CAS:AutomatedAnnotation ;
             owl:onProperty CAS:automated_annotation ],
         [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:annotation_method ],
-        [ a owl:Restriction ;
             owl:allValuesFrom CAS:string ;
             owl:onProperty CAS:description ],
-        [ a owl:Restriction ;
-            owl:minCardinality 0 ;
-            owl:onProperty CAS:description ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:AnnotationMethodOptions ;
-            owl:onProperty CAS:annotation_method ],
-        [ a owl:Restriction ;
-            owl:allValuesFrom CAS:string ;
-            owl:onProperty CAS:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:name ],
-        [ a owl:Restriction ;
-            owl:maxCardinality 1 ;
-            owl:onProperty CAS:automated_annotation ],
         [ a owl:Restriction ;
             owl:minCardinality 1 ;
             owl:onProperty CAS:name ],
         [ a owl:Restriction ;
+            owl:allValuesFrom CAS:string ;
+            owl:onProperty CAS:name ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:minCardinality 0 ;
+            owl:onProperty CAS:description ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:automated_annotation ],
+        [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:automated_annotation ],
+        [ a owl:Restriction ;
+            owl:maxCardinality 1 ;
+            owl:onProperty CAS:annotation_method ],
+        [ a owl:Restriction ;
+            owl:allValuesFrom CAS:AnnotationMethodOptions ;
+            owl:onProperty CAS:annotation_method ],
         [ a owl:Restriction ;
             owl:minCardinality 0 ;
             owl:onProperty CAS:annotation_method ] ;
@@ -14711,18 +14712,11 @@ CAS:labelsets a owl:ObjectProperty,
     rdfs:range CAS:Labelset ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
-CAS:uriorcurie a owl:Class,
-        linkml:TypeDefinition ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            owl:onDataRange CAS:uriorcurie ;
-            owl:onProperty linkml:topValue ;
-            owl:qualifiedCardinality 1 ] .
-
 CAS:ReviewOptions a owl:Class,
         linkml:EnumDefinition ;
-    owl:unionOf ( <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree> <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> ) ;
-    linkml:permissible_values <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Agree>,
-        <https://cellular-semantics.sanger.ac.uk/ontology/CAS/ReviewOptions#Disagree> .
+    owl:unionOf ( <https://purl.brain-bican.org/taxonomy/ReviewOptions#Agree> <https://purl.brain-bican.org/taxonomy/ReviewOptions#Disagree> ) ;
+    linkml:permissible_values <https://purl.brain-bican.org/taxonomy/ReviewOptions#Agree>,
+        <https://purl.brain-bican.org/taxonomy/ReviewOptions#Disagree> .
 
 CAS:algorithm_name a owl:ObjectProperty,
         linkml:SlotDefinition ;
@@ -14736,12 +14730,19 @@ CAS:description a owl:ObjectProperty,
     skos:definition "The description of the dataset. e.g. 'A total of 15 retinal ganglion cell clusters were identified from over 99K retinal ganglion cell nuclei in the current atlas. Utilizing previous characterized markers from macaque, 5 clusters can be annotated.'" ;
     skos:inScheme <https://cellular-semantics.sanger.ac.uk/ontology/CAS> .
 
+CAS:uriorcurie a owl:Class,
+        linkml:TypeDefinition ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onDataRange CAS:uriorcurie ;
+            owl:onProperty linkml:topValue ;
+            owl:qualifiedCardinality 1 ] .
+
 CAS:AnnotationMethodOptions a owl:Class,
         linkml:EnumDefinition ;
-    owl:unionOf ( <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic> <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual> <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both> ) ;
-    linkml:permissible_values <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#algorithmic>,
-        <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#both>,
-        <https://cellular-semantics.sanger.ac.uk/ontology/CAS/AnnotationMethodOptions#manual> .
+    owl:unionOf ( <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#algorithmic> <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#manual> <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#both> ) ;
+    linkml:permissible_values <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#algorithmic>,
+        <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#both>,
+        <https://purl.brain-bican.org/taxonomy/AnnotationMethodOptions#manual> .
 
 linkml:topValue a owl:DatatypeProperty ;
     rdfs:label "value" .
