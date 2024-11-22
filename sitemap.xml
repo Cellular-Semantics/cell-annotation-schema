@@ -2,946 +2,946 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Annotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/AnnotationMethodOptions/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Any/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/AutomatedAnnotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Boolean/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/CellTypeEnum/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Curie/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Date/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/DateOrDatetime/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Datetime/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Decimal/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Double/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Float/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/General_Cell_Annotation_Open_Standard/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Integer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Jsonpath/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Jsonpointer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Labelset/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Ncname/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Nodeidentifier/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Objectidentifier/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Review/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/ReviewOptions/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Sparqlpath/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/String/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Taxonomy/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Time/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Uri/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/Uriorcurie/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/about/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/algorithm_name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/algorithm_repo_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/algorithm_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/annotation_method/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/annotations/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/author_annotation_fields/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/author_contact/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/author_list/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/author_name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/automated_annotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cell_fullname/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cell_ids/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cell_label/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cell_ontology_term/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cell_ontology_term_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cellannotation_schema_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cellannotation_timestamp/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cellannotation_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cellannotation_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/datestamp/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/description/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/explanation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/labelset/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/labelsets/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/marker_gene_evidence/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/matrix_file_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/orcid/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/rationale/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/rationale_dois/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/reference_location/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/repo/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/review/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/reviewer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/reviews/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/synonyms/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/title/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Annotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/AnnotationMethodOptions/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/AnnotationTransfer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Any/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/AutomatedAnnotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/BicanAnnotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/BicanLabelset/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/BicanTaxonomy/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Boolean/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Cell/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/CellTypeEnum/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Curie/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Date/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/DateOrDatetime/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Datetime/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Decimal/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Double/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Float/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/General_Cell_Annotation_Open_Standard/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Integer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Jsonpath/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Jsonpointer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Labelset/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Ncname/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Nodeidentifier/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Objectidentifier/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Review/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/ReviewOptions/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Sparqlpath/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/String/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Taxonomy/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Time/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Uri/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/Uriorcurie/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/algorithm_name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/algorithm_repo_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/algorithm_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/annotation_method/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/annotations/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/author_annotation_fields/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/author_categories/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/author_contact/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/author_list/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/author_name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/automated_annotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cell_fullname/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cell_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cell_ids/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cell_label/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cell_ontology_term/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cell_ontology_term_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cell_set_accession/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cellannotation_schema_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cellannotation_timestamp/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cellannotation_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cellannotation_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/cells/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/comment/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/confidence/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/datestamp/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/description/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/explanation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/labelset/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/labelsets/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/marker_gene_evidence/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/matrix_file_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/negative_marker_gene_evidence/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/orcid/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/parent_cell_set_accession/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/rank/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/rationale/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/rationale_dois/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/reference_location/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/review/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/reviewer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/reviews/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/source_node_accession/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/source_taxonomy/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/synonyms/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/title/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/transferred_annotations/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/bican/transferred_cell_label/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Annotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/AnnotationMethodOptions/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Any/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/AutomatedAnnotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Boolean/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/CapAnnotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/CapTaxonomy/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/CellTypeEnum/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Curie/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Date/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/DateOrDatetime/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Datetime/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Decimal/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Double/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Float/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/General_Cell_Annotation_Open_Standard/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Integer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Jsonpath/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Jsonpointer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Labelset/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Ncname/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Nodeidentifier/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Objectidentifier/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Review/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/ReviewOptions/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Sparqlpath/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/String/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Taxonomy/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Time/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Uri/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/Uriorcurie/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/algorithm_name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/algorithm_repo_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/algorithm_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/annotation_method/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/annotations/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/author_annotation_fields/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/author_contact/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/author_list/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/author_name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/automated_annotation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/canonical_marker_genes/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cap_dataset_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cap_publication_description/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cap_publication_title/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cap_publication_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/category_cell_ontology_exists/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/category_cell_ontology_term/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/category_cell_ontology_term_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/category_fullname/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cell_fullname/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cell_ids/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cell_label/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cell_ontology_assessment/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cell_ontology_exists/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cell_ontology_term/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cell_ontology_term_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cellannotation_schema_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cellannotation_timestamp/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cellannotation_url/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/cellannotation_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/datestamp/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/description/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/explanation/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/labelset/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/labelsets/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/marker_gene_evidence/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/matrix_file_id/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/name/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/orcid/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/publication_timestamp/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/publication_version/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/rationale/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/rationale_dois/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/reference_location/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/review/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/reviewer/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/reviews/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/synonyms/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
     <url>
          <loc>https://Cellular-Semantics.github.io/cell-annotation-schema/cap/title/</loc>
-         <lastmod>2024-10-04</lastmod>
+         <lastmod>2024-11-22</lastmod>
     </url>
 </urlset>
