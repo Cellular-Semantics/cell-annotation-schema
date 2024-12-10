@@ -20,6 +20,7 @@ merged_schemas:
 	$(RUN) gen-linkml $(SCHEMA_FOLDER)/CAP/CAP_schema.yaml --output $(BUILD_FOLDER)/CAP_schema.yaml --mergeimports --format yaml --no-materialize-attributes
 
 expanded_schemas: merged_schemas
+	rm -f ~/.data/oaklib/cl.db ~/.data/oaklib/cl.db.gz
 	$(RUN) python $(SCHEMA_EXPANDER) expand -i $(BUILD_FOLDER)/general_schema.yaml -o $(BUILD_FOLDER)/general_schema.yaml
 	$(RUN) python $(SCHEMA_EXPANDER) expand -i $(BUILD_FOLDER)/BICAN_schema.yaml -o $(BUILD_FOLDER)/BICAN_schema.yaml
 	$(RUN) python $(SCHEMA_EXPANDER) expand -i $(BUILD_FOLDER)/CAP_schema.yaml -o $(BUILD_FOLDER)/CAP_schema.yaml
