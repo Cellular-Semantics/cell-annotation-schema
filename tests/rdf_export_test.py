@@ -233,8 +233,8 @@ class ExportToRDFTestCase(unittest.TestCase):
     def test_export_to_wmb(self):
         ontology_namespace = "CCN20230722"
         ontology_iri = "https://purl.brain-bican.org/taxonomy/CCN20230722/"
-        out_file = os.path.join(TESTDATA, "CCN20230722.rdf")
-        # out_file = TEST_OUTPUT
+        # out_file = os.path.join(TESTDATA, "CCN20230722.rdf")
+        out_file = TEST_OUTPUT
 
         rdf_graph = export_to_rdf(
             cas_schema="bican",
