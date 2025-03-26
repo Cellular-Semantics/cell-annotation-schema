@@ -260,6 +260,12 @@
 
       BicanAnnotation : negative_marker_gene_evidence
 
+      BicanAnnotation : neurotransmitter_accession
+
+      BicanAnnotation : neurotransmitter_marker_gene_evidence
+
+      BicanAnnotation : neurotransmitter_rationale
+
       BicanAnnotation : parent_cell_set_accession
 
       BicanAnnotation : rationale
@@ -334,6 +340,24 @@
 <td><a href="../negative_marker_gene_evidence/">negative_marker_gene_evidence</a></td>
 <td>* <br/> <a href="../String/">String</a></td>
 <td>Gene names explicitly used as evidence, which MUST be in the matrix of the An...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../neurotransmitter_accession/">neurotransmitter_accession</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>Accessions of cell neurotransmitter associated with this cell set</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../neurotransmitter_rationale/">neurotransmitter_rationale</a></td>
+<td>0..1 <br/> <a href="../String/">String</a></td>
+<td>The free-text rationale which users provide as justification/evidence for sup...</td>
+<td>direct</td>
+</tr>
+<tr>
+<td><a href="../neurotransmitter_marker_gene_evidence/">neurotransmitter_marker_gene_evidence</a></td>
+<td>* <br/> <a href="../String/">String</a></td>
+<td>List of gene names used as evidence for neurotransmitter association</td>
 <td>direct</td>
 </tr>
 <tr>
@@ -466,6 +490,9 @@ slots:
 - transferred_annotations
 - cells
 - negative_marker_gene_evidence
+- neurotransmitter_accession
+- neurotransmitter_rationale
+- neurotransmitter_marker_gene_evidence
 class_uri: PCL:0010001
 
 </code></pre>
@@ -530,6 +557,39 @@ attributes:
     from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     rank: 1000
     alias: negative_marker_gene_evidence
+    owner: Bican_Annotation
+    domain_of:
+    - Bican_Annotation
+    range: string
+    multivalued: true
+  neurotransmitter_accession:
+    name: neurotransmitter_accession
+    description: Accessions of cell neurotransmitter associated with this cell set.
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
+    alias: neurotransmitter_accession
+    owner: Bican_Annotation
+    domain_of:
+    - Bican_Annotation
+    range: string
+  neurotransmitter_rationale:
+    name: neurotransmitter_rationale
+    description: The free-text rationale which users provide as justification/evidence
+      for supporting the neurotransmitter association.
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
+    alias: neurotransmitter_rationale
+    owner: Bican_Annotation
+    domain_of:
+    - Bican_Annotation
+    range: string
+  neurotransmitter_marker_gene_evidence:
+    name: neurotransmitter_marker_gene_evidence
+    description: List of gene names used as evidence for neurotransmitter association.
+      Each gene MUST be included in the matrix of the AnnData/Seurat file.
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    rank: 1000
+    alias: neurotransmitter_marker_gene_evidence
     owner: Bican_Annotation
     domain_of:
     - Bican_Annotation
