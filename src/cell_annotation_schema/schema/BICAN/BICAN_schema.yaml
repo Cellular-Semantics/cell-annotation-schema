@@ -73,6 +73,15 @@ slots:
     description: Categories of authorship for the annotation
     range: string
     # TODO: range is object in json
+  neurotransmitter_accession:
+    description: Accessions of cell neurotransmitter associated with this cell set.
+    range: string
+  neurotransmitter_rationale:
+    description: The free-text rationale which users provide as justification/evidence for supporting the neurotransmitter association.
+    range: string
+  neurotransmitter_marker_gene_evidence:
+    description: List of gene names used as evidence for neurotransmitter association. Each gene MUST be included in the matrix of the AnnData/Seurat file.
+    multivalued: true
 
 classes:
   Bican_Taxonomy:
@@ -98,6 +107,9 @@ classes:
     - transferred_annotations
     - cells
     - negative_marker_gene_evidence
+    - neurotransmitter_accession
+    - neurotransmitter_rationale
+    - neurotransmitter_marker_gene_evidence
   AnnotationTransfer:
     slots:
     - transferred_cell_label

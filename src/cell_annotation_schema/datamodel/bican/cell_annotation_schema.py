@@ -1,5 +1,5 @@
 # Auto generated from None by pythongen.py version: 0.0.1
-# Generation date: 2024-12-10T16:08:28
+# Generation date: 2025-03-26T10:12:56
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -479,6 +479,9 @@ class BicanAnnotation(Annotation):
     transferred_annotations: Optional[Union[Union[dict, AnnotationTransfer], List[Union[dict, AnnotationTransfer]]]] = empty_list()
     cells: Optional[Union[Union[dict, Cell], List[Union[dict, Cell]]]] = empty_list()
     negative_marker_gene_evidence: Optional[Union[str, List[str]]] = empty_list()
+    neurotransmitter_accession: Optional[str] = None
+    neurotransmitter_rationale: Optional[str] = None
+    neurotransmitter_marker_gene_evidence: Optional[Union[str, List[str]]] = empty_list()
 
     def __post_init__(self, *_: List[str], **kwargs: Dict[str, Any]):
         if self._is_empty(self.cell_set_accession):
@@ -498,6 +501,16 @@ class BicanAnnotation(Annotation):
         if not isinstance(self.negative_marker_gene_evidence, list):
             self.negative_marker_gene_evidence = [self.negative_marker_gene_evidence] if self.negative_marker_gene_evidence is not None else []
         self.negative_marker_gene_evidence = [v if isinstance(v, str) else str(v) for v in self.negative_marker_gene_evidence]
+
+        if self.neurotransmitter_accession is not None and not isinstance(self.neurotransmitter_accession, str):
+            self.neurotransmitter_accession = str(self.neurotransmitter_accession)
+
+        if self.neurotransmitter_rationale is not None and not isinstance(self.neurotransmitter_rationale, str):
+            self.neurotransmitter_rationale = str(self.neurotransmitter_rationale)
+
+        if not isinstance(self.neurotransmitter_marker_gene_evidence, list):
+            self.neurotransmitter_marker_gene_evidence = [self.neurotransmitter_marker_gene_evidence] if self.neurotransmitter_marker_gene_evidence is not None else []
+        self.neurotransmitter_marker_gene_evidence = [v if isinstance(v, str) else str(v) for v in self.neurotransmitter_marker_gene_evidence]
 
         super().__post_init__(**kwargs)
 
@@ -629,11 +642,6 @@ class CellTypeEnum(EnumDefinitionImpl):
 
     @classmethod
     def _addvals(cls):
-        setattr(cls, "CL:0019019",
-            PermissibleValue(
-                text="CL:0019019",
-                description="A smooth muscle cell that is part of the tracheobronchial tree.",
-                meaning=CL["0019019"]))
         setattr(cls, "CL:0011105",
             PermissibleValue(
                 text="CL:0011105",
@@ -647,7 +655,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002656",
             PermissibleValue(
                 text="CL:0002656",
-                description="A glandular epithelial cell of the endometrium.",
+                description="""A glandular epithelial cell of the endometrium. Following ovulation, these cells secrete a glycogen-rich substance known as histotroph or uterine milk, which nourishes the embryo if implantation occurs.""",
                 meaning=CL["0002656"]))
         setattr(cls, "CL:0002224",
             PermissibleValue(
@@ -659,6 +667,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4030031",
                 description="""Any cell that is located within the interstitium between the cells most prominent in defining a given tissue. \"Interstitial cell\" is a morphological term and refers to a variety of cells with differing origins and phenotypes.""",
                 meaning=CL["4030031"]))
+        setattr(cls, "CL:4052036",
+            PermissibleValue(
+                text="CL:4052036",
+                description="""A tuft cell that is part of the nasal cavity epithelium, located in both the respiratory and olfactory epithelia of the nose. This cell plays key roles in chemosensation, lipid mediator production, immune responses, and epithelial homeostasis.""",
+                meaning=CL["4052036"]))
         setattr(cls, "CL:0002625",
             PermissibleValue(
                 text="CL:0002625",
@@ -751,6 +764,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4033024",
                 description="A basal cell that is part of a duct of an airway submucosal gland.",
                 meaning=CL["4033024"]))
+        setattr(cls, "CL:4042034",
+            PermissibleValue(
+                text="CL:4042034",
+                description="""An interneuron neuron characterized by the expression of calcitonin gene-related peptide (CGRP), a 37-amino acid neuropeptide. This neuron type is involved in nociception and pain modulation by facilitating the transmission of nociceptive signals from peripheral sensory nerve endings to central nervous system structures. This neuron type is found in the dorsal root ganglia (DRG) and trigeminal ganglion, and the spinal cord dorsal horn.""",
+                meaning=CL["4042034"]))
+        setattr(cls, "CL:0019019",
+            PermissibleValue(
+                text="CL:0019019",
+                description="A smooth muscle cell that is part of the tracheobronchial tree.",
+                meaning=CL["0019019"]))
         setattr(cls, "CL:0010017",
             PermissibleValue(
                 text="CL:0010017",
@@ -838,7 +861,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000499",
             PermissibleValue(
                 text="CL:0000499",
-                description="""A connective tissue cell of an organ found in the loose connective tissue. These are most often associated with the uterine mucosa and the ovary as well as the hematopoietic system and elsewhere.""",
+                description="A connective tissue cell of an organ found in the loose connective tissue.",
                 meaning=CL["0000499"]))
         setattr(cls, "CL:0000077",
             PermissibleValue(
@@ -981,7 +1004,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002140",
             PermissibleValue(
                 text="CL:0002140",
-                description="A sebum secreting cell of the skin that secretes sebum into the hair follicles.",
+                description="""An acinar cell that is part of a skin sebaceous gland. This cell produces and secretes sebum into hair follicles.""",
                 meaning=CL["0002140"]))
         setattr(cls, "CL:1000376",
             PermissibleValue(
@@ -1046,6 +1069,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000112",
             PermissibleValue(
                 text="CL:0000112",
+                description="""A neuron of the invertebrate central nervous system. This neuron innervates the central complex (CX) of an invertebrate brain and it forms columnar patterns with its dendrites. It is involved in navigation and spatial processing.""",
                 meaning=CL["0000112"]))
         setattr(cls, "CL:4023123",
             PermissibleValue(
@@ -1286,6 +1310,11 @@ class CellTypeEnum(EnumDefinitionImpl):
             PermissibleValue(
                 text="CL:0000146",
                 meaning=CL["0000146"]))
+        setattr(cls, "CL:4052029",
+            PermissibleValue(
+                text="CL:4052029",
+                description="""A fibroblast that is located beneath the visceral pleura of the lung. This cell contributes to the development of idiopathic pulmonary fibrosis (IPF) by forming fibrotic lesions that originate subpleurally and extend into lung tissue through activation, proliferation, migration, and differentiation into a myofibroblast.""",
+                meaning=CL["4052029"]))
         setattr(cls, "CL:0002089",
             PermissibleValue(
                 text="CL:0002089",
@@ -1313,13 +1342,18 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002514",
             PermissibleValue(
                 text="CL:0002514",
-                description="""A CD8alpha alpha positive gamma-delta intraepithelial T cell that does not express a TCR partially encoded by the Vgamma5 gene segment.""",
+                description="""A CD8-alpha alpha positive gamma-delta intraepithelial T cell that does not express a TCR partially encoded by the Vgamma5 gene segment.""",
                 meaning=CL["0002514"]))
         setattr(cls, "CL:0011102",
             PermissibleValue(
                 text="CL:0011102",
                 description="""Parasympathetic neurons are part of the parasympathetic nervous sysem and the cell bodies lie in the brain and sacral region of the spinal cord. The neurons are mainly cholinergic.""",
                 meaning=CL["0011102"]))
+        setattr(cls, "CL:4033094",
+            PermissibleValue(
+                text="CL:4033094",
+                description="""A transcriptionally distinct memory B cell whose presence increases with age, during infections, and in autoimmune diseases. In humans and mice, this cell type can be identified by the expression of T-bet, CD11c, CD11b, and the lack of CD21. An age-associated B cell responds to TLR stimuli, may produce autoantibodies, and participates in antiviral responses and pathogen clearance.""",
+                meaning=CL["4033094"]))
         setattr(cls, "CL:0004232",
             PermissibleValue(
                 text="CL:0004232",
@@ -1421,7 +1455,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4033048",
             PermissibleValue(
                 text="CL:4033048",
-                description="""A respiratory epithelial cell with topographic nuclear position in between the basal and luminal cell of the airway epithelium. This non-basal, intermediate cell has limited proliferative capacity, ultrastructural features of basal cells and no defined features of the typically differentiated cellular phenotypes.""",
+                description="""A respiratory epithelial cell derived from a basal cell, with a topographic nuclear position between the basal and luminal cells of the airway epithelium. This non-basal, intermediate progenitor cell has limited proliferative capacity and can differentiate into multiciliated, secretory, or rare airway cells (ionocytes, tuft cells, neuroendocrine cells). It shares some ultrastructural features with basal cells but lacks the defined characteristics of fully differentiated cellular phenotypes.""",
                 meaning=CL["4033048"]))
         setattr(cls, "CL:1000428",
             PermissibleValue(
@@ -1463,6 +1497,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1001610",
                 description="""Hematopoietic cells resident in the bone marrow. Include: hematopoietic stem cells (lymphoid stem cells and myeloid stem cells) and the precursor cells for thrombocytes, erythrocytes, basophils, neutrophils, eosinophils, monocytes and lymphocytes.""",
                 meaning=CL["1001610"]))
+        setattr(cls, "CL:4033086",
+            PermissibleValue(
+                text="CL:4033086",
+                description="""A tissue-resident macrophage that is associated with lipids. This cell responsible of anti-inflammatory functions, lipid accumulation and enhancing phagocytosis (Wculek et al., 2022, Liu et al., 2022). In mice and humans, a lipid-associated macrophage is characterized by the marker Trem2 (Jaitlin et al., 2019).""",
+                meaning=CL["4033086"]))
         setattr(cls, "CL:1000909",
             PermissibleValue(
                 text="CL:1000909",
@@ -1496,6 +1535,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002357",
                 description="""A fetal liver derived enucleated erythrocyte. This erythrocyte resembles adult erythrocytes in that they are small (3- to 6- times smaller than primitive erythrocytes) and produce adult hemaglobins.""",
                 meaning=CL["0002357"]))
+        setattr(cls, "CL:4033090",
+            PermissibleValue(
+                text="CL:4033090",
+                description="""A granulosa cell that is undergoing atresia. This cell type displays distinct morphological alterations compared with a healthy granulosa cell, including pyknosis (nuclear condensation) and cellular shrinkage.""",
+                meaning=CL["4033090"]))
         setattr(cls, "CL:0002560",
             PermissibleValue(
                 text="CL:0002560",
@@ -1607,7 +1651,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002456",
             PermissibleValue(
                 text="CL:0002456",
-                description="A CD11c-low plasmacytoid dendritic cell that is CD8alpha-positive and CD4-positive.",
+                description="A CD11c-low plasmacytoid dendritic cell that is CD8-alpha-positive and CD4-positive.",
                 meaning=CL["0002456"]))
         setattr(cls, "CL:0000501",
             PermissibleValue(
@@ -1894,6 +1938,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000102",
             PermissibleValue(
                 text="CL:0000102",
+                description="""A neuron type that respond to multiple stimuli such as mechanical, thermal and chemical. This neuron type is responsible for integrating different types of sensory inputs, allowing organisms to respond appropriately to diverse environmental challenges.""",
                 meaning=CL["0000102"]))
         setattr(cls, "CL:4023055",
             PermissibleValue(
@@ -1920,6 +1965,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000667",
                 description="An extracellular matrix secreting cell that secretes collagen.",
                 meaning=CL["0000667"]))
+        setattr(cls, "CL:4047029",
+            PermissibleValue(
+                text="CL:4047029",
+                description="""An endothelial cell forming the walls of capillaries immediately downstream from arterioles, facilitating the exchange of substances between blood and interstitial fluid. This cell is characterized by a small diameter and may be continuous, fenestrated, or sinusoidal, depending on their location and function. This cell plays a crucial role in tissue oxygenation, nutrient delivery, and maintaining homeostasis within the microvascular network.""",
+                meaning=CL["4047029"]))
         setattr(cls, "CL:0000157",
             PermissibleValue(
                 text="CL:0000157",
@@ -1994,11 +2044,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000826",
                 description="""A progenitor cell of the B cell lineage, with some lineage specific activity such as early stages of recombination of B cell receptor genes, but not yet fully committed to the B cell lineage until the expression of PAX5 occurs.""",
                 meaning=CL["0000826"]))
-        setattr(cls, "CL:0000106",
-            PermissibleValue(
-                text="CL:0000106",
-                description="Neuron with one neurite that extends from the cell body.",
-                meaning=CL["0000106"]))
         setattr(cls, "CL:0000589",
             PermissibleValue(
                 text="CL:0000589",
@@ -2007,13 +2052,23 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1001593",
             PermissibleValue(
                 text="CL:1001593",
-                description="""Glandular cell of parathyroid epithelium. Example: Parathyroid chief cell and parathyroid oxyphil cells.""",
+                description="Glandular (secretory) cell of parathyroid epithelium.",
                 meaning=CL["1001593"]))
         setattr(cls, "CL:1000473",
             PermissibleValue(
                 text="CL:1000473",
                 description="A myoepithelial cell that is part of the quarternary lactiferous duct.",
                 meaning=CL["1000473"]))
+        setattr(cls, "CL:4033089",
+            PermissibleValue(
+                text="CL:4033089",
+                description="""A follicular cell of ovary that has begun to degenerate and undergo atresia, a specialized apoptosis. This cell is found in an atretic follicle, which is an ovarian follicle that started to mature but failed to reach full development and instead regresses.""",
+                meaning=CL["4033089"]))
+        setattr(cls, "CL:0000106",
+            PermissibleValue(
+                text="CL:0000106",
+                description="Neuron with one neurite that extends from the cell body.",
+                meaning=CL["0000106"]))
         setattr(cls, "CL:0002562",
             PermissibleValue(
                 text="CL:0002562",
@@ -2063,6 +2118,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002337",
                 description="""A stem cell located in the bulge of the hair follicle that can give rise to regenerate the new follicle with each hair cycle and to reepithelialize the epidermis during wound repair.""",
                 meaning=CL["0002337"]))
+        setattr(cls, "CL:4052018",
+            PermissibleValue(
+                text="CL:4052018",
+                description="Any epithelial cell that is part of the fallopian tube.",
+                meaning=CL["4052018"]))
         setattr(cls, "CL:4030016",
             PermissibleValue(
                 text="CL:4030016",
@@ -2088,6 +2148,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:2000011",
                 description="Any endothelial cell of lymphatic vessel that is part of a dermis.",
                 meaning=CL["2000011"]))
+        setattr(cls, "CL:4042041",
+            PermissibleValue(
+                text="CL:4042041",
+                description="""A type of primary motor neuron located in the middle region of the spinal cord. This primary motor neuron type is characterized by their distinct axonal pathways that innervate the middle trunk muscles.""",
+                meaning=CL["4042041"]))
         setattr(cls, "CL:1001225",
             PermissibleValue(
                 text="CL:1001225",
@@ -2155,7 +2220,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0009043",
             PermissibleValue(
                 text="CL:0009043",
-                description="An intestinal crypt stem cell that is located in the colon.",
+                description="An intestinal crypt stem cell that is located in the crypt of Lieberkuhn of colon.",
                 meaning=CL["0009043"]))
         setattr(cls, "CL:0004244",
             PermissibleValue(
@@ -2367,6 +2432,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000636",
                 description="""Astrocyte-like radial glial cell that extends vertically throughout the retina, with the nucleus are usually in the middle of the inner nuclear layer.""",
                 meaning=CL["0000636"]))
+        setattr(cls, "CL:4042032",
+            PermissibleValue(
+                text="CL:4042032",
+                description="""A transcriptomically distinct GABAergic neuron located in the cerebral cortex that expresses the transcript PAX6. The standard transcriptomic reference data for this cell type can be found on the CellxGene census under the collection: 'Transcriptomic cytoarchitecture reveals principles of human neocortex organization', dataset: 'Supercluster: CGE-derived interneurons', Author Categories: 'CrossArea_subclass', clusters PAX6.""",
+                meaning=CL["4042032"]))
         setattr(cls, "CL:1000695",
             PermissibleValue(
                 text="CL:1000695",
@@ -2406,6 +2476,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000039",
                 description="""A cell that is within the developmental lineage of gametes and is able to pass along its genetic material to offspring.""",
                 meaning=CL["0000039"]))
+        setattr(cls, "CL:0008041",
+            PermissibleValue(
+                text="CL:0008041",
+                description="A mesothelial cell that is part of the intestinal serosa.",
+                meaning=CL["0008041"]))
         setattr(cls, "CL:4030064",
             PermissibleValue(
                 text="CL:4030064",
@@ -2426,10 +2501,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4033070",
                 description="A(n) dendritic cell that is cycling.",
                 meaning=CL["4033070"]))
-        setattr(cls, "CL:0000555",
-            PermissibleValue(
-                text="CL:0000555",
-                meaning=CL["0000555"]))
         setattr(cls, "CL:0000621",
             PermissibleValue(
                 text="CL:0000621",
@@ -2505,11 +2576,21 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000811",
                 description="""An immature alpha-beta T cell that is located in the thymus and is CD8-positive and CD4-negative.""",
                 meaning=CL["0000811"]))
+        setattr(cls, "CL:4042031",
+            PermissibleValue(
+                text="CL:4042031",
+                description="""An oligodendrocyte of the central nervous system that exhibits immune properties such as self-presentation and non-self antigen presentation to T cells, phagocytosis of debris, and cytokine and chemokine production. Immune oligodendroglia is immunoreactive during inflammation, neurodegenerative disorders, chronic stress and major depressive disorder.""",
+                meaning=CL["4042031"]))
         setattr(cls, "CL:0005023",
             PermissibleValue(
                 text="CL:0005023",
                 description="""Cranial motor neuron which innervates muscles derived from the branchial (pharyngeal) arches.""",
                 meaning=CL["0005023"]))
+        setattr(cls, "CL:4047043",
+            PermissibleValue(
+                text="CL:4047043",
+                description="""An enteric glial cell that is associated with neuron cell bodies within submucosal ganglia of the gastrointestinal tract. This cell is located in the submucosa, a layer of connective tissue beneath the intestinal mucosa. This cell plays a role in modulating secretomotor neuron activity and contributes to the regulation of digestive fluid secretion and absorption.""",
+                meaning=CL["4047043"]))
         setattr(cls, "CL:0002336",
             PermissibleValue(
                 text="CL:0002336",
@@ -2569,6 +2650,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002387",
                 description="""Cylindrical spore formed by development and compartmentation of hyphae; the hyphae are often supporting blastoconidiophores.""",
                 meaning=CL["0002387"]))
+        setattr(cls, "CL:4052035",
+            PermissibleValue(
+                text="CL:4052035",
+                description="""A tuft cell that is part of the epithelium of pancreatic duct. Present in humans and rats, this cell is absent in the murine pancreas under normal conditions but emerges during acinar-to-ductal metaplasia triggered by injury, inflammation, or oncogenic mutations. It modulates the immune response and protects against pancreatic ductal adenocarcinoma progression by producing suppressive eicosanoids, such as prostaglandin D2. A tuft cell in the pancreatic duct highly expresses the transcription factor POU2F3, which is essential for its development and presence.""",
+                meaning=CL["4052035"]))
         setattr(cls, "CL:0002219",
             PermissibleValue(
                 text="CL:0002219",
@@ -2905,7 +2991,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1000347",
             PermissibleValue(
                 text="CL:1000347",
-                description="A columnar cell of the colon that is part of the colonic epithelium.",
+                description="""An enterocyte (absorptive epithelial cell) of the colonic epithelium, characterized by a columnar shape. This cell is responsible for the absorption, transport, and metabolization of short-chain fatty acids (SCFAs) produced by gut bacteria, as well as the transport and absorption of water and electrolytes.""",
                 meaning=CL["1000347"]))
         setattr(cls, "CL:0000149",
             PermissibleValue(
@@ -2929,7 +3015,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4033055",
             PermissibleValue(
                 text="CL:4033055",
-                description="A ciliated cell that is part of a ciliated duct of an airway submucosal gland.",
+                description="""A multi-ciliated epithelial cell located in ciliated duct of an airway submucosal gland, characterized by a columnar shape and motile cilia on its apical surface.""",
                 meaning=CL["4033055"]))
         setattr(cls, "CL:0009074",
             PermissibleValue(
@@ -3004,7 +3090,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:3000001",
             PermissibleValue(
                 text="CL:3000001",
-                description="""A tissue-resident macrophage that is part of the placenta. A Hofbauer cell expresses high levels of growth factors and metalloproteinases that support vasculogenesis, angiogenesis, branching morphogenesis and tissue remodeling. A Hofbauer cell has a fetal origin and is present throughout pregnancy.""",
+                description="""A tissue-resident macrophage that is part of the placenta. A Hofbauer cell expresses high levels of growth factors and metalloproteinases that support vasculogenesis, angiogenesis, branching morphogenesis and tissue remodeling. A Hofbauer cell has a fetal origin, is found in the villous stroma, chorion, and amnion, and is present throughout pregnancy.""",
                 meaning=CL["3000001"]))
         setattr(cls, "CL:0002274",
             PermissibleValue(
@@ -3162,7 +3248,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000155",
             PermissibleValue(
                 text="CL:0000155",
-                description="""A cell that is usually basal in position, cuboidal with round nucleus, short microvilli, secretes pepsinogen.""",
+                description="""An epithelial cell of the stomach that is part of the fundic gastric gland. This cell is characterized by a basally located nucleus, abundant rough endoplasmic reticulum, and large apical secretory granules. It produces and secretes pepsinogen, the inactive precursor of the digestive enzyme pepsin.""",
                 meaning=CL["0000155"]))
         setattr(cls, "CL:0009022",
             PermissibleValue(
@@ -3187,7 +3273,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001005",
             PermissibleValue(
                 text="CL:0001005",
-                description="""Mature CD8_alpha-positive CD11b-negative dendritic cell is a CD8_alpha-positive CD11b-negative dendritic cell that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
+                description="""Mature CD8-alpha-positive CD11b-negative dendritic cell is a CD8-alpha-positive CD11b-negative dendritic cell that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
                 meaning=CL["0001005"]))
         setattr(cls, "CL:0001080",
             PermissibleValue(
@@ -3319,6 +3405,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0009058",
                 description="An enterocyte that is located in the anorectum.",
                 meaning=CL["0009058"]))
+        setattr(cls, "CL:4052034",
+            PermissibleValue(
+                text="CL:4052034",
+                description="""A tuft cell that is part of the medullary epithelium of the thymus, characterized by lateral microvilli and specific markers, including L1CAM in both mice (Zhang et al., 2022) and humans (Sun et al., 2023), as well as MHC II in mice (Kotas et al., 2023). This cell is pivotal in immune functions such as antigen presentation, central tolerance, and type 2 immunity. A tuft cell in the thymus exhibits characteristics of both a medullary thymic epithelial cell (mTEC) and a peripheral tuft cell. Its development is governed by transcription factors such as POU2F3.""",
+                meaning=CL["4052034"]))
         setattr(cls, "CL:0000336",
             PermissibleValue(
                 text="CL:0000336",
@@ -3332,7 +3423,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4030006",
             PermissibleValue(
                 text="CL:4030006",
-                description="""An epithelial cell that is part of the fallopian tube epithelium that secretes mucous fluid and oviduct-specific products through the stimulation of estrogen and luteinizing hormone. The fallopian tube secretory cell has approximately the same height as the ciliated cell and is usually a more narrow columnar cell. The nucleus is ovoid and perpendicular to the long axis of the cell. The chromatin is more dense and the nucleolus smaller than that seen in the ciliated cell.""",
+                description="""An epithelial cell that is part of the fallopian tube that secretes mucus and oviduct-specific products in response to hormonal stimulation from estrogen and luteinizing hormone. This fallopian tube secretory cell is similar in height to the ciliated cell, but typically exhibits a more narrow, columnar shape. Its nucleus is ovoid and oriented perpendicular to the cell's long axis, with denser chromatin and a smaller nucleolus compared to the ciliated cell.""",
                 meaning=CL["4030006"]))
         setattr(cls, "CL:0000653",
             PermissibleValue(
@@ -3502,7 +3593,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1000245",
             PermissibleValue(
                 text="CL:1000245",
-                description="Any neuron that has its soma located in some posterior lateral line ganglion.",
+                description="""Any peripheral nervous system neuron that has its soma located in some posterior lateral line ganglion.""",
                 meaning=CL["1000245"]))
         setattr(cls, "CL:0002458",
             PermissibleValue(
@@ -3556,7 +3647,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001020",
             PermissibleValue(
                 text="CL:0001020",
-                description="""Mature CD8_alpha-low Langerhans cell is a CD8_alpha-low Langerhans cell that that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
+                description="""Mature CD8-alpha-low Langerhans cell is a CD8-alpha-low Langerhans cell that that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
                 meaning=CL["0001020"]))
         setattr(cls, "CL:2000055",
             PermissibleValue(
@@ -3799,7 +3890,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1001430",
             PermissibleValue(
                 text="CL:1001430",
-                description="Any urothelial cell that is part of some urethra urothelium.",
+                description="""A urothelial cell that is part of the urethra urothelium. This cell plays a crucial role in maintaining the urethral barrier function, protecting against toxic substances in urine, sensing environmental changes, and defending against pathogen entry.""",
                 meaning=CL["1001430"]))
         setattr(cls, "CL:1000085",
             PermissibleValue(
@@ -3839,6 +3930,16 @@ class CellTypeEnum(EnumDefinitionImpl):
             PermissibleValue(
                 text="CL:0000131",
                 meaning=CL["0000131"]))
+        setattr(cls, "CL:4052016",
+            PermissibleValue(
+                text="CL:4052016",
+                description="""A capillary endothelial cell that is part of the pituitary gland. This cell is characterized by its fenestrated structure which facilitates the efficient transport of hormones and other signaling molecules, essential for endocrine signalling.""",
+                meaning=CL["4052016"]))
+        setattr(cls, "CL:4033088",
+            PermissibleValue(
+                text="CL:4033088",
+                description="""A resident macrophage that is part of the decidua. Some decidual macrophages are derived from maternal blood monocytes that are recruited to the uterus shortly after conception. The main functions of a decidual macrophage are implantation, placental development, immune regulation and vascular remodeling.""",
+                meaning=CL["4033088"]))
         setattr(cls, "CL:4023124",
             PermissibleValue(
                 text="CL:4023124",
@@ -3927,7 +4028,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002513",
             PermissibleValue(
                 text="CL:0002513",
-                description="""A CD8alpha alpha positive gamma-delta intraepithelial T cell that expresses a TCR encoded in part by the Vgamma5 gene segment.""",
+                description="""A CD8-alpha alpha positive gamma-delta intraepithelial T cell that expresses a TCR encoded in part by the Vgamma5 gene segment.""",
                 meaning=CL["0002513"]))
         setattr(cls, "CL:4023125",
             PermissibleValue(
@@ -4181,7 +4282,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1001286",
             PermissibleValue(
                 text="CL:1001286",
-                description="""Any vasa recta descending limb cell that is part of some inner medulla vasa recta descending limb.""",
+                description="""Any vasa recta descending limb cell that is part of some inner medulla descending vasa recta.""",
                 meaning=CL["1001286"]))
         setattr(cls, "CL:0004245",
             PermissibleValue(
@@ -4341,6 +4442,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002323",
                 description="""A cell of a fetus which is suspended in the amniotic fluid. Amniocytes are considered to arise from several tissues including fetal skin, the fetal urinary tract, umbilical cord, and the inner amniotic surface.""",
                 meaning=CL["0002323"]))
+        setattr(cls, "CL:4052030",
+            PermissibleValue(
+                text="CL:4052030",
+                description="""A fibroblast of the adventitia of a blood vessel. This cell contributes to vascular homeostasis, remodeling, and inflammation by producing extracellular matrix components, cytokines, and growth factors. Adventitial fibroblast can transition into an activated state during injury or disease, marked by increased proliferation, migration, matrix deposition, and contractile protein expression""",
+                meaning=CL["4052030"]))
         setattr(cls, "CL:0000626",
             PermissibleValue(
                 text="CL:0000626",
@@ -4401,6 +4507,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002284",
                 description="""An enteroendocrine cell found in the fundus and pylorus; this cell type has dense round secretory granules that contain ghrelin.""",
                 meaning=CL["0002284"]))
+        setattr(cls, "CL:4033091",
+            PermissibleValue(
+                text="CL:4033091",
+                description="An amacrine cell that uses both GABA and glycine as neurotransmitters.",
+                meaning=CL["4033091"]))
+        setattr(cls, "CL:4042029",
+            PermissibleValue(
+                text="CL:4042029",
+                description="""An immature neuron of a cerebral cortex. This neuron develops prenatally and remains in an immature state throughout the lifespan of the organism.""",
+                meaning=CL["4042029"]))
         setattr(cls, "CL:0000423",
             PermissibleValue(
                 text="CL:0000423",
@@ -4663,7 +4779,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002075",
             PermissibleValue(
                 text="CL:0002075",
-                description="""Infrequent type of columnar epithelial cell. This cell is characterized by the presence of a tuft of blunt, squat microvilli (approximately 120-140/cell) on the cell surface. The microvilli contain filaments that stretch into the underlying cytoplasm. They have a distinctive pear shape with a wide base and a narrow microvillous apex. Function not known.""",
+                description="""A rare type of columnar epithelial cell that is part of the tracheobronchial epithelium. This cell is characterized by a distinctive tuft of apical microvilli, which extends into the cytoplasm, and a pear-shaped morphology, broad at the base and tapering to a narrow apex. It plays vital roles in chemosensation, producing cytokines like IL-25, and enhancing mucociliary clearance through acetylcholine release to support mucus movement and airway defense.""",
                 meaning=CL["0002075"]))
         setattr(cls, "CL:4023005",
             PermissibleValue(
@@ -4685,9 +4801,15 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000930",
                 description="A mature NK T cell that secretes interleukin-4 and enhances Th2 immune responses.",
                 meaning=CL["0000930"]))
+        setattr(cls, "CL:4052019",
+            PermissibleValue(
+                text="CL:4052019",
+                description="Any epithelial cell that is part of the fallopian tube and lacks cilia.",
+                meaning=CL["4052019"]))
         setattr(cls, "CL:0000678",
             PermissibleValue(
                 text="CL:0000678",
+                description="""A neuron with soma location in the central nervous system that project its axon to the contralateral side of a central nervous system. This neuron can have its soma in the spinal cord, in the hemisphere of the brain, in the retina or in the ventral nerve cord of invertebrates.""",
                 meaning=CL["0000678"]))
         setattr(cls, "CL:0000772",
             PermissibleValue(
@@ -4697,7 +4819,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002455",
             PermissibleValue(
                 text="CL:0002455",
-                description="A CD11c-low plasmacytoid dendritic cell that is CD8alpha-negative and CD4-positive.",
+                description="A CD11c-low plasmacytoid dendritic cell that is CD8-alpha-negative and CD4-positive.",
                 meaning=CL["0002455"]))
         setattr(cls, "CL:0002479",
             PermissibleValue(
@@ -4709,6 +4831,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000068",
                 description="An epithelial cell that is part of a duct.",
                 meaning=CL["0000068"]))
+        setattr(cls, "CL:4047032",
+            PermissibleValue(
+                text="CL:4047032",
+                description="""A specialized pericyte located within the basement membrane of a blood capillary. This cell is characterized by its ability to produce and release a variety of bioactive molecules, collectively known as the pericyte secretome, including cytokines and regulators of angiogenesis.""",
+                meaning=CL["4047032"]))
         setattr(cls, "CL:0011103",
             PermissibleValue(
                 text="CL:0011103",
@@ -4749,6 +4876,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002665",
                 description="A fibrocyte of the cochlea that has specialized structural and molecular adaptions.",
                 meaning=CL["0002665"]))
+        setattr(cls, "CL:4033095",
+            PermissibleValue(
+                text="CL:4033095",
+                description="""An ON bipolar cell that has high expression of DIRC3, KCNJ3, LINC01915, PTPRK compared with other bipolar cells.""",
+                meaning=CL["4033095"]))
         setattr(cls, "CL:0002470",
             PermissibleValue(
                 text="CL:0002470",
@@ -4841,7 +4973,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0011020",
             PermissibleValue(
                 text="CL:0011020",
-                description="""An undifferentiated cell that originates from a neural stem cell and has the capacity to generate multiple types of lineage-restricted progenitors but not to self-renew.""",
+                description="""An undifferentiated cell derived from a neural stem cell, with a limited capacity to self-renew (Dibajnia and Morshead, 2013) and the ability to generate multiple types of lineage-restricted progenitors, contributing to the formation of neurons, astrocytes, and oligodendrocytes.""",
                 meaning=CL["0011020"]))
         setattr(cls, "CL:4033020",
             PermissibleValue(
@@ -5023,6 +5155,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000582",
                 description="""A neutrophil precursor in the granulocytic series, being a cell intermediate in development between a myelocyte and the band form neutrophil. The protein synthesis seen in earlier stages decreases or stops; the nucleus becomes indented where the indentation is smaller than half the distance to the farthest nuclear margin; chromatin becomes coarse and clumped; specific granules predominate while primary granules are rare; and the cytoplasm becomes amphophilic like that of a mature granulocyte. This cell type is integrin alpha-M-positive, CD13-negative, CD15-positive, CD16-positive, CD33-positive, CD24-positive, fMLP receptor-negative and has expression of C/EBP-a, C/EBP-e, PU.1 transcription factor, lactotransferrin, myeloperoxidase and neutrophil gelatinase associated lipocalin.""",
                 meaning=CL["0000582"]))
+        setattr(cls, "CL:4033096",
+            PermissibleValue(
+                text="CL:4033096",
+                description="""An ON bipolar cell that has high expression of NOS1AP compared with other bipolar cells.""",
+                meaning=CL["4033096"]))
         setattr(cls, "CL:0002014",
             PermissibleValue(
                 text="CL:0002014",
@@ -5098,6 +5235,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4033066",
                 description="""A supporting cell that is part of the ovary and differentiates into a granulosa cell. A pre-granulosa cell develops from an early supporting gonadal cell by repressing testis determination, which can then proliferate to form primordial follicles.""",
                 meaning=CL["4033066"]))
+        setattr(cls, "CL:4033085",
+            PermissibleValue(
+                text="CL:4033085",
+                description="""An ON diffuse bipolar cell that stratifies in the stratum 3 of the inner plexiform layer to make synapses with ON parasol ganglion cells. A diffuse bipolar 5 cell has high expression of MYO16 compared with other bipolar cells.""",
+                meaning=CL["4033085"]))
         setattr(cls, "CL:0000197",
             PermissibleValue(
                 text="CL:0000197",
@@ -5183,11 +5325,21 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1001432",
                 description="Any renal intercalated cell that is part of some collecting duct of renal tubule.",
                 meaning=CL["1001432"]))
+        setattr(cls, "CL:4052012",
+            PermissibleValue(
+                text="CL:4052012",
+                description="""A specialized theca cell that forms the inner, highly vascularized layer of the theca surrounding ovarian follicles. Originating from progenitor theca cells, the theca interna cell is steroidogenic, playing a crucial role in the production of androgens, which serves as a precursor for estrogen synthesis in granulosa cells. This cell expresses luteinizing hormone receptors, enabling it to respond to hormonal signals that regulate steroidogenesis.""",
+                meaning=CL["4052012"]))
         setattr(cls, "CL:0005012",
             PermissibleValue(
                 text="CL:0005012",
                 description="""A columnar/cuboidal epithelial cell with multiple motile cilia on its apical surface. These cells facilitate the movement of liquids such as mucus or cerebrospinal fluid across the epithelial surface.""",
                 meaning=CL["0005012"]))
+        setattr(cls, "CL:4033093",
+            PermissibleValue(
+                text="CL:4033093",
+                description="""A stem cell that is part of the corneo-scleral limbus. This cell type resides at the basal layer of the epithelium and has a small size and high nuclear to cytoplasmatic ratio (Secker and Daniels, 2009). A limbal stem cell is responsible for corneal epithelial renewal and repair (Li et al., 2023), and to help maintain a clear corneal surface by preventing conjunctival epithelial cells from migrating onto the cornea (Wang et al., 2023).""",
+                meaning=CL["4033093"]))
         setattr(cls, "CL:4033008",
             PermissibleValue(
                 text="CL:4033008",
@@ -5256,7 +5408,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001004",
             PermissibleValue(
                 text="CL:0001004",
-                description="""Immature CD8_alpha-positive CD11b-negative dendritic cell is a CD8_alpha-positive CD11b-negative dendritic cell that is CD80-low, CD86-low, and MHCII-low.""",
+                description="""Immature CD8-alpha-positive CD11b-negative dendritic cell is a CD8-alpha-positive CD11b-negative dendritic cell that is CD80-low, CD86-low, and MHCII-low.""",
                 meaning=CL["0001004"]))
         setattr(cls, "CL:0009031",
             PermissibleValue(
@@ -5362,6 +5514,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0007006",
                 description="Mesodermal cell that is axially located and gives rise to the cells of the notochord.",
                 meaning=CL["0007006"]))
+        setattr(cls, "CL:4052028",
+            PermissibleValue(
+                text="CL:4052028",
+                description="""A natural killer cell that is part of the uterus, specifically within the endometrium during the non-pregnant state and in the decidua during pregnancy. This cell exhibits dynamic changes in frequency throughout the menstrual cycle, with lower levels during menstruation and a significant increase during the mid-secretory phase and early pregnancy.""",
+                meaning=CL["4052028"]))
         setattr(cls, "CL:4033026",
             PermissibleValue(
                 text="CL:4033026",
@@ -5410,7 +5567,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000162",
             PermissibleValue(
                 text="CL:0000162",
-                description="""A large, oval stomach epithelial cell with a central nucleus; source of gastric acid. Secretes HCl.""",
+                description="""An epithelial cell of the stomach that is part of the fundic gastric gland. This cell is characterized by its pyramidal shape, abundant mitochondria, and a complex network of secretory canaliculi lined with microvilli. It secretes hydrochloric acid into the stomach lumen and produces intrinsic factor, essential for vitamin B12 absorption.""",
                 meaning=CL["0000162"]))
         setattr(cls, "CL:1001033",
             PermissibleValue(
@@ -5452,6 +5609,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002466",
                 description="""A CD11b-positive dendritic cell located in the serosal portion of the small intestine epithelium. This cell type is CD45-positive, MHC-II-positive, CD11c-low, CD103-negative.""",
                 meaning=CL["0002466"]))
+        setattr(cls, "CL:4052032",
+            PermissibleValue(
+                text="CL:4052032",
+                description="""A CD8 T cell characterized by high expression of Granzyme H (GZMH). This cell exhibits a restricted TCR repertoire and elevated expression of cytotoxic, exhaustion, and type I interferon-stimulated gene signatures compared to controls.""",
+                meaning=CL["4052032"]))
         setattr(cls, "CL:0000595",
             PermissibleValue(
                 text="CL:0000595",
@@ -5854,11 +6016,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000675",
                 description="A mature sexual reproductive cell of the female germline.",
                 meaning=CL["0000675"]))
-        setattr(cls, "CL:1001575",
-            PermissibleValue(
-                text="CL:1001575",
-                description="Squamous cell of uterine cervix epithelium.",
-                meaning=CL["1001575"]))
         setattr(cls, "CL:0011027",
             PermissibleValue(
                 text="CL:0011027",
@@ -5874,6 +6031,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002379",
                 description="""A neurecto-epithelial cell found in the arachnoid villi of dura mater. This cell type facilitates flow of cerebrospinal fluid into the blood.""",
                 meaning=CL["0002379"]))
+        setattr(cls, "CL:4052027",
+            PermissibleValue(
+                text="CL:4052027",
+                description="""A theca cell undergoing atresia, characterized by distinct morphological changes including hypertrophy, altered cell shape, and disrupted layered organization. This cell exhibits reduced steroidogenic capacity and changes in surrounding vascularization. The onset of theca cell atresia can vary, occurring at different stages of follicle atresia depending on the phase of folliculogenesis.""",
+                meaning=CL["4052027"]))
+        setattr(cls, "CL:1001575",
+            PermissibleValue(
+                text="CL:1001575",
+                description="Squamous cell of uterine cervix epithelium.",
+                meaning=CL["1001575"]))
         setattr(cls, "CL:0000386",
             PermissibleValue(
                 text="CL:0000386",
@@ -5933,11 +6100,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002618",
                 description="An endothelial cell of the umbilical vein.",
                 meaning=CL["0002618"]))
-        setattr(cls, "CL:0000024",
-            PermissibleValue(
-                text="CL:0000024",
-                description="An undifferentiated germ cell that proliferates rapidly and gives rise to oocytes.",
-                meaning=CL["0000024"]))
         setattr(cls, "CL:4040005",
             PermissibleValue(
                 text="CL:4040005",
@@ -6087,6 +6249,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000407",
                 description="A cell that anchors the cell body of a scolopidial neuron to the integument.",
                 meaning=CL["0000407"]))
+        setattr(cls, "CL:0000024",
+            PermissibleValue(
+                text="CL:0000024",
+                description="An undifferentiated germ cell that proliferates rapidly and gives rise to oocytes.",
+                meaning=CL["0000024"]))
+        setattr(cls, "CL:4047034",
+            PermissibleValue(
+                text="CL:4047034",
+                description="""A smooth muscle cell that is part of the muscularis externa of the stomach wall. It is characterized by its fusiform shape, involuntary control, and ability to generate slow, sustained contractions. This cell is organized in distinct layers and is essential for gastric motility and digestion.""",
+                meaning=CL["4047034"]))
         setattr(cls, "CL:0000041",
             PermissibleValue(
                 text="CL:0000041",
@@ -6140,7 +6312,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0019032",
             PermissibleValue(
                 text="CL:0019032",
-                description="Any brush cell that is part of the intestinal epithelium.",
+                description="""A tuft cell that is part of the intestinal epithelium, characterized by a distinctive apical tuft and lateral cytospinules connecting to neighbouring cells. This cell senses luminal stimuli via taste receptors and succinate signalling, initiating type 2 immune responses through the secretion of interleukin-25 while modulating epithelial regeneration through prostaglandin synthesis. It expresses key molecular markers such as doublecortin-like kinase 1 (DCLK1) in mice (Hendel et al., 2022), and KIT proto-oncogene in humans (Huang et al., 2024). Developed from intestinal crypt stem cells, this cell requires transcription factor POU2F3 for its development.""",
                 meaning=CL["0019032"]))
         setattr(cls, "CL:0000121",
             PermissibleValue(
@@ -6165,7 +6337,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002203",
             PermissibleValue(
                 text="CL:0002203",
-                description="Brush cell found in the epithelial layer of the colon.",
+                description="A tuft cell that is part of the epithelium of large intestine.",
                 meaning=CL["0002203"]))
         setattr(cls, "CL:0003004",
             PermissibleValue(
@@ -6285,6 +6457,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000030",
             PermissibleValue(
                 text="CL:0000030",
+                description="""A non-terminally differentiated cell that develops form the neuroectoderm. Glioblast has the potential to differentiate into various types of glial cells, including astrocytes and oligodendrocytes.""",
                 meaning=CL["0000030"]))
         setattr(cls, "CL:0000774",
             PermissibleValue(
@@ -6331,6 +6504,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002046",
                 description="""A pro-B cell that is CD22-positive, CD34-positive, CD38-positive and TdT-positive (has TdT activity). Pre-BCR is expressed on the cell surface. Cell is CD19-negative, CD20-negative, complement receptor type 2-negative and CD10-low. D-to-J recombination of the heavy chain occurs at this stage.""",
                 meaning=CL["0002046"]))
+        setattr(cls, "CL:4042038",
+            PermissibleValue(
+                text="CL:4042038",
+                description="""A type of primary motor neuron situated in the rostral region of the spinal cord. RoP neurons extend their axons to innervate the ventral trunk musculature.""",
+                meaning=CL["4042038"]))
         setattr(cls, "CL:0000670",
             PermissibleValue(
                 text="CL:0000670",
@@ -6419,7 +6597,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002179",
             PermissibleValue(
                 text="CL:0002179",
-                description="""An epithelial cell within one of the pits in the embryonic gastric mucosa from which the gastric glands develop .""",
+                description="""A simple columnar cell that populates the entire luminal surface including the gastric pits. This cell types secrete mucus to form a thick protective, lubricant layer over the gastric wall.""",
                 meaning=CL["0002179"]))
         setattr(cls, "CL:0000079",
             PermissibleValue(
@@ -6434,7 +6612,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:3000004",
             PermissibleValue(
                 text="CL:3000004",
-                description="Peripheral sensory neuron.",
+                description="""A neuron type that is located in a peripheral nervous system and it transmits sensory information from the peripheral (PNS) to the central nervous system (CNS). A sensory neuron converts physical (light, sound, touch) or chemical (such as taste and smell) stimuli into an electrical signal through a process known as sensory transduction. The function of a sensory neuron is to carry informations from the external environment and internal body conditions to the central nervous system for further processing.""",
                 meaning=CL["3000004"]))
         setattr(cls, "CL:0001056",
             PermissibleValue(
@@ -6530,6 +6708,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4033037",
                 description="A mucus secreting cell of a submucosal gland of the tracheobronchial tree.",
                 meaning=CL["4033037"]))
+        setattr(cls, "CL:4047023",
+            PermissibleValue(
+                text="CL:4047023",
+                description="""A fibroblast located in the lamina propria of the intestinal mucosa. This cell expresses PDGFRα and CD81 and is negative for α-smooth muscle actin (α-SMA). This cell is predominantly located in the small intestine adjacent to myofibroblasts surrounding the crypts. It is capable of synthesizing extracellular matrix components and structural proteins such as collagen and elastin.""",
+                meaning=CL["4047023"]))
         setattr(cls, "CL:2000094",
             PermissibleValue(
                 text="CL:2000094",
@@ -6766,7 +6949,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002254",
             PermissibleValue(
                 text="CL:0002254",
-                description="An epithelial cell of the small intestine.",
+                description="An epithelial cell of the lining of the small intestine.",
                 meaning=CL["0002254"]))
         setattr(cls, "CL:0009055",
             PermissibleValue(
@@ -6781,7 +6964,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000998",
             PermissibleValue(
                 text="CL:0000998",
-                description="""CD8_alpha-negative CD11b-negative dendritic cell is a conventional dendritic cell that is CD11b-negative, CD4-negative CD8_alpha-negative and is CD205-positive. This cell is able to cross- present antigen to CD8-alpha-positive T cells.""",
+                description="""CD8-alpha-negative CD11b-negative dendritic cell is a conventional dendritic cell that is CD11b-negative, CD4-negative CD8-alpha-negative and is CD205-positive. This cell is able to cross- present antigen to CD8-alpha-positive T cells.""",
                 meaning=CL["0000998"]))
         setattr(cls, "CL:0001043",
             PermissibleValue(
@@ -6865,7 +7048,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000999",
             PermissibleValue(
                 text="CL:0000999",
-                description="""CD8_alpha-negative CD11b-positive dendritic cell is a conventional dendritic cell that is CD11b-positive, CD4-positive and is CD205-negative and CD8_alpha-negative.""",
+                description="""CD8-alpha-negative CD11b-positive dendritic cell is a conventional dendritic cell that is CD11b-positive, CD4-positive and is CD205-negative and CD8-alpha-negative.""",
                 meaning=CL["0000999"]))
         setattr(cls, "CL:0002472",
             PermissibleValue(
@@ -7055,7 +7238,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001018",
             PermissibleValue(
                 text="CL:0001018",
-                description="""Immature CD8_alpha-low Langerhans cell is a CD8_alpha-low Langerhans cell that is CD80-low, CD86-low, and MHCII-low.""",
+                description="""Immature CD8-alpha-low Langerhans cell is a CD8-alpha-low Langerhans cell that is CD80-low, CD86-low, and MHCII-low.""",
                 meaning=CL["0001018"]))
         setattr(cls, "CL:0003009",
             PermissibleValue(
@@ -7194,7 +7377,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000503",
             PermissibleValue(
                 text="CL:0000503",
-                description="""A flattened stroma cell forming a sheath or theca outside the basal lamina lining the mature ovarian follicle. Thecal interstitial or stromal cells are steroidogenic, and produce primarily androgens which serve as precusors of estrogens in the granulosa cells.""",
+                description="""A specialized stromal cell that forms the theca layer outside the basal lamina lining the ovarian follicle, appearing during the secondary follicle stage.""",
                 meaning=CL["0000503"]))
         setattr(cls, "CL:0000908",
             PermissibleValue(
@@ -7433,7 +7616,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002368",
             PermissibleValue(
                 text="CL:0002368",
-                description="An endo-epithelial cell of the respiratory tract.",
+                description="""An epithelial cell of the respiratory tract epithelium.  These cells have an endodermal origin.""",
                 meaning=CL["0002368"]))
         setattr(cls, "CL:0000749",
             PermissibleValue(
@@ -7710,6 +7893,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002095",
                 description="A cell in the hilum of the ovary that produces androgens.",
                 meaning=CL["0002095"]))
+        setattr(cls, "CL:4052013",
+            PermissibleValue(
+                text="CL:4052013",
+                description="""A specialized theca cell that forms the outer layer of the theca surrounding the ovarian follicle, appearing at the antral follicle. Originating from progenitor theca cells, theca externa cell is characterized by its fibroblast-like appearance and primarily function to provide structural support to the developing follicle. This cell produces collagen fibers and extracellular matrix components such as Col1a1 and Col1a2.""",
+                meaning=CL["4052013"]))
         setattr(cls, "CL:0002398",
             PermissibleValue(
                 text="CL:0002398",
@@ -7983,6 +8171,11 @@ class CellTypeEnum(EnumDefinitionImpl):
             PermissibleValue(
                 text="CL:4023032",
                 meaning=CL["4023032"]))
+        setattr(cls, "CL:4052015",
+            PermissibleValue(
+                text="CL:4052015",
+                description="Any capillary endothelial cell that is part of an endocrine gland.",
+                meaning=CL["4052015"]))
         setattr(cls, "CL:1000353",
             PermissibleValue(
                 text="CL:1000353",
@@ -8139,8 +8332,13 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001003",
             PermissibleValue(
                 text="CL:0001003",
-                description="""Mature CD8_alpha-negative CD11b-positive dendritic cell is a CD8_alpha-negative CD11b-positive dendritic cell that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
+                description="""Mature CD8-alpha-negative CD11b-positive dendritic cell is a CD8-alpha-negative CD11b-positive dendritic cell that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
                 meaning=CL["0001003"]))
+        setattr(cls, "CL:4047030",
+            PermissibleValue(
+                text="CL:4047030",
+                description="""A specialized endothelial cell located in the transition zone between capillaries and small venules in the microvascular system. It exhibits characteristics of both capillary and venous cells, expressing markers from both types. This cell plays a role in regulating blood flow and substance exchange between blood and tissues.""",
+                meaning=CL["4047030"]))
         setattr(cls, "CL:4033046",
             PermissibleValue(
                 text="CL:4033046",
@@ -8215,11 +8413,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000315",
                 description="A goblet cell that is part of the epithelium of principal gastric gland.",
                 meaning=CL["1000315"]))
-        setattr(cls, "CL:0000536",
-            PermissibleValue(
-                text="CL:0000536",
-                description="A secondary neuron (sensu Teleostei) that has a motor function.",
-                meaning=CL["0000536"]))
         setattr(cls, "CL:0002148",
             PermissibleValue(
                 text="CL:0002148",
@@ -8248,7 +8441,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1001210",
             PermissibleValue(
                 text="CL:1001210",
-                description="""Any vasa recta ascending limb cell that is part of some outer medulla vasa recta ascending limb.""",
+                description="""Any vasa recta ascending limb cell that is part of some outer medulla ascending vasa recta.""",
                 meaning=CL["1001210"]))
         setattr(cls, "CL:0002221",
             PermissibleValue(
@@ -8332,7 +8525,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000997",
             PermissibleValue(
                 text="CL:0000997",
-                description="""Immature CD8_alpha-negative CD11b-positive dendritic cell is a CD8_alpha-negative CD11b-positive dendritic cell that is CD80-low, CD86-low, and MHCII-low.""",
+                description="""Immature CD8-alpha-negative CD11b-positive dendritic cell is a CD8-alpha-negative CD11b-positive dendritic cell that is CD80-low, CD86-low, and MHCII-low.""",
                 meaning=CL["0000997"]))
         setattr(cls, "CL:0003028",
             PermissibleValue(
@@ -8575,13 +8768,23 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1001209",
             PermissibleValue(
                 text="CL:1001209",
-                description="""Any vasa recta ascending limb cell that is part of some inner medulla vasa recta ascending limb.""",
+                description="""Any vasa recta ascending limb cell that is part of some inner medulla ascending vasa recta.""",
                 meaning=CL["1001209"]))
         setattr(cls, "CL:0002002",
             PermissibleValue(
                 text="CL:0002002",
                 description="""A granulocyte monocyte progenitor that is Kit-positive, CD34-positive, Fc-gamma receptor II/II-positive, and is Sca-1-negative, Il7ra-negative, Cxc3r1-negative, and CD90-negative.""",
                 meaning=CL["0002002"]))
+        setattr(cls, "CL:4033092",
+            PermissibleValue(
+                text="CL:4033092",
+                description="""An enterocyte that is part of a duodenal epithelium and expresses beta-1,3-glucuronyltransferase 1 (B3GAT1), also known as CD57 or HNK-1.""",
+                meaning=CL["4033092"]))
+        setattr(cls, "CL:0000536",
+            PermissibleValue(
+                text="CL:0000536",
+                description="A secondary neuron (sensu Teleostei) that has a motor function.",
+                meaning=CL["0000536"]))
         setattr(cls, "CL:4042023",
             PermissibleValue(
                 text="CL:4042023",
@@ -8646,11 +8849,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4042012",
                 description="""An L2 intratelencephalic projecting glutamatergic neuron with a soma on the L1-L2 border. This neuron type has small apical dendrites projecting to L1.""",
                 meaning=CL["4042012"]))
-        setattr(cls, "CL:1001591",
-            PermissibleValue(
-                text="CL:1001591",
-                description="Glandular cell of oviduct epithelium. Example: peg cells, ciliated cells.",
-                meaning=CL["1001591"]))
         setattr(cls, "CL:0000676",
             PermissibleValue(
                 text="CL:0000676",
@@ -8675,6 +8873,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002261",
                 description="An endothelial cell found in the mucosa associated with the facial skeleton.",
                 meaning=CL["0002261"]))
+        setattr(cls, "CL:4047101",
+            PermissibleValue(
+                text="CL:4047101",
+                description="""A natural killer cell resident to the liver, located in the hepatic sinusoids. In humans this cell type is distinguished from circulating natural killer cells by CD49a or CD69 gene expression. Liver-resident natural killer cells have also been shown to express CCR5, EOMES, KLRB1, GZMK, and CXCR6 in humans.""",
+                meaning=CL["4047101"]))
+        setattr(cls, "CL:1001591",
+            PermissibleValue(
+                text="CL:1001591",
+                description="Glandular cell of oviduct epithelium. Example: peg cells, ciliated cells.",
+                meaning=CL["1001591"]))
         setattr(cls, "CL:0000942",
             PermissibleValue(
                 text="CL:0000942",
@@ -8758,7 +8966,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002252",
             PermissibleValue(
                 text="CL:0002252",
-                description="An epithelial cell of the esophagus.",
+                description="An epithelial cell of the lining of the esophagus.",
                 meaning=CL["0002252"]))
         setattr(cls, "CL:4042016",
             PermissibleValue(
@@ -8783,7 +8991,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0008021",
             PermissibleValue(
                 text="CL:0008021",
-                description="Any neuron that has its soma located in some anterior lateral line ganglion.",
+                description="""Any peripheral nervous system neuron that has its soma located in some anterior lateral line ganglion.""",
                 meaning=CL["0008021"]))
         setattr(cls, "CL:0000886",
             PermissibleValue(
@@ -8938,7 +9146,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002332",
             PermissibleValue(
                 text="CL:0002332",
-                description="A ciliated cell of the bronchus.",
+                description="""A multi-ciliated epithelial cell located in the bronchus epithelium, characterized by a columnar shape and motile cilia on its apical surface.""",
                 meaning=CL["0002332"]))
         setattr(cls, "CL:0009110",
             PermissibleValue(
@@ -9018,8 +9226,13 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002454",
             PermissibleValue(
                 text="CL:0002454",
-                description="""Cd4-negative, CD8_alpha-negative, CD11b-positive dendritic cell is a conventional dendritic cell that is CD11b-positive, CD4-negative, CD8_alpha-negative and is CD205-positive.""",
+                description="""CD4-negative, CD8-alpha-negative, CD11b-positive dendritic cell is a conventional dendritic cell that is CD11b-positive, CD4-negative, CD8-alpha-negative and is CD205-positive.""",
                 meaning=CL["0002454"]))
+        setattr(cls, "CL:4052038",
+            PermissibleValue(
+                text="CL:4052038",
+                description="""A tuft cell that is part of the nasal cavity respiratory epithelium. Acting as a chemosensor, it detects bitter taste ligands and bacterial signals via taste receptors, maintaining epithelial-microbial homeostasis by stimulating antimicrobial peptide secretion from adjacent epithelial cells. This cell is a major source of IL-25, promoting type 2 immune responses and potentially contributing to chronic rhinosinusitis (O'Leary et al., 2019).""",
+                meaning=CL["4052038"]))
         setattr(cls, "CL:1001596",
             PermissibleValue(
                 text="CL:1001596",
@@ -9143,6 +9356,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0011021",
                 description="A fibroblast that is part of upper back skin.",
                 meaning=CL["0011021"]))
+        setattr(cls, "CL:4042036",
+            PermissibleValue(
+                text="CL:4042036",
+                description="""A neuron of the central nervous system with its soma primarily located in the lateral hypothalamic area and surrounding regions, including the zona incerta. This neuron type expresses melanin-concentrating hormone and is involved in regulating various physiological processes, including sleep, feeding behavior, and energy homeostasis.""",
+                meaning=CL["4042036"]))
         setattr(cls, "CL:1000382",
             PermissibleValue(
                 text="CL:1000382",
@@ -9541,7 +9759,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:2000084",
             PermissibleValue(
                 text="CL:2000084",
-                description="Any goblet cell that is part of a conjunctiva.",
+                description="""A goblet cell that is part of the conjunctival epithelium, characterized by apical accumulation of mucin granules (containing MUC5AC in humans; Muc5ac/Muc5b in mice). These gel-forming mucins support tear film stability, ocular lubrication, and pathogen defence. The conjunctival goblet cell forms tight junctions with neighbouring epithelial cells via species-specific claudins (claudin-10 in humans, claudin-2 in mice) and regulates immune homeostasis by facilitating soluble antigen transport to dendritic cells through goblet cell-associated antigen passages (GAPs) (Barbosa et al., 2017). The transcription factor SPDEF is essential for its differentiation.""",
                 meaning=CL["2000084"]))
         setattr(cls, "CL:0011012",
             PermissibleValue(
@@ -9625,7 +9843,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1001287",
             PermissibleValue(
                 text="CL:1001287",
-                description="""Any vasa recta descending limb cell that is part of some outer medulla vasa recta descending limb.""",
+                description="""Any vasa recta descending limb cell that is part of some outer medulla descending vasa recta.""",
                 meaning=CL["1001287"]))
         setattr(cls, "CL:0009056",
             PermissibleValue(
@@ -9637,6 +9855,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000934",
                 description="A CD4-positive, alpha-beta T cell that has cytotoxic function.",
                 meaning=CL["0000934"]))
+        setattr(cls, "CL:4052020",
+            PermissibleValue(
+                text="CL:4052020",
+                description="""A granzyme K-associated CD8 T cell that resides in the lung, characterized by the expression of granzyme K (GZMK), and tissue residency markers CD103 and CD49a. This cell exhibits cytotoxic potential through its expression of multiple granzymes (GZMA, GZMB, GZMH, GZMM) in addition to GZMK.""",
+                meaning=CL["4052020"]))
         setattr(cls, "CL:0000771",
             PermissibleValue(
                 text="CL:0000771",
@@ -9716,11 +9939,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000166",
                 description="""A cell that stores epinephrine secretory vesicles. During times of stress, the nervous system signals the vesicles to secrete their hormonal content. Their name derives from their ability to stain a brownish color with chromic salts. Characteristically, they are located in the adrenal medulla and paraganglia of the sympathetic nervous system.""",
                 meaning=CL["0000166"]))
-        setattr(cls, "CL:0000419",
-            PermissibleValue(
-                text="CL:0000419",
-                description="An epithelial fate stem cell found in flatworms.",
-                meaning=CL["0000419"]))
         setattr(cls, "CL:0000978",
             PermissibleValue(
                 text="CL:0000978",
@@ -9736,6 +9954,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002624",
                 description="A paneth cell of the appendix.",
                 meaning=CL["0002624"]))
+        setattr(cls, "CL:4047037",
+            PermissibleValue(
+                text="CL:4047037",
+                description="""A smooth muscle cell found in the innermost layer of the muscularis externa of the stomach wall. This cell forms a unique layer of smooth muscle fibers oriented obliquely to the stomach's longitudinal axis. It is responsible for aiding in the mixing and churning of gastric contents, contributing to mechanical digestion within the stomach.""",
+                meaning=CL["4047037"]))
+        setattr(cls, "CL:0000419",
+            PermissibleValue(
+                text="CL:0000419",
+                description="An epithelial fate stem cell found in flatworms.",
+                meaning=CL["0000419"]))
         setattr(cls, "CL:0009096",
             PermissibleValue(
                 text="CL:0009096",
@@ -9805,6 +10033,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000341",
                 description="An enterocyte that is part of the epithelium proper of jejunum.",
                 meaning=CL["1000341"]))
+        setattr(cls, "CL:4052023",
+            PermissibleValue(
+                text="CL:4052023",
+                description="""An epithelial cell that is part of the endometrial luminal epithelium, forming a continuous layer lining the uterine cavity. This cell undergoes cyclical changes during the menstrual cycle, proliferating under estrogen in the proliferative phase, and differentiating under progesterone in the secretory phase to prepare for potential implantation. During the window of implantation, this cell changes from a tall columnar shape to a shorter columnar or cuboidal form, loses polarity, and becomes receptive to blastocyst implantation.""",
+                meaning=CL["4052023"]))
         setattr(cls, "CL:0000950",
             PermissibleValue(
                 text="CL:0000950",
@@ -9924,6 +10157,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0009090",
                 description="""An adult endothelial progenitor cell that is resident of adult vasculature and capable of differentiating to regenerate endothelial cell populations. Endothelial colony forming cells are characterised in vivo by clonal proliferative status, de novo vessel formation, homing to ischemic sites and paracrine support of angiogenesis. These cells are phenotypically similar to endothelial cells.""",
                 meaning=CL["0009090"]))
+        setattr(cls, "CL:0002477",
+            PermissibleValue(
+                text="CL:0002477",
+                description="""A macrophage located in adipose tissue that is CD45-positive, CD11c-positive, and SIRPa-positive.""",
+                meaning=CL["0002477"]))
         setattr(cls, "CL:0009067",
             PermissibleValue(
                 text="CL:0009067",
@@ -9932,12 +10170,12 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002059",
             PermissibleValue(
                 text="CL:0002059",
-                description="A conventional thymic dendritic cell that is CD8alpha-positive.",
+                description="A conventional thymic dendritic cell that is CD8-alpha-positive.",
                 meaning=CL["0002059"]))
         setattr(cls, "CL:0002460",
             PermissibleValue(
                 text="CL:0002460",
-                description="A conventional thymic dendritic cell that is CD8alpha-negative.",
+                description="A conventional thymic dendritic cell that is CD8-alpha-negative.",
                 meaning=CL["0002460"]))
         setattr(cls, "CL:0000286",
             PermissibleValue(
@@ -9989,6 +10227,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000533",
                 description="A primary neuron (sensu Teleostei) that has a motor function.",
                 meaning=CL["0000533"]))
+        setattr(cls, "CL:4042039",
+            PermissibleValue(
+                text="CL:4042039",
+                description="""A neuron of the central nervous system that develops from a caudal ganglionic eminence.""",
+                meaning=CL["4042039"]))
         setattr(cls, "CL:0001011",
             PermissibleValue(
                 text="CL:0001011",
@@ -10043,6 +10286,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002000",
                 description="""An erythroid progenitor cell is Kit-positive, Ly6A-negative, CD41-negative, CD127-negative, and CD123-negative. This cell type is also described as being lin-negative, Kit-positive, CD150-negative, CD41-negative, CD105-positive, and FcgR-negative.""",
                 meaning=CL["0002000"]))
+        setattr(cls, "CL:4042028",
+            PermissibleValue(
+                text="CL:4042028",
+                description="""A neuron in the central nervous system that is not committed to a differentiated fate, has not been newly derived from neurogenesis, and does not integrate into any circuit.""",
+                meaning=CL["4042028"]))
         setattr(cls, "CL:0004138",
             PermissibleValue(
                 text="CL:0004138",
@@ -10058,16 +10306,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000863",
                 description="""An elicited macrophage that is recruited into the tissues in response to injury and infection as part of an inflammatory response, expresses high levels of pro-inflammatory cytokines, ROS and NO, and shows potent microbicidal activity.""",
                 meaning=CL["0000863"]))
-        setattr(cls, "CL:0002477",
-            PermissibleValue(
-                text="CL:0002477",
-                description="""A macrophage located in adipose tissue that is CD45-positive, CD11c-positive, and SIRPa-positive.""",
-                meaning=CL["0002477"]))
-        setattr(cls, "CL:0002182",
-            PermissibleValue(
-                text="CL:0002182",
-                description="""A simple columnar cell that populates the entire luminal surface including the gastric pits. This cell types secrete mucus to form a thick protective, lubricant layer over the gastric wall.""",
-                meaning=CL["0002182"]))
         setattr(cls, "CL:0000333",
             PermissibleValue(
                 text="CL:0000333",
@@ -10497,7 +10735,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002255",
             PermissibleValue(
                 text="CL:0002255",
-                description="""A stromal cell of the endometrium that is fibroblastic in appearance. During decidualization this cell may differentiate into a decidual stromal cell.""",
+                description="""A stromal cell of the endometrium, characterized by its fibroblast-like morphology, regenerative capacity, and ability to undergo decidualization. It differentiates into a decidual stromal cell during pregnancy, essential for embryo implantation and maintenance. This cell is involved in tissue proliferation, remodeling, and breakdown, responding to hormonal changes, particularly estrogen and progesterone.""",
                 meaning=CL["0002255"]))
         setattr(cls, "CL:0002553",
             PermissibleValue(
@@ -10825,7 +11063,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001001",
             PermissibleValue(
                 text="CL:0001001",
-                description="""Immature CD8_alpha-negative CD11b-negative dendritic cell is a CD8_alpha-negative CD11b-negative dendritic cell that is CD80-low, CD86-low, and MHCII-low.""",
+                description="""Immature CD8-alpha-negative CD11b-negative dendritic cell is a CD8-alpha-negative CD11b-negative dendritic cell that is CD80-low, CD86-low, and MHCII-low.""",
                 meaning=CL["0001001"]))
         setattr(cls, "CL:0011023",
             PermissibleValue(
@@ -10967,6 +11205,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000615",
                 description="Any kidney tubule cell that is part of some renal cortex tubule.",
                 meaning=CL["1000615"]))
+        setattr(cls, "CL:4052014",
+            PermissibleValue(
+                text="CL:4052014",
+                description="""A capillary endothelial cell that is part of islet of Langerhans, characterized by a high density of fenestrations —approximately ten times greater than those in exocrine pancreatic capillaries. These fenestrations facilitate efficient hormone exchange, which is essential for maintaining glucose homeostasis. The cell's structure and function are regulated by the local production of vascular endothelial growth factor-A (VEGF-A), which maintains its fenestrated architecture.""",
+                meaning=CL["4052014"]))
         setattr(cls, "CL:4052005",
             PermissibleValue(
                 text="CL:4052005",
@@ -11122,7 +11365,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1000223",
             PermissibleValue(
                 text="CL:1000223",
-                description="""A neuroendocrine cell that is part of respiratory epithelium of the lung and is involved in the sensory detection of environmental stimuli, including hypoxia, nicotine and air pressure. Ultrastructurally, this cell type is characterized by the presence of cytoplasmic dense core granules, which are considered the storage sites of amine and peptide hormones. Lung neuroendocrine cells are innervated and appear as solitary cells or as clustered masses, localized at airway bifurcation sites, called neuroepithelial bodies that can release serotonin in response to hypoxia and interact with sensory nerve terminals. Lung neuroendocrine cells also function as reserve stem cells that repair the surrounding epithelium after injury.""",
+                description="""A neuroendocrine cell that is part of respiratory epithelium of the lung and is involved in the sensory detection of environmental stimuli, including hypoxia, nicotine and air pressure. Ultrastructurally, this cell type is characterized by the presence of cytoplasmic dense core granules, which are considered the storage sites of amine and peptide hormones. Pulmonary neuroendocrine cells are innervated and appear as solitary cells or as clustered masses, localized at airway bifurcation sites, called neuroepithelial bodies that can release serotonin in response to hypoxia and interact with sensory nerve terminals. Pulmonary neuroendocrine cells also function as reserve stem cells that repair the surrounding epithelium after injury.""",
                 meaning=CL["1000223"]))
         setattr(cls, "CL:0000445",
             PermissibleValue(
@@ -11334,6 +11577,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1000274",
             PermissibleValue(
                 text="CL:1000274",
+                description="""An extraembryonic cell that is part of the trophectoderm, representing the first lineage to differentiate in the embryo. This cell is crucial for implantation into the uterine wall and differentiates into trophoblast cells, which contribute to placenta formation and facilitate maternal-fetal nutrient and signal exchange.""",
                 meaning=CL["1000274"]))
         setattr(cls, "CL:0000591",
             PermissibleValue(
@@ -11353,7 +11597,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000319",
             PermissibleValue(
                 text="CL:0000319",
-                description="Any secretory cell that is capable of some mucus secretion.",
+                description="Any cell that is capable of some mucus secretion.",
                 meaning=CL["0000319"]))
         setattr(cls, "CL:0002137",
             PermissibleValue(
@@ -11549,6 +11793,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000639",
                 description="A basophilic chromophil cell that of the anterior pituitary gland.",
                 meaning=CL["0000639"]))
+        setattr(cls, "CL:0002104",
+            PermissibleValue(
+                text="CL:0002104",
+                description="""An IgG-negative double negative memory B cell is a double negative memory B cell with the phenotype IgG-negative, IgD-negative, and CD27-negative.""",
+                meaning=CL["0002104"]))
         setattr(cls, "CL:0000385",
             PermissibleValue(
                 text="CL:0000385",
@@ -11569,11 +11818,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0009107",
                 description="""A lymphatic endothelial cell located in the subcapsular sinus ceiling of a lymph node. In human, it's characterized by a unique marker expression (NT5e+ and Caveolin-1+).""",
                 meaning=CL["0009107"]))
-        setattr(cls, "CL:0002175",
-            PermissibleValue(
-                text="CL:0002175",
-                description="A cell within the primary follicle of the ovary.",
-                meaning=CL["0002175"]))
         setattr(cls, "CL:4042024",
             PermissibleValue(
                 text="CL:4042024",
@@ -11599,16 +11843,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000528",
                 description="A nerve cell where transmission is mediated by nitric oxide.",
                 meaning=CL["0000528"]))
-        setattr(cls, "CL:0000402",
-            PermissibleValue(
-                text="CL:0000402",
-                description="An interneuron that has its cell body in a central nervous system.",
-                meaning=CL["0000402"]))
-        setattr(cls, "CL:0002104",
-            PermissibleValue(
-                text="CL:0002104",
-                description="""An IgG-negative double negative memory B cell is a double negative memory B cell with the phenotype IgG-negative, IgD-negative, and CD27-negative.""",
-                meaning=CL["0002104"]))
         setattr(cls, "CL:0002032",
             PermissibleValue(
                 text="CL:0002032",
@@ -11627,7 +11861,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001000",
             PermissibleValue(
                 text="CL:0001000",
-                description="""CD8_alpha-positive CD11b-negative dendritic cell is a conventional dendritic cell that is CD11b-negative, CD4-negative and is CD205-positive and CD8_alpha-positive.""",
+                description="""CD8-alpha-positive CD11b-negative dendritic cell is a conventional dendritic cell that is CD11b-negative, CD4-negative and is CD205-positive and CD8-alpha-positive.""",
                 meaning=CL["0001000"]))
         setattr(cls, "CL:4042025",
             PermissibleValue(
@@ -11709,6 +11943,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0010002",
                 description="An epithelial cell that is part_of a umbilical artery.",
                 meaning=CL["0010002"]))
+        setattr(cls, "CL:4042035",
+            PermissibleValue(
+                text="CL:4042035",
+                description="""A type of cerebellar inhibitory GABAergic interneuron that is located in the molecular layer of the cerebellum. This cell type inhibits Purkinje cells and other molecular layer interneurons. This interneuron plays a crucial role in regulating cerebellar output through feedforward inhibition and is characterized by its fast-spiking properties.""",
+                meaning=CL["4042035"]))
         setattr(cls, "CL:0009064",
             PermissibleValue(
                 text="CL:0009064",
@@ -11950,7 +12189,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001015",
             PermissibleValue(
                 text="CL:0001015",
-                description="""CD8_alpha-low Langerhans cell is a Langerhans cell that is CD205-high and is CD8_alpha-low.""",
+                description="""CD8-alpha-low Langerhans cell is a Langerhans cell that is CD205-high and is CD8-alpha-low.""",
                 meaning=CL["0001015"]))
         setattr(cls, "CL:0000848",
             PermissibleValue(
@@ -11982,6 +12221,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002097",
                 description="""A cell of the adrenal cortex. Cell types include those that synthesize and secrete chemical derivatives (steroids) of cholesterol.""",
                 meaning=CL["0002097"]))
+        setattr(cls, "CL:0002175",
+            PermissibleValue(
+                text="CL:0002175",
+                description="A cell within the primary follicle of the ovary.",
+                meaning=CL["0002175"]))
+        setattr(cls, "CL:4052026",
+            PermissibleValue(
+                text="CL:4052026",
+                description="""A fast type II muscle cell that is part of the skeletal muscle tissue. This cell is characterized by its intermediate metabolic profile, utilizing both glycolytic and oxidative pathways for energy production. In humans, it is distinguished by the expression of myosin heavy chain 1 (MYH1).""",
+                meaning=CL["4052026"]))
         setattr(cls, "CL:1000410",
             PermissibleValue(
                 text="CL:1000410",
@@ -12087,6 +12336,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0017011",
                 description="A hillock cell that is part of the prostatic urethra.",
                 meaning=CL["0017011"]))
+        setattr(cls, "CL:4052037",
+            PermissibleValue(
+                text="CL:4052037",
+                description="""A tuft cell that is part of the olfactory epithelium, characterized by a globular body and the expression of neurogranin (Nrgn) in mice. This cell plays a crucial role in allergen recognition and regulating olfactory stem cell proliferation via TRPM5-dependent ATP sensing and cysteinyl leukotriene production. Unlike nasal respiratory tuft cells, it has low to absent expression of taste receptors, including the G protein Gα gustducin, and rarely contacts olfactory sensory neurons directly.""",
+                meaning=CL["4052037"]))
         setattr(cls, "CL:0000904",
             PermissibleValue(
                 text="CL:0000904",
@@ -12289,7 +12543,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1000706",
             PermissibleValue(
                 text="CL:1000706",
-                description="Any urothelial cell that is part of some urothelium of ureter.",
+                description="A urothelial cell that is part of the urothelium of ureter.",
                 meaning=CL["1000706"]))
         setattr(cls, "CL:4030015",
             PermissibleValue(
@@ -12363,7 +12617,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000150",
             PermissibleValue(
                 text="CL:0000150",
-                description="""A specialized epithelial cell that is capable of synthesizing and secreting certain biomolecules.""",
+                description="""An epithelial cell, located in a gland, that is specialised for the synthesis and secretion of specific biomolecules, such as hormones, or mucous.""",
                 meaning=CL["0000150"]))
         setattr(cls, "CL:0000549",
             PermissibleValue(
@@ -12430,21 +12684,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000449",
                 description="An epithelial cell that is part of the nephron.",
                 meaning=CL["1000449"]))
-        setattr(cls, "CL:0009002",
-            PermissibleValue(
-                text="CL:0009002",
-                description="""Any cell participating in the inflammatory response to a foreign substance, e.g. neutrophil, macrophage.""",
-                meaning=CL["0009002"]))
         setattr(cls, "CL:1000427",
             PermissibleValue(
                 text="CL:1000427",
                 description="A chromaffin cell that is part of the adrenal cortex.",
                 meaning=CL["1000427"]))
-        setattr(cls, "CL:0008020",
-            PermissibleValue(
-                text="CL:0008020",
-                description="""A skeletal muscle satellite cell that undergoes symmetric division to produce two adult skeleltal muscle myoblasts.""",
-                meaning=CL["0008020"]))
         setattr(cls, "CL:0000546",
             PermissibleValue(
                 text="CL:0000546",
@@ -12458,7 +12702,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0001002",
             PermissibleValue(
                 text="CL:0001002",
-                description="""Mature CD8_alpha-negative CD11b-negative dendritic cell is a CD8_alpha-negative CD11b-negative dendritic cell that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
+                description="""Mature CD8-alpha-negative CD11b-negative dendritic cell is a CD8-alpha-negative CD11b-negative dendritic cell that is CD80-high, CD86-high, MHCII-high and is CD83-positive.""",
                 meaning=CL["0001002"]))
         setattr(cls, "CL:0000159",
             PermissibleValue(
@@ -12489,6 +12733,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002092",
                 description="""A cell found in the bone marrow. This can include fibroblasts, macrophages, adipocytes, osteoblasts, osteoclasts, endothelial cells and hematopoietic cells.""",
                 meaning=CL["0002092"]))
+        setattr(cls, "CL:4047040",
+            PermissibleValue(
+                text="CL:4047040",
+                description="""A smooth muscle cell that is found in the inner muscular layer of hollow organs. It is characterized by its spiral/helical arrangement around organ lumens. This cell is crucial for peristaltic movements in organs.""",
+                meaning=CL["4047040"]))
+        setattr(cls, "CL:0009002",
+            PermissibleValue(
+                text="CL:0009002",
+                description="""Any cell participating in the inflammatory response to a foreign substance, e.g. neutrophil, macrophage.""",
+                meaning=CL["0009002"]))
         setattr(cls, "CL:2000018",
             PermissibleValue(
                 text="CL:2000018",
@@ -12527,7 +12781,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002563",
             PermissibleValue(
                 text="CL:0002563",
-                description="An epithelial cell of the intestine.",
+                description="An epithelial cell of the lining of the intestine.",
                 meaning=CL["0002563"]))
         setattr(cls, "CL:0002403",
             PermissibleValue(
@@ -12569,6 +12823,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4023187",
                 description="""A neuron with a small cell body that is located in a koniocellular layer of the lateral geniculate nucleus (LGN).""",
                 meaning=CL["4023187"]))
+        setattr(cls, "CL:4052017",
+            PermissibleValue(
+                text="CL:4052017",
+                description="""A capillary endothelial cell that is part of the choroid plexus, characterized by its fenestrated nature with 60 to 80 nm fenestrations and lack of tight junctions. This fenestrated structure allows for the rapid delivery of water and other components, aiding in the production of cerebrospinal fluid (CSF).""",
+                meaning=CL["4052017"]))
         setattr(cls, "CL:0000874",
             PermissibleValue(
                 text="CL:0000874",
@@ -12604,6 +12863,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000550",
                 description="""A nucleated, immature erythrocyte in which the nucleus occupies a relatively smaller part of the cell than in its precursor, the basophilic erythroblast. The cytoplasm is beginning to acquire hemoglobin and thus is no longer a purely basophilic, but takes on acidophilic aspects, which becomes progressively more marked as the cell matures. The chromatin of the nucleus is arranged in coarse, deeply staining clumps. This cell is CD71-positive and lacks hematopoeitic lineage markers.""",
                 meaning=CL["0000550"]))
+        setattr(cls, "CL:4042040",
+            PermissibleValue(
+                text="CL:4042040",
+                description="""A glutametergic neuron with its soma located in a basal ganglia. This neuron type is involved in motor control, decision making and learning.""",
+                meaning=CL["4042040"]))
         setattr(cls, "CL:0000525",
             PermissibleValue(
                 text="CL:0000525",
@@ -12679,6 +12943,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000580",
                 description="""A neutrophil precursor in the granulocytic series, being a cell intermediate in development between a promyelocyte and a metamyelocyte; in this stage, production of primary granules is complete and neutrophil-specific granules has started. No nucleolus is present. This cell type is CD13-positive, CD16-negative, integrin alpha-M-positive, CD15-positive, CD33-positive, CD24-positive, C/EBP-a-positive, C/EBPe-positive, PU.1-positive, lactotransferrin-positive, myeloperoxidase-positive and NGAL-positive.""",
                 meaning=CL["0000580"]))
+        setattr(cls, "CL:4042033",
+            PermissibleValue(
+                text="CL:4042033",
+                description="""A neuron of the central nervous system that expresses POMC and synthesizes the POMC precursor polypeptide. This neuron type is located in the arcuate nucleus of the hypothalamus and in the nucleus tractus solitarius of the brainstem. The pro-opiomelanocortin neuron is part of the central melanocortin system and it is involved in regulating energy homeostasis, metabolism, and appetite. This neuronal type responds to hormonal signals such as levels of leptin and insulin, and its activation results in the release of α-melanocyte-stimulating hormone (α-MSH), which acts on melanocortin receptors to suppress food intake and increase energy expenditure.""",
+                meaning=CL["4042033"]))
+        setattr(cls, "CL:0008020",
+            PermissibleValue(
+                text="CL:0008020",
+                description="""A skeletal muscle satellite cell that undergoes symmetric division to produce two adult skeleltal muscle myoblasts.""",
+                meaning=CL["0008020"]))
         setattr(cls, "CL:0001009",
             PermissibleValue(
                 text="CL:0001009",
@@ -12768,6 +13042,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0017009",
                 description="A human dendritic cell that expresses the AXL and SIGLEC6 genes.",
                 meaning=CL["0017009"]))
+        setattr(cls, "CL:1100001",
+            PermissibleValue(
+                text="CL:1100001",
+                description="""An epithelial cell that is specialised for the synthesis and secretion of specific biomolecules.""",
+                meaning=CL["1100001"]))
         setattr(cls, "CL:0000573",
             PermissibleValue(
                 text="CL:0000573",
@@ -12781,7 +13060,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002253",
             PermissibleValue(
                 text="CL:0002253",
-                description="An epithelial cell of the large intestine.",
+                description="An epithelial cell of the lining of the large intestine.",
                 meaning=CL["0002253"]))
         setattr(cls, "CL:0019029",
             PermissibleValue(
@@ -12883,6 +13162,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0009109",
                 description="A lymphatic endothelial cell located in a lymph node trabecula.",
                 meaning=CL["0009109"]))
+        setattr(cls, "CL:4042030",
+            PermissibleValue(
+                text="CL:4042030",
+                description="""A GABAergic interneuron located in the cerebellar cortex. This GABAergic interneuron type has a distinct morphology, it presents a small cell soma near the Purkinje cell layer (PCL), dendrites that extend to the surface of the molecular layer, and beaded axons that make local synapses contacts within the molecular layer. A candelabrum cell is excited by mossy fibers and granule cells but inhibited by Purkinje cells, and it inhibits molecular layer interneurons, which leads to the disinhibition of Purkinje cells.""",
+                meaning=CL["4042030"]))
         setattr(cls, "CL:4030023",
             PermissibleValue(
                 text="CL:4030023",
@@ -13016,7 +13300,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4030007",
             PermissibleValue(
                 text="CL:4030007",
-                description="""An epithelial ciliated cell that is part of the fallopian tube. This cell type is found mainly on the apex of the mucosal folds and contributes, together with peristaltic contractions, to the self-propulsion of spermatozoa, the transport of ovum during ovulation and the transport of the fertilized ovum to the intramural fallopian tube. A fallopian tube ciliated cell has a columnar shape and contains an oval or round nucleus, often located perpendicular or parallel to the long axis of the cell.""",
+                description="""A multi-ciliated epithelial cell that is part of the fallopian tube, mainly found on the apex of the mucosal folds. This cell exhibits a columnar shape with an oval nucleus and is characterized by the presence of cilia on its surface. The coordinated beating of these cilia, together with peristaltic contractions, contributes to the self-propulsion of spermatozoa, the transport of ovum during ovulation and the transport of the fertilized ovum to the intramural fallopian tube.""",
                 meaning=CL["4030007"]))
         setattr(cls, "CL:4023161",
             PermissibleValue(
@@ -13080,6 +13364,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000532",
             PermissibleValue(
                 text="CL:0000532",
+                description="""A primary motor neuron with its soma in the caudal region of a spinal cord. The axon of this motoneuron exit the spinal cord from one single point and innervates the lateral surface of ventral axial muscles""",
                 meaning=CL["0000532"]))
         setattr(cls, "CL:1000500",
             PermissibleValue(
@@ -13104,6 +13389,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000114",
             PermissibleValue(
                 text="CL:0000114",
+                description="""An ectodermal cell that is part of the external ectoderm, forming the outermost layer of the developing embryo. It is characterized by its polarized nature, with distinct apical and basal surfaces (Ferrante Jr., Reinke, & Stanley, 1995). Surface ectodermal cell gives rise to the epidermis, hair follicles, nails, sensory organs, and specialized structures like the apical ectodermal ridge crucial for limb development (Skoufa et al., 2024).""",
                 meaning=CL["0000114"]))
         setattr(cls, "CL:0000622",
             PermissibleValue(
@@ -13342,11 +13628,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002099",
                 description="""A small, polyhedral, cell found in rounded groups or curved columns with deeply staining nuclei, scanty basophilic cytoplasm and a few lipid droplets. This cell in the zona glomerulosa produces mineralocorticoids.""",
                 meaning=CL["0002099"]))
-        setattr(cls, "CL:0002431",
-            PermissibleValue(
-                text="CL:0002431",
-                description="""A double-positive thymocyte that is undergoing positive selection, has high expression of the alpha-beta T cell receptor, is CD69-positive, and is in the process of down regulating the CD8 co-receptor.""",
-                meaning=CL["0002431"]))
         setattr(cls, "CL:0000242",
             PermissibleValue(
                 text="CL:0000242",
@@ -13387,6 +13668,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002515",
                 description="""An interrenal chromaffin cell found in teleosts that contain heterogeneous vesicles with electron-dense granules located asymmetrically within the vesicular membrane.""",
                 meaning=CL["0002515"]))
+        setattr(cls, "CL:4052033",
+            PermissibleValue(
+                text="CL:4052033",
+                description="""A tuft cell that is part of the extrahepatic biliary tree, including the gallbladder and extrahepatic bile ducts. It shares a core genetic program with intestinal tuft cells but has unique tissue-specific genes. Biliary tuft cell functions as a bile acid-sensitive regulator, suppressing inflammation and modulating microbiome-dependent neutrophil infiltration in biliary tissues. Unlike its intestinal counterparts, this cell decreases in number postnatally as bile acid production matures, with its abundance negatively regulated by bile acids.""",
+                meaning=CL["4052033"]))
         setattr(cls, "CL:0002492",
             PermissibleValue(
                 text="CL:0002492",
@@ -13521,11 +13807,26 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000917",
                 description="""A CD8-positive, alpha-beta positive T cell that has the phenotype T-bet-positive, eomesodermin-positive, CXCR3-positive, CCR6-negative, and is capable of producing interferon-gamma.""",
                 meaning=CL["0000917"]))
+        setattr(cls, "CL:0002431",
+            PermissibleValue(
+                text="CL:0002431",
+                description="""A double-positive thymocyte that is undergoing positive selection, has high expression of the alpha-beta T cell receptor, is CD69-positive, and is in the process of down regulating the CD8 co-receptor.""",
+                meaning=CL["0002431"]))
+        setattr(cls, "CL:4052031",
+            PermissibleValue(
+                text="CL:4052031",
+                description="A secretory epithelial cell of the respiratory and terminal bronchioles.",
+                meaning=CL["4052031"]))
         setattr(cls, "CL:0011013",
             PermissibleValue(
                 text="CL:0011013",
                 description="A sperm cell that is cabaple of motion (motility).",
                 meaning=CL["0011013"]))
+        setattr(cls, "CL:4052022",
+            PermissibleValue(
+                text="CL:4052022",
+                description="""A smooth muscle cell that is part of the fallopian tube. This cell is responsible for peristaltic contractions that facilitate gamete and embryo transport, fluid mixing, and embryo admission to the uterus.""",
+                meaning=CL["4052022"]))
         setattr(cls, "CL:0000821",
             PermissibleValue(
                 text="CL:0000821",
@@ -13647,7 +13948,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4030034",
             PermissibleValue(
                 text="CL:4030034",
-                description="""A ciliated cell of the respiratory system. Ciliated cells are present in airway epithelium.""",
+                description="""A multiciliated epithelial cell located in the respiratory tract epithelium, characterized by a columnar shape and motile cilia on its apical surface. This cell develops through a highly orchestrated process, transitioning from a basal progenitor via an intermediate deuterosomal cell stage that generates centrioles essential for ciliogenesis.""",
                 meaning=CL["4030034"]))
         setattr(cls, "CL:0002033",
             PermissibleValue(
@@ -13692,7 +13993,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4023068",
             PermissibleValue(
                 text="CL:4023068",
-                description="An excitatory neuron that has its soma located in the thalamic complex.",
+                description="""An excitatory neuron that has its soma located in the thalamic complex. This neuron type can be involved in a series of circuits related to sensory integration, motor integration, pain processing, social behaviour and reward response.""",
                 meaning=CL["4023068"]))
         setattr(cls, "CL:1001216",
             PermissibleValue(
@@ -13773,16 +14074,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000880",
                 description="""A border associated macrophage found at the interface between the blood and the cerebrospinal fluid in the brain. This central nervous system macrophage has a star-like shaped body and expresses scavenger receptors.""",
                 meaning=CL["0000880"]))
+        setattr(cls, "CL:4052021",
+            PermissibleValue(
+                text="CL:4052021",
+                description="""A CD8 T cell characterized by high expression of Granzyme K (GZMK). This cell is enriched in both inflamed tissues, such as synovial tissue in rheumatoid arthritis and respiratory tissues during COVID-19, as well as non-inflamed tissues like the gut and kidneys. Unlike highly cytotoxic GZMB+ CD8+ T cell, GZMK+ CD8+ T cell exhibits lower direct cytotoxic potential, and is involved in producing pro-inflammatory cytokines such as IFN-γ and TNF-α.""",
+                meaning=CL["4052021"]))
         setattr(cls, "CL:0002168",
             PermissibleValue(
                 text="CL:0002168",
                 description="""A border cell is a slender columnar cell on the medial portion of the basilar membrane.""",
                 meaning=CL["0002168"]))
-        setattr(cls, "CL:0002100",
-            PermissibleValue(
-                text="CL:0002100",
-                description="A regular cardiac myocyte of the interventricular region of the heart.",
-                meaning=CL["0002100"]))
         setattr(cls, "CL:0000351",
             PermissibleValue(
                 text="CL:0000351",
@@ -13815,7 +14116,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000508",
             PermissibleValue(
                 text="CL:0000508",
-                description="""An endocrine cell found in the pyloric gland mucosa (antral mucosa) of the stomach of mammals and responsible for the secretion of gastrin and enkephalin. Most abundant in pyloric antrum, pyramidal in form with a narrow apex bearing long microvilli.""",
+                description="""An endocrine cell found in the stomach and duodenum and is responsible for the secretion of gastrin and enkephalin. Most abundant in pyloric antrum, pyramidal in form with a narrow apex bearing long microvilli.""",
                 meaning=CL["0000508"]))
         setattr(cls, "CL:0002660",
             PermissibleValue(
@@ -13866,6 +14167,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002136",
                 description="A cell in the zona fasciculata that produce glucocorticoids, e.g cortisol.",
                 meaning=CL["0002136"]))
+        setattr(cls, "CL:0002100",
+            PermissibleValue(
+                text="CL:0002100",
+                description="A regular cardiac myocyte of the interventricular region of the heart.",
+                meaning=CL["0002100"]))
+        setattr(cls, "CL:4033087",
+            PermissibleValue(
+                text="CL:4033087",
+                description="""A tissue-resident macrophage that is part of the placenta. This cell helps preventing immunological rejection of the fetus by modulating the immune environment. A placental resident macrophage has high plasticity to adapt to the changing needs of each phase of pregnancy.""",
+                meaning=CL["4033087"]))
         setattr(cls, "CL:0008047",
             PermissibleValue(
                 text="CL:0008047",
@@ -13909,7 +14220,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1000222",
             PermissibleValue(
                 text="CL:1000222",
-                description="Any neuroendocrine cell that is part of some stomach.",
+                description="""A specialised neuroendocrine cell located in the gastric mucosa that regulates digestive processes including acid secretion and gut motility. This cell stores hormones in large dense core vesicles and synaptic-like microvesicles.""",
                 meaning=CL["1000222"]))
         setattr(cls, "CL:0000164",
             PermissibleValue(
@@ -13986,6 +14297,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000983",
                 description="A plasmablast that secretes IgM.",
                 meaning=CL["0000983"]))
+        setattr(cls, "CL:4047017",
+            PermissibleValue(
+                text="CL:4047017",
+                description="""A transit amplifying cell of the gut epithelium, located in the wall of the intestinal crypt, just above intestinal stem cells from which they derive. These are rapidly dividing cells, capable of multiple rounds of division before differentiating into the various cell types of the gut epithelium (enterocyte, goblet, eneterodendocrine, paneth cells).""",
+                meaning=CL["4047017"]))
         setattr(cls, "CL:0000760",
             PermissibleValue(
                 text="CL:0000760",
@@ -14218,6 +14534,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0011109",
                 description="A neuron that releases hypocretin as a neurotransmitter.",
                 meaning=CL["0011109"]))
+        setattr(cls, "CL:4047025",
+            PermissibleValue(
+                text="CL:4047025",
+                description="Any type G enteroendocrine cell that is part of some epithelium of stomach.",
+                meaning=CL["4047025"]))
         setattr(cls, "CL:0001068",
             PermissibleValue(
                 text="CL:0001068",
@@ -14283,6 +14604,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4042015",
                 description="""A VIP GABAergic cortical interneuron expressing vasoactive intestinal polypeptide and choline acetyltransferase in the Mmus neocortex. This interneuron releases both γ-aminobutyric acid and acetylcholine.""",
                 meaning=CL["4042015"]))
+        setattr(cls, "CL:4047035",
+            PermissibleValue(
+                text="CL:4047035",
+                description="""A specialized smooth muscle cell located in the outermost layer of the muscularis externa of the stomach wall. This cell is arranged longitudinally along the stomach's axis and is responsible for the contractions that facilitate food movement toward the pylorus.""",
+                meaning=CL["4047035"]))
         setattr(cls, "CL:0000661",
             PermissibleValue(
                 text="CL:0000661",
@@ -14402,6 +14728,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0011026",
                 description="""A precursor cell that has a tendency to differentiate into a specific type of cell. They are descendants of stem cells, only they are more constrained in their differentiation potential or capacity for self-renewal, and are often more limited in both senses.""",
                 meaning=CL["0011026"]))
+        setattr(cls, "CL:4042037",
+            PermissibleValue(
+                text="CL:4042037",
+                description="""A interneuron of the striatum expressing gamma-aminobutyric acid and somatostatin. This interneuron has a fusiform soma with a diameter between 9 - 25 µm, it has a long axon up to the length of 1mm. This neuron type displays a low threshold Ca2+ spike (LTS), a high input resistance, and the expression of long-lasting plateau potentials following depolarization from rest.""",
+                meaning=CL["4042037"]))
         setattr(cls, "CL:0002529",
             PermissibleValue(
                 text="CL:0002529",
@@ -14425,7 +14756,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000317",
             PermissibleValue(
                 text="CL:0000317",
-                description="""A cell secreting sebun, an oily substance secreted by sebaceous glands, composed of keratin, fat, and cellular debris.""",
+                description="""An epithelial cell that is part of a sebaceous gland. This cell produces and secretes sebum, an oily, lipid-rich substance, through holocrine secretion where the entire cell ruptures to release its contents.""",
                 meaning=CL["0000317"]))
         setattr(cls, "CL:0000953",
             PermissibleValue(
@@ -14566,6 +14897,15 @@ slots.confidence = Slot(uri=CELL_ANNOTATION_SCHEMA.confidence, name="confidence"
 
 slots.author_categories = Slot(uri=CELL_ANNOTATION_SCHEMA.author_categories, name="author_categories", curie=CELL_ANNOTATION_SCHEMA.curie('author_categories'),
                    model_uri=CELL_ANNOTATION_SCHEMA.author_categories, domain=None, range=Optional[str])
+
+slots.neurotransmitter_accession = Slot(uri=CELL_ANNOTATION_SCHEMA.neurotransmitter_accession, name="neurotransmitter_accession", curie=CELL_ANNOTATION_SCHEMA.curie('neurotransmitter_accession'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.neurotransmitter_accession, domain=None, range=Optional[str])
+
+slots.neurotransmitter_rationale = Slot(uri=CELL_ANNOTATION_SCHEMA.neurotransmitter_rationale, name="neurotransmitter_rationale", curie=CELL_ANNOTATION_SCHEMA.curie('neurotransmitter_rationale'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.neurotransmitter_rationale, domain=None, range=Optional[str])
+
+slots.neurotransmitter_marker_gene_evidence = Slot(uri=CELL_ANNOTATION_SCHEMA.neurotransmitter_marker_gene_evidence, name="neurotransmitter_marker_gene_evidence", curie=CELL_ANNOTATION_SCHEMA.curie('neurotransmitter_marker_gene_evidence'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.neurotransmitter_marker_gene_evidence, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.datestamp = Slot(uri=CELL_ANNOTATION_SCHEMA.datestamp, name="datestamp", curie=CELL_ANNOTATION_SCHEMA.curie('datestamp'),
                    model_uri=CELL_ANNOTATION_SCHEMA.datestamp, domain=None, range=str)
