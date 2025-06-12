@@ -163,6 +163,13 @@ slots:
     description: Gene names explicitly used as evidence, which MUST be in the matrix
       of the AnnData/Seurat file
     multivalued: true
+  marker_gene_context:
+    description: > 
+       The context in which the marker genes given in the marker gene evidence field should be tested.
+       Context should consist of a list of field_name:value.  Where field name = an obs field name.  
+       The obs field name may be further broken down into labelset.field name, where a field is attached to a 
+       specific labelset.
+    multivalued: true
   synonyms:
     description: List of synonyms
     multivalued: true
