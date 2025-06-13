@@ -276,6 +276,17 @@ enums:
           milk, which nourishes the embryo if implantation occurs.
         meaning: CL:0002656
         title: glandular endometrial unciliated epithelial cell
+      CL:4033014:
+        text: CL:4033014
+        description: A small, narrow, peg-shaped epithelial cell with little cytoplasm
+          that is part of oviduct epithelium. This cell is rarer than the ciliated
+          and secretory epithelial cells of the fallopian tube epithelium and is often
+          found intercalated between them. Peg cells are generally distributed basally
+          along the epithelium and have been found in high concentrations at the fimbriated,
+          distal end of the fallopian tube in humans. It may have a regenerative/stem-cell
+          function. In humans, markers include EPCAM, CD44, and ITGA6.
+        meaning: CL:4033014
+        title: peg cell
       CL:0002224:
         text: CL:0002224
         description: A cell of the cuboidal epithelium that covers the lens. The cells
@@ -461,6 +472,23 @@ enums:
           secreting a number of neurotransmitters.
         meaning: CL:0002292
         title: type I cell of carotid body
+      CL:4052051:
+        text: CL:4052051
+        description: "\u200B\u200BA uterine natural killer subset that is present\
+          \ in the endometrial lining during the non-pregnant state (Garcia-Alonso\
+          \ et al., 2021) and in the decidua during pregnancy (Vento-Tormo et al.,\
+          \ 2018). It expresses the uterine resident marker CD49a and is distinguished\
+          \ from uNK2 and uNK3 by CD39 expression and the absence of CD103 (Whettlock\
+          \ et al., 2022) and CD160 (Mare\u010Dkov\xE1 et al., 2024). It also expresses\
+          \ higher levels of killer-cell immunoglobulin-like receptors (KIRs) and\
+          \ leukocyte immunoglobulin-like receptor B1 (LILRB1), which facilitate interaction\
+          \ with human leukocyte antigens (HLAs) on extravillous trophoblast cells,\
+          \ promoting immune tolerance and implantation. Enriched in the endometrium\
+          \ post-ovulation (Mare\u010Dkov\xE1 et al., 2024) and prominent in early\
+          \ pregnancy (Whettlock et al., 2022), uNK1 regulates trophoblast invasion\
+          \ and spiral artery remodeling (Zhang & Wei, 2021)."
+        meaning: CL:4052051
+        title: uterine natural killer cell 1, human
       CL:0000067:
         text: CL:0000067
         description: An epithelial cell that has a cilia.
@@ -468,10 +496,17 @@ enums:
         title: ciliated epithelial cell
       CL:0002181:
         text: CL:0002181
-        description: A neck cell that secretes mucus within the stomach. Its products
-          are distinct histochemically from those of the surface mucous cells of stomach.
+        description: A columnar epithelial mucous secreting cell located in the neck
+          of the gastric glands. These cells have numerous apical secretory vesicles
+          containing mucins and a basally displaced nucleus. The mucous they secrete
+          is distinct histochemically from that of the surface mucous cells of stomach.
         meaning: CL:0002181
         title: mucous neck cell of gastric gland
+      CL:4070010:
+        text: CL:4070010
+        description: A motor neuron that moves the medial tooth forward
+        meaning: CL:4070010
+        title: gastric mill neuron
       CL:0004214:
         text: CL:0004214
         description: A type of type 3 cone bipolar cell with distinctive crescent-shaped
@@ -590,11 +625,6 @@ enums:
         description: A stromal cell found in the lamina propria of the vermiform appendix.
         meaning: CL:0009035
         title: stromal cell of lamina propria of vermiform appendix
-      CL:0000473:
-        text: CL:0000473
-        description: A cell whose primary function is to protect the organism.
-        meaning: CL:0000473
-        title: defensive cell
       CL:0000109:
         text: CL:0000109
         meaning: CL:0000109
@@ -618,22 +648,6 @@ enums:
           bladder.
         meaning: CL:1001428
         title: bladder urothelial cell
-      CL:4033014:
-        text: CL:4033014
-        description: A small, narrow, peg-shaped epithelial cell with little cytoplasm
-          that is part of oviduct epithelium. This cell is rarer than the ciliated
-          and secretory epithelial cells of the fallopian tube epithelium and is often
-          found intercalated between them. Peg cells are generally distributed basally
-          along the epithelium and have been found in high concentrations at the fimbriated,
-          distal end of the fallopian tube in humans. It may have a regenerative/stem-cell
-          function. In humans, markers include EPCAM, CD44, and ITGA6.
-        meaning: CL:4033014
-        title: peg cell
-      CL:0000212:
-        text: CL:0000212
-        description: A cell that takes up and metabolizes substances.
-        meaning: CL:0000212
-        title: absorptive cell
       CL:0000611:
         text: CL:0000611
         description: Any granulocytopoietic cell that has part some transcription
@@ -1057,12 +1071,12 @@ enums:
         title: tracheobronchial serous cell
       CL:4042019:
         text: CL:4042019
-        description: A type of tanycyte found in the lateral infundibular recess of
-          the brain. This tanycyte has an elongated morphology with multiple microvilli
-          extending to the third ventricle in the lateral zones of the median eminence.
-          This type of tanycyte expresses FGF receptors 1 and 2, is in contact with
-          GnRH neurons, and is involved in the release of gonadotropin-releasing hormone
-          (GnRH).
+        description: A type of tanycyte located in ventral part of the lateral wall
+          of the third ventricle and in the lateral infundibular recess of the brain.
+          This tanycyte has an elongated morphology with multiple microvilli extending
+          into the median eminence. This type of tanycyte expresses FGF receptors
+          1 and 2, is in contact with GnRH neurons, and is involved in the release
+          of gonadotropin-releasing hormone (GnRH).
         meaning: CL:4042019
         title: beta1-tanycyte
       CL:1001100:
@@ -1107,12 +1121,13 @@ enums:
           the primary motor cortex
       CL:0002085:
         text: CL:0002085
-        description: A specialized elongated ventricular ependymal cell that has processes
-          that extend to the outer, or pial, surface of the CNS. A tanycyte is found
-          in the adult brain, specifically in the third ventricle, cerebral aqueduct,
-          spinal canal, and floor of the fourth ventricle. This cell type is involved
-          in hormonal regulation, gatekeeping molecules between the bloodstream and
-          cerebrospinal fluid, metabolic sensing, and regulating food intake.
+        description: A specialized elongated ventricular ependymal cell with one or
+          more processes that extend into the brain parenchyma or associated blood
+          vessels where they contact blood vessel endothelial cells and/or neurons.
+          These cells are found in the ventricles and circumventricular organs of
+          the brain. They are involved in hormonal regulation, gatekeeping molecules
+          between the bloodstream and cerebrospinal fluid, metabolic sensing, and
+          regulating food intake.
         meaning: CL:0002085
         title: tanycyte
       CL:1001142:
@@ -1885,7 +1900,7 @@ enums:
           cells are used to make a distinction between this cell and the other functionally
           different subpopulation of granulosa cells at the wall of the Graafian follicle.
         meaning: CL:0000711
-        title: cumulus cell
+        title: cumulus granulosa cell
       CL:0007019:
         text: CL:0007019
         meaning: CL:0007019
@@ -2139,6 +2154,12 @@ enums:
         description: A pyramidal neuron with soma located in the amygdala.
         meaning: CL:4023110
         title: amygdala pyramidal neuron
+      CL:4070016:
+        text: CL:4070016
+        description: Pyloric pacemaker neuron that provides feedback to commissural
+          ganglia (CoG) neurons.
+        meaning: CL:4070016
+        title: anterior burster neuron
       CL:0002210:
         text: CL:0002210
         description: A slow muscle cell that contains high levels of myoglobin and
@@ -2709,6 +2730,17 @@ enums:
           sperm or a Y-bearing sperm fertilizes the X-bearing ovum.
         meaning: CL:0002291
         title: X chromosome-bearing sperm cell
+      CL:4047036:
+        text: CL:4047036
+        description: A smooth muscle cell located in the middle layer of the muscularis
+          externa of the stomach wall. This cell is arranged concentrically with the
+          stomach's longitudinal axis, forming a continuous sheet of contractile tissue.
+          It is fusiform in shape, containing actin and myosin filaments that enable
+          contraction without striations. This cell contributes to the mechanical
+          digestion and movement of food within the stomach through coordinated contractions,
+          and plays a role in forming the pyloric sphincter in the pyloric region.
+        meaning: CL:4047036
+        title: stomach smooth muscle circular layer cell
       CL:1001585:
         text: CL:1001585
         description: 'Glandular cell of appendix epithelium. Example: Goblet cells;
@@ -2754,6 +2786,18 @@ enums:
           while the lamina is renewed on its inner surface by the endothelial cells.
         meaning: CL:0002173
         title: extraglomerular mesangial cell
+      CL:4047054:
+        text: CL:4047054
+        description: A dendritic cell capable of capturing antigens in peripheral
+          tissues and migrating through blood or lymphatic vessels to secondary lymphoid
+          organs, where it presents processed antigens to T cells. It expresses MHC
+          class II molecules and lacks lineage markers associated with other leukocyte
+          populations, distinguishing it as a member of the dendritic cell lineage.
+          This cell plays a pivotal role in initiating and regulating adaptive immune
+          responses by linking peripheral antigen capture with T cell activation in
+          lymphoid tissues.
+        meaning: CL:4047054
+        title: migratory dendtritic cell
       CL:4040006:
         text: CL:4040006
         description: A chromatophore that is part of the dermis.
@@ -2851,6 +2895,7 @@ enums:
         title: IgG short lived plasma cell
       CL:0000078:
         text: CL:0000078
+        description: Any squamous epithelial cell that is part of some periderm.
         meaning: CL:0000078
         title: peridermal cell
       CL:0002106:
@@ -2989,7 +3034,7 @@ enums:
         description: A leukocyte with a single non-segmented nucleus in the mature
           form.
         meaning: CL:0000842
-        title: mononuclear cell
+        title: mononuclear leukocyte
       CL:0001031:
         text: CL:0001031
         description: An excitatory granule cell with a soma located in the granular
@@ -3019,11 +3064,13 @@ enums:
         title: male gamete
       CL:0002204:
         text: CL:0002204
-        description: A cell type found in the gastrointestinal and respiratory tracts
-          that is characterized by the presence of a tuft of blunt, squat microvilli
-          (120-140 per cell). Function of this cell type is not known.
+        description: An epithelial cell found in various organs, including the gastrointestinal
+          and respiratory tracts, characterized by a tuft of 120-140 blunt microvilli
+          on its apical surface. This cell exhibits diverse functions depending on
+          its location, which includes chemosensation, initiation of immune responses,
+          contribution to mucociliary clearance, and defense against parasites.
         meaning: CL:0002204
-        title: brush cell
+        title: tuft cell
       CL:0004215:
         text: CL:0004215
         description: A type 5 cone bipolar cell with narrowly stratified post synaptic
@@ -3238,6 +3285,12 @@ enums:
           secreted vesicles or dissolved in the cytoplasm that is lost during secretion.
         meaning: CL:0000033
         title: apocrine cell
+      CL:4070012:
+        text: CL:4070012
+        description: A motor neuron that controls ventral stomach grooves leading
+          to pyloric filter.
+        meaning: CL:4070012
+        title: inferior cardiac neuron
       CL:1000486:
         text: CL:1000486
         description: A basal cell that is part of the urothelium. Compared to other
@@ -3388,6 +3441,14 @@ enums:
           a xanthophore.
         meaning: CL:0005002
         title: xanthoblast
+      CL:4047056:
+        text: CL:4047056
+        description: A columnar, mucin-producing cholangiocyte that lines large bile
+          ducts, including the hilar bile duct, right and left hepatic bile ducts,
+          and large intrahepatic bile ducts. This cell expresses phosphorylated STAT3
+          and TFF-3 in humans and mice.
+        meaning: CL:4047056
+        title: large mucus secreting cholangiocyte
       CL:0001013:
         text: CL:0001013
         description: Mature interstitial dendritic cell is a interstitial dendritic
@@ -3768,6 +3829,16 @@ enums:
           neuron or a motor neuron.
         meaning: CL:0000534
         title: primary interneuron (sensu Teleostei)
+      CL:4052041:
+        text: CL:4052041
+        description: A tuft cell that is part of the epithelium of the pharyngotympanic
+          (auditory) tube. This chemosensory cell is often positioned near cholinoreceptive
+          sensory nerve fibers, suggesting a role in neuroimmune communication. It
+          detects chemical signals and releases neuropeptides, such as acetylcholine
+          (ACh) and CGRP, which contribute to inflammatory responses that help protect
+          deeper tissues from harmful substances.
+        meaning: CL:4052041
+        title: tuft cell of auditory tube
       CL:0002256:
         text: CL:0002256
         description: A supportive cell that has characteristics of glial cell. Processes
@@ -3824,9 +3895,9 @@ enums:
         description: A tuft cell that is part of the medullary epithelium of the thymus,
           characterized by lateral microvilli and specific markers, including L1CAM
           in both mice (Zhang et al., 2022) and humans (Sun et al., 2023), as well
-          as MHC II in mice (Kotas et al., 2023). This cell is pivotal in immune functions
-          such as antigen presentation, central tolerance, and type 2 immunity. A
-          tuft cell in the thymus exhibits characteristics of both a medullary thymic
+          as MHC II in mice (Miller et al., 2018). This cell is pivotal in immune
+          functions such as antigen presentation, central tolerance, and type 2 immunity.
+          A tuft cell in the thymus exhibits characteristics of both a medullary thymic
           epithelial cell (mTEC) and a peripheral tuft cell. Its development is governed
           by transcription factors such as POU2F3.
         meaning: CL:4052034
@@ -4144,13 +4215,6 @@ enums:
           lineage markers (lin-negative).
         meaning: CL:0000553
         title: megakaryocyte progenitor cell
-      CL:0000651:
-        text: CL:0000651
-        description: A mucus-secreting cell, with numerous apical secretory vesicles
-          containing mucins; nucleus are basally displaced; numerous at the neck of
-          mucus secreting glands
-        meaning: CL:0000651
-        title: mucous neck cell
       CL:4023013:
         text: CL:4023013
         description: A glutamatergic neuron located in the cerebral cortex that projects
@@ -4355,6 +4419,21 @@ enums:
           relative to small/intrahepatic cholangiocytes.
         meaning: CL:0019020
         title: extrahepatic cholangiocyte
+      CL:4052052:
+        text: CL:4052052
+        description: "A uterine natural killer subset that is present in the endometrial\
+          \ lining during the non-pregnant state (Garcia-Alonso et al., 2021) and\
+          \ in the decidua during pregnancy (Vento-Tormo et al., 2018), peaking in\
+          \ the first trimester. It expresses the uterine resident marker CD49a and\
+          \ is distinguished from uNK1 and uNK3 by the absence of CD39, CD103 (Whettlock\
+          \ et al., 2022), and CD160 (Mare\u010Dkov\xE1 et al., 2024), with ITGB2\
+          \ serving as a defining marker (Vento-Tormo et al., 2018). Functionally,\
+          \ it produces more cytokines upon stimulation than uNK1, suggesting a role\
+          \ in immune defense, and secretes XCL1 chemokines, facilitating interactions\
+          \ with maternal dendritic cells and fetal extravillous trophoblasts (Vento-Tormo\
+          \ et al., 2018)."
+        meaning: CL:4052052
+        title: uterine natural killer cell 2, human
       CL:4023074:
         text: CL:4023074
         description: A neuron that has its soma located in the mammillary body.
@@ -4382,10 +4461,11 @@ enums:
         title: alveolar macrophage
       CL:4042017:
         text: CL:4042017
-        description: "A tanycyte cell found in the ventromedial and dorsomedial nuclei\
-          \ of the hypothalamus. This type of tanycyte extends its protrusions close\
-          \ to parenchymal neurons without contacting blood vessels. It expresses\
-          \ the glial marker S-100\u03B2."
+        description: "The dorsal-most tanycyte type of the third venticle.  These\
+          \ cells projects into the ventromedial or dorsomedial nucleus of the hypothalamus.\
+          \ This type of tanycyte extends its protrusions close to parenchymal neurons\
+          \ without contacting blood vessels. It expresses the glial marker S-100\u03B2\
+          ."
         meaning: CL:4042017
         title: alpha1-tanycyte
       CL:0000694:
@@ -4473,6 +4553,11 @@ enums:
         title: CD8aa(I) thymocyte
       CL:0000131:
         text: CL:0000131
+        description: "An endothelial cell that lines the blood and lymphatic vessels\
+          \ of the digestive tract. This cell forms the gut\u2013vascular barrier\
+          \ (GVB) through tight junctions and crosstalk with pericytes and enteric\
+          \ glial cells, regulating the passage of nutrients and immune cells while\
+          \ restricting microbial translocation into the bloodstream."
         meaning: CL:0000131
         title: gut endothelial cell
       CL:4052016:
@@ -4638,10 +4723,10 @@ enums:
         title: naive regulatory T cell
       CL:0002250:
         text: CL:0002250
-        description: A cell that is found in a zone occupying the bottom region of
-          the crypt; provide the source of most of the cell types of the intestinal
-          epithelium; proliferate by mitotic division; differentiates into columnar
-          or goblet cells.
+        description: A stem cell located in epithelium the based of the crypt of Lieberkuhn.
+          Division of these cells serve both to maintain the stem cell population
+          and produce the transit amplifying cells that are all precursors of all
+          cell types that populate the intestinal epithelium.
         meaning: CL:0002250
         title: intestinal crypt stem cell
       CL:4052008:
@@ -4762,8 +4847,11 @@ enums:
         title: nucleated thrombocyte
       CL:1000850:
         text: CL:1000850
-        description: Any epithelial cell of distal tubule that is part of some macula
-          densa.
+        description: An epithelial cell that is part of the macula densa, characterized
+          by a tightly packed arrangement, apically positioned nuclei, and prominent
+          primary cilia, creating a distinctive 'dense spot' appearance under microscopy.
+          It is involved in regulating renal blood flow, glomerular filtration rate,
+          and renin release.
         meaning: CL:1000850
         title: macula densa epithelial cell
       CL:0000311:
@@ -5114,6 +5202,17 @@ enums:
           and is capable of expressing IL17A and/or IL-22.
         meaning: CL:0001071
         title: group 3 innate lymphoid cell
+      CL:0000127:
+        text: CL:0000127
+        description: A class of large neuroglial (macroglial) cells in the central
+          nervous system - the largest and most numerous neuroglial cells in the brain
+          and spinal cord. Astrocytes (from 'star' cells) are irregularly shaped with
+          many long processes, including those with 'end feet' which form the glial
+          (limiting) membrane and directly and indirectly contribute to the blood-brain
+          barrier. They regulate the extracellular ionic and chemical environment,
+          and 'reactive astrocytes' (along with microglia) respond to injury.
+        meaning: CL:0000127
+        title: astrocyte
       CL:0000809:
         text: CL:0000809
         description: A thymocyte expressing the alpha-beta T cell receptor complex
@@ -5350,25 +5449,6 @@ enums:
           and, later in gestation, the spongiotrophoblast.
         meaning: CL:0002498
         title: secondary trophoblast giant cell
-      CL:0007021:
-        text: CL:0007021
-        description: Secretory cell that produces a chemical mixture that triggers
-          antipredator behavior. The substance is released only upon disruption of
-          the epidermis. [Behavior of teleost fishes, second edition, edited by Pitcher,
-          1992]
-        meaning: CL:0007021
-        title: alarm substance cell
-      CL:0000127:
-        text: CL:0000127
-        description: A class of large neuroglial (macroglial) cells in the central
-          nervous system - the largest and most numerous neuroglial cells in the brain
-          and spinal cord. Astrocytes (from 'star' cells) are irregularly shaped with
-          many long processes, including those with 'end feet' which form the glial
-          (limiting) membrane and directly and indirectly contribute to the blood-brain
-          barrier. They regulate the extracellular ionic and chemical environment,
-          and 'reactive astrocytes' (along with microglia) respond to injury.
-        meaning: CL:0000127
-        title: astrocyte
       CL:1001608:
         text: CL:1001608
         description: Fibroblast from foreskin.
@@ -5414,6 +5494,12 @@ enums:
           follicular stimulating hormone (FSH) and luteinizing hormone (LH).
         meaning: CL:0000437
         title: gonadtroph
+      CL:4052045:
+        text: CL:4052045
+        description: A stromal cell that is part of the ovarian stroma, characterized
+          by its ability to synthesize steroid hormones.
+        meaning: CL:4052045
+        title: steroidogenic stromal cell of ovary
       CL:0001029:
         text: CL:0001029
         description: Common dendritic precursor is a hematopoietic progenitor cell
@@ -5605,7 +5691,7 @@ enums:
         description: Any epithelial cell that is part of the fallopian tube and lacks
           cilia.
         meaning: CL:4052019
-        title: fallopian tube non-ciliated cell
+        title: fallopian tube non-ciliated epithelial cell
       CL:0000678:
         text: CL:0000678
         description: A neuron with soma location in the central nervous system that
@@ -5668,9 +5754,9 @@ enums:
         title: skeletal muscle satellite stem cell
       CL:4042018:
         text: CL:4042018
-        description: "A type of tanycyte found in the dorsomedial arcuate nucleus\
-          \ of the hypothalamus. This mono-ciliated tanycyte extends its protrusion\
-          \ to the arcuate nucleus and expresses the glial marker S-100\u03B2."
+        description: "Tanycyte of the third ventricle, located immediately ventral\
+          \ to alpha-1 tanycytes. These cells project to the ventromedial and arcuate\
+          \ nuclei of the hypothalamus and express the glial marker S-100\u03B2."
         meaning: CL:4042018
         title: alpha2-tanycyte
       CL:0000891:
@@ -6567,6 +6653,19 @@ enums:
           cell has the phenotype IgM-negative, IgD-positive, and CD38-positive.
         meaning: CL:0000963
         title: Bm3-delta B cell
+      CL:0002497:
+        text: CL:0002497
+        description: A trophoblast giant cell derived from the mural trophectoderm.
+        meaning: CL:0002497
+        title: primary trophoblast giant cell
+      CL:0008045:
+        text: CL:0008045
+        description: A tanycyte of the subcommisural organ (SCO).  These cells extend
+          long and slender fibers extending from their cell bodies in the ependyma
+          toward fenestrated capillaries associated with the SCO, where they form
+          a dense network surrounding these capillaries.
+        meaning: CL:0008045
+        title: tanycyte of subcommissural organ
       CL:4040002:
         text: CL:4040002
         description: Glial cell that provides support to the enteric nervous system.
@@ -6581,11 +6680,6 @@ enums:
           is glial fibrillary acidic protein (GFAP).
         meaning: CL:4040002
         title: enteroglial cell
-      CL:0002497:
-        text: CL:0002497
-        description: A trophoblast giant cell derived from the mural trophectoderm.
-        meaning: CL:0002497
-        title: primary trophoblast giant cell
       CL:0002086:
         text: CL:0002086
         description: A cardiac myocyte that is an excitable cells in the myocardium,
@@ -7093,7 +7187,14 @@ enums:
         title: kidney connecting tubule alpha-intercalated cell
       CL:0009041:
         text: CL:0009041
-        description: A tuft cell that is a part of the colon.
+        description: "A tuft cell that is part of the colonic epithelium, primarily\
+          \ adapted for microbial sensing in the dense colonic microbiota. Unlike\
+          \ its small intestinal counterpart, it does not participate in parasite-driven\
+          \ tuft cell\u2013ILC2 circuits. Instead, it detects bacterial metabolites\
+          \ via taste-signaling pathways (Strine and Craig, 2022). The colonic tuft\
+          \ cell plays a key role in epithelial repair, modulates inflammatory responses\
+          \ through IL-25 secretion, and contributes to intestinal homeostasis by\
+          \ balancing microbiome interactions (Sebastian et al., 2021)."
         meaning: CL:0009041
         title: tuft cell of colon
       CL:4033019:
@@ -7167,6 +7268,12 @@ enums:
         description: A mature sexual reproductive cell of the female germline.
         meaning: CL:0000675
         title: female gamete
+      CL:0008055:
+        text: CL:0008055
+        description: A secretory epithelial cell of the respiratory tract epithelium.  These
+          cells have an endodermal origin.
+        meaning: CL:0008055
+        title: respiratory tract secretory epithelial cell
       CL:0011027:
         text: CL:0011027
         description: Any fibroblast that is part of skeletal muscle tissue.
@@ -7198,10 +7305,6 @@ enums:
         description: Squamous cell of uterine cervix epithelium.
         meaning: CL:1001575
         title: uterine cervix squamous cell
-      CL:0000386:
-        text: CL:0000386
-        meaning: CL:0000386
-        title: attachment cell
       CL:0000932:
         text: CL:0000932
         description: A type II NK T cell that has been recently activated, secretes
@@ -7610,6 +7713,11 @@ enums:
           CD19, and CD20, and of larger size than non-classical monocytes.
         meaning: CL:0000860
         title: classical monocyte
+      CL:4070011:
+        text: CL:4070011
+        description: A motor neuron that closes the lateral teeth.
+        meaning: CL:4070011
+        title: lateral gastric neuron
       CL:0001035:
         text: CL:0001035
         description: A connective tissue cell found in bone.
@@ -8299,6 +8407,17 @@ enums:
           specialized function of the FAE in mucosal immunity.
         meaning: CL:4052011
         title: follicle associated enterocyte
+      CL:4052040:
+        text: CL:4052040
+        description: A tuft cell that is part of the epithelium of the stomach. This
+          cell is characterized by gastric chemosensation and immune regulation through
+          IL-25 secretion, which activates ILC2s to produce IL-13, driving epithelial
+          remodelling and tuft cell expansion. Unlike intestinal tuft cells, which
+          are primarily involved in helminth defense and type 2 immunity, the tuft
+          cell of the stomach is primarily involved in inflammation, metaplasia, and
+          hyperplasia.
+        meaning: CL:4052040
+        title: tuft cell of stomach
       CL:0005010:
         text: CL:0005010
         description: A cuboidal epithelial cell of the kidney that regulates acid/base
@@ -9070,6 +9189,12 @@ enums:
           and secretion of parathyroid hormone.
         meaning: CL:0000446
         title: chief cell of parathyroid gland
+      CL:0000916:
+        text: CL:0000916
+        description: A mature gamma-delta T cell located in the epidermis that regulates
+          wound healing.
+        meaning: CL:0000916
+        title: dendritic epidermal T cell
       CL:0000561:
         text: CL:0000561
         description: Interneuron of the vertebrate retina. They integrate, modulate,
@@ -9226,6 +9351,15 @@ enums:
         description: A smooth muscle cell that is part of the cecum.
         meaning: CL:1000281
         title: smooth muscle cell of cecum
+      CL:4052039:
+        text: CL:4052039
+        description: A tuft cell that is part of the epithelium of the submandibular
+          gland, localized to the striated ducts in mice, pigs, and humans, and to
+          the main excretory ducts in rats. This cell is characterized by chemosensory
+          functions, potential roles in immune regulation, and possible involvement
+          in salivary secretion via acetylcholine release.
+        meaning: CL:4052039
+        title: tuft cell of submandibular gland
       CL:0002368:
         text: CL:0002368
         description: An epithelial cell of the respiratory tract epithelium.  These
@@ -9253,15 +9387,21 @@ enums:
           in cortical layer 4/5.
         meaning: CL:4030062
         title: L4/5 intratelencephalic projecting glutamatergic neuron
-      CL:0000334:
-        text: CL:0000334
-        meaning: CL:0000334
-        title: vegetative cell (sensu Fungi)
       CL:2000006:
         text: CL:2000006
         description: Any germinal center B cell that is part of a tonsil.
         meaning: CL:2000006
         title: tonsil germinal center B cell
+      CL:0000334:
+        text: CL:0000334
+        meaning: CL:0000334
+        title: vegetative cell (sensu Fungi)
+      CL:4052055:
+        text: CL:4052055
+        description: A mature NK T cell that can be identified by the expression of
+          CD56 in humans.
+        meaning: CL:4052055
+        title: mature NK T cell, human
       CL:1000335:
         text: CL:1000335
         description: An enterocyte that is part of the epithelium of intestinal villus.
@@ -9376,6 +9516,16 @@ enums:
         description: An epithelial cell of thyroid gland.
         meaning: CL:0002257
         title: epithelial cell of thyroid gland
+      CL:4047042:
+        text: CL:4047042
+        description: An enteric glial cell located within the myenteric ganglia of
+          the gastrointestinal tract. This cell has a small somata and has very short,
+          irregularly branched processes that surround neuron cell bodies, giving
+          it a protoplasmic-like appearance. It plays crucial roles in modulating
+          myenteric neuron activity, regulating oxidative stress, and influencing
+          neuroinflammation and neurogenesis.
+        meaning: CL:4047042
+        title: type 1 myenteric plexus glia
       CL:1000296:
         text: CL:1000296
         description: An epithelial cell that is part of the urethra.
@@ -9426,16 +9576,6 @@ enums:
           formation of the micropyle.
         meaning: CL:0000579
         title: border follicle cell
-      CL:0000217:
-        text: CL:0000217
-        meaning: CL:0000217
-        title: insulating cell
-      CL:0000916:
-        text: CL:0000916
-        description: A mature gamma-delta T cell located in the epidermis that regulates
-          wound healing.
-        meaning: CL:0000916
-        title: dendritic epidermal T cell
       CL:0000406:
         text: CL:0000406
         meaning: CL:0000406
@@ -9618,12 +9758,6 @@ enums:
         description: The neurons that utilize glycine as a neurotransmitter.
         meaning: CL:1001509
         title: glycinergic neuron
-      CL:0002428:
-        text: CL:0002428
-        description: A double-positive thymocyte that is large (i.e. has a high forward
-          scatter signal in flow cytometry) and is actively proliferating.
-        meaning: CL:0002428
-        title: double-positive blast
       CL:0002453:
         text: CL:0002453
         description: A progenitor cell of the central nervous system that can differentiate
@@ -10084,6 +10218,22 @@ enums:
           and CD23-negative.
         meaning: CL:0000958
         title: T1 B cell
+      CL:4047047:
+        text: CL:4047047
+        description: "An enteric glial cell located within the ganglia of the enteric\
+          \ nervous system. This cell is characterized by it\u2019s small somata and\
+          \ short, irregularly branched processes that surround neuronal cell bodies\
+          \ in the myenteric and submucosal ganglia. This cell plays important roles\
+          \ in modulating neuronal activity and neurogenesis in the gastrointestinal\
+          \ tract."
+        meaning: CL:4047047
+        title: type I enteric glial cell
+      CL:0002428:
+        text: CL:0002428
+        description: A double-positive thymocyte that is large (i.e. has a high forward
+          scatter signal in flow cytometry) and is actively proliferating.
+        meaning: CL:0002428
+        title: double-positive blast
       CL:0002433:
         text: CL:0002433
         description: A CD4-positive, CD8-negative thymocyte that expresses high levels
@@ -10756,28 +10906,6 @@ enums:
         text: CL:0000676
         meaning: CL:0000676
         title: cap cell
-      CL:2000067:
-        text: CL:2000067
-        description: Any fibroblast that is part of a cardiac atrium.
-        meaning: CL:2000067
-        title: cardiac atrium fibroblast
-      CL:0001074:
-        text: CL:0001074
-        description: An innate lymphoid cell precursor in the human with the phenotype
-          CD34-positive, CD56-positive, CD117-positive.Thie cell type may include
-          precusors to NK cells and ILC3 cells.
-        meaning: CL:0001074
-        title: CD34-positive, CD56-positive, CD117-positive common innate lymphoid
-          precursor, human
-      CL:0000843:
-        text: CL:0000843
-        description: A resting mature B cell that has the phenotype IgM-positive,
-          IgD-positive, CD23-positive and CD21-positive, and found in the B cell follicles
-          of the white pulp of the spleen or the corticol areas of the peripheral
-          lymph nodes. This cell type is also described as being CD19-positive, B220-positive,
-          AA4-negative, CD43-negative, and CD5-negative.
-        meaning: CL:0000843
-        title: follicular B cell
       CL:0002261:
         text: CL:0002261
         description: An endothelial cell found in the mucosa associated with the facial
@@ -10939,6 +11067,17 @@ enums:
           and bronchial mucosa-associated lymphoid tissues.
         meaning: CL:0000886
         title: nasal and broncial associated lymphoid tissue macrophage
+      CL:2000067:
+        text: CL:2000067
+        description: Any fibroblast that is part of a cardiac atrium.
+        meaning: CL:2000067
+        title: cardiac atrium fibroblast
+      CL:4070017:
+        text: CL:4070017
+        description: A motor neuron that controls pyloric filter movements; innervates
+          the lateral pyloric muscle.
+        meaning: CL:4070017
+        title: lateral pyloric motor neuron
       CL:0002241:
         text: CL:0002241
         description: A fibroblasts found in interstitial spaces in the pulmonary tract.
@@ -11079,6 +11218,38 @@ enums:
           involved in sensory perception of touch.
         meaning: CL:0000200
         title: touch receptor cell
+      CL:4070014:
+        text: CL:4070014
+        description: A motor neuron that controls pyloric filter movements; innervates
+          the pyloric muscle.
+        meaning: CL:4070014
+        title: pyloric motor neuron
+      CL:0001074:
+        text: CL:0001074
+        description: An innate lymphoid cell precursor in the human with the phenotype
+          CD34-positive, CD56-positive, CD117-positive.Thie cell type may include
+          precusors to NK cells and ILC3 cells.
+        meaning: CL:0001074
+        title: CD34-positive, CD56-positive, CD117-positive common innate lymphoid
+          precursor, human
+      CL:4052047:
+        text: CL:4052047
+        description: A luteal cell that is part of the older, regressing corpus luteum.
+          This cell exhibits increased expression of genes involved in progesterone
+          metabolism - Akr1c18 in mice (Lan et al., 2024), cell cycle arrest, and
+          apoptosis. A late luteal cell contributes to corpus luteum regression and
+          eventual clearance from the ovary through luteolysis.
+        meaning: CL:4052047
+        title: late luteal cell
+      CL:0000843:
+        text: CL:0000843
+        description: A resting mature B cell that has the phenotype IgM-positive,
+          IgD-positive, CD23-positive and CD21-positive, and found in the B cell follicles
+          of the white pulp of the spleen or the corticol areas of the peripheral
+          lymph nodes. This cell type is also described as being CD19-positive, B220-positive,
+          AA4-negative, CD43-negative, and CD5-negative.
+        meaning: CL:0000843
+        title: follicular B cell
       CL:2000076:
         text: CL:2000076
         description: Any vein endothelial cell that is part of a hindlimb stylopod.
@@ -11482,6 +11653,20 @@ enums:
         description: A muscle cell that is part of the middle internodal tract.
         meaning: CL:1000290
         title: myocyte of middle internodal tract
+      CL:4052053:
+        text: CL:4052053
+        description: "A uterine natural killer subset found in the endometrial lining\
+          \ during the non-pregnant state (Garcia-Alonso et al., 2021) and in the\
+          \ decidua during pregnancy (Vento-Tormo et al., 2018), becoming the dominant\
+          \ uNK subset late in pregnancy. It expresses the uterine resident marker\
+          \ CD49a and is distinguished from uNK1 and uNK2 by CD160 (Mare\u010Dkov\xE1\
+          \ et al., 2024) and CD103 expression, the absence of CD39, and low KIR levels\
+          \ (Whettlock et al., 2022). Resembling intraepithelial ILC1 cells, uNK3\
+          \ primarily supports uterine immune defense (Huhn et al., 2020) and indirectly\
+          \ influences trophoblast behavior through chemokine secretion, such as CCL5\
+          \ (Vento-Tormo et al., 2018)."
+        meaning: CL:4052053
+        title: uterine natural killer cell 3, human
       CL:0002314:
         text: CL:0002314
         description: An auditory epithelial support cell located in the vestibular
@@ -11824,12 +12009,6 @@ enums:
         description: A peptide hormone secreting cell that secretes substance P.
         meaning: CL:0000505
         title: substance P secreting cell
-      CL:4032001:
-        text: CL:4032001
-        description: A GABAergic interneuron located in the cerebral cortex that expresses
-          reelin (rln).
-        meaning: CL:4032001
-        title: reelin GABAergic cortical interneuron
       CL:0002434:
         text: CL:0002434
         description: A CD8-positive, CD4-negative thymocyte that is CD24-positive
@@ -11941,6 +12120,15 @@ enums:
         description: An endothelial cell that is part of a hepatic portal vein.
         meaning: CL:0009094
         title: endothelial cell of hepatic portal vein
+      CL:4047048:
+        text: CL:4047048
+        description: An enteric glial cell characterized by a small central soma that
+          extends long, thin, bipolar projections. This cell is primarily located
+          along small nerve fibers within the muscle layers of the gastrointestinal
+          tract and is known for its unbranching processes that closely follow these
+          nerve fibers in the muscularis.
+        meaning: CL:4047048
+        title: type 4 muscularis propria glia
       CL:4042002:
         text: CL:4042002
         description: A nucleus accumbens shell and olfactory tubercle D1 medium spiny
@@ -11951,12 +12139,6 @@ enums:
         text: CL:0000452
         meaning: CL:0000452
         title: thyroid hormone secreting cell
-      CL:0000215:
-        text: CL:0000215
-        description: A cell whose primary function is to prevent the transport of
-          stuff across compartments.
-        meaning: CL:0000215
-        title: barrier cell
       CL:0002376:
         text: CL:0002376
         description: A glial cell that ensheaths multiple small diameter axons in
@@ -12052,6 +12234,12 @@ enums:
         description: A smooth muscle of the pulmonary artery.
         meaning: CL:0002591
         title: smooth muscle cell of the pulmonary artery
+      CL:4070013:
+        text: CL:4070013
+        description: A motor neuron that controls  ventral stomach grooves leading
+          to pyloric filter.
+        meaning: CL:4070013
+        title: ventricular dilator motor neuron
       CL:0002423:
         text: CL:0002423
         description: A DN2 thymocyte that is Kit-hi.
@@ -12091,6 +12279,20 @@ enums:
         description: Any fibroblast that is part of a female gonad.
         meaning: CL:2000063
         title: ovarian fibroblast
+      CL:4052046:
+        text: CL:4052046
+        description: A luteal cell that is part of the young, developing corpus luteum.
+          This cell promotes progesterone synthesis, marked by high Parm1 expression
+          in mice (Lan et al., 2024). An early luteal cell is associated with steroidogenesis
+          and cell growth, contributing to early corpus luteum function and maturation.
+        meaning: CL:4052046
+        title: early luteal cell
+      CL:4032001:
+        text: CL:4032001
+        description: A GABAergic interneuron located in the cerebral cortex that expresses
+          reelin (rln).
+        meaning: CL:4032001
+        title: reelin GABAergic cortical interneuron
       CL:0000835:
         text: CL:0000835
         description: The most primitive precursor in the granulocytic series, having
@@ -13251,7 +13453,16 @@ enums:
         title: L5/6 cck GABAergic interneuron (Mmus)
       CL:0011006:
         text: CL:0011006
-        description: An inhibitory GABAergic interneuron found in the cerebellar cortex.
+        description: A cerebellar interneuron characterized by a spindle-shaped or
+          triangular soma, parasagittally oriented and located at the border between
+          the granular layer and the Purkinje cell layer. The Lugaro cell extends
+          dendrites predominantly in the parasagittal plane, forming synaptic interactions
+          with basket, stellate, and Golgi cells. Its axonal projections extend upward
+          into the molecular layer, where they form a parasagittal plexus and emit
+          long transverse collaterals that run parallel to the long axis of the cerebellar
+          folia. The Lugaro cell is capable of co-releasing GABA and glycine, as evidenced
+          by the expression of glutamate decarboxylase (GAD65/67) and the glycine
+          transporter GlyT2.
         meaning: CL:0011006
         title: Lugaro cell
       CL:0002134:
@@ -13945,10 +14156,11 @@ enums:
           composed of a few long, smooth axonal branches.
         meaning: CL:4023089
         title: nest basket cell
-      CL:1000696:
-        text: CL:1000696
-        meaning: CL:1000696
-        title: kidney interstitial inflammatory macrophage
+      CL:0002579:
+        text: CL:0002579
+        description: A preadipocyte that is part of an omentum.
+        meaning: CL:0002579
+        title: omentum preadipocyte
       CL:1000314:
         text: CL:1000314
         description: A goblet cell that is part of the epithelium of gastric cardiac
@@ -14151,17 +14363,6 @@ enums:
         description: A fibroblast of the aortic adventitia.
         meaning: CL:0002547
         title: fibroblast of the aortic adventitia
-      CL:0002579:
-        text: CL:0002579
-        description: A preadipocyte that is part of an omentum.
-        meaning: CL:0002579
-        title: omentum preadipocyte
-      CL:0000213:
-        text: CL:0000213
-        description: A cell within an epithelial cell sheet whose main function is
-          to act as an internal or external covering for a tissue or an organism.
-        meaning: CL:0000213
-        title: lining cell
       CL:0017002:
         text: CL:0017002
         description: A neuroendocrine cell that is part of the prostate epithelium.
@@ -14232,6 +14433,14 @@ enums:
         description: A cell in the zona reticularis that produce sex hormones.
         meaning: CL:0002137
         title: type III cell of adrenal cortex
+      CL:4047044:
+        text: CL:4047044
+        description: An enteric glial cell that has an elongated, fibrous morphology
+          with long processes that run parallel to nerve fibers connecting enteric
+          myenteric ganglia. This cell is located in the interganglionic fiber tracts
+          of the enteric nervous system.
+        meaning: CL:4047044
+        title: type 2 interganglionic glia
       CL:0000413:
         text: CL:0000413
         description: A cell whose nucleus contains a single haploid genome.
@@ -14303,6 +14512,23 @@ enums:
         description: An epithelial cell of the retinal pigmented epithelium.
         meaning: CL:0002586
         title: retinal pigment epithelial cell
+      CL:1000696:
+        text: CL:1000696
+        meaning: CL:1000696
+        title: kidney interstitial inflammatory macrophage
+      CL:0008053:
+        text: CL:0008053
+        description: A capillary endothelial cell that is part of the circumventricular
+          organs (CVOs), characterized by fenestrations that facilitate selective
+          permeability to molecules, distinguishing it from the non-fenestrated endothelial
+          cells of the blood-brain barrier. This cell is integral to the unique vascular
+          structure of CVOs, which lack a traditional blood-brain barrier. It enables
+          bidirectional exchange of polar molecules between blood and neural tissue,
+          supporting neuroendocrine signaling, fluid balance, and immune responses.
+          It is marked by the expression of PLVAP, a component of the fenestral diaphragm,
+          in both rodents and humans.
+        meaning: CL:0008053
+        title: circumventricular organ capillary endothelial cell
       CL:0000453:
         text: CL:0000453
         description: Langerhans cell is a conventional dendritic cell that has plasma
@@ -14593,6 +14819,14 @@ enums:
           (pore) through the chorion through which the sperm fertilizes the egg.
         meaning: CL:0007022
         title: micropylar cell
+      CL:0008044:
+        text: CL:0008044
+        description: A tanycyte of the area postrema (AP).  These cells extend long
+          and slender fibers extending from their cell bodies in the ependyma toward
+          fenestrated capillaries associated with the AP, where they form a dense
+          network surrounding these capillaries.
+        meaning: CL:0008044
+        title: tanycyte of area postrema
       CL:2000030:
         text: CL:2000030
         description: Any native cell that is part of a hypothalamus.
@@ -15602,12 +15836,6 @@ enums:
           CXCR3-negative, CCR6-negative, and is capable of producing interleukin-4.
         meaning: CL:0000546
         title: T-helper 2 cell
-      CL:0000914:
-        text: CL:0000914
-        description: An immature alpha-beta T-cell that express Egr2. These cells
-          give rise to T cells expressing NK markers.
-        meaning: CL:0000914
-        title: immature NK T cell
       CL:0001002:
         text: CL:0001002
         description: Mature CD8-alpha-negative CD11b-negative dendritic cell is a
@@ -15855,12 +16083,12 @@ enums:
         title: totipotent stem cell
       CL:4042020:
         text: CL:4042020
-        description: A type of tanycyte found in the floor of the infundibular recess
-          in the brain. This tanycyte has an elongated morphology with multiple microvilli
-          extending medially and ventrally to the median eminence, contacting the
-          pial surface and blood vessels. This type of tanycyte expresses FGF receptors
-          1 and 2, is in contact with GnRH neurons, and is involved in the release
-          of gonadotropin-releasing hormone (GnRH).
+        description: A type of tanycyte located in the floor of third ventricle and
+          the infindibular recess. This tanycyte has an elongated morphology with
+          multiple microvilli extending medially and ventrally to the median eminence,
+          contacting the pial surface and blood vessels. This type of tanycyte expresses
+          FGF receptors 1 and 2, is in contact with GnRH neurons, and is involved
+          in the release of gonadotropin-releasing hormone (GnRH).
         meaning: CL:4042020
         title: beta2-tanycyte
       CL:0000981:
@@ -15902,6 +16130,14 @@ enums:
         meaning: CL:1000374
         title: transitional myocyte of posterior division of left branch of atrioventricular
           bundle
+      CL:0008042:
+        text: CL:0008042
+        description: A tanycyte of the subfornical organ (SFO).  These cells extend
+          long and slender fibers extending from their cell bodies in the ependyma
+          toward fenestrated capillaries associated with the SFO, where they form
+          a dense network surrounding these capillaries.
+        meaning: CL:0008042
+        title: tanycyte of subfornical organ
       CL:0000542:
         text: CL:0000542
         description: A lymphocyte is a leukocyte commonly found in the blood and lymph
@@ -15976,6 +16212,17 @@ enums:
         description: An alveolar macrophage that expresses metallothionein.
         meaning: CL:4033042
         title: metallothionein-positive alveolar macrophage
+      CL:0000914:
+        text: CL:0000914
+        description: An immature alpha-beta T-cell that express Egr2. These cells
+          give rise to T cells expressing NK markers.
+        meaning: CL:0000914
+        title: immature NK T cell
+      CL:4070015:
+        text: CL:4070015
+        description: A motor neuron that controls the cardiopyloric valve.
+        meaning: CL:4070015
+        title: pyloric dilator neuron
       CL:0000816:
         text: CL:0000816
         description: An immature B cell is a B cell that has the phenotype surface
@@ -16063,6 +16310,11 @@ enums:
           secretion of specific biomolecules.
         meaning: CL:1100001
         title: secretory epithelial cell
+      CL:4052050:
+        text: CL:4052050
+        description: An epithelial cell that is part of an endometrium luminal epithelium.
+        meaning: CL:4052050
+        title: luminal epithelial cell of endometrium
       CL:0000573:
         text: CL:0000573
         description: One of the two photoreceptor cell types in the vertebrate retina.
@@ -16209,14 +16461,14 @@ enums:
         title: lymphatic endothelial cell of trabecula
       CL:4042030:
         text: CL:4042030
-        description: A GABAergic interneuron located in the cerebellar cortex. This
-          GABAergic interneuron type has a distinct morphology, it presents a small
-          cell soma near the Purkinje cell layer (PCL), dendrites that extend to the
-          surface of the molecular layer, and beaded axons that make local synapses
-          contacts within the molecular layer. A candelabrum cell is excited by mossy
-          fibers and granule cells but inhibited by Purkinje cells, and it inhibits
-          molecular layer interneurons, which leads to the disinhibition of Purkinje
-          cells.
+        description: A GABAergic interneuron located in the Purkinje layer of the
+          cerebellar cortex. This GABAergic interneuron type has a distinct morphology,
+          it presents a small cell soma near the Purkinje cell layer (PCL), dendrites
+          that extend to the surface of the molecular layer, and beaded axons that
+          make local synapses contacts within the molecular layer. A candelabrum cell
+          is excited by mossy fibers and granule cells but inhibited by Purkinje cells,
+          and it inhibits molecular layer interneurons, which leads to the disinhibition
+          of Purkinje cells.
         meaning: CL:4042030
         title: candelabrum cell
       CL:4030023:
@@ -16415,7 +16667,7 @@ enums:
           the transport of ovum during ovulation and the transport of the fertilized
           ovum to the intramural fallopian tube.
         meaning: CL:4030007
-        title: fallopian tube multiciliated cell
+        title: fallopian tube multiciliated epithelial cell
       CL:4023161:
         text: CL:4023161
         description: An excitatory glutamatergic interneuron found in the granular
@@ -16632,9 +16884,9 @@ enums:
         title: Feyrter cell
       CL:0009084:
         text: CL:0009084
-        description: An epithelial cell that is part of an endometrial gland.
+        description: An epithelial cell that is part of an endometrium glandular epithelium.
         meaning: CL:0009084
-        title: epithelial cell of endometrial gland
+        title: glandular epithelial cell of endometrium
       CL:2000023:
         text: CL:2000023
         description: Any interneuron that is part of a spinal cord ventral column.
@@ -16661,6 +16913,15 @@ enums:
         description: A neoplastic cell that is capable of entering a surrounding tissue
         meaning: CL:0001064
         title: malignant cell
+      CL:4047038:
+        text: CL:4047038
+        description: A multipolar neuron in the myenteric plexus of the gastrointestinal
+          tract, characterized by a small to medium-sized cell body and multiple short
+          dendrites.  This neuron exhibits fast excitatory postsynaptic potentials
+          and can be classified into stubby, spiny and hairy subtypes based on dendritic
+          morphology. (Brehmer, 2021)
+        meaning: CL:4047038
+        title: dogiel type I neuron
       CL:0000615:
         text: CL:0000615
         description: A thick walled spore containing one or more haploid nuclei produced
@@ -17049,6 +17310,14 @@ enums:
         description: A secretory epithelial cell of the respiratory and terminal bronchioles.
         meaning: CL:4052031
         title: respiratory airway secretory cell
+      CL:4047045:
+        text: CL:4047045
+        description: An enteric glial cell located in the lamina propria of the intestinal
+          mucosa. This cell plays important roles in maintaining gut barrier function,
+          regulating intestinal homeostasis, and mediating interactions between the
+          enteric nervous system and the immune system.
+        meaning: CL:4047045
+        title: type 3 mucosal glia
       CL:0011013:
         text: CL:0011013
         description: A sperm cell that is cabaple of motion (motility).
@@ -17319,6 +17588,15 @@ enums:
           patch.
         meaning: CL:1000411
         title: endothelial cell of Peyer's patch
+      CL:4052042:
+        text: CL:4052042
+        description: A tuft cell that is part of the epithelium of the urethra. This
+          cell monitors urethral contents by detecting chemical stimuli, such as bitter
+          compounds and sugars. Upon activation, it stimulates sensory nerve fibres
+          and triggers detrusor muscle contraction, likely aiding in pathogen clearance
+          by promoting bladder emptying.
+        meaning: CL:4052042
+        title: tuft cell of urethra
       CL:0000420:
         text: CL:0000420
         description: An epithelial cell that forms a syncytium, which is a multinucleated
@@ -17791,6 +18069,19 @@ enums:
           CD33-positive, and CD13-positive.
         meaning: CL:0000769
         title: basophilic metamyelocyte
+      CL:4047053:
+        text: CL:4047053
+        description: A macrophage characterized by high expression of Triggering Receptor
+          Expressed on Myeloid cells 2 (TREM2), found in various tissues including
+          the liver, adipose tissue, bone, gut (Colonna, 2023), and tumor microenvironments,
+          where it is associated with immunosuppressive and anti-inflammatory activity
+          (Colmenares, 2024; Khantakova, 2022). This cell exhibits a distinct gene
+          expression profile in the tumor microenvironment, including overexpression
+          of complement system genes (C1QA, C1QB, C1QC, C3), and SPP1 in both mice
+          and humans (Xiong, 2020; Khantakova, 2022). It is involved in phagocytosis,
+          tissue repair, and modulation of immune responses (Coeho, 2021).
+        meaning: CL:4047053
+        title: TREM2-positive macrophage
       CL:2000028:
         text: CL:2000028
         description: Any glutamatergic neuron that is part of a cerebellum.
@@ -17808,7 +18099,7 @@ enums:
         title: epithelial cell of parathyroid gland
       CL:0000171:
         text: CL:0000171
-        description: A type of enteocrine cell found in the periphery of the islets
+        description: A type A enteroendocrine cell found in the periphery of the islets
           of Langerhans that secretes glucagon.
         meaning: CL:0000171
         title: pancreatic A cell
@@ -17852,7 +18143,6 @@ enums:
         title: T-helper 17 cell
       CL:0000076:
         text: CL:0000076
-        description: Any epithelial cell that is part of some squamous epithelium.
         meaning: CL:0000076
         title: squamous epithelial cell
       CL:0001078:
@@ -17880,7 +18170,8 @@ enums:
         title: non-striated muscle cell
       CL:0002621:
         text: CL:0002621
-        description: Any epithelial cell that is part of some gingival epithelium.
+        description: Any stratified squamous epithelial cell that is part of some
+          gingival epithelium.
         meaning: CL:0002621
         title: gingival epithelial cell
       CL:1001601:
@@ -17939,7 +18230,13 @@ enums:
         title: granulocytopoietic cell
       CL:0010010:
         text: CL:0010010
-        description: Any stellate neuron that has its soma located in some cerebellum.
+        description: A GABAergic interneuron that is located in the molecular layer
+          of the cerebellum. This cell receives excitatory inputs primarily from parallel
+          fibers and plays a crucial role in feed-forward inhibition by suppressing
+          the activity of Purkinje cells and modulating the output of the cerebellar
+          cortex. The stellate cell is part of the local circuitry that contributes
+          to the fine-tuning of motor coordination and a regulator of cerebellar blood
+          flow via neurovascular coupling.
         meaning: CL:0010010
         title: cerebellar stellate cell
       CL:0000436:
@@ -18055,7 +18352,13 @@ enums:
         title: distal tip cell (sensu Nematoda)
       CL:2000064:
         text: CL:2000064
-        description: Any epithelial cell that is part of a female gonad.
+        description: A meso-epithelial cell of the ovarian surface epithelium, varying
+          in shape from flat to cuboidal to pseudostratified columnar. This cell plays
+          a crucial role in ovulation by producing proteolytic enzymes in response
+          to gonadotropins, facilitating follicle rupture through tissue breakdown
+          and TNF-alpha signaling. Additionally, this cell contributes to post-ovulatory
+          wound repair (Morris et al., 2022) and exhibits stem cell-like properties
+          (Flesken-Nikitin et al., 2013; Wang et al., 2019).
         meaning: CL:2000064
         title: ovarian surface epithelial cell
       CL:0002573:
@@ -18313,7 +18616,7 @@ enums:
           membranous labyrinth
       CL:3000003:
         text: CL:3000003
-        description: Sympathetic cholinergic neuron.
+        description: A type of autonomic neuron that releases acetylcholine.
         meaning: CL:3000003
         title: sympathetic cholinergic neuron
       CL:4042004:
@@ -18554,6 +18857,15 @@ slots:
   marker_gene_evidence:
     description: Gene names explicitly used as evidence, which MUST be in the matrix
       of the AnnData/Seurat file
+    from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
+    multivalued: true
+  marker_gene_context:
+    description: 'The context in which the marker genes given in the marker gene evidence
+      field should be tested. Context should consist of a list of field_name:value.  Where
+      field name = an obs field name.   The obs field name may be further broken down
+      into labelset.field name, where a field is attached to a  specific labelset.
+
+      '
     from_schema: https://cellular-semantics.sanger.ac.uk/ontology/CAS
     multivalued: true
   synonyms:

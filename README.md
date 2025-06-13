@@ -55,6 +55,11 @@ Merged LinkML schemas are available at [build](https://github.com/Cellular-Seman
 
 This repo also contains the [CAP AnnData Specification](https://github.com/cellannotation/cell-annotation-schema/blob/main/docs/cap_anndata_schema.md). 
 
+## Editing the schema
+
+1. Schema editing is done in the [src/cell_annotation_schema/schema](src/cell_annotation_schema/schema) folder.
+2. Dataclasses needs to be updated to reflect the changes in the schema. This is done by running `make build` command in the project root folder. (see [project.Makefile](project.Makefile)
+_Note: this will require creating a poetry virtual env and install dependencies via `poetry install`_
 
 ## Releases
 
