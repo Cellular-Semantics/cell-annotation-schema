@@ -1,5 +1,5 @@
 # Auto generated from None by pythongen.py version: 0.0.1
-# Generation date: 2025-03-26T10:12:56
+# Generation date: 2025-06-13T12:55:34
 # Schema: General_Cell_Annotation_Open_Standard
 #
 # id: https://cellular-semantics.sanger.ac.uk/ontology/CAS
@@ -613,6 +613,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002656",
                 description="""A glandular epithelial cell of the endometrium. Following ovulation, these cells secrete a glycogen-rich substance known as histotroph or uterine milk, which nourishes the embryo if implantation occurs.""",
                 meaning=CL["0002656"]))
+        setattr(cls, "CL:4033014",
+            PermissibleValue(
+                text="CL:4033014",
+                description="""A small, narrow, peg-shaped epithelial cell with little cytoplasm that is part of oviduct epithelium. This cell is rarer than the ciliated and secretory epithelial cells of the fallopian tube epithelium and is often found intercalated between them. Peg cells are generally distributed basally along the epithelium and have been found in high concentrations at the fimbriated, distal end of the fallopian tube in humans. It may have a regenerative/stem-cell function. In humans, markers include EPCAM, CD44, and ITGA6.""",
+                meaning=CL["4033014"]))
         setattr(cls, "CL:0002224",
             PermissibleValue(
                 text="CL:0002224",
@@ -759,6 +764,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002292",
                 description="""A round or oval neuroepithelial cell that contacts other type I cells or capillaries. They occur in clusters that are surrounded by sheath cells (type-II cells) in the carotid body. This cell type is capable of secreting a number of neurotransmitters.""",
                 meaning=CL["0002292"]))
+        setattr(cls, "CL:4052051",
+            PermissibleValue(
+                text="CL:4052051",
+                description="""​​A uterine natural killer subset that is present in the endometrial lining during the non-pregnant state (Garcia-Alonso et al., 2021) and in the decidua during pregnancy (Vento-Tormo et al., 2018). It expresses the uterine resident marker CD49a and is distinguished from uNK2 and uNK3 by CD39 expression and the absence of CD103 (Whettlock et al., 2022) and CD160 (Marečková et al., 2024). It also expresses higher levels of killer-cell immunoglobulin-like receptors (KIRs) and leukocyte immunoglobulin-like receptor B1 (LILRB1), which facilitate interaction with human leukocyte antigens (HLAs) on extravillous trophoblast cells, promoting immune tolerance and implantation. Enriched in the endometrium post-ovulation (Marečková et al., 2024) and prominent in early pregnancy (Whettlock et al., 2022), uNK1 regulates trophoblast invasion and spiral artery remodeling (Zhang & Wei, 2021).""",
+                meaning=CL["4052051"]))
         setattr(cls, "CL:0000067",
             PermissibleValue(
                 text="CL:0000067",
@@ -767,8 +777,13 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002181",
             PermissibleValue(
                 text="CL:0002181",
-                description="""A neck cell that secretes mucus within the stomach. Its products are distinct histochemically from those of the surface mucous cells of stomach.""",
+                description="""A columnar epithelial mucous secreting cell located in the neck of the gastric glands. These cells have numerous apical secretory vesicles containing mucins and a basally displaced nucleus. The mucous they secrete is distinct histochemically from that of the surface mucous cells of stomach.""",
                 meaning=CL["0002181"]))
+        setattr(cls, "CL:4070010",
+            PermissibleValue(
+                text="CL:4070010",
+                description="A motor neuron that moves the medial tooth forward",
+                meaning=CL["4070010"]))
         setattr(cls, "CL:0004214",
             PermissibleValue(
                 text="CL:0004214",
@@ -864,11 +879,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0009035",
                 description="A stromal cell found in the lamina propria of the vermiform appendix.",
                 meaning=CL["0009035"]))
-        setattr(cls, "CL:0000473",
-            PermissibleValue(
-                text="CL:0000473",
-                description="A cell whose primary function is to protect the organism.",
-                meaning=CL["0000473"]))
         setattr(cls, "CL:0000109",
             PermissibleValue(
                 text="CL:0000109",
@@ -888,16 +898,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1001428",
                 description="A urothelial cell that is part of the urothelium of the urinary bladder.",
                 meaning=CL["1001428"]))
-        setattr(cls, "CL:4033014",
-            PermissibleValue(
-                text="CL:4033014",
-                description="""A small, narrow, peg-shaped epithelial cell with little cytoplasm that is part of oviduct epithelium. This cell is rarer than the ciliated and secretory epithelial cells of the fallopian tube epithelium and is often found intercalated between them. Peg cells are generally distributed basally along the epithelium and have been found in high concentrations at the fimbriated, distal end of the fallopian tube in humans. It may have a regenerative/stem-cell function. In humans, markers include EPCAM, CD44, and ITGA6.""",
-                meaning=CL["4033014"]))
-        setattr(cls, "CL:0000212",
-            PermissibleValue(
-                text="CL:0000212",
-                description="A cell that takes up and metabolizes substances.",
-                meaning=CL["0000212"]))
         setattr(cls, "CL:0000611",
             PermissibleValue(
                 text="CL:0000611",
@@ -1210,7 +1210,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4042019",
             PermissibleValue(
                 text="CL:4042019",
-                description="""A type of tanycyte found in the lateral infundibular recess of the brain. This tanycyte has an elongated morphology with multiple microvilli extending to the third ventricle in the lateral zones of the median eminence. This type of tanycyte expresses FGF receptors 1 and 2, is in contact with GnRH neurons, and is involved in the release of gonadotropin-releasing hormone (GnRH).""",
+                description="""A type of tanycyte located in ventral part of the lateral wall of the third ventricle and in the lateral infundibular recess of the brain. This tanycyte has an elongated morphology with multiple microvilli extending into the median eminence. This type of tanycyte expresses FGF receptors 1 and 2, is in contact with GnRH neurons, and is involved in the release of gonadotropin-releasing hormone (GnRH).""",
                 meaning=CL["4042019"]))
         setattr(cls, "CL:1001100",
             PermissibleValue(
@@ -1245,7 +1245,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002085",
             PermissibleValue(
                 text="CL:0002085",
-                description="""A specialized elongated ventricular ependymal cell that has processes that extend to the outer, or pial, surface of the CNS. A tanycyte is found in the adult brain, specifically in the third ventricle, cerebral aqueduct, spinal canal, and floor of the fourth ventricle. This cell type is involved in hormonal regulation, gatekeeping molecules between the bloodstream and cerebrospinal fluid, metabolic sensing, and regulating food intake.""",
+                description="""A specialized elongated ventricular ependymal cell with one or more processes that extend into the brain parenchyma or associated blood vessels where they contact blood vessel endothelial cells and/or neurons. These cells are found in the ventricles and circumventricular organs of the brain. They are involved in hormonal regulation, gatekeeping molecules between the bloodstream and cerebrospinal fluid, metabolic sensing, and regulating food intake.""",
                 meaning=CL["0002085"]))
         setattr(cls, "CL:1001142",
             PermissibleValue(
@@ -2045,6 +2045,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4023110",
                 description="A pyramidal neuron with soma located in the amygdala.",
                 meaning=CL["4023110"]))
+        setattr(cls, "CL:4070016",
+            PermissibleValue(
+                text="CL:4070016",
+                description="Pyloric pacemaker neuron that provides feedback to commissural ganglia (CoG) neurons.",
+                meaning=CL["4070016"]))
         setattr(cls, "CL:0002210",
             PermissibleValue(
                 text="CL:0002210",
@@ -2482,6 +2487,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002291",
                 description="""A sperm bearing an X chromosome. Chromosomal and genetic sex is established at fertilization in mammals and depends upon whether an X-bearing sperm or a Y-bearing sperm fertilizes the X-bearing ovum.""",
                 meaning=CL["0002291"]))
+        setattr(cls, "CL:4047036",
+            PermissibleValue(
+                text="CL:4047036",
+                description="""A smooth muscle cell located in the middle layer of the muscularis externa of the stomach wall. This cell is arranged concentrically with the stomach's longitudinal axis, forming a continuous sheet of contractile tissue. It is fusiform in shape, containing actin and myosin filaments that enable contraction without striations. This cell contributes to the mechanical digestion and movement of food within the stomach through coordinated contractions, and plays a role in forming the pyloric sphincter in the pyloric region.""",
+                meaning=CL["4047036"]))
         setattr(cls, "CL:1001585",
             PermissibleValue(
                 text="CL:1001585",
@@ -2517,6 +2527,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002173",
                 description="""A cell that is a specialized type of pericyte providing structural support for the capillary loops of kidney. A flat, elongated cell with extensive fine cytoplasmic processes found outside the kidney glomerulus near the macula densa and bound laterally by afferent and efferent arterioles. Being phagocytic, this cell participates in the continuous turnover of the basal lamina by removing its outer portion containing residues of filtration, while the lamina is renewed on its inner surface by the endothelial cells.""",
                 meaning=CL["0002173"]))
+        setattr(cls, "CL:4047054",
+            PermissibleValue(
+                text="CL:4047054",
+                description="""A dendritic cell capable of capturing antigens in peripheral tissues and migrating through blood or lymphatic vessels to secondary lymphoid organs, where it presents processed antigens to T cells. It expresses MHC class II molecules and lacks lineage markers associated with other leukocyte populations, distinguishing it as a member of the dendritic cell lineage. This cell plays a pivotal role in initiating and regulating adaptive immune responses by linking peripheral antigen capture with T cell activation in lymphoid tissues.""",
+                meaning=CL["4047054"]))
         setattr(cls, "CL:4040006",
             PermissibleValue(
                 text="CL:4040006",
@@ -2595,6 +2610,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000078",
             PermissibleValue(
                 text="CL:0000078",
+                description="Any squamous epithelial cell that is part of some periderm.",
                 meaning=CL["0000078"]))
         setattr(cls, "CL:0002106",
             PermissibleValue(
@@ -2709,7 +2725,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002204",
             PermissibleValue(
                 text="CL:0002204",
-                description="""A cell type found in the gastrointestinal and respiratory tracts that is characterized by the presence of a tuft of blunt, squat microvilli (120-140 per cell). Function of this cell type is not known.""",
+                description="""An epithelial cell found in various organs, including the gastrointestinal and respiratory tracts, characterized by a tuft of 120-140 blunt microvilli on its apical surface. This cell exhibits diverse functions depending on its location, which includes chemosensation, initiation of immune responses, contribution to mucociliary clearance, and defense against parasites.""",
                 meaning=CL["0002204"]))
         setattr(cls, "CL:0004215",
             PermissibleValue(
@@ -2891,6 +2907,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000033",
                 description="""An exocrine cell characterized by loss of part of the cytoplasm during the process of secretion. The secreted substance is accumulated at the apical end and is either budded off through the plasma membrane producing secreted vesicles or dissolved in the cytoplasm that is lost during secretion.""",
                 meaning=CL["0000033"]))
+        setattr(cls, "CL:4070012",
+            PermissibleValue(
+                text="CL:4070012",
+                description="A motor neuron that controls ventral stomach grooves leading to pyloric filter.",
+                meaning=CL["4070012"]))
         setattr(cls, "CL:1000486",
             PermissibleValue(
                 text="CL:1000486",
@@ -3013,6 +3034,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0005002",
                 description="A non-terminally differentiated cell that differentiates into a xanthophore.",
                 meaning=CL["0005002"]))
+        setattr(cls, "CL:4047056",
+            PermissibleValue(
+                text="CL:4047056",
+                description="""A columnar, mucin-producing cholangiocyte that lines large bile ducts, including the hilar bile duct, right and left hepatic bile ducts, and large intrahepatic bile ducts. This cell expresses phosphorylated STAT3 and TFF-3 in humans and mice.""",
+                meaning=CL["4047056"]))
         setattr(cls, "CL:0001013",
             PermissibleValue(
                 text="CL:0001013",
@@ -3316,6 +3342,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000534",
                 description="A primary neuron (sensu Teleostei) that is neither a sensory neuron or a motor neuron.",
                 meaning=CL["0000534"]))
+        setattr(cls, "CL:4052041",
+            PermissibleValue(
+                text="CL:4052041",
+                description="""A tuft cell that is part of the epithelium of the pharyngotympanic (auditory) tube. This chemosensory cell is often positioned near cholinoreceptive sensory nerve fibers, suggesting a role in neuroimmune communication. It detects chemical signals and releases neuropeptides, such as acetylcholine (ACh) and CGRP, which contribute to inflammatory responses that help protect deeper tissues from harmful substances.""",
+                meaning=CL["4052041"]))
         setattr(cls, "CL:0002256",
             PermissibleValue(
                 text="CL:0002256",
@@ -3364,7 +3395,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4052034",
             PermissibleValue(
                 text="CL:4052034",
-                description="""A tuft cell that is part of the medullary epithelium of the thymus, characterized by lateral microvilli and specific markers, including L1CAM in both mice (Zhang et al., 2022) and humans (Sun et al., 2023), as well as MHC II in mice (Kotas et al., 2023). This cell is pivotal in immune functions such as antigen presentation, central tolerance, and type 2 immunity. A tuft cell in the thymus exhibits characteristics of both a medullary thymic epithelial cell (mTEC) and a peripheral tuft cell. Its development is governed by transcription factors such as POU2F3.""",
+                description="""A tuft cell that is part of the medullary epithelium of the thymus, characterized by lateral microvilli and specific markers, including L1CAM in both mice (Zhang et al., 2022) and humans (Sun et al., 2023), as well as MHC II in mice (Miller et al., 2018). This cell is pivotal in immune functions such as antigen presentation, central tolerance, and type 2 immunity. A tuft cell in the thymus exhibits characteristics of both a medullary thymic epithelial cell (mTEC) and a peripheral tuft cell. Its development is governed by transcription factors such as POU2F3.""",
                 meaning=CL["4052034"]))
         setattr(cls, "CL:0000336",
             PermissibleValue(
@@ -3620,11 +3651,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000553",
                 description="""The earliest cytologically identifiable precursor in the thrombocytic series. This cell is capable of endomitosis and lacks expression of hematopoieitic lineage markers (lin-negative).""",
                 meaning=CL["0000553"]))
-        setattr(cls, "CL:0000651",
-            PermissibleValue(
-                text="CL:0000651",
-                description="""A mucus-secreting cell, with numerous apical secretory vesicles containing mucins; nucleus are basally displaced; numerous at the neck of mucus secreting glands""",
-                meaning=CL["0000651"]))
         setattr(cls, "CL:4023013",
             PermissibleValue(
                 text="CL:4023013",
@@ -3784,6 +3810,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0019020",
                 description="""An epithelial cell of the extrahepatic bile ducts, including the left and right hepatic duct, common hepatic duct, and common bile duct. They are columnar in shape, and have a large nuclear-to-cytoplasmic ratio relative to small/intrahepatic cholangiocytes.""",
                 meaning=CL["0019020"]))
+        setattr(cls, "CL:4052052",
+            PermissibleValue(
+                text="CL:4052052",
+                description="""A uterine natural killer subset that is present in the endometrial lining during the non-pregnant state (Garcia-Alonso et al., 2021) and in the decidua during pregnancy (Vento-Tormo et al., 2018), peaking in the first trimester. It expresses the uterine resident marker CD49a and is distinguished from uNK1 and uNK3 by the absence of CD39, CD103 (Whettlock et al., 2022), and CD160 (Marečková et al., 2024), with ITGB2 serving as a defining marker (Vento-Tormo et al., 2018). Functionally, it produces more cytokines upon stimulation than uNK1, suggesting a role in immune defense, and secretes XCL1 chemokines, facilitating interactions with maternal dendritic cells and fetal extravillous trophoblasts (Vento-Tormo et al., 2018).""",
+                meaning=CL["4052052"]))
         setattr(cls, "CL:4023074",
             PermissibleValue(
                 text="CL:4023074",
@@ -3807,7 +3838,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4042017",
             PermissibleValue(
                 text="CL:4042017",
-                description="""A tanycyte cell found in the ventromedial and dorsomedial nuclei of the hypothalamus. This type of tanycyte extends its protrusions close to parenchymal neurons without contacting blood vessels. It expresses the glial marker S-100β.""",
+                description="""The dorsal-most tanycyte type of the third venticle.  These cells projects into the ventromedial or dorsomedial nucleus of the hypothalamus. This type of tanycyte extends its protrusions close to parenchymal neurons without contacting blood vessels. It expresses the glial marker S-100β.""",
                 meaning=CL["4042017"]))
         setattr(cls, "CL:0000694",
             PermissibleValue(
@@ -3885,6 +3916,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000131",
             PermissibleValue(
                 text="CL:0000131",
+                description="""An endothelial cell that lines the blood and lymphatic vessels of the digestive tract. This cell forms the gut–vascular barrier (GVB) through tight junctions and crosstalk with pericytes and enteric glial cells, regulating the passage of nutrients and immune cells while restricting microbial translocation into the bloodstream.""",
                 meaning=CL["0000131"]))
         setattr(cls, "CL:4052016",
             PermissibleValue(
@@ -4014,7 +4046,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002250",
             PermissibleValue(
                 text="CL:0002250",
-                description="""A cell that is found in a zone occupying the bottom region of the crypt; provide the source of most of the cell types of the intestinal epithelium; proliferate by mitotic division; differentiates into columnar or goblet cells.""",
+                description="""A stem cell located in epithelium the based of the crypt of Lieberkuhn. Division of these cells serve both to maintain the stem cell population and produce the transit amplifying cells that are all precursors of all cell types that populate the intestinal epithelium.""",
                 meaning=CL["0002250"]))
         setattr(cls, "CL:4052008",
             PermissibleValue(
@@ -4109,7 +4141,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:1000850",
             PermissibleValue(
                 text="CL:1000850",
-                description="Any epithelial cell of distal tubule that is part of some macula densa.",
+                description="""An epithelial cell that is part of the macula densa, characterized by a tightly packed arrangement, apically positioned nuclei, and prominent primary cilia, creating a distinctive 'dense spot' appearance under microscopy. It is involved in regulating renal blood flow, glomerular filtration rate, and renin release.""",
                 meaning=CL["1000850"]))
         setattr(cls, "CL:0000311",
             PermissibleValue(
@@ -4383,6 +4415,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0001071",
                 description="""An innate lymphoid cell that constituitively expresses RORgt and is capable of expressing IL17A and/or IL-22.""",
                 meaning=CL["0001071"]))
+        setattr(cls, "CL:0000127",
+            PermissibleValue(
+                text="CL:0000127",
+                description="""A class of large neuroglial (macroglial) cells in the central nervous system - the largest and most numerous neuroglial cells in the brain and spinal cord. Astrocytes (from 'star' cells) are irregularly shaped with many long processes, including those with 'end feet' which form the glial (limiting) membrane and directly and indirectly contribute to the blood-brain barrier. They regulate the extracellular ionic and chemical environment, and 'reactive astrocytes' (along with microglia) respond to injury.""",
+                meaning=CL["0000127"]))
         setattr(cls, "CL:0000809",
             PermissibleValue(
                 text="CL:0000809",
@@ -4570,16 +4607,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002498",
                 description="""A trophoblast giant cell that is derived from ectoplacental cone and, later in gestation, the spongiotrophoblast.""",
                 meaning=CL["0002498"]))
-        setattr(cls, "CL:0007021",
-            PermissibleValue(
-                text="CL:0007021",
-                description="""Secretory cell that produces a chemical mixture that triggers antipredator behavior. The substance is released only upon disruption of the epidermis. [Behavior of teleost fishes, second edition, edited by Pitcher, 1992]""",
-                meaning=CL["0007021"]))
-        setattr(cls, "CL:0000127",
-            PermissibleValue(
-                text="CL:0000127",
-                description="""A class of large neuroglial (macroglial) cells in the central nervous system - the largest and most numerous neuroglial cells in the brain and spinal cord. Astrocytes (from 'star' cells) are irregularly shaped with many long processes, including those with 'end feet' which form the glial (limiting) membrane and directly and indirectly contribute to the blood-brain barrier. They regulate the extracellular ionic and chemical environment, and 'reactive astrocytes' (along with microglia) respond to injury.""",
-                meaning=CL["0000127"]))
         setattr(cls, "CL:1001608",
             PermissibleValue(
                 text="CL:1001608",
@@ -4610,6 +4637,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000437",
                 description="""A rounded cell that is usually situated next to sinusoids; secretes follicular stimulating hormone (FSH) and luteinizing hormone (LH).""",
                 meaning=CL["0000437"]))
+        setattr(cls, "CL:4052045",
+            PermissibleValue(
+                text="CL:4052045",
+                description="""A stromal cell that is part of the ovarian stroma, characterized by its ability to synthesize steroid hormones.""",
+                meaning=CL["4052045"]))
         setattr(cls, "CL:0001029",
             PermissibleValue(
                 text="CL:0001029",
@@ -4810,7 +4842,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4042018",
             PermissibleValue(
                 text="CL:4042018",
-                description="""A type of tanycyte found in the dorsomedial arcuate nucleus of the hypothalamus. This mono-ciliated tanycyte extends its protrusion to the arcuate nucleus and expresses the glial marker S-100β.""",
+                description="""Tanycyte of the third ventricle, located immediately ventral to alpha-1 tanycytes. These cells project to the ventromedial and arcuate nuclei of the hypothalamus and express the glial marker S-100β.""",
                 meaning=CL["4042018"]))
         setattr(cls, "CL:0000891",
             PermissibleValue(
@@ -5505,16 +5537,21 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000963",
                 description="""A germinal center B cell that develops from a Bm3 B cell. This cell has the phenotype IgM-negative, IgD-positive, and CD38-positive.""",
                 meaning=CL["0000963"]))
-        setattr(cls, "CL:4040002",
-            PermissibleValue(
-                text="CL:4040002",
-                description="""Glial cell that provides support to the enteric nervous system. It is involved in enteric neurotransmission, in maintaining the integrity of the mucosal barrier of the gut and serves as a link between the nervous and immune systems of the gut. In enteric nerve strands, glial processes ensheath multiaxonal bundles which distinguishes enteric glia from all other peripheral glia. Ultrastructurally, the most conspicuous trait of an enteroglial cell is the presence of 10 nm filaments, which criss-cross the cell body, form axial bundles in the processes and appear to firmly anchor the cells to the ganglionic surfaces. Similar to astrocytes, their main constituent is glial fibrillary acidic protein (GFAP).""",
-                meaning=CL["4040002"]))
         setattr(cls, "CL:0002497",
             PermissibleValue(
                 text="CL:0002497",
                 description="A trophoblast giant cell derived from the mural trophectoderm.",
                 meaning=CL["0002497"]))
+        setattr(cls, "CL:0008045",
+            PermissibleValue(
+                text="CL:0008045",
+                description="""A tanycyte of the subcommisural organ (SCO).  These cells extend long and slender fibers extending from their cell bodies in the ependyma toward fenestrated capillaries associated with the SCO, where they form a dense network surrounding these capillaries.""",
+                meaning=CL["0008045"]))
+        setattr(cls, "CL:4040002",
+            PermissibleValue(
+                text="CL:4040002",
+                description="""Glial cell that provides support to the enteric nervous system. It is involved in enteric neurotransmission, in maintaining the integrity of the mucosal barrier of the gut and serves as a link between the nervous and immune systems of the gut. In enteric nerve strands, glial processes ensheath multiaxonal bundles which distinguishes enteric glia from all other peripheral glia. Ultrastructurally, the most conspicuous trait of an enteroglial cell is the presence of 10 nm filaments, which criss-cross the cell body, form axial bundles in the processes and appear to firmly anchor the cells to the ganglionic surfaces. Similar to astrocytes, their main constituent is glial fibrillary acidic protein (GFAP).""",
+                meaning=CL["4040002"]))
         setattr(cls, "CL:0002086",
             PermissibleValue(
                 text="CL:0002086",
@@ -5916,7 +5953,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0009041",
             PermissibleValue(
                 text="CL:0009041",
-                description="A tuft cell that is a part of the colon.",
+                description="""A tuft cell that is part of the colonic epithelium, primarily adapted for microbial sensing in the dense colonic microbiota. Unlike its small intestinal counterpart, it does not participate in parasite-driven tuft cell–ILC2 circuits. Instead, it detects bacterial metabolites via taste-signaling pathways (Strine and Craig, 2022). The colonic tuft cell plays a key role in epithelial repair, modulates inflammatory responses through IL-25 secretion, and contributes to intestinal homeostasis by balancing microbiome interactions (Sebastian et al., 2021).""",
                 meaning=CL["0009041"]))
         setattr(cls, "CL:4033019",
             PermissibleValue(
@@ -5972,6 +6009,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000675",
                 description="A mature sexual reproductive cell of the female germline.",
                 meaning=CL["0000675"]))
+        setattr(cls, "CL:0008055",
+            PermissibleValue(
+                text="CL:0008055",
+                description="""A secretory epithelial cell of the respiratory tract epithelium.  These cells have an endodermal origin.""",
+                meaning=CL["0008055"]))
         setattr(cls, "CL:0011027",
             PermissibleValue(
                 text="CL:0011027",
@@ -5997,10 +6039,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1001575",
                 description="Squamous cell of uterine cervix epithelium.",
                 meaning=CL["1001575"]))
-        setattr(cls, "CL:0000386",
-            PermissibleValue(
-                text="CL:0000386",
-                meaning=CL["0000386"]))
         setattr(cls, "CL:0000932",
             PermissibleValue(
                 text="CL:0000932",
@@ -6310,6 +6348,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000860",
                 description="""A monocyte that responds rapidly to microbial stimuli by secreting cytokines and antimicrobial factors and which is characterized by high expression of CCR2 in both rodents and humans, negative for the lineage markers CD3, CD19, and CD20, and of larger size than non-classical monocytes.""",
                 meaning=CL["0000860"]))
+        setattr(cls, "CL:4070011",
+            PermissibleValue(
+                text="CL:4070011",
+                description="A motor neuron that closes the lateral teeth.",
+                meaning=CL["4070011"]))
         setattr(cls, "CL:0001035",
             PermissibleValue(
                 text="CL:0001035",
@@ -6828,6 +6871,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4052011",
                 description="""An enterocyte found in the follicle-associated epithelium (FAE) that covers Peyer's patches and other mucosa-associated lymphoid tissues. This cell has reduced absorptive capacity and expresses higher levels of chemokines CCL20 and CXCL16, compared to regular villus enterocytes. It contributes to antigen sampling and immune interactions, supporting the specialized function of the FAE in mucosal immunity.""",
                 meaning=CL["4052011"]))
+        setattr(cls, "CL:4052040",
+            PermissibleValue(
+                text="CL:4052040",
+                description="""A tuft cell that is part of the epithelium of the stomach. This cell is characterized by gastric chemosensation and immune regulation through IL-25 secretion, which activates ILC2s to produce IL-13, driving epithelial remodelling and tuft cell expansion. Unlike intestinal tuft cells, which are primarily involved in helminth defense and type 2 immunity, the tuft cell of the stomach is primarily involved in inflammation, metaplasia, and hyperplasia.""",
+                meaning=CL["4052040"]))
         setattr(cls, "CL:0005010",
             PermissibleValue(
                 text="CL:0005010",
@@ -7454,6 +7502,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000446",
                 description="""An epithelial cell of the parathyroid gland that is arranged in wide, irregular interconnecting columns; responsible for the synthesis and secretion of parathyroid hormone.""",
                 meaning=CL["0000446"]))
+        setattr(cls, "CL:0000916",
+            PermissibleValue(
+                text="CL:0000916",
+                description="A mature gamma-delta T cell located in the epidermis that regulates wound healing.",
+                meaning=CL["0000916"]))
         setattr(cls, "CL:0000561",
             PermissibleValue(
                 text="CL:0000561",
@@ -7569,6 +7622,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000281",
                 description="A smooth muscle cell that is part of the cecum.",
                 meaning=CL["1000281"]))
+        setattr(cls, "CL:4052039",
+            PermissibleValue(
+                text="CL:4052039",
+                description="""A tuft cell that is part of the epithelium of the submandibular gland, localized to the striated ducts in mice, pigs, and humans, and to the main excretory ducts in rats. This cell is characterized by chemosensory functions, potential roles in immune regulation, and possible involvement in salivary secretion via acetylcholine release.""",
+                meaning=CL["4052039"]))
         setattr(cls, "CL:0002368",
             PermissibleValue(
                 text="CL:0002368",
@@ -7589,15 +7647,20 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4030062",
                 description="""An intratelencephalic-projecting glutamatergic with a soma located in cortical layer 4/5.""",
                 meaning=CL["4030062"]))
-        setattr(cls, "CL:0000334",
-            PermissibleValue(
-                text="CL:0000334",
-                meaning=CL["0000334"]))
         setattr(cls, "CL:2000006",
             PermissibleValue(
                 text="CL:2000006",
                 description="Any germinal center B cell that is part of a tonsil.",
                 meaning=CL["2000006"]))
+        setattr(cls, "CL:0000334",
+            PermissibleValue(
+                text="CL:0000334",
+                meaning=CL["0000334"]))
+        setattr(cls, "CL:4052055",
+            PermissibleValue(
+                text="CL:4052055",
+                description="A mature NK T cell that can be identified by the expression of CD56 in humans.",
+                meaning=CL["4052055"]))
         setattr(cls, "CL:1000335",
             PermissibleValue(
                 text="CL:1000335",
@@ -7697,6 +7760,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002257",
                 description="An epithelial cell of thyroid gland.",
                 meaning=CL["0002257"]))
+        setattr(cls, "CL:4047042",
+            PermissibleValue(
+                text="CL:4047042",
+                description="""An enteric glial cell located within the myenteric ganglia of the gastrointestinal tract. This cell has a small somata and has very short, irregularly branched processes that surround neuron cell bodies, giving it a protoplasmic-like appearance. It plays crucial roles in modulating myenteric neuron activity, regulating oxidative stress, and influencing neuroinflammation and neurogenesis.""",
+                meaning=CL["4047042"]))
         setattr(cls, "CL:1000296",
             PermissibleValue(
                 text="CL:1000296",
@@ -7737,15 +7805,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000579",
                 description="""A follicle cell that migrates from the anterior pole of the insect egg chamber to the anterior of the oocyte where they participate in the formation of the micropyle.""",
                 meaning=CL["0000579"]))
-        setattr(cls, "CL:0000217",
-            PermissibleValue(
-                text="CL:0000217",
-                meaning=CL["0000217"]))
-        setattr(cls, "CL:0000916",
-            PermissibleValue(
-                text="CL:0000916",
-                description="A mature gamma-delta T cell located in the epidermis that regulates wound healing.",
-                meaning=CL["0000916"]))
         setattr(cls, "CL:0000406",
             PermissibleValue(
                 text="CL:0000406",
@@ -7894,11 +7953,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1001509",
                 description="The neurons that utilize glycine as a neurotransmitter.",
                 meaning=CL["1001509"]))
-        setattr(cls, "CL:0002428",
-            PermissibleValue(
-                text="CL:0002428",
-                description="""A double-positive thymocyte that is large (i.e. has a high forward scatter signal in flow cytometry) and is actively proliferating.""",
-                meaning=CL["0002428"]))
         setattr(cls, "CL:0002453",
             PermissibleValue(
                 text="CL:0002453",
@@ -8260,6 +8314,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000958",
                 description="""A transitional stage B cell that migrates from the bone marrow into the peripheral circulation, and finally to the spleen. This cell type has the phenotype surface IgM-positive, surface IgD-negative, CD21-negative, CD23-negative, and CD62L-negative, and CD93-positive. This cell type has also been described as IgM-high, CD19-positive, B220-positive, AA4-positive, and CD23-negative.""",
                 meaning=CL["0000958"]))
+        setattr(cls, "CL:4047047",
+            PermissibleValue(
+                text="CL:4047047",
+                description="""An enteric glial cell located within the ganglia of the enteric nervous system. This cell is characterized by it’s small somata and short, irregularly branched processes that surround neuronal cell bodies in the myenteric and submucosal ganglia. This cell plays important roles in modulating neuronal activity and neurogenesis in the gastrointestinal tract.""",
+                meaning=CL["4047047"]))
+        setattr(cls, "CL:0002428",
+            PermissibleValue(
+                text="CL:0002428",
+                description="""A double-positive thymocyte that is large (i.e. has a high forward scatter signal in flow cytometry) and is actively proliferating.""",
+                meaning=CL["0002428"]))
         setattr(cls, "CL:0002433",
             PermissibleValue(
                 text="CL:0002433",
@@ -8809,21 +8873,6 @@ class CellTypeEnum(EnumDefinitionImpl):
             PermissibleValue(
                 text="CL:0000676",
                 meaning=CL["0000676"]))
-        setattr(cls, "CL:2000067",
-            PermissibleValue(
-                text="CL:2000067",
-                description="Any fibroblast that is part of a cardiac atrium.",
-                meaning=CL["2000067"]))
-        setattr(cls, "CL:0001074",
-            PermissibleValue(
-                text="CL:0001074",
-                description="""An innate lymphoid cell precursor in the human with the phenotype CD34-positive, CD56-positive, CD117-positive.Thie cell type may include precusors to NK cells and ILC3 cells.""",
-                meaning=CL["0001074"]))
-        setattr(cls, "CL:0000843",
-            PermissibleValue(
-                text="CL:0000843",
-                description="""A resting mature B cell that has the phenotype IgM-positive, IgD-positive, CD23-positive and CD21-positive, and found in the B cell follicles of the white pulp of the spleen or the corticol areas of the peripheral lymph nodes. This cell type is also described as being CD19-positive, B220-positive, AA4-negative, CD43-negative, and CD5-negative.""",
-                meaning=CL["0000843"]))
         setattr(cls, "CL:0002261",
             PermissibleValue(
                 text="CL:0002261",
@@ -8954,6 +9003,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000886",
                 description="""A mucosa-associated lymphoid tissue macrophage found in the nasal and bronchial mucosa-associated lymphoid tissues.""",
                 meaning=CL["0000886"]))
+        setattr(cls, "CL:2000067",
+            PermissibleValue(
+                text="CL:2000067",
+                description="Any fibroblast that is part of a cardiac atrium.",
+                meaning=CL["2000067"]))
+        setattr(cls, "CL:4070017",
+            PermissibleValue(
+                text="CL:4070017",
+                description="""A motor neuron that controls pyloric filter movements; innervates the lateral pyloric muscle.""",
+                meaning=CL["4070017"]))
         setattr(cls, "CL:0002241",
             PermissibleValue(
                 text="CL:0002241",
@@ -9074,6 +9133,26 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000200",
                 description="""Any neuron that is capable of some detection of mechanical stimulus involved in sensory perception of touch.""",
                 meaning=CL["0000200"]))
+        setattr(cls, "CL:4070014",
+            PermissibleValue(
+                text="CL:4070014",
+                description="A motor neuron that controls pyloric filter movements; innervates the pyloric muscle.",
+                meaning=CL["4070014"]))
+        setattr(cls, "CL:0001074",
+            PermissibleValue(
+                text="CL:0001074",
+                description="""An innate lymphoid cell precursor in the human with the phenotype CD34-positive, CD56-positive, CD117-positive.Thie cell type may include precusors to NK cells and ILC3 cells.""",
+                meaning=CL["0001074"]))
+        setattr(cls, "CL:4052047",
+            PermissibleValue(
+                text="CL:4052047",
+                description="""A luteal cell that is part of the older, regressing corpus luteum. This cell exhibits increased expression of genes involved in progesterone metabolism - Akr1c18 in mice (Lan et al., 2024), cell cycle arrest, and apoptosis. A late luteal cell contributes to corpus luteum regression and eventual clearance from the ovary through luteolysis.""",
+                meaning=CL["4052047"]))
+        setattr(cls, "CL:0000843",
+            PermissibleValue(
+                text="CL:0000843",
+                description="""A resting mature B cell that has the phenotype IgM-positive, IgD-positive, CD23-positive and CD21-positive, and found in the B cell follicles of the white pulp of the spleen or the corticol areas of the peripheral lymph nodes. This cell type is also described as being CD19-positive, B220-positive, AA4-negative, CD43-negative, and CD5-negative.""",
+                meaning=CL["0000843"]))
         setattr(cls, "CL:2000076",
             PermissibleValue(
                 text="CL:2000076",
@@ -9392,6 +9471,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000290",
                 description="A muscle cell that is part of the middle internodal tract.",
                 meaning=CL["1000290"]))
+        setattr(cls, "CL:4052053",
+            PermissibleValue(
+                text="CL:4052053",
+                description="""A uterine natural killer subset found in the endometrial lining during the non-pregnant state (Garcia-Alonso et al., 2021) and in the decidua during pregnancy (Vento-Tormo et al., 2018), becoming the dominant uNK subset late in pregnancy. It expresses the uterine resident marker CD49a and is distinguished from uNK1 and uNK2 by CD160 (Marečková et al., 2024) and CD103 expression, the absence of CD39, and low KIR levels (Whettlock et al., 2022). Resembling intraepithelial ILC1 cells, uNK3 primarily supports uterine immune defense (Huhn et al., 2020) and indirectly influences trophoblast behavior through chemokine secretion, such as CCL5 (Vento-Tormo et al., 2018).""",
+                meaning=CL["4052053"]))
         setattr(cls, "CL:0002314",
             PermissibleValue(
                 text="CL:0002314",
@@ -9667,11 +9751,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000505",
                 description="A peptide hormone secreting cell that secretes substance P.",
                 meaning=CL["0000505"]))
-        setattr(cls, "CL:4032001",
-            PermissibleValue(
-                text="CL:4032001",
-                description="A GABAergic interneuron located in the cerebral cortex that expresses reelin (rln).",
-                meaning=CL["4032001"]))
         setattr(cls, "CL:0002434",
             PermissibleValue(
                 text="CL:0002434",
@@ -9757,6 +9836,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0009094",
                 description="An endothelial cell that is part of a hepatic portal vein.",
                 meaning=CL["0009094"]))
+        setattr(cls, "CL:4047048",
+            PermissibleValue(
+                text="CL:4047048",
+                description="""An enteric glial cell characterized by a small central soma that extends long, thin, bipolar projections. This cell is primarily located along small nerve fibers within the muscle layers of the gastrointestinal tract and is known for its unbranching processes that closely follow these nerve fibers in the muscularis.""",
+                meaning=CL["4047048"]))
         setattr(cls, "CL:4042002",
             PermissibleValue(
                 text="CL:4042002",
@@ -9766,11 +9850,6 @@ class CellTypeEnum(EnumDefinitionImpl):
             PermissibleValue(
                 text="CL:0000452",
                 meaning=CL["0000452"]))
-        setattr(cls, "CL:0000215",
-            PermissibleValue(
-                text="CL:0000215",
-                description="""A cell whose primary function is to prevent the transport of stuff across compartments.""",
-                meaning=CL["0000215"]))
         setattr(cls, "CL:0002376",
             PermissibleValue(
                 text="CL:0002376",
@@ -9836,6 +9915,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002591",
                 description="A smooth muscle of the pulmonary artery.",
                 meaning=CL["0002591"]))
+        setattr(cls, "CL:4070013",
+            PermissibleValue(
+                text="CL:4070013",
+                description="A motor neuron that controls  ventral stomach grooves leading to pyloric filter.",
+                meaning=CL["4070013"]))
         setattr(cls, "CL:0002423",
             PermissibleValue(
                 text="CL:0002423",
@@ -9870,6 +9954,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:2000063",
                 description="Any fibroblast that is part of a female gonad.",
                 meaning=CL["2000063"]))
+        setattr(cls, "CL:4052046",
+            PermissibleValue(
+                text="CL:4052046",
+                description="""A luteal cell that is part of the young, developing corpus luteum. This cell promotes progesterone synthesis, marked by high Parm1 expression in mice (Lan et al., 2024). An early luteal cell is associated with steroidogenesis and cell growth, contributing to early corpus luteum function and maturation.""",
+                meaning=CL["4052046"]))
+        setattr(cls, "CL:4032001",
+            PermissibleValue(
+                text="CL:4032001",
+                description="A GABAergic interneuron located in the cerebral cortex that expresses reelin (rln).",
+                meaning=CL["4032001"]))
         setattr(cls, "CL:0000835",
             PermissibleValue(
                 text="CL:0000835",
@@ -10791,7 +10885,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0011006",
             PermissibleValue(
                 text="CL:0011006",
-                description="An inhibitory GABAergic interneuron found in the cerebellar cortex.",
+                description="""A cerebellar interneuron characterized by a spindle-shaped or triangular soma, parasagittally oriented and located at the border between the granular layer and the Purkinje cell layer. The Lugaro cell extends dendrites predominantly in the parasagittal plane, forming synaptic interactions with basket, stellate, and Golgi cells. Its axonal projections extend upward into the molecular layer, where they form a parasagittal plexus and emit long transverse collaterals that run parallel to the long axis of the cerebellar folia. The Lugaro cell is capable of co-releasing GABA and glycine, as evidenced by the expression of glutamate decarboxylase (GAD65/67) and the glycine transporter GlyT2.""",
                 meaning=CL["0011006"]))
         setattr(cls, "CL:0002134",
             PermissibleValue(
@@ -11332,10 +11426,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4023089",
                 description="""A basket cell which has simpler dendritic arbors (compared to small or large basket cells), and an axonal plexus of intermediate density, composed of a few long, smooth axonal branches.""",
                 meaning=CL["4023089"]))
-        setattr(cls, "CL:1000696",
+        setattr(cls, "CL:0002579",
             PermissibleValue(
-                text="CL:1000696",
-                meaning=CL["1000696"]))
+                text="CL:0002579",
+                description="A preadipocyte that is part of an omentum.",
+                meaning=CL["0002579"]))
         setattr(cls, "CL:1000314",
             PermissibleValue(
                 text="CL:1000314",
@@ -11495,16 +11590,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002547",
                 description="A fibroblast of the aortic adventitia.",
                 meaning=CL["0002547"]))
-        setattr(cls, "CL:0002579",
-            PermissibleValue(
-                text="CL:0002579",
-                description="A preadipocyte that is part of an omentum.",
-                meaning=CL["0002579"]))
-        setattr(cls, "CL:0000213",
-            PermissibleValue(
-                text="CL:0000213",
-                description="""A cell within an epithelial cell sheet whose main function is to act as an internal or external covering for a tissue or an organism.""",
-                meaning=CL["0000213"]))
         setattr(cls, "CL:0017002",
             PermissibleValue(
                 text="CL:0017002",
@@ -11560,6 +11645,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002137",
                 description="A cell in the zona reticularis that produce sex hormones.",
                 meaning=CL["0002137"]))
+        setattr(cls, "CL:4047044",
+            PermissibleValue(
+                text="CL:4047044",
+                description="""An enteric glial cell that has an elongated, fibrous morphology with long processes that run parallel to nerve fibers connecting enteric myenteric ganglia. This cell is located in the interganglionic fiber tracts of the enteric nervous system.""",
+                meaning=CL["4047044"]))
         setattr(cls, "CL:0000413",
             PermissibleValue(
                 text="CL:0000413",
@@ -11624,6 +11714,15 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0002586",
                 description="An epithelial cell of the retinal pigmented epithelium.",
                 meaning=CL["0002586"]))
+        setattr(cls, "CL:1000696",
+            PermissibleValue(
+                text="CL:1000696",
+                meaning=CL["1000696"]))
+        setattr(cls, "CL:0008053",
+            PermissibleValue(
+                text="CL:0008053",
+                description="""A capillary endothelial cell that is part of the circumventricular organs (CVOs), characterized by fenestrations that facilitate selective permeability to molecules, distinguishing it from the non-fenestrated endothelial cells of the blood-brain barrier. This cell is integral to the unique vascular structure of CVOs, which lack a traditional blood-brain barrier. It enables bidirectional exchange of polar molecules between blood and neural tissue, supporting neuroendocrine signaling, fluid balance, and immune responses. It is marked by the expression of PLVAP, a component of the fenestral diaphragm, in both rodents and humans.""",
+                meaning=CL["0008053"]))
         setattr(cls, "CL:0000453",
             PermissibleValue(
                 text="CL:0000453",
@@ -11834,6 +11933,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0007022",
                 description="""A specialized pore forming cell of the follicle, located adjacent to the animal pole of the oocyte. The micropylar cell makes the single micropyle (pore) through the chorion through which the sperm fertilizes the egg.""",
                 meaning=CL["0007022"]))
+        setattr(cls, "CL:0008044",
+            PermissibleValue(
+                text="CL:0008044",
+                description="""A tanycyte of the area postrema (AP).  These cells extend long and slender fibers extending from their cell bodies in the ependyma toward fenestrated capillaries associated with the AP, where they form a dense network surrounding these capillaries.""",
+                meaning=CL["0008044"]))
         setattr(cls, "CL:2000030",
             PermissibleValue(
                 text="CL:2000030",
@@ -12650,11 +12754,6 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000546",
                 description="""A CD4-positive, alpha-beta T cell that has the phenotype GATA-3-positive, CXCR3-negative, CCR6-negative, and is capable of producing interleukin-4.""",
                 meaning=CL["0000546"]))
-        setattr(cls, "CL:0000914",
-            PermissibleValue(
-                text="CL:0000914",
-                description="""An immature alpha-beta T-cell that express Egr2. These cells give rise to T cells expressing NK markers.""",
-                meaning=CL["0000914"]))
         setattr(cls, "CL:0001002",
             PermissibleValue(
                 text="CL:0001002",
@@ -12847,7 +12946,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4042020",
             PermissibleValue(
                 text="CL:4042020",
-                description="""A type of tanycyte found in the floor of the infundibular recess in the brain. This tanycyte has an elongated morphology with multiple microvilli extending medially and ventrally to the median eminence, contacting the pial surface and blood vessels. This type of tanycyte expresses FGF receptors 1 and 2, is in contact with GnRH neurons, and is involved in the release of gonadotropin-releasing hormone (GnRH).""",
+                description="""A type of tanycyte located in the floor of third ventricle and the infindibular recess. This tanycyte has an elongated morphology with multiple microvilli extending medially and ventrally to the median eminence, contacting the pial surface and blood vessels. This type of tanycyte expresses FGF receptors 1 and 2, is in contact with GnRH neurons, and is involved in the release of gonadotropin-releasing hormone (GnRH).""",
                 meaning=CL["4042020"]))
         setattr(cls, "CL:0000981",
             PermissibleValue(
@@ -12879,6 +12978,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000374",
                 description="""A transitional myocyte that is part of the posterior division of left branch of atrioventricular bundle.""",
                 meaning=CL["1000374"]))
+        setattr(cls, "CL:0008042",
+            PermissibleValue(
+                text="CL:0008042",
+                description="""A tanycyte of the subfornical organ (SFO).  These cells extend long and slender fibers extending from their cell bodies in the ependyma toward fenestrated capillaries associated with the SFO, where they form a dense network surrounding these capillaries.""",
+                meaning=CL["0008042"]))
         setattr(cls, "CL:0000542",
             PermissibleValue(
                 text="CL:0000542",
@@ -12929,6 +13033,16 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4033042",
                 description="An alveolar macrophage that expresses metallothionein.",
                 meaning=CL["4033042"]))
+        setattr(cls, "CL:0000914",
+            PermissibleValue(
+                text="CL:0000914",
+                description="""An immature alpha-beta T-cell that express Egr2. These cells give rise to T cells expressing NK markers.""",
+                meaning=CL["0000914"]))
+        setattr(cls, "CL:4070015",
+            PermissibleValue(
+                text="CL:4070015",
+                description="A motor neuron that controls the cardiopyloric valve.",
+                meaning=CL["4070015"]))
         setattr(cls, "CL:0000816",
             PermissibleValue(
                 text="CL:0000816",
@@ -13003,6 +13117,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1100001",
                 description="""An epithelial cell that is specialised for the synthesis and secretion of specific biomolecules.""",
                 meaning=CL["1100001"]))
+        setattr(cls, "CL:4052050",
+            PermissibleValue(
+                text="CL:4052050",
+                description="An epithelial cell that is part of an endometrium luminal epithelium.",
+                meaning=CL["4052050"]))
         setattr(cls, "CL:0000573",
             PermissibleValue(
                 text="CL:0000573",
@@ -13121,7 +13240,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:4042030",
             PermissibleValue(
                 text="CL:4042030",
-                description="""A GABAergic interneuron located in the cerebellar cortex. This GABAergic interneuron type has a distinct morphology, it presents a small cell soma near the Purkinje cell layer (PCL), dendrites that extend to the surface of the molecular layer, and beaded axons that make local synapses contacts within the molecular layer. A candelabrum cell is excited by mossy fibers and granule cells but inhibited by Purkinje cells, and it inhibits molecular layer interneurons, which leads to the disinhibition of Purkinje cells.""",
+                description="""A GABAergic interneuron located in the Purkinje layer of the cerebellar cortex. This GABAergic interneuron type has a distinct morphology, it presents a small cell soma near the Purkinje cell layer (PCL), dendrites that extend to the surface of the molecular layer, and beaded axons that make local synapses contacts within the molecular layer. A candelabrum cell is excited by mossy fibers and granule cells but inhibited by Purkinje cells, and it inhibits molecular layer interneurons, which leads to the disinhibition of Purkinje cells.""",
                 meaning=CL["4042030"]))
         setattr(cls, "CL:4030023",
             PermissibleValue(
@@ -13435,7 +13554,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0009084",
             PermissibleValue(
                 text="CL:0009084",
-                description="An epithelial cell that is part of an endometrial gland.",
+                description="An epithelial cell that is part of an endometrium glandular epithelium.",
                 meaning=CL["0009084"]))
         setattr(cls, "CL:2000023",
             PermissibleValue(
@@ -13462,6 +13581,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0001064",
                 description="A neoplastic cell that is capable of entering a surrounding tissue",
                 meaning=CL["0001064"]))
+        setattr(cls, "CL:4047038",
+            PermissibleValue(
+                text="CL:4047038",
+                description="""A multipolar neuron in the myenteric plexus of the gastrointestinal tract, characterized by a small to medium-sized cell body and multiple short dendrites.  This neuron exhibits fast excitatory postsynaptic potentials and can be classified into stubby, spiny and hairy subtypes based on dendritic morphology. (Brehmer, 2021)""",
+                meaning=CL["4047038"]))
         setattr(cls, "CL:0000615",
             PermissibleValue(
                 text="CL:0000615",
@@ -13773,6 +13897,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:4052031",
                 description="A secretory epithelial cell of the respiratory and terminal bronchioles.",
                 meaning=CL["4052031"]))
+        setattr(cls, "CL:4047045",
+            PermissibleValue(
+                text="CL:4047045",
+                description="""An enteric glial cell located in the lamina propria of the intestinal mucosa. This cell plays important roles in maintaining gut barrier function, regulating intestinal homeostasis, and mediating interactions between the enteric nervous system and the immune system.""",
+                meaning=CL["4047045"]))
         setattr(cls, "CL:0011013",
             PermissibleValue(
                 text="CL:0011013",
@@ -14000,6 +14129,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:1000411",
                 description="An endothelial cell that is part of the small intestine Peyer's patch.",
                 meaning=CL["1000411"]))
+        setattr(cls, "CL:4052042",
+            PermissibleValue(
+                text="CL:4052042",
+                description="""A tuft cell that is part of the epithelium of the urethra. This cell monitors urethral contents by detecting chemical stimuli, such as bitter compounds and sugars. Upon activation, it stimulates sensory nerve fibres and triggers detrusor muscle contraction, likely aiding in pathogen clearance by promoting bladder emptying.""",
+                meaning=CL["4052042"]))
         setattr(cls, "CL:0000420",
             PermissibleValue(
                 text="CL:0000420",
@@ -14347,6 +14481,11 @@ class CellTypeEnum(EnumDefinitionImpl):
                 text="CL:0000769",
                 description="""A basophil precursor in the granulocytic series, being a cell intermediate in development between a basophilic myelocyte and a band form basophil. The nucleus becomes indented where the indentation is smaller than half the distance to the farthest nuclear margin; chromatin becomes coarse and clumped; specific granules predominate while primary granules are rare. Markers are CD11b-positive, CD15-positive, CD16-positive, CD24-positive, CD33-positive, and CD13-positive.""",
                 meaning=CL["0000769"]))
+        setattr(cls, "CL:4047053",
+            PermissibleValue(
+                text="CL:4047053",
+                description="""A macrophage characterized by high expression of Triggering Receptor Expressed on Myeloid cells 2 (TREM2), found in various tissues including the liver, adipose tissue, bone, gut (Colonna, 2023), and tumor microenvironments, where it is associated with immunosuppressive and anti-inflammatory activity (Colmenares, 2024; Khantakova, 2022). This cell exhibits a distinct gene expression profile in the tumor microenvironment, including overexpression of complement system genes (C1QA, C1QB, C1QC, C3), and SPP1 in both mice and humans (Xiong, 2020; Khantakova, 2022). It is involved in phagocytosis, tissue repair, and modulation of immune responses (Coeho, 2021).""",
+                meaning=CL["4047053"]))
         setattr(cls, "CL:2000028",
             PermissibleValue(
                 text="CL:2000028",
@@ -14365,7 +14504,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000171",
             PermissibleValue(
                 text="CL:0000171",
-                description="""A type of enteocrine cell found in the periphery of the islets of Langerhans that secretes glucagon.""",
+                description="""A type A enteroendocrine cell found in the periphery of the islets of Langerhans that secretes glucagon.""",
                 meaning=CL["0000171"]))
         setattr(cls, "CL:0000323",
             PermissibleValue(
@@ -14404,7 +14543,6 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0000076",
             PermissibleValue(
                 text="CL:0000076",
-                description="Any epithelial cell that is part of some squamous epithelium.",
                 meaning=CL["0000076"]))
         setattr(cls, "CL:0001078",
             PermissibleValue(
@@ -14429,7 +14567,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0002621",
             PermissibleValue(
                 text="CL:0002621",
-                description="Any epithelial cell that is part of some gingival epithelium.",
+                description="Any stratified squamous epithelial cell that is part of some gingival epithelium.",
                 meaning=CL["0002621"]))
         setattr(cls, "CL:1001601",
             PermissibleValue(
@@ -14479,7 +14617,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:0010010",
             PermissibleValue(
                 text="CL:0010010",
-                description="Any stellate neuron that has its soma located in some cerebellum.",
+                description="""A GABAergic interneuron that is located in the molecular layer of the cerebellum. This cell receives excitatory inputs primarily from parallel fibers and plays a crucial role in feed-forward inhibition by suppressing the activity of Purkinje cells and modulating the output of the cerebellar cortex. The stellate cell is part of the local circuitry that contributes to the fine-tuning of motor coordination and a regulator of cerebellar blood flow via neurovascular coupling.""",
                 meaning=CL["0010010"]))
         setattr(cls, "CL:0000436",
             PermissibleValue(
@@ -14572,7 +14710,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:2000064",
             PermissibleValue(
                 text="CL:2000064",
-                description="Any epithelial cell that is part of a female gonad.",
+                description="""A meso-epithelial cell of the ovarian surface epithelium, varying in shape from flat to cuboidal to pseudostratified columnar. This cell plays a crucial role in ovulation by producing proteolytic enzymes in response to gonadotropins, facilitating follicle rupture through tissue breakdown and TNF-alpha signaling. Additionally, this cell contributes to post-ovulatory wound repair (Morris et al., 2022) and exhibits stem cell-like properties (Flesken-Nikitin et al., 2013; Wang et al., 2019).""",
                 meaning=CL["2000064"]))
         setattr(cls, "CL:0002573",
             PermissibleValue(
@@ -14772,7 +14910,7 @@ class CellTypeEnum(EnumDefinitionImpl):
         setattr(cls, "CL:3000003",
             PermissibleValue(
                 text="CL:3000003",
-                description="Sympathetic cholinergic neuron.",
+                description="A type of autonomic neuron that releases acetylcholine.",
                 meaning=CL["3000003"]))
         setattr(cls, "CL:4042004",
             PermissibleValue(
@@ -14913,6 +15051,9 @@ slots.rationale_dois = Slot(uri=CELL_ANNOTATION_SCHEMA.rationale_dois, name="rat
 
 slots.marker_gene_evidence = Slot(uri=CELL_ANNOTATION_SCHEMA.marker_gene_evidence, name="marker_gene_evidence", curie=CELL_ANNOTATION_SCHEMA.curie('marker_gene_evidence'),
                    model_uri=CELL_ANNOTATION_SCHEMA.marker_gene_evidence, domain=None, range=Optional[Union[str, List[str]]])
+
+slots.marker_gene_context = Slot(uri=CELL_ANNOTATION_SCHEMA.marker_gene_context, name="marker_gene_context", curie=CELL_ANNOTATION_SCHEMA.curie('marker_gene_context'),
+                   model_uri=CELL_ANNOTATION_SCHEMA.marker_gene_context, domain=None, range=Optional[Union[str, List[str]]])
 
 slots.synonyms = Slot(uri=CELL_ANNOTATION_SCHEMA.synonyms, name="synonyms", curie=CELL_ANNOTATION_SCHEMA.curie('synonyms'),
                    model_uri=CELL_ANNOTATION_SCHEMA.synonyms, domain=None, range=Optional[Union[str, List[str]]])
